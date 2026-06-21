@@ -1,6 +1,7 @@
 # Jarvis Systems Website
 
-Einfache Startseite mit HTML, CSS und JavaScript.
+Einfache Startseite mit HTML, CSS und JavaScript. Das Projekt ist für GitHub
+und Cloudflare Pages vorbereitet.
 
 ## Lokal starten
 
@@ -9,8 +10,18 @@ pnpm install
 pnpm dev
 ```
 
-## Später veröffentlichen
+## Cloudflare Pages
 
-Das Projekt ist für GitHub und Cloudflare Pages vorbereitet. Bei einer
-Git-basierten Cloudflare-Pages-Bereitstellung wird kein Build-Befehl benötigt;
-das Ausgabeverzeichnis ist `/`.
+Empfohlene Einstellungen für die GitHub-Integration:
+
+- Production branch: `main`
+- Framework preset: `None`
+- Build command: leer lassen
+- Build output directory: `public`
+- Root directory: `/`
+
+Alternativ ist nach der Cloudflare-Anmeldung ein direkter Upload möglich:
+
+```powershell
+pnpm deploy
+```

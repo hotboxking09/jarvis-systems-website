@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "wrangler pages dev .",
-    "deploy": "wrangler pages deploy ."
+    "dev": "wrangler pages dev public",
+    "deploy": "wrangler pages deploy public --project-name jarvis-systems-website"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
