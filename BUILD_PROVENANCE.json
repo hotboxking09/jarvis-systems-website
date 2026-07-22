@@ -1,7 +1,7 @@
 {
   "project": "JARVIS SYSTEM Website",
   "mode": "release",
-  "generated_utc": "2026-07-22T22:29:11+00:00",
+  "generated_utc": "2026-07-22T22:32:58+00:00",
   "copyright": "© 2026 Oliver-Frank Pristaff. All rights reserved.",
   "public_iso_available": false,
   "sha256": {
@@ -19,11 +19,11 @@
     "assets/og-card.svg": "6dad79e5954ea6f55dd1f3bc3493806cc2dc01ef5ecc442ace4fc428d51be465",
     "data/status.json": "14e41b725468a5124cc35fb55c71768ad638e3177693d2c2e09358df025486af",
     "data/updates.json": "d04e16048b6cf2a85b0aef8bf687a5c2961c512050ab8446debfb00e52bdef96",
-    "index.html": "a4234924fdbb6dff28aafd7042fec4fe9943cfcf489fe60d71608a7041d13807",
+    "index.html": "9ab218eac47a3112386914e8f2a13a995daee955085bc13e18141fc32db52af5",
     "legal.html": "54d21983ff0f51f303ad5d81ffdf4c2e71a3b2dcbec4c1d6abeaadaee98dfe93",
-    "robots.txt": "8dec41836c1494b6bdb0d855d35d7b77a4c2e78cff3ca9c44e5a973b0d7b35e4",
+    "robots.txt": "38167b69bf9da1c4230342b0ead4d8ee46ac7a88a3d0082f48fc5eb9a37e54aa",
     "site.webmanifest": "2f92d2f9c2a794eaf4325456e2d222f7576e7c6c055370316cf22b909b4368c2",
-    "sitemap.xml": "2ba80319732eb60709ae494903c877da54e2e7754565f4b1d68ae2133f515058",
+    "sitemap.xml": "4a7e727f4ac78011cd54a50a240882ce6457be4609df63cf14435b56668ec446",
     "styles.css": "68da2cbafa178ffaa43ebbab47a71d9fefd67223a0a5c35cda2862645d461350"
   }
 }
