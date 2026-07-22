@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>JARVIS SYSTEM // Entwicklungsupdates</title>
+  <id>https://jarvisserver.org/</id><link href="https://jarvisserver.org/feed.xml" rel="self"/>
+  <link href="https://jarvisserver.org/updates/"/>
+  <updated>2026-07-23T00:00:00+02:00</updated>
+  <subtitle>Verifizierte Entwicklungsschritte von JARVIS OS.</subtitle>
+  <entry>
+    <title>JARVIS SYSTEM ist im Google-Index</title>
+    <id>https://jarvisserver.org/updates/website-google-indexiert/</id><link href="https://jarvisserver.org/updates/website-google-indexiert/"/>
+    <updated>2026-07-23T00:00:00+02:00</updated>
+    <published>2026-07-23T00:00:00+02:00</published>
+    <author><name>Oliver-Frank Pristaff</name></author>
+    <summary>Domain-Property, Sitemap und HTTPS wurden bestätigt. Google führt die öffentliche Startseite nun als indexiert und für Suchergebnisse berechtigt.</summary>
+  </entry>
+  <entry>
+    <title>Hardwareportabilität verbindlich gemacht</title>
+    <id>https://jarvisserver.org/updates/hardwareportabilitaet-verbindlich/</id><link href="https://jarvisserver.org/updates/hardwareportabilitaet-verbindlich/"/>
+    <updated>2026-07-23T00:00:00+02:00</updated>
+    <published>2026-07-22T00:00:00+02:00</published>
+    <author><name>Oliver-Frank Pristaff</name></author>
+    <summary>JARVIS SYSTEM wird für unterschiedliche reale x86-64-PCs gebaut. VM-Erfolge bleiben Vorstufen; eine reale Hardwarematrix ist Release-Pflicht.</summary>
+  </entry>
+  <entry>
+    <title>Mausgesteuerter EFI-Manager abgenommen</title>
+    <id>https://jarvisserver.org/updates/efi-manager-maussteuerung/</id><link href="https://jarvisserver.org/updates/efi-manager-maussteuerung/"/>
+    <updated>2026-07-23T00:00:00+02:00</updated>
+    <published>2026-07-22T00:00:00+02:00</published>
+    <author><name>Oliver-Frank Pristaff</name></author>
+    <summary>Hover, Linksklick, flüssige Kartenhebung und animierte Signalstruktur wurden in OVMF real geprüft.</summary>
+  </entry>
+  <entry>
+    <title>Neue Installer-ISO intern verifiziert</title>
+    <id>https://jarvisserver.org/updates/installer-iso-intern-verifiziert/</id><link href="https://jarvisserver.org/updates/installer-iso-intern-verifiziert/"/>
+    <updated>2026-07-23T00:00:00+02:00</updated>
+    <published>2026-07-22T00:00:00+02:00</published>
+    <author><name>Oliver-Frank Pristaff</name></author>
+    <summary>BIOS-/UEFI-Struktur, fixturefreie EFI-Identität und Medienstart bis zum Netzwerk-Preflight bestanden. Die ISO wird noch nicht öffentlich angeboten.</summary>
+  </entry>
+  <entry>
+    <title>Native JARVIS-Laufzeit</title>
+    <id>https://jarvisserver.org/updates/native-jarvis-laufzeit/</id><link href="https://jarvisserver.org/updates/native-jarvis-laufzeit/"/>
+    <updated>2026-07-23T00:00:00+02:00</updated>
+    <published>2026-07-20T00:00:00+02:00</published>
+    <author><name>Oliver-Frank Pristaff</name></author>
+    <summary>Eigener Login-Supervisor, Unified Shell, Frame Core, System Control und echte Telemetrie wurden in der isolierten Entwicklungsumgebung abgenommen.</summary>
+  </entry>
+</feed>

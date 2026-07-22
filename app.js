@@ -46,6 +46,9 @@ const escapeHtml = (value) => String(value)
 async function loadUpdates() {
   const feed = document.getElementById("update-feed");
   if (!feed) return;
+  // Release builds contain the complete update feed as static HTML so crawlers,
+  // readers without JavaScript and assistive tools receive the same content.
+  if (feed.querySelector(".update-entry")) return;
   try {
     const response = await fetch("data/updates.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -55,7 +58,7 @@ async function loadUpdates() {
     feed.innerHTML = updates.map((entry) => `
       <article class="update-entry reveal is-visible">
         <time class="update-date" datetime="${escapeHtml(entry.date)}">${escapeHtml(entry.date.split("-").reverse().join("."))}</time>
-        <div><h3>${escapeHtml(entry.title)}</h3><p>${escapeHtml(entry.summary)}</p></div>
+        <div><h3><a href="/updates/${encodeURIComponent(entry.slug)}/">${escapeHtml(entry.title)}</a></h3><p>${escapeHtml(entry.summary)}</p><a class="text-link" href="/updates/${encodeURIComponent(entry.slug)}/">TECHNISCHEN BERICHT LESEN →</a></div>
         <span class="update-tag">${escapeHtml(entry.state || entry.code)}</span>
       </article>`).join("");
   } catch (error) {

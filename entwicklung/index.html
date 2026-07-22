@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de-CH" data-release-state="public-release">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#02060a">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Einblick in den dokumentierten Entwicklungsprozess von JARVIS OS: reproduzierbare Builds, VM-Tests, Hardwaretests, Backups, Release-Gates und ehrliche Statusangaben.">
+  <meta name="author" content="Oliver-Frank Pristaff">
+  <meta name="creator" content="Oliver-Frank Pristaff">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:site_name" content="JARVIS SYSTEM">
+  <meta property="og:title" content="Wie JARVIS OS entwickelt wird // JARVIS SYSTEM">
+  <meta property="og:description" content="Einblick in den dokumentierten Entwicklungsprozess von JARVIS OS: reproduzierbare Builds, VM-Tests, Hardwaretests, Backups, Release-Gates und ehrliche Statusangaben.">
+  <meta property="og:url" content="https://jarvisserver.org/entwicklung/">
+  <meta property="og:image" content="https://jarvisserver.org/assets/og-card.png">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="JARVIS SYSTEM – unabhängiges Betriebssystemprojekt">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wie JARVIS OS entwickelt wird // JARVIS SYSTEM">
+  <meta name="twitter:description" content="Einblick in den dokumentierten Entwicklungsprozess von JARVIS OS: reproduzierbare Builds, VM-Tests, Hardwaretests, Backups, Release-Gates und ehrliche Statusangaben.">
+  <meta name="twitter:image" content="https://jarvisserver.org/assets/og-card.png">
+  <link rel="canonical" href="https://jarvisserver.org/entwicklung/">
+  <link rel="alternate" type="application/atom+xml" title="JARVIS SYSTEM Updates" href="/feed.xml">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="/styles.css">
+  <title>Wie JARVIS OS entwickelt wird // JARVIS SYSTEM</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://jarvisserver.org/#website","url":"https://jarvisserver.org/","name":"JARVIS SYSTEM","alternateName":"JARVIS OS","inLanguage":"de-CH","publisher":{"@id":"https://jarvisserver.org/#project"}},{"@type":"Organization","@id":"https://jarvisserver.org/#project","name":"JARVIS SYSTEM","description":"Unabhängiges Betriebssystemprojekt aus der Schweiz.","url":"https://jarvisserver.org/","logo":{"@type":"ImageObject","url":"https://jarvisserver.org/assets/jarvis-core-head.png","width":1024,"height":1024},"founder":{"@id":"https://jarvisserver.org/#founder"}},{"@type":"Person","@id":"https://jarvisserver.org/#founder","name":"Oliver-Frank Pristaff","url":"https://jarvisserver.org/gruender/","jobTitle":"Gründer und Entwickler von JARVIS SYSTEM","nationality":{"@type":"Country","name":"Schweiz"}},{"@type":"TechArticle","@id":"https://jarvisserver.org/entwicklung/#page","url":"https://jarvisserver.org/entwicklung/","name":"Wie JARVIS OS entwickelt wird","headline":"Wie JARVIS OS entwickelt wird","description":"Einblick in den dokumentierten Entwicklungsprozess von JARVIS OS: reproduzierbare Builds, VM-Tests, Hardwaretests, Backups, Release-Gates und ehrliche Statusangaben.","inLanguage":"de-CH","isPartOf":{"@id":"https://jarvisserver.org/#website"},"datePublished":"2026-07-23","dateModified":"2026-07-23","author":{"@id":"https://jarvisserver.org/#founder"},"publisher":{"@id":"https://jarvisserver.org/#project"},"image":"https://jarvisserver.org/assets/og-card.png"},{"@type":"BreadcrumbList","@id":"https://jarvisserver.org/entwicklung/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"JARVIS SYSTEM","item":"https://jarvisserver.org/"},{"@type":"ListItem","position":2,"name":"Wie JARVIS OS entwickelt wird","item":"https://jarvisserver.org/entwicklung/"}]}]}</script>
+</head>
+<body class="content-page">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas><div class="noise-layer" aria-hidden="true"></div>
+  
+  <header class="site-header" id="top">
+    <a class="brand" href="/" aria-label="JARVIS SYSTEM Startseite">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>JARVIS</strong><small>SYSTEM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENÜ</button>
+      <div class="nav-links" id="nav-links"><a href="/jarvis-os/">JARVIS OS</a><a href="/technik/">Technik</a><a href="/entwicklung/" aria-current="page">Entwicklung</a><a href="/updates/">Updates</a><a href="/roadmap/">Roadmap</a><a href="/gruender/">Gründer</a><a href="/faq/">FAQ</a></div>
+    </nav>
+    <div class="header-state"><span></span> ENGINEERING ONLINE</div>
+  </header>
+  <main id="main">
+    <section class="content-hero section-shell">
+      <div class="content-hero-copy reveal">
+        <nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">JARVIS SYSTEM</a><span>/</span><span aria-current="page">Entwicklung</span></nav>
+        <p class="eyebrow">ENGINEERING PROCESS // BUILD TEST DOCUMENT</p>
+        <h1>Wie JARVIS OS entwickelt wird</h1>
+        <p class="content-intro">JARVIS OS entsteht iterativ: planen, bauen, isoliert testen, Fehler reproduzieren, dokumentieren und erst danach den nächsten Bereich öffnen. Die professionelle Projektdokumentation hält Entscheidungen, Dateien, Prüfergebnisse und offene Risiken fest.</p>
+      </div>
+      <div class="content-core reveal" aria-hidden="true">
+        <div class="core-rings"><i></i><i></i><i></i></div>
+        <picture><source srcset="/assets/jarvis-core-head.webp" type="image/webp"><img src="/assets/jarvis-core-head.png" width="1024" height="1024" alt="" decoding="async"></picture>
+        <span>ENTWICKLUNG // ONLINE</span>
+      </div>
+      <div class="content-facts"><div><span>METHODE</span><b>ITERATIV</b></div><div><span>BUILD</span><b>REPRODUZIERBAR</b></div><div><span>TEST</span><b>VM + BARE METAL</b></div><div><span>STATUS</span><b>DOKUMENTIERT</b></div></div>
+    </section>
+    <div class="content-layout section-shell">
+      <aside class="content-index"><b>PAGE MATRIX</b><a href="#workflow">01 // WORKFLOW</a><a href="#tests">02 // TEST MATRIX</a><a href="#documentation">03 // DOCUMENTATION</a><a href="#release">04 // RELEASE DISCIPLINE</a><a href="/updates/">LIVE DEVELOPMENT LOG</a></aside>
+      <article class="content-copy"><section id="workflow" class="content-block reveal">
+      <p class="eyebrow">01 // WORKFLOW</p>
+      <h2>Vom Auftrag zum nachvollziehbaren Build</h2>
+      <p>Jede grössere Änderung beginnt mit einer klaren Zielbeschreibung und einer Prüfung des bestehenden Zustands. Vor riskanten Systemeingriffen werden Backups, Recoverypfade oder VM-Snapshots vorbereitet. Danach werden Änderungen möglichst klein und prüfbar umgesetzt.</p><p>Buildskripte erzeugen definierte Artefakte statt manuell veränderter Einzelkopien. Prüfsummen, Git-Commits und Buildprotokolle machen sichtbar, welcher Quellstand zu welchem Ergebnis gehört. Das schützt nicht vor jedem Fehler, verhindert aber unkontrollierbaren Entwicklungszustand.</p>
+    </section><section id="tests" class="content-block reveal">
+      <p class="eyebrow">02 // TEST MATRIX</p>
+      <h2>VM-Erfolg, Installation und reale Hardware sind getrennte Stufen</h2>
+      <p>QEMU und OVMF erlauben schnelle UEFI- und Installerprüfungen, ohne den Entwicklungsrechner bei jedem Versuch zu gefährden. Dort werden Bootpfade, Eingabe, Darstellungslogik und Installationsabläufe reproduzierbar getestet.</p><p>Danach folgen frische Installationen und echte Hardwaretests. Ein Ergebnis wird nicht auf alle Computer übertragen, nur weil es in einer VM funktioniert. Die Hardwarematrix erfasst unterschiedliche Grafik-, Netzwerk-, Speicher-, Eingabe- und Energieklassen.</p>
+    </section><section id="documentation" class="content-block reveal">
+      <p class="eyebrow">03 // DOCUMENTATION</p>
+      <h2>Entscheidungen und Grenzen bleiben sichtbar</h2>
+      <p>Die laufende Projektdokumentation umfasst Entwicklungsprotokolle, Architekturentscheidungen, Recoveryanweisungen, Testmatrizen, Buildnachweise und eine Roadmap. Erledigte Schritte werden von offenen Punkten getrennt.</p><p>Auch Fehlschläge gehören in den Entwicklungsstand. Wenn beispielsweise ein Fingerprint-Pfad nur teilweise funktioniert oder ein Übergang kurz schwarz wird, darf die Oberfläche nicht so beschrieben werden, als sei das Problem vollständig gelöst.</p>
+    </section><section id="release" class="content-block reveal">
+      <p class="eyebrow">04 // RELEASE DISCIPLINE</p>
+      <h2>Warum die ISO noch nicht öffentlich verteilt wird</h2>
+      <p>Eine öffentliche Betriebssystem-ISO kann reale Datenträger verändern. Deshalb reichen ein schöner Bootscreen und ein erfolgreicher Einzeltest nicht aus. Partitionierung, Installation, Bootloader, Anmeldung, Netzwerk, Updates, Recovery und Deinstallation benötigen belastbare Tests.</p><p>Erst wenn diese Pfade auf einer ausreichend breiten Hardwarematrix nachvollziehbar funktionieren, wird über eine Community-Freigabe entschieden. Bis dahin bleibt die ISO intern und die Website veröffentlicht ausschliesslich überprüfbare Entwicklungsinformationen.</p><div class="content-callout">RELEASE STANDARD // Sauber und wiederholbar vor schnell und spektakulär.</div>
+    </section></article>
+    </div>
+    <section class="related-section section-shell" aria-labelledby="related-title">
+      <p class="eyebrow">NEXT SIGNALS</p><h2 id="related-title">JARVIS weiter erkunden</h2>
+      <div class="related-grid"><a class="related-card" href="/technik/"><span>JARVIS KNOWLEDGE</span><h3>Technik hinter JARVIS SYSTEM</h3><p>Technischer Überblick über UEFI-Bootmanager, Runtime, Unified Shell, Login, Hardwareerkennung und reale Telemetrie von JARVIS OS.</p><b>ÖFFNEN →</b></a><a class="related-card" href="/roadmap/"><span>JARVIS KNOWLEDGE</span><h3>Roadmap von JARVIS SYSTEM</h3><p>Die öffentliche JARVIS-OS-Roadmap von Foundation und Bootmanager über Hardwareportabilität, Secure Boot und Recovery bis zum kontrollierten Community-Release.</p><b>ÖFFNEN →</b></a><a class="related-card" href="/updates/"><span>DEVELOPMENT LOG</span><h3>Aktuelle Updates</h3><p>Nachvollziehbare Entwicklungsstände und verifizierte Meilensteine.</p><b>ÖFFNEN →</b></a></div>
+    </section>
+  </main>
+  
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><b>JARVIS SYSTEM</b><span>INDEPENDENT ENGINEERING PROJECT</span></div>
+    <nav class="footer-map" aria-label="Seitennavigation">
+      <a href="/jarvis-os/">JARVIS OS</a><a href="/technik/">Technik</a><a href="/entwicklung/">Entwicklung</a>
+      <a href="/updates/">Updates</a><a href="/roadmap/">Roadmap</a><a href="/gruender/">Gründer</a><a href="/faq/">FAQ</a>
+    </nav>
+    <div class="footer-legal">
+      <p>© 2026 Oliver-Frank Pristaff. Alle Rechte vorbehalten. Keine ISO-Verteilung.</p>
+      <a href="/legal.html">Rechte, Hinweise &amp; Datenschutz</a>
+    </div>
+    <div class="footer-state"><span></span> PROJECT SIGNAL ACTIVE</div>
+  </footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "name": "JARVIS SYSTEM",
   "short_name": "JARVIS",
-  "description": "JARVIS SYSTEM ist ein unabhängiges Betriebssystemprojekt mit eigener Boot-, Login-, Shell- und Systemoberfläche.",
+  "description": "JARVIS SYSTEM ist ein unabhängiges Betriebssystemprojekt aus der Schweiz mit eigener UEFI-Bootoberfläche, Anmeldung, Unified Shell und echter Systemtelemetrie.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#010407",

@@ -1,30 +1,72 @@
 [
   {
+    "date": "2026-07-23",
+    "modified": "2026-07-23",
+    "code": "DISCOVERY-01",
+    "state": "LIVE",
+    "slug": "website-google-indexiert",
+    "title": "JARVIS SYSTEM ist im Google-Index",
+    "summary": "Domain-Property, Sitemap und HTTPS wurden bestätigt. Google führt die öffentliche Startseite nun als indexiert und für Suchergebnisse berechtigt.",
+    "sections": [
+      ["Eigene Domain und verifizierte Inhaberschaft", "Die öffentliche Projektwebsite läuft unter jarvisserver.org mit erzwungenem HTTPS. Die Domain-Inhaberschaft wurde über einen dauerhaft hinterlegten DNS-TXT-Eintrag in Google Search Console bestätigt."],
+      ["Sitemap und Seitenstruktur erkannt", "Die XML-Sitemap wurde erfolgreich eingereicht. Google erkannte die Startseite und die Rechteseite. robots.txt, Canonical-URLs und strukturierte Daten zeigen auf die eigene HTTPS-Domain."],
+      ["Startseite indexiert", "Nach der URL-Prüfung und dem Indexierungsantrag meldete Google ausdrücklich: URL ist auf Google und Seite ist indexiert. Konkrete Positionen bei Suchbegriffen bleiben dynamisch und werden nicht als garantiert dargestellt."]
+    ]
+  },
+  {
     "date": "2026-07-22",
+    "modified": "2026-07-23",
     "code": "PORTABILITY-01",
     "state": "CONFIRMED",
+    "slug": "hardwareportabilitaet-verbindlich",
     "title": "Hardwareportabilität verbindlich gemacht",
-    "summary": "JARVIS SYSTEM wird für unterschiedliche reale x86-64-PCs gebaut. VM-Erfolge bleiben Vorstufen; eine reale Hardwarematrix ist Release-Pflicht."
+    "summary": "JARVIS SYSTEM wird für unterschiedliche reale x86-64-PCs gebaut. VM-Erfolge bleiben Vorstufen; eine reale Hardwarematrix ist Release-Pflicht.",
+    "sections": [
+      ["Keine Massanfertigung für einen einzelnen Laptop", "Die Systemarchitektur muss Display, Eingabe, Grafik, Netzwerk, Speicher, Energieversorgung und Sensoren zur Laufzeit erkennen. Fehlende Fähigkeiten benötigen sichere Fallbacks statt fest codierter Annahmen."],
+      ["VM ist Vorstufe, nicht Kompatibilitätsnachweis", "QEMU und OVMF bleiben wichtige reproduzierbare Testumgebungen. Eine erfolgreiche VM-Prüfung belegt jedoch nicht, dass unterschiedliche reale PCs automatisch unterstützt werden."],
+      ["Release-Gate Hardwarematrix", "Vor einer breiten Veröffentlichung sind dokumentierte Tests auf verschiedenen Intel- und AMD-Plattformen sowie unterschiedlichen Grafik-, Netzwerk-, Speicher- und Displayklassen vorgesehen."]
+    ]
   },
   {
     "date": "2026-07-22",
+    "modified": "2026-07-23",
     "code": "BOOT-POINTER-01",
     "state": "VERIFIED",
+    "slug": "efi-manager-maussteuerung",
     "title": "Mausgesteuerter EFI-Manager abgenommen",
-    "summary": "Hover, Linksklick, flüssige Kartenhebung und animierte Signalstruktur wurden in OVMF real geprüft."
+    "summary": "Hover, Linksklick, flüssige Kartenhebung und animierte Signalstruktur wurden in OVMF real geprüft.",
+    "sections": [
+      ["Interaktive Systemkarten", "Der native EFI-Manager reagiert auf Zeigerbewegung und hebt das aktive Startziel visuell hervor. Ein Linksklick wählt das erkannte System; Tastatur und Enter bleiben als gleichwertiger Bedienpfad erhalten."],
+      ["Bewegte Systemoberfläche", "Signalstruktur, Linien und Farbfelder sind nicht als statisches Hintergrundbild eingebaut. Die Preboot-Oberfläche reagiert sichtbar auf Auswahl und Countdown, ohne nicht vorhandene Betriebssysteme oder Hardwaredaten zu erfinden."],
+      ["OVMF-Prüfung", "Der Bedienpfad wurde in einer kontrollierten UEFI-VM mit OVMF geprüft. Reale Firmwarevarianten und unterschiedliche Eingabegeräte bleiben Bestandteil der späteren Hardwarematrix."]
+    ]
   },
   {
     "date": "2026-07-22",
+    "modified": "2026-07-23",
     "code": "ISO-ENG-03",
     "state": "ENGINEERING",
+    "slug": "installer-iso-intern-verifiziert",
     "title": "Neue Installer-ISO intern verifiziert",
-    "summary": "BIOS-/UEFI-Struktur, fixturefreie EFI-Identität und Medienstart bis zum Netzwerk-Preflight bestanden. Die ISO wird noch nicht öffentlich angeboten."
+    "summary": "BIOS-/UEFI-Struktur, fixturefreie EFI-Identität und Medienstart bis zum Netzwerk-Preflight bestanden. Die ISO wird noch nicht öffentlich angeboten.",
+    "sections": [
+      ["Kontrollierter Medienstart", "Der Engineering-Build wurde als bootfähiges Installationsmedium erzeugt und bis zum vorgesehenen Installer-Preflight geprüft. Netzwerk, Konto und Zielsystem gehören zum geführten Installationsablauf."],
+      ["Dynamische Identität statt Testdaten", "Bootziele und sichtbare Systeminformationen dürfen nicht aus fest eingebauten Fixtures stammen. Die EFI-Identität wird aus tatsächlich vorhandenen Startpfaden gebildet."],
+      ["Noch keine öffentliche Freigabe", "Der erfolgreiche interne Start ist kein vollständiger Installations- und Recoverynachweis. Partitionierung, reale Hardware, Secure Boot, Rollback und Wiederherstellung bleiben offene Freigabebedingungen."]
+    ]
   },
   {
     "date": "2026-07-20",
+    "modified": "2026-07-23",
     "code": "RUNTIME-02",
     "state": "VERIFIED",
+    "slug": "native-jarvis-laufzeit",
     "title": "Native JARVIS-Laufzeit",
-    "summary": "Eigener Login-Supervisor, Unified Shell, Frame Core, System Control und echte Telemetrie wurden in der isolierten Entwicklungsumgebung abgenommen."
+    "summary": "Eigener Login-Supervisor, Unified Shell, Frame Core, System Control und echte Telemetrie wurden in der isolierten Entwicklungsumgebung abgenommen.",
+    "sections": [
+      ["Zusammenhängender Laufzeitpfad", "Anmeldung und Systemoberfläche wurden so verbunden, dass JARVIS nach erfolgreicher Authentifizierung in die eigene Laufzeit wechselt. Passwort, Fingerprint und Recovery werden als getrennte, prüfbare Pfade behandelt."],
+      ["Unified Shell und Anwendungen", "Die feste JARVIS-Shell bleibt der Systemkern, während Programme als eigene Fenster geöffnet, gewechselt, minimiert, maximiert und geschlossen werden können. Der Frame Core stellt dabei die gemeinsame Designsprache bereit."],
+      ["Reale Telemetrie", "CPU, RAM, Netzwerk, Speicher, Energie und verfügbare Sensorwerte werden aus lokalen Systemschnittstellen bezogen. Nicht verfügbare Messwerte müssen als N/A sichtbar bleiben."]
+    ]
   }
 ]
