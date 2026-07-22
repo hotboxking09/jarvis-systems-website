@@ -1,0 +1,20 @@
+{
+  "as_of": "2026-07-22",
+  "product_stage": "UEFI Engineering Candidate",
+  "public_download": false,
+  "distribution_target": "Allgemeine x86-64-PCs mit UEFI/ACPI und Linux-Unterstützung",
+  "verified": [
+    "Nativer JARVIS EFI Boot Manager",
+    "Maus- und Tastatursteuerung im Preboot",
+    "Installer-Medienstart in OVMF",
+    "Eigener Login-/Shell-Pfad",
+    "Echte Laufzeittelemetrie"
+  ],
+  "release_gates": [
+    "Frische Installation der aktuellen ISO-Revision",
+    "Breite reale Hardwarematrix",
+    "Secure-Boot-Vertrauenspfad",
+    "Legacy-BIOS-Lauf",
+    "Recovery- und Offline-Matrix"
+  ]
+}

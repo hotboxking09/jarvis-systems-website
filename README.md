@@ -1,27 +1,8 @@
-# Jarvis Systems Website
+# JARVIS SYSTEM — generated website deployment
 
-Einfache Startseite mit HTML, CSS und JavaScript. Das Projekt ist für GitHub
-und Cloudflare Pages vorbereitet.
+This public repository contains only generated static website output. The full
+authoring project and operating-system sources are not published here.
 
-## Lokal starten
-
-```powershell
-pnpm install
-pnpm dev
-```
-
-## Cloudflare Pages
-
-Empfohlene Einstellungen für die GitHub-Integration:
-
-- Production branch: `main`
-- Framework preset: `None`
-- Build command: leer lassen
-- Build output directory: `public`
-- Root directory: `/`
-
-Alternativ ist nach der Cloudflare-Anmeldung ein direkter Upload möglich:
-
-```powershell
-pnpm deploy
-```
+Copyright © 2026 JARVIS SYSTEM rights holder. All rights reserved. No reuse
+licence and no operating-system ISO are provided. See `LICENSE.md` and
+`RIGHTS_AND_RELEASE_POLICY.md`.

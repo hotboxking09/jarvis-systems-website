@@ -1,0 +1,30 @@
+[
+  {
+    "date": "2026-07-22",
+    "code": "PORTABILITY-01",
+    "state": "CONFIRMED",
+    "title": "Hardwareportabilität verbindlich gemacht",
+    "summary": "JARVIS SYSTEM wird für unterschiedliche reale x86-64-PCs gebaut. VM-Erfolge bleiben Vorstufen; eine reale Hardwarematrix ist Release-Pflicht."
+  },
+  {
+    "date": "2026-07-22",
+    "code": "BOOT-POINTER-01",
+    "state": "VERIFIED",
+    "title": "Mausgesteuerter EFI-Manager abgenommen",
+    "summary": "Hover, Linksklick, flüssige Kartenhebung und animierte Signalstruktur wurden in OVMF real geprüft."
+  },
+  {
+    "date": "2026-07-22",
+    "code": "ISO-ENG-03",
+    "state": "ENGINEERING",
+    "title": "Neue Installer-ISO intern verifiziert",
+    "summary": "BIOS-/UEFI-Struktur, fixturefreie EFI-Identität und Medienstart bis zum Netzwerk-Preflight bestanden. Die ISO wird noch nicht öffentlich angeboten."
+  },
+  {
+    "date": "2026-07-20",
+    "code": "RUNTIME-02",
+    "state": "VERIFIED",
+    "title": "Native JARVIS-Laufzeit",
+    "summary": "Eigener Login-Supervisor, Unified Shell, Frame Core, System Control und echte Telemetrie wurden in der isolierten Entwicklungsumgebung abgenommen."
+  }
+]

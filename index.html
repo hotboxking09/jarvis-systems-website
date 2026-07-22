@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="de" data-release-state="public-release">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#02060a">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="JARVIS SYSTEM ist ein unabhängiges Betriebssystemprojekt mit eigener Boot-, Login-, Shell- und Systemoberfläche.">
+  <meta name="author" content="Oliver">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JARVIS SYSTEM // Ein Betriebssystemprojekt von Oliver">
+  <meta property="og:description" content="Ein unabhängiges Betriebssystemprojekt mit eigener Boot-, Login-, Shell- und Systemoberfläche.">
+  <meta property="og:image" content="https://hotboxking09.github.io/jarvis-systems-website/assets/og-card.svg">
+  <meta property="og:url" content="https://hotboxking09.github.io/jarvis-systems-website/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://hotboxking09.github.io/jarvis-systems-website/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="styles.css">
+  <title>JARVIS SYSTEM // Oliver's Operating System Project</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas>
+  <div class="noise-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="JARVIS SYSTEM Startseite">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>JARVIS</strong><small>SYSTEM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENÜ</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#system">System</a>
+        <a href="#identity">Identity</a>
+        <a href="#status">Status</a>
+        <a href="#updates">Updates</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#about">Story</a>
+        <a href="#community">Community</a>
+      </div>
+    </nav>
+    <div class="header-state"><span></span> ENGINEERING ONLINE</div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">INDEPENDENT OPERATING SYSTEM PROJECT // CH-2026</p>
+        <h1 id="hero-title"><span>JARVIS</span> SYSTEM</h1>
+        <p class="hero-lead">Ein Betriebssystemprojekt von Oliver. Entwickelt für reale PCs – mit eigener Bootoberfläche, sicherem Zugang, Unified Shell und einer klaren technischen Identität.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#system">SYSTEM ENTDECKEN <span>→</span></a>
+          <a class="button button-ghost" href="#updates">ENTWICKLUNGSLOG</a>
+        </div>
+        <div class="truth-strip" role="note">
+          <span>TRANSPARENT FOUNDATION</span>
+          <p>Aktuell Linux-/Ubuntu-basiert. Kein fertiger eigener Kernel und noch kein öffentlicher ISO-Download.</p>
+        </div>
+      </div>
+
+      <div class="hero-core reveal" aria-label="JARVIS System Core Visualisierung">
+        <div class="core-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="core-label core-label-top"><span>CORE ID</span><b>JARVIS-01</b></div>
+        <div class="core-label core-label-left"><span>STATE</span><b>ENGINEERING</b></div>
+        <div class="core-label core-label-right"><span>TARGET</span><b>REAL HARDWARE</b></div>
+        <picture class="head-frame">
+          <img src="assets/jarvis-core-head.png" width="1024" height="1024" alt="Abstraktes JARVIS-Systemkern-Symbol">
+        </picture>
+        <div class="core-scan" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-rail reveal" aria-label="Projektstatus">
+        <div><span>BUILD CHANNEL</span><b>COMMUNITY PREVIEW</b></div>
+        <div><span>PRIMARY TARGET</span><b>x86-64 / UEFI</b></div>
+        <div><span>PUBLIC ISO</span><b class="state-warn">NOT RELEASED</b></div>
+        <div><span>DATA POLICY</span><b>NO TRACKING</b></div>
+      </div>
+    </section>
+
+    <section class="system-intro section-shell section-pad" id="system" aria-labelledby="system-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 // SYSTEM DEFINITION</p>
+        <h2 id="system-title">Nicht nur ein Theme.<br><span>Ein kompletter Systemumbau.</span></h2>
+        <p>JARVIS SYSTEM ersetzt den normalen sichtbaren Weg von der Betriebssystemauswahl bis zu Anmeldung, Shell, Appsteuerung und Systemverwaltung durch eigene JARVIS-Komponenten.</p>
+      </div>
+
+      <div class="architecture-flow reveal" aria-label="JARVIS Systemarchitektur">
+        <div class="flow-node"><span>01</span><b>UEFI</b><small>Hardware & Boot</small></div>
+        <i aria-hidden="true"></i>
+        <div class="flow-node active"><span>02</span><b>JARVIS BOOT</b><small>Eigener EFI Manager</small></div>
+        <i aria-hidden="true"></i>
+        <div class="flow-node"><span>03</span><b>SYSTEM CORE</b><small>Kernel & Services</small></div>
+        <i aria-hidden="true"></i>
+        <div class="flow-node active"><span>04</span><b>SECURE ACCESS</b><small>Login & Auth</small></div>
+        <i aria-hidden="true"></i>
+        <div class="flow-node active"><span>05</span><b>UNIFIED SHELL</b><small>Command & Apps</small></div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card reveal"><span class="feature-code">BOOT-01</span><h3>Nativer EFI Manager</h3><p>Eigene sichtbare Systemauswahl mit dynamischer Hardwareerkennung, Maus, Tastatur und ehrlichen Prebootdaten.</p><b class="status-chip confirmed">VERIFIED</b></article>
+        <article class="feature-card reveal"><span class="feature-code">AUTH-02</span><h3>Secure Access</h3><p>Eigener PAM-/Fingerprint-Supervisor, durchgehender Login-Handoff und klar definierte Recoverypfade.</p><b class="status-chip confirmed">VERIFIED IN LAB</b></article>
+        <article class="feature-card reveal"><span class="feature-code">SHELL-04</span><h3>Unified Shell</h3><p>Feste JARVIS-Oberfläche mit Command Core, Systemansichten, Appsteuerung und eigenem Frame Core.</p><b class="status-chip confirmed">VERIFIED IN LAB</b></article>
+        <article class="feature-card reveal"><span class="feature-code">DATA-03</span><h3>Echte Telemetrie</h3><p>CPU, RAM, Netzwerk, Speicher, Energie und Sensoren aus realen Quellen. Unbekanntes bleibt sichtbar N/A.</p><b class="status-chip confirmed">REAL SOURCES</b></article>
+        <article class="feature-card reveal"><span class="feature-code">HW-01</span><h3>Hardwareportabilität</h3><p>Keine Laptop-Maßanfertigung: Capability Discovery, sichere Fallbacks und eine verbindliche Bare-Metal-Matrix.</p><b class="status-chip attention">RELEASE GATE</b></article>
+        <article class="feature-card reveal"><span class="feature-code">DEV-01</span><h3>Development Platform</h3><p>Das langfristige Ziel ist ein System für Entwicklung, Systemengineering und kontrollierbare technische Arbeit.</p><b class="status-chip active">IN DEVELOPMENT</b></article>
+      </div>
+    </section>
+
+    <section class="identity-section section-shell section-pad" id="identity" aria-labelledby="identity-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 // OFFICIAL VISUAL IDENTITY</p>
+        <h2 id="identity-title">Zwei Gesichter.<br><span>Ein Systemkern.</span></h2>
+        <p>Beide Köpfe gehören zur visuellen Identität des Projekts. Der geometrische Core steht für Präzision und Systemlogik. Der metallische Guardian bewacht die Grenze zwischen Hardware, Bootauswahl und JARVIS OS.</p>
+      </div>
+      <div class="identity-stage">
+        <article class="identity-face identity-guardian reveal">
+          <div class="identity-image"><img src="assets/jarvis-boot-guardian.png" width="1920" height="1080" alt="Metallischer JARVIS Boot Guardian mit cyan-, magenta- und rotfarbenen Systemlinien"></div>
+          <div class="identity-caption"><span>IDENTITY // 01</span><h3>BOOT GUARDIAN</h3><p>Die sichtbare Instanz des nativen Bootmanagers – dort, wo reale Hardware erkannt und das Zielsystem gewählt wird.</p><b>PREBOOT DOMAIN</b></div>
+        </article>
+        <article class="identity-face identity-core reveal">
+          <div class="identity-image"><img src="assets/jarvis-core-head.png" width="1024" height="1024" alt="Geometrischer JARVIS System Core in Cyan, Grün und Magenta"></div>
+          <div class="identity-caption"><span>IDENTITY // 02</span><h3>SYSTEM CORE</h3><p>Die technische Signatur für Laufzeit, Login, Shell, Dokumentation und den zusammenhängenden JARVIS-Auftritt.</p><b>RUNTIME DOMAIN</b></div>
+        </article>
+      </div>
+      <div class="identity-rule reveal"><span>BOOT</span><i></i><b>ONE DESIGN LANGUAGE</b><i></i><span>RUNTIME</span></div>
+    </section>
+
+    <section class="status-section section-shell section-pad" id="status" aria-labelledby="status-title">
+      <div class="section-heading compact reveal">
+        <p class="eyebrow">03 // VERIFIED PROJECT STATE</p>
+        <h2 id="status-title">Status ohne Marketing-Fakes.</h2>
+        <p>Alle Angaben haben einen Standzeitpunkt. Animationen sind Gestaltung – technische Aussagen basieren auf dokumentierten Projektprüfungen.</p>
+      </div>
+      <div class="status-console reveal">
+        <div class="console-top"><span>JARVIS PROJECT MATRIX</span><span>SNAPSHOT // 22.07.2026</span></div>
+        <div class="console-grid">
+          <div class="matrix-list">
+            <div><span>NATIVE EFI MANAGER</span><b class="ok">VERIFIED</b></div>
+            <div><span>POINTER / KEYBOARD</span><b class="ok">VERIFIED</b></div>
+            <div><span>INSTALLER MEDIA BOOT</span><b class="ok">VERIFIED</b></div>
+            <div><span>OWN LOGIN / SHELL</span><b class="ok">VM VERIFIED</b></div>
+            <div><span>PUBLIC ISO RELEASE</span><b class="hold">LOCKED</b></div>
+            <div><span>SECURE BOOT TRUST</span><b class="open">OPEN GATE</b></div>
+            <div><span>REAL HARDWARE MATRIX</span><b class="open">IN PREPARATION</b></div>
+          </div>
+          <div class="signal-monitor" aria-label="Dekorative Projektsignal-Visualisierung">
+            <div class="monitor-grid" aria-hidden="true"></div>
+            <svg viewBox="0 0 720 260" role="img" aria-label="Dekorative Signalstruktur, keine Telemetrie">
+              <path class="trace trace-cyan" d="M0 190 C80 188 92 188 130 188 S178 54 224 54 270 178 316 178 366 106 414 106 454 154 502 154 542 70 586 70 630 132 720 132"/>
+              <path class="trace trace-magenta" d="M0 218 C70 218 105 92 154 92 204 92 228 210 280 210 330 210 358 128 408 128 458 128 492 202 542 202 596 202 630 102 720 102"/>
+              <path class="trace trace-red" d="M0 232 H118 L148 164 H240 L274 226 H384 L420 146 H520 L556 214 H720"/>
+            </svg>
+            <p>ANIMATED SIGNAL FABRIC // DECORATIVE, NOT TELEMETRY</p>
+          </div>
+        </div>
+      </div>
+      <div class="download-lock reveal" role="note">
+        <div class="lock-icon" aria-hidden="true"></div>
+        <div><span>DISTRIBUTION CONTROL</span><h3>Keine öffentliche ISO – noch nicht.</h3><p>Interne Engineering-Kandidaten werden geprüft und geschützt. Ein Download wird erst geöffnet, wenn Installation, Recovery, Secure Boot und Hardwarematrix den Freigabestandard erfüllen.</p></div>
+        <b>ACCESS LOCKED</b>
+      </div>
+    </section>
+
+    <section class="updates-section section-shell section-pad" id="updates" aria-labelledby="updates-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">04 // DEVELOPMENT TRANSMISSIONS</p>
+        <h2 id="updates-title">Updates aus dem Systembau.</h2>
+        <p>Keine leeren Ankündigungen: nachvollziehbare Schritte, ehrliche Grenzen und der aktuelle technische Stand.</p>
+      </div>
+      <div class="update-feed" id="update-feed" aria-live="polite"><p class="loading">UPDATES WERDEN GELADEN...</p></div>
+    </section>
+
+    <section class="roadmap-section section-shell section-pad" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="section-heading compact reveal">
+        <p class="eyebrow">05 // ROADMAP</p>
+        <h2 id="roadmap-title">Vom Engineering Candidate zum echten Release.</h2>
+      </div>
+      <ol class="roadmap-grid">
+        <li class="done reveal"><span>01</span><div><b>FOUNDATION</b><h3>Design, Shell und Runtime</h3><p>Eigene Systemidentität, native Anmeldung, Unified Shell und Systemflächen.</p></div></li>
+        <li class="done reveal"><span>02</span><div><b>BOOT & INSTALL</b><h3>EFI und Community Installer</h3><p>Eigener Bootmanager und installierbares Engineering-Medium.</p></div></li>
+        <li class="active reveal"><span>03</span><div><b>HARDWARE GATE</b><h3>Reale PC-Matrix</h3><p>Intel, AMD, NVIDIA, Netzwerk, Speicher, Displays und Eingabe auf Bare Metal.</p></div></li>
+        <li class="open reveal"><span>04</span><div><b>TRUST & RECOVERY</b><h3>Secure Boot und Rückwege</h3><p>Signaturpfad, Offline-Reparatur, Updates und belastbarer Rollback.</p></div></li>
+        <li class="open reveal"><span>05</span><div><b>COMMUNITY RELEASE</b><h3>Kontrollierte Veröffentlichung</h3><p>Dokumentation, Testerprogramm, Downloadfreigabe und Community-Infrastruktur.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="about-section section-shell section-pad" id="about" aria-labelledby="about-title">
+      <div class="story-heading reveal">
+        <p class="eyebrow">06 // THE STORY BEHIND JARVIS SYSTEMS</p>
+        <h2 id="about-title">Nicht im Rechenzentrum begonnen.<br><span>Sondern im echten Leben.</span></h2>
+      </div>
+      <div class="about-layout">
+        <div class="founder-card reveal">
+          <div class="founder-id"><span>FOUNDER ID</span><b>OLIVER-FRANK PRISTAFF</b><small>CREATOR // PRODUCT LEAD</small></div>
+          <div class="founder-avatar" aria-hidden="true">O</div>
+          <dl class="founder-facts">
+            <div><dt>ORIGIN</dt><dd>SWITZERLAND</dd></div>
+            <div><dt>GENERATION</dt><dd>2003</dd></div>
+            <div><dt>FOUNDATION</dt><dd>CRAFT + TECHNOLOGY</dd></div>
+          </dl>
+          <div class="founder-lines"><i></i><i></i><i></i></div>
+        </div>
+        <div class="about-copy reveal">
+          <p class="story-intro">Mein Name ist Oliver-Frank Pristaff. Ich bin 22 Jahre alt, komme aus der Schweiz und bin der Gründer des Projekts JARVIS Systems.</p>
+          <p>Mein Weg begann nicht in einem Informatiklabor, sondern im Handwerk. Nach meiner Ausbildung arbeitete ich als Maurer, besonders im Bereich Kundenmaurerarbeiten. Dort lernte ich, dass ein tragfähiges Ergebnis nicht durch grosse Worte entsteht, sondern durch Planung, Genauigkeit und viele sauber ausgeführte Schritte.</p>
+          <p>Vier Jahre meines Lebens verbrachte ich in einem Heim. Diese Zeit war schwer und hat mich geprägt. Sie gehört zu meiner Geschichte, aber sie definiert nicht meine Grenzen. Ich lernte, weiterzumachen, Verantwortung für meinen eigenen Weg zu übernehmen und aus schwierigen Ausgangslagen etwas Eigenes aufzubauen.</p>
+          <p>Technik wurde zu dem Ort, an dem aus Neugier echtes Verständnis entstand. Neben der Arbeit baute ich Computer zusammen, richtete Netzwerke und Server ein und beschäftigte mich immer tiefer mit Hardware, Linux, Windows, Virtualisierung, Heimservern, Datacentern, künstlicher Intelligenz und Softwareentwicklung. Ich wollte nie nur einen Computer besitzen. Ich wollte verstehen, wie er wirklich funktioniert.</p>
+        </div>
+      </div>
+      <div class="story-grid">
+        <article class="story-chapter reveal"><span>01</span><p class="eyebrow">WHY JARVIS SYSTEMS</p><h3>Warum bestehende Grenzen übernehmen?</h3><p>Mit jedem eigenen Projekt entstand eine neue Umgebung. Daraus entwickelte sich eine grössere Frage: Warum alle Ideen an bestehende Systeme anpassen, wenn stattdessen eine gemeinsame eigene Plattform entstehen kann? Diese Vision erhielt einen Namen: <strong>JARVIS Systems.</strong></p></article>
+        <article class="story-chapter reveal"><span>02</span><p class="eyebrow">THE OPERATING SYSTEM</p><h3>Nicht einfach „ein weiteres Linux“.</h3><p>Mein Ziel ist nicht, Linux nur anders aussehen zu lassen. JARVIS OS soll sich als vollständiges eigenes Produkt anfühlen – mit eigener Bootumgebung, Anmeldung, Shell, Systemsteuerung und Designsprache. Ein System, das nicht um Programme herum gebaut wird, sondern um den Menschen, der damit arbeitet.</p></article>
+        <article class="story-chapter reveal"><span>03</span><p class="eyebrow">ENGINEERING PHILOSOPHY</p><h3>Ehrlich, präzise und nachvollziehbar.</h3><p>Wenn Daten vorhanden sind, zeigt JARVIS sie. Wenn etwas nicht messbar ist, steht dort <strong>N/A</strong> statt einer erfundenen Zahl. Das System soll technisch und kraftvoll wirken, aber niemals vortäuschen, weiter zu sein, als es wirklich ist. Jede Funktion soll gebaut, geprüft und dokumentiert werden.</p></article>
+      </div>
+      <div class="ecosystem-panel reveal">
+        <div><p class="eyebrow">THE LONG-TERM VISION</p><h3>Vom Betriebssystem zum Ökosystem.</h3><p>JARVIS Systems soll langfristig eine gemeinsame Plattform für eigenständige Produkte werden. Alle Bereiche teilen dieselbe Philosophie, dieselbe technische Handschrift und dieselbe visuelle Identität.</p></div>
+        <ul aria-label="Geplantes JARVIS-Ökosystem"><li>JARVIS OS</li><li>Entwicklerwerkzeuge</li><li>Eigene Shell & Systemsteuerung</li><li>Boot- & Hardwareprojekte</li><li>Serverlösungen</li><li>Webseiten & Anwendungen</li><li>Spiele & Entwicklungswerkzeuge</li><li>Dokumentationssysteme</li></ul>
+      </div>
+      <blockquote class="founder-motto reveal"><span>PERSONAL MOTTO</span>„Grosse Projekte entstehen nicht durch Perfektion am ersten Tag, sondern durch tausende kleine Schritte, die konsequent in dieselbe Richtung gehen.“<cite>— Oliver-Frank Pristaff</cite></blockquote>
+    </section>
+
+    <section class="community-section section-shell section-pad" id="community" aria-labelledby="community-title">
+      <div class="community-panel reveal">
+        <div>
+          <p class="eyebrow">07 // COMMUNITY UPLINK</p>
+          <h2 id="community-title">Sei dabei, bevor es öffentlich wird.</h2>
+          <p>Der Community-Discord wird als nächster Kommunikationsknoten aufgebaut: Updates, Testgruppen, Hardwareberichte, Feedback und transparente Entwicklungsdiskussionen.</p>
+        </div>
+        <div class="community-actions">
+          <span class="status-chip attention">DISCORD // IN PREPARATION</span>
+          <a class="button button-ghost" href="mailto:opristaff@gmail.com">PROJEKT KONTAKTIEREN →</a>
+          <a class="button button-ghost is-disabled" href="#" aria-disabled=&quot;true&quot;>COMMUNITY LINK FOLGT</a>
+          <a class="button button-ghost " href="https://github.com/hotboxking09/jarvis-systems-website" >GITHUB ÖFFNEN →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><b>JARVIS SYSTEM</b><span>INDEPENDENT ENGINEERING PROJECT</span></div>
+    <div class="footer-legal">
+      <p>© 2026 Oliver-Frank Pristaff. Alle Rechte vorbehalten. Keine ISO-Verteilung.</p>
+      <a href="legal.html">Rechte, Hinweise & Datenschutz</a>
+    </div>
+    <div class="footer-state"><span></span> PROJECT SIGNAL ACTIVE</div>
+  </footer>
+
+  <noscript><div class="noscript">JavaScript ist nur für Animationen und den Updatefeed erforderlich. Die Kerninhalte bleiben ohne Tracking statisch.</div></noscript>
+  <script src="app.js" defer></script>
+</body>
+</html>

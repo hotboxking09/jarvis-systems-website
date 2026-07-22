@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hotboxking09.github.io/jarvis-systems-website/sitemap.xml

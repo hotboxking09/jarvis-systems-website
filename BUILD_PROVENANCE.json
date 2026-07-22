@@ -1,0 +1,28 @@
+{
+  "project": "JARVIS SYSTEM Website",
+  "mode": "release",
+  "generated_utc": "2026-07-22T21:35:28+00:00",
+  "copyright": "© 2026 Oliver-Frank Pristaff. All rights reserved.",
+  "public_iso_available": false,
+  "sha256": {
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".well-known/security.txt": "3763d28f670a70604c167ea2f105f4b05bb4cd738edf850f923877eddb266805",
+    "404.html": "69fd4cf512c0c145b617ab47e1cafbafdc201c423256b27a46c88ee892febbb7",
+    "LICENSE.md": "2151d72d2b76cf4815b5cbafde03cc9275d243fac791158bbad7b1f55d717876",
+    "RIGHTS_AND_RELEASE_POLICY.md": "bcad66328e91331afeb46ee9435f373ba46f07b5727e0516f84a12297b8d8a35",
+    "THIRD_PARTY_NOTICES.md": "713f27e3b875e10f0242c5368c3935b5700fdeebd629163b4db764e1a9daa8f9",
+    "app.js": "bc02dd13be65d1b51e827d4a4d2e462b56a0ab61970239b35bb7682337857e73",
+    "assets/favicon.svg": "c2df76e865acc4f9aab905a870c05c4e9db351dae6673e4ae9c4a8f9095e6acb",
+    "assets/jarvis-boot-guardian.png": "b5d5768937c0e9fcf705ab3a5de7d00242e262e6dabfbb8e8ac1e0f0f1054b38",
+    "assets/jarvis-core-head.png": "250cddea772d5859b5d2a9423c1220f3afc6dea1641cb89191609cfdfe3ebea7",
+    "assets/og-card.svg": "6dad79e5954ea6f55dd1f3bc3493806cc2dc01ef5ecc442ace4fc428d51be465",
+    "data/status.json": "14e41b725468a5124cc35fb55c71768ad638e3177693d2c2e09358df025486af",
+    "data/updates.json": "d04e16048b6cf2a85b0aef8bf687a5c2961c512050ab8446debfb00e52bdef96",
+    "index.html": "116d4ebc64efb9b8bde8f3a249d3e2c457c5d637f370c6a6f2e8e594e4226464",
+    "legal.html": "e5baaebd56613224ee3c0df3e663a0d7521251be814d508c1e5102d438470b73",
+    "robots.txt": "8f470615e70f721fa9446ee1a600b33df423ea3904a1a0a00fcd05880853878c",
+    "site.webmanifest": "2f92d2f9c2a794eaf4325456e2d222f7576e7c6c055370316cf22b909b4368c2",
+    "sitemap.xml": "e087ff01c17560a98fce38d0b5b587e6c6f6f7b97845cd2f492ea9307233557a",
+    "styles.css": "ee1726eb53c42840db661d03b7003160805a3f6e3aedc78ab31315fbe5964126"
+  }
+}

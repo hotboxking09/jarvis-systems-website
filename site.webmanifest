@@ -1,0 +1,16 @@
+{
+  "name": "JARVIS SYSTEM",
+  "short_name": "JARVIS",
+  "description": "JARVIS SYSTEM ist ein unabhängiges Betriebssystemprojekt mit eigener Boot-, Login-, Shell- und Systemoberfläche.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#010407",
+  "theme_color": "#02060a",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

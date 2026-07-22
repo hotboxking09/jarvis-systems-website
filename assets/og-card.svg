@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="r"><stop stop-color="#0b3b4a"/><stop offset="1" stop-color="#010407"/></radialGradient>
+    <linearGradient id="t"><stop stop-color="#b4fbff"/><stop offset=".55" stop-color="#4ff4ff"/><stop offset="1" stop-color="#8b69ff"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#4ff4ff" stroke-opacity=".08"/></pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#r)"/><rect width="1200" height="630" fill="url(#grid)"/>
+  <path d="M0 80h350l90 90h240l80-80h440M0 540h260l65-65h280l100 70h495" fill="none" stroke="#ff2bd6" stroke-opacity=".45"/>
+  <circle cx="950" cy="315" r="205" fill="none" stroke="#4ff4ff" stroke-opacity=".3"/><circle cx="950" cy="315" r="170" fill="none" stroke="#ff2bd6" stroke-opacity=".28" stroke-dasharray="14 12"/>
+  <path d="m950 150 142 82v166l-142 82-142-82V232z" fill="#03121a" stroke="#4ff4ff" stroke-width="2"/>
+  <path d="M887 281h126l-18 42-45 23-45-23z" fill="none" stroke="#4ff4ff" stroke-width="6" filter="url(#glow)"/><path d="m919 291 31 16 31-16" fill="none" stroke="#b4fbff" stroke-width="8" filter="url(#glow)"/>
+  <text x="80" y="245" fill="url(#t)" font-family="Arial,sans-serif" font-size="108" font-weight="800" letter-spacing="-5">JARVIS</text>
+  <text x="82" y="330" fill="#effcff" font-family="Arial,sans-serif" font-size="70" font-weight="700" letter-spacing="15">SYSTEM</text>
+  <text x="86" y="390" fill="#88a7b3" font-family="monospace" font-size="22" letter-spacing="5">INDEPENDENT OPERATING SYSTEM PROJECT</text>
+  <text x="86" y="445" fill="#68ffb2" font-family="monospace" font-size="18" letter-spacing="4">ENGINEERING // REAL HARDWARE // TRANSPARENT</text>
+  <path d="M80 120h260" stroke="#4ff4ff" stroke-width="3" filter="url(#glow)"/><path d="M80 500h500" stroke="#ff2bd6" stroke-width="2"/>
+</svg>
