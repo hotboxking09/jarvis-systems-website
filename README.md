@@ -1,5 +1,8 @@
 # JARVIS SYSTEM — generated website deployment
 
+**Official website:** [jarvisserver.org](https://jarvisserver.org)<br>
+**Founder and developer:** [Oliver-Frank Pristaff](https://github.com/hotboxking09)
+
 This public repository contains only generated static website output. The full
 authoring project and operating-system sources are not published here.
 
