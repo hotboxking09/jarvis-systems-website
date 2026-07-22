@@ -1,12 +1,12 @@
 {
   "project": "JARVIS SYSTEM Website",
   "mode": "release",
-  "generated_utc": "2026-07-22T21:35:28+00:00",
+  "generated_utc": "2026-07-22T21:53:39+00:00",
   "copyright": "© 2026 Oliver-Frank Pristaff. All rights reserved.",
   "public_iso_available": false,
   "sha256": {
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    ".well-known/security.txt": "3763d28f670a70604c167ea2f105f4b05bb4cd738edf850f923877eddb266805",
+    ".well-known/security.txt": "08d59576e57246608c7c0c20a0e825223733d66370420d4478219c5f9ff91228",
     "404.html": "69fd4cf512c0c145b617ab47e1cafbafdc201c423256b27a46c88ee892febbb7",
     "LICENSE.md": "2151d72d2b76cf4815b5cbafde03cc9275d243fac791158bbad7b1f55d717876",
     "RIGHTS_AND_RELEASE_POLICY.md": "bcad66328e91331afeb46ee9435f373ba46f07b5727e0516f84a12297b8d8a35",
@@ -18,11 +18,11 @@
     "assets/og-card.svg": "6dad79e5954ea6f55dd1f3bc3493806cc2dc01ef5ecc442ace4fc428d51be465",
     "data/status.json": "14e41b725468a5124cc35fb55c71768ad638e3177693d2c2e09358df025486af",
     "data/updates.json": "d04e16048b6cf2a85b0aef8bf687a5c2961c512050ab8446debfb00e52bdef96",
-    "index.html": "116d4ebc64efb9b8bde8f3a249d3e2c457c5d637f370c6a6f2e8e594e4226464",
-    "legal.html": "e5baaebd56613224ee3c0df3e663a0d7521251be814d508c1e5102d438470b73",
-    "robots.txt": "8f470615e70f721fa9446ee1a600b33df423ea3904a1a0a00fcd05880853878c",
+    "index.html": "d13fb80e2dce262b95bad42a28dd515fefd41efa7256650d8056b6d91ca39014",
+    "legal.html": "54d21983ff0f51f303ad5d81ffdf4c2e71a3b2dcbec4c1d6abeaadaee98dfe93",
+    "robots.txt": "8dec41836c1494b6bdb0d855d35d7b77a4c2e78cff3ca9c44e5a973b0d7b35e4",
     "site.webmanifest": "2f92d2f9c2a794eaf4325456e2d222f7576e7c6c055370316cf22b909b4368c2",
-    "sitemap.xml": "e087ff01c17560a98fce38d0b5b587e6c6f6f7b97845cd2f492ea9307233557a",
+    "sitemap.xml": "2ba80319732eb60709ae494903c877da54e2e7754565f4b1d68ae2133f515058",
     "styles.css": "ee1726eb53c42840db661d03b7003160805a3f6e3aedc78ab31315fbe5964126"
   }
 }

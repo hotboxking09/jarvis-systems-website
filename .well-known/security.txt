@@ -1,4 +1,4 @@
 Contact: mailto:opristaff@gmail.com
-Canonical: https://hotboxking09.github.io/jarvis-systems-website/.well-known/security.txt
+Canonical: https://jarvisserver.org/.well-known/security.txt
 Expires: 2027-07-22T00:00:00.000Z
 Preferred-Languages: de, en
