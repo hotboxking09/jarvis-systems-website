@@ -1,7 +1,7 @@
 {
   "project": "JARVIS SYSTEM Website",
   "mode": "release",
-  "generated_utc": "2026-07-22T22:32:58+00:00",
+  "generated_utc": "2026-07-22T22:35:04+00:00",
   "copyright": "© 2026 Oliver-Frank Pristaff. All rights reserved.",
   "public_iso_available": false,
   "sha256": {
@@ -17,6 +17,7 @@
     "assets/jarvis-core-head.png": "250cddea772d5859b5d2a9423c1220f3afc6dea1641cb89191609cfdfe3ebea7",
     "assets/og-card.png": "50ea432277c72c020a66e984674df100ef40c4c9b15d36a74598f6243d5ebc57",
     "assets/og-card.svg": "6dad79e5954ea6f55dd1f3bc3493806cc2dc01ef5ecc442ace4fc428d51be465",
+    "cbaebc5922a708168d107a553b7f13203032970f027967f47ec49a986b7b4319.txt": "7a25621bacb400315ed44dc9a367d3483e7bc84e71dba9ce33c86d617c39342d",
     "data/status.json": "14e41b725468a5124cc35fb55c71768ad638e3177693d2c2e09358df025486af",
     "data/updates.json": "d04e16048b6cf2a85b0aef8bf687a5c2961c512050ab8446debfb00e52bdef96",
     "index.html": "9ab218eac47a3112386914e8f2a13a995daee955085bc13e18141fc32db52af5",
