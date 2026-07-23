@@ -2,15 +2,55 @@
   {
     "date": "2026-07-23",
     "modified": "2026-07-23",
+    "code": "COMMUNITY-02",
+    "state": "VERIFIED",
+    "slug": "discord-onboarding-automatisiert",
+    "title": "Discord-Onboarding und Rollenmatrix automatisiert",
+    "summary": "Die JARVIS-Community besitzt jetzt einen bereinigten Kanal- und Rollenaufbau, eine verpflichtende Interessenabfrage vor dem Beitritt und automatische, nicht privilegierte Rollenzuweisung.",
+    "sections": [
+      [
+        "Legacy-Struktur vollständig entfernt",
+        "Alle alten Kanäle und Kategorien wurden gelöscht. Von den alten editierbaren Rollen blieb auf ausdrücklichen Wunsch nur Member für bestehende Mitglieder erhalten. Die sichtbare Serverstruktur besteht jetzt ausschliesslich aus den neuen JARVIS-Bereichen System Entry, JARVIS SYSTEM, Developer Core, Test Lab, Community, Gaming, Voice Uplink und Staff Core."
+      ],
+      [
+        "Pflichtabfrage vor dem Beitritt",
+        "Neue Mitglieder beantworten vor dem Beitritt die Frage Wofür interessierst du dich? Mehrfachauswahl ist erlaubt. JARVIS OS & Entwicklung, Testen & Hardware sowie Community & Gaming schalten jeweils passende Kanäle frei. Der neue Willkommensbereich und der Discord Server Guide bilden den gemeinsamen Einstieg."
+      ],
+      [
+        "Rollen ohne manuelle Freischaltung",
+        "Jede Auswahl vergibt automatisch COMMUNITY MEMBER und zusätzlich OS & DEVELOPMENT, HARDWARE & TESTING oder COMMUNITY & GAMING. Diese Interessenrollen besitzen keine Moderations- oder Administratorrechte. Die Auswahl kann später über Kanäle & Rollen geändert werden."
+      ],
+      [
+        "Weniger Bots und kleinere Berechtigungsfläche",
+        "Member Count, ServerStats, Astro, Streamcord, Dyno, Graphite und TikTok wurden entfernt. ProBot bleibt für Moderationsunterstützung, DISBOARD.org und Discord Me für Serververzeichnisse. Für die Rollenautomatik wird kein eigener Bot benötigt, weil Discords natives Community-Onboarding die Aufgabe dauerhaft übernimmt."
+      ],
+      [
+        "Website und Discord gegenseitig verbunden",
+        "Die offizielle Community-Seite unter jarvisserver.org/community/ dokumentiert Aufbau, Automatik, Sicherheitsgrenzen und Release-Status und führt über den permanenten Einladungslink zum Server. Im Discord verweisen Willkommens-, Rollen- und Updateinformationen zurück auf die offizielle Website und das öffentliche Entwicklungslog."
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "modified": "2026-07-23",
     "code": "COMMUNITY-01",
     "state": "ONLINE",
     "slug": "discord-community-online",
     "title": "Offizielle JARVIS-Community ist online",
     "summary": "Der Discord-Server von JARVIS SYSTEM ist mit klaren Bereichen für Entwicklung, Tests, Community und Gaming sowie einem sicheren Rollen- und Onboardingmodell gestartet.",
     "sections": [
-      ["Struktur statt Kanalchaos", "Der Server ist in System Entry, JARVIS SYSTEM, Developer Core, Test Lab, Community, Gaming, Voice Uplink und einen privaten Staff Core gegliedert. Neue Mitglieder wählen beim Einstieg ihre Interessen und erhalten dadurch eine verständliche Kanalauswahl."],
-      ["Berechtigungen mit klaren Grenzen", "Administration, Moderation, Entwicklung, Tests und Communityrollen sind getrennt. Bot-Administratorrechte wurden entfernt; Moderationsrechte bleiben auf ihre Aufgabe begrenzt. Sicherheitskanäle und interne Entwicklung liegen in einem nicht öffentlichen Staff-Bereich."],
-      ["Community ohne vorzeitige ISO-Freigabe", "Interessierte können Updates verfolgen, Feedback geben, Fehler strukturiert melden und sich über Hardware, Entwicklung oder Gaming austauschen. Der Community-Start ändert nichts am Release-Gate: Eine JARVIS-OS-ISO wird erst nach belastbaren Installations-, Recovery- und Hardwaretests öffentlich."]
+      [
+        "Struktur statt Kanalchaos",
+        "Der Server ist in System Entry, JARVIS SYSTEM, Developer Core, Test Lab, Community, Gaming, Voice Uplink und einen privaten Staff Core gegliedert. Neue Mitglieder wählen beim Einstieg ihre Interessen und erhalten dadurch eine verständliche Kanalauswahl."
+      ],
+      [
+        "Berechtigungen mit klaren Grenzen",
+        "Administration, Moderation, Entwicklung, Tests und Communityrollen sind getrennt. Bot-Administratorrechte wurden entfernt; Moderationsrechte bleiben auf ihre Aufgabe begrenzt. Sicherheitskanäle und interne Entwicklung liegen in einem nicht öffentlichen Staff-Bereich."
+      ],
+      [
+        "Community ohne vorzeitige ISO-Freigabe",
+        "Interessierte können Updates verfolgen, Feedback geben, Fehler strukturiert melden und sich über Hardware, Entwicklung oder Gaming austauschen. Der Community-Start ändert nichts am Release-Gate: Eine JARVIS-OS-ISO wird erst nach belastbaren Installations-, Recovery- und Hardwaretests öffentlich."
+      ]
     ]
   },
   {
@@ -22,9 +62,18 @@
     "title": "JARVIS SYSTEM ist im Google-Index",
     "summary": "Domain-Property, Sitemap und HTTPS wurden bestätigt. Google führt die öffentliche Startseite nun als indexiert und für Suchergebnisse berechtigt.",
     "sections": [
-      ["Eigene Domain und verifizierte Inhaberschaft", "Die öffentliche Projektwebsite läuft unter jarvisserver.org mit erzwungenem HTTPS. Die Domain-Inhaberschaft wurde über einen dauerhaft hinterlegten DNS-TXT-Eintrag in Google Search Console bestätigt."],
-      ["Sitemap und Seitenstruktur erkannt", "Die XML-Sitemap wurde erfolgreich eingereicht. Google erkannte die Startseite und die Rechteseite. robots.txt, Canonical-URLs und strukturierte Daten zeigen auf die eigene HTTPS-Domain."],
-      ["Startseite indexiert", "Nach der URL-Prüfung und dem Indexierungsantrag meldete Google ausdrücklich: URL ist auf Google und Seite ist indexiert. Konkrete Positionen bei Suchbegriffen bleiben dynamisch und werden nicht als garantiert dargestellt."]
+      [
+        "Eigene Domain und verifizierte Inhaberschaft",
+        "Die öffentliche Projektwebsite läuft unter jarvisserver.org mit erzwungenem HTTPS. Die Domain-Inhaberschaft wurde über einen dauerhaft hinterlegten DNS-TXT-Eintrag in Google Search Console bestätigt."
+      ],
+      [
+        "Sitemap und Seitenstruktur erkannt",
+        "Die XML-Sitemap wurde erfolgreich eingereicht. Google erkannte die Startseite und die Rechteseite. robots.txt, Canonical-URLs und strukturierte Daten zeigen auf die eigene HTTPS-Domain."
+      ],
+      [
+        "Startseite indexiert",
+        "Nach der URL-Prüfung und dem Indexierungsantrag meldete Google ausdrücklich: URL ist auf Google und Seite ist indexiert. Konkrete Positionen bei Suchbegriffen bleiben dynamisch und werden nicht als garantiert dargestellt."
+      ]
     ]
   },
   {
@@ -36,9 +85,18 @@
     "title": "Hardwareportabilität verbindlich gemacht",
     "summary": "JARVIS SYSTEM wird für unterschiedliche reale x86-64-PCs gebaut. VM-Erfolge bleiben Vorstufen; eine reale Hardwarematrix ist Release-Pflicht.",
     "sections": [
-      ["Keine Massanfertigung für einen einzelnen Laptop", "Die Systemarchitektur muss Display, Eingabe, Grafik, Netzwerk, Speicher, Energieversorgung und Sensoren zur Laufzeit erkennen. Fehlende Fähigkeiten benötigen sichere Fallbacks statt fest codierter Annahmen."],
-      ["VM ist Vorstufe, nicht Kompatibilitätsnachweis", "QEMU und OVMF bleiben wichtige reproduzierbare Testumgebungen. Eine erfolgreiche VM-Prüfung belegt jedoch nicht, dass unterschiedliche reale PCs automatisch unterstützt werden."],
-      ["Release-Gate Hardwarematrix", "Vor einer breiten Veröffentlichung sind dokumentierte Tests auf verschiedenen Intel- und AMD-Plattformen sowie unterschiedlichen Grafik-, Netzwerk-, Speicher- und Displayklassen vorgesehen."]
+      [
+        "Keine Massanfertigung für einen einzelnen Laptop",
+        "Die Systemarchitektur muss Display, Eingabe, Grafik, Netzwerk, Speicher, Energieversorgung und Sensoren zur Laufzeit erkennen. Fehlende Fähigkeiten benötigen sichere Fallbacks statt fest codierter Annahmen."
+      ],
+      [
+        "VM ist Vorstufe, nicht Kompatibilitätsnachweis",
+        "QEMU und OVMF bleiben wichtige reproduzierbare Testumgebungen. Eine erfolgreiche VM-Prüfung belegt jedoch nicht, dass unterschiedliche reale PCs automatisch unterstützt werden."
+      ],
+      [
+        "Release-Gate Hardwarematrix",
+        "Vor einer breiten Veröffentlichung sind dokumentierte Tests auf verschiedenen Intel- und AMD-Plattformen sowie unterschiedlichen Grafik-, Netzwerk-, Speicher- und Displayklassen vorgesehen."
+      ]
     ]
   },
   {
@@ -50,9 +108,18 @@
     "title": "Mausgesteuerter EFI-Manager abgenommen",
     "summary": "Hover, Linksklick, flüssige Kartenhebung und animierte Signalstruktur wurden in OVMF real geprüft.",
     "sections": [
-      ["Interaktive Systemkarten", "Der native EFI-Manager reagiert auf Zeigerbewegung und hebt das aktive Startziel visuell hervor. Ein Linksklick wählt das erkannte System; Tastatur und Enter bleiben als gleichwertiger Bedienpfad erhalten."],
-      ["Bewegte Systemoberfläche", "Signalstruktur, Linien und Farbfelder sind nicht als statisches Hintergrundbild eingebaut. Die Preboot-Oberfläche reagiert sichtbar auf Auswahl und Countdown, ohne nicht vorhandene Betriebssysteme oder Hardwaredaten zu erfinden."],
-      ["OVMF-Prüfung", "Der Bedienpfad wurde in einer kontrollierten UEFI-VM mit OVMF geprüft. Reale Firmwarevarianten und unterschiedliche Eingabegeräte bleiben Bestandteil der späteren Hardwarematrix."]
+      [
+        "Interaktive Systemkarten",
+        "Der native EFI-Manager reagiert auf Zeigerbewegung und hebt das aktive Startziel visuell hervor. Ein Linksklick wählt das erkannte System; Tastatur und Enter bleiben als gleichwertiger Bedienpfad erhalten."
+      ],
+      [
+        "Bewegte Systemoberfläche",
+        "Signalstruktur, Linien und Farbfelder sind nicht als statisches Hintergrundbild eingebaut. Die Preboot-Oberfläche reagiert sichtbar auf Auswahl und Countdown, ohne nicht vorhandene Betriebssysteme oder Hardwaredaten zu erfinden."
+      ],
+      [
+        "OVMF-Prüfung",
+        "Der Bedienpfad wurde in einer kontrollierten UEFI-VM mit OVMF geprüft. Reale Firmwarevarianten und unterschiedliche Eingabegeräte bleiben Bestandteil der späteren Hardwarematrix."
+      ]
     ]
   },
   {
@@ -64,9 +131,18 @@
     "title": "Neue Installer-ISO intern verifiziert",
     "summary": "BIOS-/UEFI-Struktur, fixturefreie EFI-Identität und Medienstart bis zum Netzwerk-Preflight bestanden. Die ISO wird noch nicht öffentlich angeboten.",
     "sections": [
-      ["Kontrollierter Medienstart", "Der Engineering-Build wurde als bootfähiges Installationsmedium erzeugt und bis zum vorgesehenen Installer-Preflight geprüft. Netzwerk, Konto und Zielsystem gehören zum geführten Installationsablauf."],
-      ["Dynamische Identität statt Testdaten", "Bootziele und sichtbare Systeminformationen dürfen nicht aus fest eingebauten Fixtures stammen. Die EFI-Identität wird aus tatsächlich vorhandenen Startpfaden gebildet."],
-      ["Noch keine öffentliche Freigabe", "Der erfolgreiche interne Start ist kein vollständiger Installations- und Recoverynachweis. Partitionierung, reale Hardware, Secure Boot, Rollback und Wiederherstellung bleiben offene Freigabebedingungen."]
+      [
+        "Kontrollierter Medienstart",
+        "Der Engineering-Build wurde als bootfähiges Installationsmedium erzeugt und bis zum vorgesehenen Installer-Preflight geprüft. Netzwerk, Konto und Zielsystem gehören zum geführten Installationsablauf."
+      ],
+      [
+        "Dynamische Identität statt Testdaten",
+        "Bootziele und sichtbare Systeminformationen dürfen nicht aus fest eingebauten Fixtures stammen. Die EFI-Identität wird aus tatsächlich vorhandenen Startpfaden gebildet."
+      ],
+      [
+        "Noch keine öffentliche Freigabe",
+        "Der erfolgreiche interne Start ist kein vollständiger Installations- und Recoverynachweis. Partitionierung, reale Hardware, Secure Boot, Rollback und Wiederherstellung bleiben offene Freigabebedingungen."
+      ]
     ]
   },
   {
@@ -78,9 +154,18 @@
     "title": "Native JARVIS-Laufzeit",
     "summary": "Eigener Login-Supervisor, Unified Shell, Frame Core, System Control und echte Telemetrie wurden in der isolierten Entwicklungsumgebung abgenommen.",
     "sections": [
-      ["Zusammenhängender Laufzeitpfad", "Anmeldung und Systemoberfläche wurden so verbunden, dass JARVIS nach erfolgreicher Authentifizierung in die eigene Laufzeit wechselt. Passwort, Fingerprint und Recovery werden als getrennte, prüfbare Pfade behandelt."],
-      ["Unified Shell und Anwendungen", "Die feste JARVIS-Shell bleibt der Systemkern, während Programme als eigene Fenster geöffnet, gewechselt, minimiert, maximiert und geschlossen werden können. Der Frame Core stellt dabei die gemeinsame Designsprache bereit."],
-      ["Reale Telemetrie", "CPU, RAM, Netzwerk, Speicher, Energie und verfügbare Sensorwerte werden aus lokalen Systemschnittstellen bezogen. Nicht verfügbare Messwerte müssen als N/A sichtbar bleiben."]
+      [
+        "Zusammenhängender Laufzeitpfad",
+        "Anmeldung und Systemoberfläche wurden so verbunden, dass JARVIS nach erfolgreicher Authentifizierung in die eigene Laufzeit wechselt. Passwort, Fingerprint und Recovery werden als getrennte, prüfbare Pfade behandelt."
+      ],
+      [
+        "Unified Shell und Anwendungen",
+        "Die feste JARVIS-Shell bleibt der Systemkern, während Programme als eigene Fenster geöffnet, gewechselt, minimiert, maximiert und geschlossen werden können. Der Frame Core stellt dabei die gemeinsame Designsprache bereit."
+      ],
+      [
+        "Reale Telemetrie",
+        "CPU, RAM, Netzwerk, Speicher, Energie und verfügbare Sensorwerte werden aus lokalen Systemschnittstellen bezogen. Nicht verfügbare Messwerte müssen als N/A sichtbar bleiben."
+      ]
     ]
   }
 ]

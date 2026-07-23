@@ -7,7 +7,24 @@
     "description": "JARVIS OS ist ein unabhängiges Betriebssystemprojekt aus der Schweiz mit eigener Bootoberfläche, Anmeldung, Shell, Systemsteuerung und ehrlicher Echtzeit-Telemetrie.",
     "schema_type": "TechArticle",
     "intro": "JARVIS OS ist der Betriebssystemkern innerhalb von JARVIS SYSTEM. Das Projekt entwickelt einen durchgehenden eigenen Bedienpfad vom UEFI-Bootmanager über Anmeldung und Systemoberfläche bis zur Shell – nachvollziehbar dokumentiert und für unterschiedliche reale x86-64-PCs statt nur für eine einzelne VM.",
-    "facts": [["PROJEKTTYP", "UNABHÄNGIGES BETRIEBSSYSTEM"], ["HERKUNFT", "SCHWEIZ"], ["ZIEL", "REALE x86-64-PCs"], ["STATUS", "ENGINEERING CANDIDATE"]],
+    "facts": [
+      [
+        "PROJEKTTYP",
+        "UNABHÄNGIGES BETRIEBSSYSTEM"
+      ],
+      [
+        "HERKUNFT",
+        "SCHWEIZ"
+      ],
+      [
+        "ZIEL",
+        "REALE x86-64-PCs"
+      ],
+      [
+        "STATUS",
+        "ENGINEERING CANDIDATE"
+      ]
+    ],
     "sections": [
       {
         "id": "definition",
@@ -54,7 +71,11 @@
         "callout": "CURRENT RELEASE GATE // Keine öffentliche ISO, bis Installation, Recovery, Secure Boot und Hardwareportabilität belastbar geprüft sind."
       }
     ],
-    "related": ["technik", "entwicklung", "roadmap"]
+    "related": [
+      "technik",
+      "entwicklung",
+      "roadmap"
+    ]
   },
   {
     "slug": "technik",
@@ -64,7 +85,24 @@
     "description": "Technischer Überblick über UEFI-Bootmanager, Runtime, Unified Shell, Login, Hardwareerkennung und reale Telemetrie von JARVIS OS.",
     "schema_type": "TechArticle",
     "intro": "Die technische Architektur von JARVIS SYSTEM trennt sichtbare Produktidentität, Betriebssystemdienste und Hardwarebasis bewusst voneinander. Dadurch kann die JARVIS-Laufzeit weiterentwickelt werden, während Kernel und Treiber weiterhin einen stabilen Hardwarezugang bereitstellen.",
-    "facts": [["BOOT", "NATIVE EFI"], ["RUNTIME", "JARVIS CORE"], ["AUTH", "PAM + FINGERPRINT"], ["DATA", "REAL SOURCES"]],
+    "facts": [
+      [
+        "BOOT",
+        "NATIVE EFI"
+      ],
+      [
+        "RUNTIME",
+        "JARVIS CORE"
+      ],
+      [
+        "AUTH",
+        "PAM + FINGERPRINT"
+      ],
+      [
+        "DATA",
+        "REAL SOURCES"
+      ]
+    ],
     "sections": [
       {
         "id": "boot",
@@ -104,7 +142,11 @@
         "callout": "ENGINEERING RULE // VM-verifiziert bedeutet nicht automatisch hardwareverifiziert."
       }
     ],
-    "related": ["jarvis-os", "entwicklung", "roadmap"]
+    "related": [
+      "jarvis-os",
+      "entwicklung",
+      "roadmap"
+    ]
   },
   {
     "slug": "entwicklung",
@@ -114,7 +156,24 @@
     "description": "Einblick in den dokumentierten Entwicklungsprozess von JARVIS OS: reproduzierbare Builds, VM-Tests, Hardwaretests, Backups, Release-Gates und ehrliche Statusangaben.",
     "schema_type": "TechArticle",
     "intro": "JARVIS OS entsteht iterativ: planen, bauen, isoliert testen, Fehler reproduzieren, dokumentieren und erst danach den nächsten Bereich öffnen. Die professionelle Projektdokumentation hält Entscheidungen, Dateien, Prüfergebnisse und offene Risiken fest.",
-    "facts": [["METHODE", "ITERATIV"], ["BUILD", "REPRODUZIERBAR"], ["TEST", "VM + BARE METAL"], ["STATUS", "DOKUMENTIERT"]],
+    "facts": [
+      [
+        "METHODE",
+        "ITERATIV"
+      ],
+      [
+        "BUILD",
+        "REPRODUZIERBAR"
+      ],
+      [
+        "TEST",
+        "VM + BARE METAL"
+      ],
+      [
+        "STATUS",
+        "DOKUMENTIERT"
+      ]
+    ],
     "sections": [
       {
         "id": "workflow",
@@ -154,7 +213,11 @@
         "callout": "RELEASE STANDARD // Sauber und wiederholbar vor schnell und spektakulär."
       }
     ],
-    "related": ["technik", "roadmap", "updates"]
+    "related": [
+      "technik",
+      "roadmap",
+      "updates"
+    ]
   },
   {
     "slug": "roadmap",
@@ -164,44 +227,80 @@
     "description": "Die öffentliche JARVIS-OS-Roadmap von Foundation und Bootmanager über Hardwareportabilität, Secure Boot und Recovery bis zum kontrollierten Community-Release.",
     "schema_type": "WebPage",
     "intro": "Die Roadmap beschreibt keine Wunschliste ohne Reihenfolge. Jede Phase besitzt technische Bedingungen, die vor dem nächsten Releasezustand erfüllt sein müssen. Bereits gebaute Komponenten bleiben testpflichtig, wenn sich Installer, Hardwarebasis oder Laufzeit verändern.",
-    "facts": [["PHASE", "HARDWARE GATE"], ["PUBLIC ISO", "LOCKED"], ["NEXT", "BARE METAL"], ["GOAL", "COMMUNITY RELEASE"]],
+    "facts": [
+      [
+        "PHASE",
+        "HARDWARE GATE"
+      ],
+      [
+        "PUBLIC ISO",
+        "LOCKED"
+      ],
+      [
+        "NEXT",
+        "BARE METAL"
+      ],
+      [
+        "GOAL",
+        "COMMUNITY RELEASE"
+      ]
+    ],
     "sections": [
       {
         "id": "foundation",
         "eyebrow": "01 // FOUNDATION",
         "heading": "Systemidentität, Shell und Laufzeit",
-        "paragraphs": ["Die erste Phase etablierte die gemeinsame Designsprache, die feste Systemoberfläche, den Login-Pfad, die Unified Shell, den Frame Core und die Systemtelemetrie. Diese Grundlage ist im Labor vorhanden und wird weiterhin regressionsgetestet."],
+        "paragraphs": [
+          "Die erste Phase etablierte die gemeinsame Designsprache, die feste Systemoberfläche, den Login-Pfad, die Unified Shell, den Frame Core und die Systemtelemetrie. Diese Grundlage ist im Labor vorhanden und wird weiterhin regressionsgetestet."
+        ],
         "callout": "STATUS // FOUNDATION BUILT — CONTINUOUS REGRESSION TESTING"
       },
       {
         "id": "boot-install",
         "eyebrow": "02 // BOOT & INSTALL",
         "heading": "EFI-Manager und Community-Installer",
-        "paragraphs": ["Der native EFI-Manager, Maus- und Tastaturbedienung sowie der Installer-Medienstart wurden in OVMF geprüft. Der Installationspfad wird weiter von verbliebenen Distributionskomponenten entkoppelt und muss frische Installationen reproduzierbar abschliessen."],
-        "bullets": ["Dynamische Systemerkennung", "Interaktive Bootkarten", "Netzwerk- und Konto-Preflight", "Installations- und Recoveryprotokoll"]
+        "paragraphs": [
+          "Der native EFI-Manager, Maus- und Tastaturbedienung sowie der Installer-Medienstart wurden in OVMF geprüft. Der Installationspfad wird weiter von verbliebenen Distributionskomponenten entkoppelt und muss frische Installationen reproduzierbar abschliessen."
+        ],
+        "bullets": [
+          "Dynamische Systemerkennung",
+          "Interaktive Bootkarten",
+          "Netzwerk- und Konto-Preflight",
+          "Installations- und Recoveryprotokoll"
+        ]
       },
       {
         "id": "hardware",
         "eyebrow": "03 // ACTIVE GATE",
         "heading": "Breite Hardwareportabilität",
-        "paragraphs": ["Diese Phase ist der aktuelle Schwerpunkt. JARVIS OS muss Fähigkeiten automatisch erkennen und auf fehlende Sensoren oder Treiber sauber reagieren. Geplant sind dokumentierte Tests auf verschiedenen Intel- und AMD-Plattformen sowie unterschiedlichen Grafik-, WLAN-, LAN-, Speicher- und Displayklassen."],
+        "paragraphs": [
+          "Diese Phase ist der aktuelle Schwerpunkt. JARVIS OS muss Fähigkeiten automatisch erkennen und auf fehlende Sensoren oder Treiber sauber reagieren. Geplant sind dokumentierte Tests auf verschiedenen Intel- und AMD-Plattformen sowie unterschiedlichen Grafik-, WLAN-, LAN-, Speicher- und Displayklassen."
+        ],
         "callout": "ACTIVE // VM IST VORSTUFE, BARE METAL IST FREIGABENACHWEIS"
       },
       {
         "id": "trust",
         "eyebrow": "04 // TRUST & RECOVERY",
         "heading": "Secure Boot, Updates und belastbare Rückwege",
-        "paragraphs": ["Vor einer öffentlichen ISO müssen Signatur- und Vertrauenskette, Updatefehler, Offline-Reparatur, Rollback und Wiederherstellung geprüft werden. Nutzer dürfen nach einem fehlgeschlagenen Update oder einer fehlerhaften Konfiguration nicht ohne dokumentierten Rückweg bleiben."]
+        "paragraphs": [
+          "Vor einer öffentlichen ISO müssen Signatur- und Vertrauenskette, Updatefehler, Offline-Reparatur, Rollback und Wiederherstellung geprüft werden. Nutzer dürfen nach einem fehlgeschlagenen Update oder einer fehlerhaften Konfiguration nicht ohne dokumentierten Rückweg bleiben."
+        ]
       },
       {
         "id": "community",
         "eyebrow": "05 // COMMUNITY RELEASE",
         "heading": "Kontrollierte Testgruppe vor breiter Veröffentlichung",
-        "paragraphs": ["Der erste externe Kreis soll aus freiwilligen Testern mit klaren Voraussetzungen, Sicherungsanweisung und strukturiertem Feedback bestehen. Erst danach folgen öffentliche Dokumentation, Downloadfreigabe und eine erweiterte Community-Infrastruktur."],
+        "paragraphs": [
+          "Der erste externe Kreis soll aus freiwilligen Testern mit klaren Voraussetzungen, Sicherungsanweisung und strukturiertem Feedback bestehen. Erst danach folgen öffentliche Dokumentation, Downloadfreigabe und eine erweiterte Community-Infrastruktur."
+        ],
         "callout": "NO DATE FAKES // Eine Veröffentlichung erhält erst dann ein Datum, wenn die technischen Gates realistisch planbar sind."
       }
     ],
-    "related": ["entwicklung", "technik", "faq"]
+    "related": [
+      "entwicklung",
+      "technik",
+      "faq"
+    ]
   },
   {
     "slug": "gruender",
@@ -211,7 +310,24 @@
     "description": "Die Geschichte von Oliver-Frank Pristaff aus der Schweiz: vom Maurerhandwerk und schweren Lebensphasen zur Entwicklung von JARVIS SYSTEM und JARVIS OS.",
     "schema_type": "ProfilePage",
     "intro": "Oliver-Frank Pristaff ist der Gründer und Entwickler hinter JARVIS SYSTEM. Sein Weg begann im Schweizer Handwerk und führte über jahrelanges eigenständiges Lernen mit Computern, Netzwerken, Servern und Softwareentwicklung zum eigenen Betriebssystemprojekt.",
-    "facts": [["NAME", "OLIVER-FRANK PRISTAFF"], ["HERKUNFT", "SCHWEIZ"], ["JAHRGANG", "2003"], ["ROLLE", "GRÜNDER + ENTWICKLER"]],
+    "facts": [
+      [
+        "NAME",
+        "OLIVER-FRANK PRISTAFF"
+      ],
+      [
+        "HERKUNFT",
+        "SCHWEIZ"
+      ],
+      [
+        "JAHRGANG",
+        "2003"
+      ],
+      [
+        "ROLLE",
+        "GRÜNDER + ENTWICKLER"
+      ]
+    ],
     "sections": [
       {
         "id": "craft",
@@ -244,11 +360,105 @@
         "id": "motto",
         "eyebrow": "04 // PRINCIPLE",
         "heading": "Tausende Schritte in dieselbe Richtung",
-        "paragraphs": ["Das Projekt soll nicht durch überstürzte Versprechen wachsen, sondern durch konsequentes Bauen, Prüfen und Dokumentieren. Diese Haltung fasst Olivers persönliches Motto zusammen:"],
+        "paragraphs": [
+          "Das Projekt soll nicht durch überstürzte Versprechen wachsen, sondern durch konsequentes Bauen, Prüfen und Dokumentieren. Diese Haltung fasst Olivers persönliches Motto zusammen:"
+        ],
         "quote": "Grosse Projekte entstehen nicht durch Perfektion am ersten Tag, sondern durch tausende kleine Schritte, die konsequent in dieselbe Richtung gehen."
       }
     ],
-    "related": ["jarvis-os", "entwicklung", "updates"]
+    "related": [
+      "jarvis-os",
+      "entwicklung",
+      "updates"
+    ]
+  },
+  {
+    "slug": "community",
+    "nav": "Community",
+    "kicker": "COMMUNITY UPLINK // VERIFIED ENTRY",
+    "title": "JARVIS SYSTEM Community",
+    "description": "Offizielle JARVIS-SYSTEM-Community mit Discord-Einladung, automatischem Pre-Join-Onboarding, Interessenrollen, Entwicklerbereichen, Testlabor und dokumentierter Moderationsstruktur.",
+    "schema_type": "WebPage",
+    "intro": "Die offizielle JARVIS-SYSTEM-Community verbindet Betriebssystementwicklung, technische Tests, Hardwarewissen, offenen Austausch und Gaming in einer klar gegliederten Discord-Kommandozentrale. Der Einstieg ist automatisiert, nachvollziehbar und benötigt keine manuelle Freischaltung.",
+    "facts": [
+      [
+        "STATUS",
+        "ONLINE"
+      ],
+      [
+        "ENTRY",
+        "PRE-JOIN"
+      ],
+      [
+        "ROLES",
+        "AUTOMATISCH"
+      ],
+      [
+        "PUBLIC ISO",
+        "LOCKED"
+      ]
+    ],
+    "sections": [
+      {
+        "id": "entry",
+        "eyebrow": "01 // SYSTEM ENTRY",
+        "heading": "Ein klarer Einstieg statt Kanalchaos",
+        "paragraphs": [
+          "Neue Mitglieder beginnen im Bereich 00 // SYSTEM ENTRY. Dort stehen Ankündigungen, Willkommen, Regeln und Sicherheit, Rollenauswahl, Vorstellungen sowie FAQ und offizielle Links. Der Server Guide führt anschliessend durch die wichtigsten ersten Schritte.",
+          "Vor dem vollständigen Beitritt stellt Discord verpflichtend die Frage, wofür sich das neue Mitglied interessiert. Mehrere Antworten sind möglich. Dadurch bleibt der Einstieg kurz, während jede Person unmittelbar die passenden Bereiche und Rollen erhält."
+        ],
+        "callout": "OFFICIAL ENTRY // Der permanente Einladungslink führt ausschliesslich zum Server JARVIS SYSTEM // COMMUNITY."
+      },
+      {
+        "id": "automation",
+        "eyebrow": "02 // ACCESS MATRIX",
+        "heading": "Automatische Interessenrollen und passende Kanäle",
+        "paragraphs": [
+          "Die Auswahl JARVIS OS & Entwicklung vergibt COMMUNITY MEMBER und OS & DEVELOPMENT. Testen & Hardware vergibt COMMUNITY MEMBER und HARDWARE & TESTING. Community & Gaming vergibt COMMUNITY MEMBER und COMMUNITY & GAMING. Die Interessenrollen besitzen keine administrativen Sonderrechte.",
+          "Mit jeder Antwort werden gleichzeitig die dazugehörigen Kanäle eingeblendet. Mitglieder können ihre Auswahl später in Discord unter Kanäle & Rollen ändern. Die Umsetzung nutzt Discords natives Community-Onboarding; ein selbst gehosteter Bot, ein externer Server oder ein kostenpflichtiger Automationsdienst ist dafür nicht notwendig."
+        ],
+        "bullets": [
+          "JARVIS OS & Entwicklung",
+          "Testen & Hardware",
+          "Community & Gaming",
+          "Mehrfachauswahl möglich",
+          "Keine manuelle Freischaltung erforderlich"
+        ]
+      },
+      {
+        "id": "structure",
+        "eyebrow": "03 // CHANNEL MATRIX",
+        "heading": "Projekt, Entwicklung, Tests und Community sauber getrennt",
+        "paragraphs": [
+          "Der öffentliche Projektbereich enthält JARVIS-News, Systemdiskussion, Ideen, Entwicklungslog, Roadmap, Website-Updates sowie Screenshots und Demos. Developer Core trennt Code und Architektur, Linux und Kernel, UEFI und Boot, Treiber und Hardware sowie Shell und Runtime in eigene Fachkanäle.",
+          "Das Test Lab bündelt Bugreports, Testerinformationen und VM- oder Bare-Metal-Prüfungen. Community- und Gaming-Bereiche ermöglichen lockeren Austausch, Technikgespräche, Mitspielersuche und Medien. Voice Uplink bietet getrennte Räume für Community, Entwicklung und Gaming. Interne Moderation und nicht veröffentlichte Entwicklung bleiben im privaten Staff Core."
+        ]
+      },
+      {
+        "id": "security",
+        "eyebrow": "04 // SECURITY & CLEANUP",
+        "heading": "Alte Strukturen entfernt, Rechte bewusst begrenzt",
+        "paragraphs": [
+          "Beim Neubau wurden sämtliche alten Kanäle und Kategorien gelöscht. Alte editierbare Rollen wurden ebenfalls entfernt; nur die bestehende Rolle Member blieb für vorhandene Mitglieder erhalten. Die neue Rollenstruktur trennt Eigentümer, Administration, Moderation, Entwicklung, Tests und Community voneinander.",
+          "Nicht mehr benötigte Zähl-, Statistik-, Stream- und Verwaltungsbots wurden entfernt. ProBot bleibt für Moderationsunterstützung, DISBOARD.org und Discord Me für die Auffindbarkeit des Servers. Die native Onboarding-Automatik reduziert zusätzliche Bot-Abhängigkeiten und damit unnötige Berechtigungsflächen."
+        ],
+        "callout": "SECURITY RULE // Rollen für Interessen gewähren Zugang zu Inhalten, aber keine Moderations- oder Administratorrechte."
+      },
+      {
+        "id": "documentation",
+        "eyebrow": "05 // DOCUMENT EVERYTHING",
+        "heading": "Community-Änderungen gehören zum Entwicklungsprotokoll",
+        "paragraphs": [
+          "JARVIS SYSTEM dokumentiert nicht nur Betriebssystemcode. Auch Website, GitHub, Community-Struktur, Rollenmodell, Sicherheitsentscheidungen und Automatisierung werden mit Datum, betroffenen Bereichen und offenen Prüfungen festgehalten. So bleibt nachvollziehbar, wie das Ökosystem entsteht.",
+          "Der Discord-Start ändert nichts am technischen Release-Gate. Es gibt weiterhin keine öffentliche ISO. Freiwillige Tester werden erst dann in einen kontrollierten Systemtest einbezogen, wenn Installation, Recovery, Secure Boot und Hardwareportabilität ausreichend vorbereitet und dokumentiert sind."
+        ]
+      }
+    ],
+    "related": [
+      "updates",
+      "entwicklung",
+      "roadmap"
+    ]
   },
   {
     "slug": "faq",
@@ -258,19 +468,70 @@
     "description": "Klare Antworten zu JARVIS OS: Linux-Basis, eigener Kernel, Download, Installation, Hardware, Windows-Dualboot, Datenschutz, Entwicklung und Community.",
     "schema_type": "FAQPage",
     "intro": "Hier stehen kurze und ehrliche Antworten auf die wichtigsten Fragen zum Betriebssystemprojekt JARVIS SYSTEM. Der veröffentlichte Projektstatus wird aktualisiert, sobald sich technische Fakten ändern.",
-    "facts": [["ANSWERS", "10"], ["PUBLIC ISO", "NOCH NICHT"], ["BASE", "LINUX KERNEL"], ["TARGET", "REAL HARDWARE"]],
-    "faq": [
-      ["Was ist JARVIS OS?", "JARVIS OS ist ein unabhängiges Betriebssystemprojekt aus der Schweiz. Es entwickelt einen eigenen sichtbaren Systempfad mit UEFI-Bootmanager, Anmeldung, Unified Shell, Systemsteuerung und Echtzeit-Telemetrie."],
-      ["Ist JARVIS OS einfach eine Linux-Distribution?", "Der aktuelle Engineering-Stand nutzt weiterhin einen Linux-Kernel, Linux-Treiber und ausgewählte Basiskomponenten. Die sichtbare Boot-, Login-, Shell- und Systemschicht wird als eigene JARVIS-Produktumgebung entwickelt. Diese Grundlage wird nicht verschwiegen."],
-      ["Besitzt JARVIS OS bereits einen eigenen Kernel?", "Nein. Ein vollständig eigener Kernel und eigene Treiber sind langfristige Forschungsziele, aber noch keine fertigen Komponenten. Heute bleiben Linux-Kernel und Treiber für stabilen Hardwarezugang erhalten."],
-      ["Kann ich JARVIS OS herunterladen?", "Noch nicht. Es gibt derzeit keine öffentliche ISO. Der Download bleibt gesperrt, bis Installation, Recovery, Secure Boot und Hardwareportabilität ausreichend geprüft sind."],
-      ["Wird JARVIS OS nur auf einem bestimmten Laptop funktionieren?", "Nein, das System wird ausdrücklich für unterschiedliche reale x86-64-PCs entworfen. Die automatische Hardwareerkennung und breite Bare-Metal-Testmatrix sind deshalb verbindliche Release-Gates."],
-      ["Kann JARVIS OS neben Windows installiert werden?", "Der Bootmanager ist für die Erkennung vorhandener Startziele konzipiert. Ein öffentlicher Dualboot-Pfad wird jedoch erst freigegeben, wenn Erkennung, Auswahl, Installation und Recovery auf realen Systemen sicher getestet wurden."],
-      ["Sind die Telemetriedaten echt?", "Technische Anzeigen sollen reale lokale Quellen verwenden. Nicht verfügbare Werte werden als N/A markiert. Dekorative Animationen werden als solche bezeichnet und dürfen nicht als Messdaten ausgegeben werden."],
-      ["Was überträgt das öffentliche Arbeitssignal?", "Nur aggregierten Aktivstatus, Dauer, Puls und Prozessanzahl. Es überträgt keine Chats, Prompts, Befehle, Dateinamen, Audioinhalte, Hardware-IDs oder IP-Adressen."],
-      ["Wer entwickelt JARVIS SYSTEM?", "Gegründet und entwickelt wird das Projekt von Oliver-Frank Pristaff aus der Schweiz. Die Entwicklung wird durch strukturierte Dokumentation, reproduzierbare Builds und schrittweise Tests begleitet."],
-      ["Wie kann ich das Projekt unterstützen?", "Die offizielle Discord-Community ist geöffnet. Dort helfen seriöses Feedback, technische Diskussionen und später strukturierte Hardwaretests. Eine öffentliche ISO gibt es weiterhin erst nach den dokumentierten Release-Gates."]
+    "facts": [
+      [
+        "ANSWERS",
+        "10"
+      ],
+      [
+        "PUBLIC ISO",
+        "NOCH NICHT"
+      ],
+      [
+        "BASE",
+        "LINUX KERNEL"
+      ],
+      [
+        "TARGET",
+        "REAL HARDWARE"
+      ]
     ],
-    "related": ["jarvis-os", "roadmap", "gruender"]
+    "faq": [
+      [
+        "Was ist JARVIS OS?",
+        "JARVIS OS ist ein unabhängiges Betriebssystemprojekt aus der Schweiz. Es entwickelt einen eigenen sichtbaren Systempfad mit UEFI-Bootmanager, Anmeldung, Unified Shell, Systemsteuerung und Echtzeit-Telemetrie."
+      ],
+      [
+        "Ist JARVIS OS einfach eine Linux-Distribution?",
+        "Der aktuelle Engineering-Stand nutzt weiterhin einen Linux-Kernel, Linux-Treiber und ausgewählte Basiskomponenten. Die sichtbare Boot-, Login-, Shell- und Systemschicht wird als eigene JARVIS-Produktumgebung entwickelt. Diese Grundlage wird nicht verschwiegen."
+      ],
+      [
+        "Besitzt JARVIS OS bereits einen eigenen Kernel?",
+        "Nein. Ein vollständig eigener Kernel und eigene Treiber sind langfristige Forschungsziele, aber noch keine fertigen Komponenten. Heute bleiben Linux-Kernel und Treiber für stabilen Hardwarezugang erhalten."
+      ],
+      [
+        "Kann ich JARVIS OS herunterladen?",
+        "Noch nicht. Es gibt derzeit keine öffentliche ISO. Der Download bleibt gesperrt, bis Installation, Recovery, Secure Boot und Hardwareportabilität ausreichend geprüft sind."
+      ],
+      [
+        "Wird JARVIS OS nur auf einem bestimmten Laptop funktionieren?",
+        "Nein, das System wird ausdrücklich für unterschiedliche reale x86-64-PCs entworfen. Die automatische Hardwareerkennung und breite Bare-Metal-Testmatrix sind deshalb verbindliche Release-Gates."
+      ],
+      [
+        "Kann JARVIS OS neben Windows installiert werden?",
+        "Der Bootmanager ist für die Erkennung vorhandener Startziele konzipiert. Ein öffentlicher Dualboot-Pfad wird jedoch erst freigegeben, wenn Erkennung, Auswahl, Installation und Recovery auf realen Systemen sicher getestet wurden."
+      ],
+      [
+        "Sind die Telemetriedaten echt?",
+        "Technische Anzeigen sollen reale lokale Quellen verwenden. Nicht verfügbare Werte werden als N/A markiert. Dekorative Animationen werden als solche bezeichnet und dürfen nicht als Messdaten ausgegeben werden."
+      ],
+      [
+        "Was überträgt das öffentliche Arbeitssignal?",
+        "Nur aggregierten Aktivstatus, Dauer, Puls und Prozessanzahl. Es überträgt keine Chats, Prompts, Befehle, Dateinamen, Audioinhalte, Hardware-IDs oder IP-Adressen."
+      ],
+      [
+        "Wer entwickelt JARVIS SYSTEM?",
+        "Gegründet und entwickelt wird das Projekt von Oliver-Frank Pristaff aus der Schweiz. Die Entwicklung wird durch strukturierte Dokumentation, reproduzierbare Builds und schrittweise Tests begleitet."
+      ],
+      [
+        "Wie kann ich das Projekt unterstützen?",
+        "Die offizielle Discord-Community ist geöffnet. Dort helfen seriöses Feedback, technische Diskussionen und später strukturierte Hardwaretests. Eine öffentliche ISO gibt es weiterhin erst nach den dokumentierten Release-Gates."
+      ]
+    ],
+    "related": [
+      "jarvis-os",
+      "roadmap",
+      "gruender"
+    ]
   }
 ]
