@@ -42,6 +42,13 @@
   const sensorCopy = document.getElementById("sensor-lock-copy");
   const threatFeed = document.getElementById("threat-feed");
   const feedMode = document.getElementById("feed-mode");
+  const directHeroState = document.getElementById("direct-hero-state");
+  const directIntegrityLight = document.getElementById("direct-integrity-light");
+  const directIntegrityTitle = document.getElementById("direct-integrity-title");
+  const directIntegrityCopy = document.getElementById("direct-integrity-copy");
+  const directLedgerState = document.getElementById("direct-ledger-state");
+  const directLedgerUpdated = document.getElementById("direct-ledger-updated");
+  const directLedgerEvents = document.getElementById("direct-ledger-events");
 
   const escapeHtml = (value) => String(value)
     .replaceAll("&", "&amp;")
@@ -343,6 +350,63 @@
       </li>`).join("");
   };
 
+  const renderDirectLedger = () => {
+    if (!directLedgerEvents) return;
+    const events = Array.isArray(honeypot?.events) ? honeypot.events : [];
+    const state = honeypot?.sensor?.state || "pending";
+    if (directLedgerState) {
+      directLedgerState.textContent = state === "online"
+        ? "AUTHENTICATED // LIVE"
+        : state === "staged"
+          ? "RECEIVER STAGED"
+          : state === "offline"
+            ? "SENSOR OFFLINE"
+            : "SENSOR PENDING";
+      directLedgerState.dataset.state = state;
+    }
+    if (directLedgerUpdated) {
+      directLedgerUpdated.textContent = `LAST EVENT // ${ageLabel(honeypot?.last_direct_event)}`;
+    }
+    if (events.length === 0) {
+      directLedgerEvents.innerHTML = `
+        <li class="direct-ledger-empty">
+          <span>00 // QUIET</span>
+          <div><b>NO AUTHENTICATED DIRECT EVENTS IN BUFFER</b><small>Keine Aktivität wird erfunden. Der Feed bleibt ehrlich leer.</small></div>
+        </li>`;
+      return;
+    }
+    const safeSeverities = new Set(["info", "low", "medium", "high"]);
+    directLedgerEvents.innerHTML = events.slice(0, 24).map((event, index) => {
+      const severity = safeSeverities.has(event.severity) ? event.severity : "info";
+      const location = event.country
+        ? `${escapeHtml(event.country)}${Number.isInteger(event.asn) ? ` // AS${event.asn}` : ""}`
+        : "REGION/ASN NOT SAFELY ENRICHED";
+      const outcome = String(event.outcome || "observed").replaceAll("_", " ").toUpperCase();
+      const time = Number.isFinite(Date.parse(event.time_window))
+        ? new Date(event.time_window).toLocaleString("de-CH", {
+          timeZone: "UTC",
+          hour12: false,
+          day: "2-digit",
+          month: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit"
+        })
+        : "--";
+      return `
+        <li data-severity="${severity}">
+          <span>${String(index + 1).padStart(2, "0")} // ${escapeHtml(severity.toUpperCase())}</span>
+          <div class="direct-ledger-main">
+            <b>${escapeHtml(event.source_alias || "SRC-UNKNOWN")} // ${escapeHtml(event.label || event.type)}</b>
+            <small>${escapeHtml(location)} // ${escapeHtml(time)} UTC // ×${number.format(Number(event.count) || 1)}</small>
+          </div>
+          <div class="direct-ledger-outcome">
+            <small>OUTCOME</small><b>${escapeHtml(outcome)}</b><em>HOST COMPROMISED // NO</em>
+          </div>
+          <i aria-hidden="true"></i>
+        </li>`;
+    }).join("");
+  };
+
   const updateMetrics = () => {
     metricPublicTotal.textContent = number.format(infrastructure.available_connected_public);
     metricPublicRendered.textContent = number.format(infrastructure.rendered_sample);
@@ -363,8 +427,31 @@
     metricFreshness.textContent = ageLabel(globalThreat.source_updated_at || globalThreat.generated_at);
     sensorState.textContent = online ? "ONLINE" : staged ? "STAGED" : offline ? "OFFLINE" : "PENDING";
     sensorState.dataset.state = online ? "online" : staged ? "staged" : offline ? "offline" : "pending";
+    if (directHeroState) {
+      directHeroState.textContent = online
+        ? "AUTHENTICATED SENSOR // LIVE"
+        : staged
+          ? "SECURE UPLINK // STAGED"
+          : offline
+            ? "SENSOR // OFFLINE"
+            : "SENSOR // PENDING";
+      directHeroState.dataset.state = state;
+    }
+    if (directIntegrityLight) {
+      directIntegrityLight.className = online ? "ok" : "pending";
+    }
+    if (directIntegrityTitle) {
+      directIntegrityTitle.textContent = online
+        ? "AUTHENTICATED DIRECT SENSOR FEED"
+        : "DIRECT SENSOR FEED NOT LIVE";
+    }
+    if (directIntegrityCopy) {
+      directIntegrityCopy.textContent = online
+        ? "HMAC-signiert, streng schemageprüft und ohne öffentliche Rohdaten"
+        : "Der öffentliche Zustand wird nicht vorgetäuscht; Snapshot bleibt als Fallback verfügbar";
+    }
     sensorCopy.textContent = online
-      ? "Der öffentliche Feed ist aktiv. Angezeigt werden ausschließlich vergröberte Regionen und aggregierte Ereignisse."
+      ? "Der öffentliche Feed ist aktiv. Angezeigt werden ausschließlich täglich wechselnde Quellpseudonyme, Zeitfenster und – nur wenn sicher verfügbar – vergröberte Regionen."
       : staged
         ? "Der echte Sensor und der signierte Empfänger laufen im privaten Stagingmodus. Veröffentlichte Direkt-Ereignisse bleiben absichtlich null."
         : offline
@@ -378,7 +465,9 @@
         : offline
           ? "VERIFIED SNAPSHOTS // SENSOR OFFLINE"
           : "VERIFIED SNAPSHOTS // JARVIS UPLINK PENDING";
-    syncState.textContent = "VERIFIED SNAPSHOTS LOADED";
+    syncState.textContent = online
+      ? "LIVE SENSOR + VERIFIED SNAPSHOTS"
+      : "VERIFIED SNAPSHOTS LOADED";
   };
 
   const loadJson = async (url) => {
@@ -405,6 +494,7 @@
       }
       updateMetrics();
       renderFeed();
+      renderDirectLedger();
       resize();
       if (animationHandle) window.cancelAnimationFrame(animationHandle);
       draw();
@@ -413,6 +503,22 @@
       statusLabel.textContent = "VERIFIED DATA UNAVAILABLE";
       threatFeed.innerHTML = "<li class='feed-loading'><span>DATA ERROR</span><b>SNAPSHOT COULD NOT BE VERIFIED</b></li>";
       console.error("Threat Observatory:", error);
+    }
+  };
+
+  const refreshLive = async () => {
+    if (!endpoint) return;
+    try {
+      const live = await loadJson(`${endpoint}/v1/public/attacks?refresh=${Date.now()}`);
+      if (live.schema !== 1 || !live.sensor || !Array.isArray(live.events)) {
+        throw new Error("invalid live schema");
+      }
+      honeypot = live;
+      updateMetrics();
+      renderDirectLedger();
+      if (reducedMotion) draw();
+    } catch {
+      syncState.textContent = "LIVE SENSOR UNREACHABLE // LAST VERIFIED VIEW";
     }
   };
 
@@ -480,4 +586,5 @@
   const observer = new ResizeObserver(resize);
   observer.observe(mapViewport);
   loadData();
+  window.setInterval(refreshLive, 30_000);
 })();

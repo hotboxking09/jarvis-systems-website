@@ -29,7 +29,7 @@
   <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="/styles.css">
   <title>Globales Threat Observatory // JARVIS SYSTEM</title>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://jarvisserver.org/#website","url":"https://jarvisserver.org/","name":"JARVIS SYSTEM","alternateName":"JARVIS OS","inLanguage":"de-CH","publisher":{"@id":"https://jarvisserver.org/#project"}},{"@type":"Organization","@id":"https://jarvisserver.org/#project","name":"JARVIS SYSTEM","description":"Unabhängiges Betriebssystemprojekt aus der Schweiz.","url":"https://jarvisserver.org/","sameAs":["https://github.com/hotboxking09/jarvis-systems-website","https://discord.gg/DWBwuUhXmv"],"logo":{"@type":"ImageObject","url":"https://jarvisserver.org/assets/jarvis-core-head.png","width":1024,"height":1024},"founder":{"@id":"https://jarvisserver.org/#founder"}},{"@type":"Person","@id":"https://jarvisserver.org/#founder","name":"Oliver-Frank Pristaff","url":"https://jarvisserver.org/gruender/","jobTitle":"Gründer und Entwickler von JARVIS SYSTEM","sameAs":["https://github.com/hotboxking09"],"nationality":{"@type":"Country","name":"Schweiz"}},{"@type":"TechArticle","@id":"https://jarvisserver.org/threat-observatory/#page","url":"https://jarvisserver.org/threat-observatory/","name":"Globales Threat Observatory","headline":"Globales Threat Observatory","description":"Interaktive JARVIS-Weltkarte mit echten öffentlichen RIPE-Atlas-Infrastrukturdaten, datierten DShield-Beobachtungen und einem ehrlichen Status für den geplanten eigenen Honeypot.","inLanguage":"de-CH","isPartOf":{"@id":"https://jarvisserver.org/#website"},"datePublished":"2026-07-23","dateModified":"2026-07-23","author":{"@id":"https://jarvisserver.org/#founder"},"publisher":{"@id":"https://jarvisserver.org/#project"},"image":"https://jarvisserver.org/assets/og-card.png"},{"@type":"BreadcrumbList","@id":"https://jarvisserver.org/threat-observatory/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"JARVIS SYSTEM","item":"https://jarvisserver.org/"},{"@type":"ListItem","position":2,"name":"Globales Threat Observatory","item":"https://jarvisserver.org/threat-observatory/"}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://jarvisserver.org/#website","url":"https://jarvisserver.org/","name":"JARVIS SYSTEM","alternateName":"JARVIS OS","inLanguage":"de-CH","publisher":{"@id":"https://jarvisserver.org/#project"}},{"@type":"Organization","@id":"https://jarvisserver.org/#project","name":"JARVIS SYSTEM","description":"Unabhängiges Betriebssystemprojekt aus der Schweiz.","url":"https://jarvisserver.org/","sameAs":["https://github.com/hotboxking09/jarvis-systems-website","https://discord.gg/DWBwuUhXmv"],"logo":{"@type":"ImageObject","url":"https://jarvisserver.org/assets/jarvis-core-head.png","width":1024,"height":1024},"founder":{"@id":"https://jarvisserver.org/#founder"}},{"@type":"Person","@id":"https://jarvisserver.org/#founder","name":"Oliver-Frank Pristaff","url":"https://jarvisserver.org/gruender/","jobTitle":"Gründer und Entwickler von JARVIS SYSTEM","sameAs":["https://github.com/hotboxking09"],"nationality":{"@type":"Country","name":"Schweiz"}},{"@type":"TechArticle","@id":"https://jarvisserver.org/threat-observatory/#page","url":"https://jarvisserver.org/threat-observatory/","name":"Globales Threat Observatory","headline":"Globales Threat Observatory","description":"Interaktive JARVIS-Weltkarte mit echten öffentlichen RIPE-Atlas-Infrastrukturdaten, datierten DShield-Beobachtungen und einem ehrlichen Status für den geplanten eigenen Honeypot.","inLanguage":"de-CH","isPartOf":{"@id":"https://jarvisserver.org/#website"},"datePublished":"2026-07-23","dateModified":"2026-07-24","author":{"@id":"https://jarvisserver.org/#founder"},"publisher":{"@id":"https://jarvisserver.org/#project"},"image":"https://jarvisserver.org/assets/og-card.png"},{"@type":"BreadcrumbList","@id":"https://jarvisserver.org/threat-observatory/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"JARVIS SYSTEM","item":"https://jarvisserver.org/"},{"@type":"ListItem","position":2,"name":"Globales Threat Observatory","item":"https://jarvisserver.org/threat-observatory/"}]}]}</script>
 </head>
 <body class="content-page threat-observatory-page">
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -51,7 +51,7 @@
     <nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">JARVIS SYSTEM</a><span>/</span><span aria-current="page">Threat Map</span></nav>
     <p class="eyebrow">09 // GLOBAL SECURITY VISUALIZATION</p>
     <h1>THREAT<br><span>OBSERVATORY</span></h1>
-    <p class="content-intro">Eine hochauflösende, interaktive Weltansicht für echte öffentliche Netzwerkknoten, globale Threat-Intelligence und später die datenschutzbegrenzten Ereignisse des eigenen JARVIS-Honeypots. Keine erfundenen Angriffe, keine heimlichen Scans und keine vorgetäuschte Genauigkeit.</p>
+    <p class="content-intro">Eine hochauflösende, interaktive Weltansicht für echte öffentliche Netzwerkknoten, globale Threat-Intelligence und die datenschutzbegrenzten Ereignisse des eigenen JARVIS-Honeypots. Keine erfundenen Angriffe, keine heimlichen Scans und keine vorgetäuschte Genauigkeit.</p>
     <div class="threat-hero-actions">
       <a class="button button-primary" href="#observatory-console">OBSERVATORY ÖFFNEN <span>↓</span></a>
       <a class="button button-ghost" href="#truth-contract">DATENVERTRAG</a>
@@ -66,7 +66,7 @@
   <div class="threat-truth-strip reveal" role="note">
     <div><span>PUBLIC INFRASTRUCTURE</span><b>RIPE ATLAS // VERIFIED SNAPSHOT</b></div>
     <div><span>GLOBAL THREAT PULSE</span><b>DShield // EXTERNAL OBSERVATIONS</b></div>
-    <div><span>DIRECT JARVIS EVENTS</span><b class="state-pending">SENSOR PRIVATE // PUBLIC LOCKED</b></div>
+    <div><span>DIRECT JARVIS EVENTS</span><b id="direct-hero-state">AUTHENTICATED FEED // CHECKING</b></div>
     <div><span>LOCATION POLICY</span><b>APPROXIMATE ONLY</b></div>
   </div>
 </section>
@@ -124,9 +124,9 @@
         <li class="feed-loading"><span>DATA LINK</span><b>WAITING FOR VERIFIED SNAPSHOT</b></li>
       </ol>
       <div class="sensor-lock">
-        <div class="sensor-lock-head"><span>JARVIS HONEYPOT UPLINK</span><b id="sensor-lock-state">PUBLIC LOCKED</b></div>
+        <div class="sensor-lock-head"><span>JARVIS HONEYPOT UPLINK</span><b id="sensor-lock-state">CHECKING</b></div>
         <div class="sensor-lock-line"><i></i></div>
-        <p id="sensor-lock-copy">Sensor und sicherer Empfänger existieren. TCP/22 und die Veröffentlichung direkter Ereignisse bleiben bis zur schriftlichen Providerfreigabe technisch gesperrt.</p>
+        <p id="sensor-lock-copy">Der Browser prüft den signierten, datenschutzbegrenzten JARVIS-Sensorfeed. Roh-IP, Zugangsdaten, Befehle und Payloads werden nicht veröffentlicht.</p>
       </div>
     </aside>
   </div>
@@ -141,9 +141,29 @@
       <span>DATA INTEGRITY MATRIX</span>
       <div><i class="ok"></i><p><b>NO ACTIVE SCANNING</b><small>Nur freiwillig veröffentlichte oder offiziell bereitgestellte Datenquellen</small></p></div>
       <div><i class="ok"></i><p><b>NO RAW PUBLIC ATTACKER IPs</b><small>Öffentliche Ansicht nutzt Regionen und Netzbetreiber statt Personenbehauptungen</small></p></div>
-      <div><i class="pending"></i><p><b>DIRECT SENSOR FEED DUAL-LOCKED</b><small>Sensor- und Receiver-Gate werden erst nach schriftlicher Providerfreigabe geöffnet</small></p></div>
+      <div><i class="ok" id="direct-integrity-light"></i><p><b id="direct-integrity-title">AUTHENTICATED DIRECT SENSOR FEED</b><small id="direct-integrity-copy">Doppelt freigegeben, HMAC-signiert und streng schemageprüft</small></p></div>
     </div>
   </div>
+
+  <section class="direct-ledger" aria-labelledby="direct-ledger-title">
+    <header>
+      <div>
+        <span>PRIVACY-BOUNDED EVENT STREAM // 24H</span>
+        <h3 id="direct-ledger-title">DIRECT THREAT LEDGER</h3>
+      </div>
+      <div class="direct-ledger-status">
+        <b id="direct-ledger-state">CHECKING SENSOR</b>
+        <small id="direct-ledger-updated">LAST EVENT // --</small>
+      </div>
+    </header>
+    <div class="direct-ledger-contract">
+      <i></i>
+      <p><b>WER?</b> Ausschließlich ein täglich wechselndes Quellpseudonym – keine IP und keine behauptete Personenidentität. <b>WAS?</b> Ereignistyp, ehrlicher Schweregrad und Ergebnis innerhalb der Cowrie-Emulation. <b>HOST?</b> Niemals automatisch als kompromittiert bezeichnet.</p>
+    </div>
+    <ol id="direct-ledger-events" class="direct-ledger-events" aria-live="polite">
+      <li class="direct-ledger-empty"><span>DATA LINK</span><b>WAITING FOR AUTHENTICATED SENSOR SNAPSHOT</b></li>
+    </ol>
+  </section>
 </section>
 
 <section class="threat-truth section-shell section-pad" id="truth-contract" aria-labelledby="truth-title">
@@ -170,8 +190,8 @@
     </article>
     <article class="truth-source-card reveal">
       <span>SOURCE // 04</span><h3>JARVIS Sensor Feed</h3>
-      <p>Der grüne Bereich zeigt nur eine grosszügig verschleierte Zielregion. Cowrie und der HMAC-gesicherte Empfänger sind real vorhanden, laufen aber im privaten Stagingzustand. Bis zur Providerfreigabe bleibt die Zahl veröffentlichter Direkt-Ereignisse exakt null.</p>
-      <b>DIRECT EVENTS // DUAL-GATED</b>
+      <p>Der grüne Bereich zeigt nur eine grosszügig verschleierte Zielregion. Der reale Cowrie-Sensor sendet ausschließlich minimierte, pseudonymisierte Ereignisse über einen HMAC-gesicherten Empfänger. Der Livezustand wird im Browser direkt aus der öffentlichen API geprüft.</p>
+      <b>DIRECT EVENTS // AUTHENTICATED + SANITIZED</b>
     </article>
   </div>
   <div class="threat-future-pipeline reveal">
@@ -180,7 +200,7 @@
     <div><span>03</span><b>PUBLIC API</b><small>signierte Aggregate, Rate Limit</small></div><i></i>
     <div><span>04</span><b>MAP + DISCORD</b><small>Website-Visualisierung und private Logs</small></div>
   </div>
-  <div class="content-callout reveal">PRIVACY BOUNDARY // Der spätere öffentliche Feed enthält keine Roh-IP, keinen echten Namen, keine Malware, keine Passwörter und keine vollständigen Eingaben. Detaillierte Sicherheitslogs bleiben geschützt, zeitlich begrenzt und für öffentliche Anzeigen pseudonymisiert beziehungsweise aggregiert.</div>
+  <div class="content-callout reveal">PRIVACY BOUNDARY // Der öffentliche Feed enthält keine Roh-IP, keinen echten Namen, keine Malware, keine Passwörter und keine vollständigen Eingaben. Detaillierte Sicherheitslogs bleiben geschützt und zeitlich begrenzt; die öffentliche Anzeige verwendet täglich wechselnde Pseudonyme und Zeitfenster-Aggregate.</div>
 </section>
 </main>
   

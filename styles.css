@@ -798,6 +798,111 @@ blockquote { margin: 2rem 0; padding: 0; color: #c5dbe2; font-size: clamp(1.05re
 .observatory-integrity p,.observatory-integrity b,.observatory-integrity small { margin: 0; display: block; font-family: monospace; }
 .observatory-integrity b { color: var(--white); font-size: .52rem; letter-spacing: .06em; }
 .observatory-integrity small { margin-top: .2rem; color: var(--muted); font-size: .47rem; line-height: 1.45; }
+.threat-truth-strip #direct-hero-state[data-state="online"] { color: var(--sensor-green); text-shadow: 0 0 12px rgba(104,255,178,.3); }
+.threat-truth-strip #direct-hero-state[data-state="offline"] { color: var(--threat-red); }
+.direct-ledger {
+  position: relative;
+  border-top: 1px solid rgba(104,255,178,.2);
+  background:
+    linear-gradient(90deg,rgba(104,255,178,.025) 1px,transparent 1px) 0 0/44px 44px,
+    linear-gradient(rgba(104,255,178,.025) 1px,transparent 1px) 0 0/44px 44px,
+    linear-gradient(145deg,rgba(2,15,18,.98),rgba(7,4,15,.98));
+}
+.direct-ledger::before {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 36%;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg,var(--sensor-green),transparent);
+  box-shadow: 0 0 13px rgba(104,255,178,.65);
+}
+.direct-ledger > header {
+  min-height: 88px;
+  padding: 1.15rem 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(79,244,255,.11);
+}
+.direct-ledger header span,.direct-ledger header h3,.direct-ledger-status b,.direct-ledger-status small {
+  margin: 0;
+  display: block;
+  font-family: monospace;
+}
+.direct-ledger header span { color: var(--muted); font-size: .49rem; font-weight: 800; letter-spacing: .14em; }
+.direct-ledger header h3 { margin-top: .28rem; font-size: 1.1rem; letter-spacing: .06em; }
+.direct-ledger-status { text-align: right; }
+.direct-ledger-status b { color: var(--amber); font-size: .54rem; letter-spacing: .1em; }
+.direct-ledger-status b[data-state="online"] { color: var(--sensor-green); text-shadow: 0 0 12px rgba(104,255,178,.35); }
+.direct-ledger-status b[data-state="offline"] { color: var(--threat-red); }
+.direct-ledger-status small { margin-top: .35rem; color: var(--muted); font-size: .45rem; letter-spacing: .07em; }
+.direct-ledger-contract {
+  margin: 1rem 1.3rem;
+  padding: .8rem 1rem;
+  display: grid;
+  grid-template-columns: 3px minmax(0,1fr);
+  gap: .8rem;
+  border: 1px solid rgba(104,255,178,.13);
+  background: rgba(104,255,178,.025);
+}
+.direct-ledger-contract i { background: var(--sensor-green); box-shadow: 0 0 12px rgba(104,255,178,.48); }
+.direct-ledger-contract p { margin: 0; color: #8ea7ae; font-size: .62rem; line-height: 1.65; }
+.direct-ledger-contract b { color: var(--sensor-green); font: 800 .52rem monospace; letter-spacing: .08em; }
+.direct-ledger-events {
+  max-height: 510px;
+  margin: 0;
+  padding: 0 1.3rem 1.15rem;
+  overflow: auto;
+  list-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(104,255,178,.35) transparent;
+}
+.direct-ledger-events li {
+  min-height: 78px;
+  padding: .85rem .15rem;
+  display: grid;
+  grid-template-columns: 92px minmax(190px,1fr) minmax(190px,.7fr) 5px;
+  gap: 1rem;
+  align-items: center;
+  border-bottom: 1px solid rgba(79,244,255,.08);
+}
+.direct-ledger-events li > span { color: var(--signal-blue); font: 800 .5rem monospace; letter-spacing: .08em; }
+.direct-ledger-events li[data-severity="medium"] > span { color: var(--amber); }
+.direct-ledger-events li[data-severity="high"] > span { color: var(--threat-red); }
+.direct-ledger-main b,.direct-ledger-main small,.direct-ledger-outcome small,.direct-ledger-outcome b,.direct-ledger-outcome em {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: monospace;
+}
+.direct-ledger-main b { color: var(--white); font-size: .65rem; letter-spacing: .04em; }
+.direct-ledger-main small { margin-top: .3rem; color: var(--muted); font-size: .47rem; }
+.direct-ledger-outcome { text-align: right; }
+.direct-ledger-outcome small { color: #5f7b84; font-size: .43rem; letter-spacing: .12em; }
+.direct-ledger-outcome b { margin-top: .18rem; color: var(--sensor-green); font-size: .51rem; letter-spacing: .05em; }
+.direct-ledger-outcome em { margin-top: .22rem; color: #668087; font-size: .41rem; font-style: normal; }
+.direct-ledger-events li > i {
+  width: 4px;
+  height: 30px;
+  background: linear-gradient(var(--sensor-green),transparent);
+  box-shadow: 0 0 10px rgba(104,255,178,.45);
+  animation: threat-feed-pulse 1.8s ease-in-out infinite;
+}
+.direct-ledger-events li[data-severity="high"] > i {
+  background: linear-gradient(var(--threat-red),transparent);
+  box-shadow: 0 0 10px rgba(255,49,89,.55);
+}
+.direct-ledger-events .direct-ledger-empty {
+  grid-template-columns: 92px minmax(0,1fr);
+  min-height: 92px;
+}
+.direct-ledger-empty b,.direct-ledger-empty small { display: block; font-family: monospace; }
+.direct-ledger-empty b { color: var(--muted); font-size: .58rem; }
+.direct-ledger-empty small { margin-top: .25rem; color: #637b83; font-size: .48rem; }
 
 .threat-truth { border-top: 1px solid rgba(79,244,255,.09); }
 .threat-truth .section-heading { max-width: 1050px; }
@@ -838,6 +943,9 @@ blockquote { margin: 2rem 0; padding: 0; color: #c5dbe2; font-size: clamp(1.05re
   .threat-feed { max-height: 380px; }
   .observatory-lower { grid-template-columns: 1fr; }
   .signal-spectrum { border-right: 0; border-bottom: 1px solid rgba(79,244,255,.12); }
+  .direct-ledger-events li { grid-template-columns: 76px minmax(0,1fr) 5px; }
+  .direct-ledger-outcome { grid-column: 2; text-align: left; }
+  .direct-ledger-events li > i { grid-column: 3; grid-row: 1/3; }
 }
 @media (max-width: 680px) {
   .threat-hero { padding-top: 3.5rem; }
@@ -853,11 +961,21 @@ blockquote { margin: 2rem 0; padding: 0; color: #c5dbe2; font-size: clamp(1.05re
   .map-axis { display: none; }
   .map-status-tag { left: 12px; right: auto; bottom: 12px; max-width: calc(100% - 24px); font-size: .44rem; }
   .map-legend b { width: 100%; margin-left: 0; line-height: 1.5; }
+  .direct-ledger > header { align-items: flex-start; }
+  .direct-ledger-status { max-width: 45%; }
+  .direct-ledger-contract { margin: .8rem; }
+  .direct-ledger-events { padding: 0 .8rem .9rem; }
+  .direct-ledger-events li { grid-template-columns: 1fr 4px; gap: .55rem; }
+  .direct-ledger-events li > span { grid-column: 1; }
+  .direct-ledger-main { grid-column: 1; }
+  .direct-ledger-outcome { grid-column: 1; }
+  .direct-ledger-events li > i { grid-column: 2; grid-row: 1/4; }
+  .direct-ledger-events .direct-ledger-empty { grid-template-columns: 1fr; }
   .truth-source-grid { grid-template-columns: 1fr; }
   .truth-source-card { min-height: 240px; }
   .threat-future-pipeline { grid-template-columns: 1fr; }
   .threat-future-pipeline > i { width: 1px; height: 22px; margin-left: .35rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .threat-orbit,.map-scanline,.map-status-tag i,.threat-feed li i,.sensor-lock-line i { animation: none !important; }
+  .threat-orbit,.map-scanline,.map-status-tag i,.threat-feed li i,.sensor-lock-line i,.direct-ledger-events li > i { animation: none !important; }
 }
