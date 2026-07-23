@@ -269,7 +269,7 @@
       ["Sind die Telemetriedaten echt?", "Technische Anzeigen sollen reale lokale Quellen verwenden. Nicht verfügbare Werte werden als N/A markiert. Dekorative Animationen werden als solche bezeichnet und dürfen nicht als Messdaten ausgegeben werden."],
       ["Was überträgt das öffentliche Arbeitssignal?", "Nur aggregierten Aktivstatus, Dauer, Puls und Prozessanzahl. Es überträgt keine Chats, Prompts, Befehle, Dateinamen, Audioinhalte, Hardware-IDs oder IP-Adressen."],
       ["Wer entwickelt JARVIS SYSTEM?", "Gegründet und entwickelt wird das Projekt von Oliver-Frank Pristaff aus der Schweiz. Die Entwicklung wird durch strukturierte Dokumentation, reproduzierbare Builds und schrittweise Tests begleitet."],
-      ["Wie kann ich das Projekt unterstützen?", "Aktuell helfen seriöses Feedback, echtes Interesse und später strukturierte Hardwaretests. Ein Community-Discord und ein kontrolliertes Testerprogramm sind geplant; bis dahin ist der Projektkontakt über die Website erreichbar."]
+      ["Wie kann ich das Projekt unterstützen?", "Die offizielle Discord-Community ist geöffnet. Dort helfen seriöses Feedback, technische Diskussionen und später strukturierte Hardwaretests. Eine öffentliche ISO gibt es weiterhin erst nach den dokumentierten Release-Gates."]
     ],
     "related": ["jarvis-os", "roadmap", "gruender"]
   }

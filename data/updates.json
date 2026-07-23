@@ -2,6 +2,20 @@
   {
     "date": "2026-07-23",
     "modified": "2026-07-23",
+    "code": "COMMUNITY-01",
+    "state": "ONLINE",
+    "slug": "discord-community-online",
+    "title": "Offizielle JARVIS-Community ist online",
+    "summary": "Der Discord-Server von JARVIS SYSTEM ist mit klaren Bereichen für Entwicklung, Tests, Community und Gaming sowie einem sicheren Rollen- und Onboardingmodell gestartet.",
+    "sections": [
+      ["Struktur statt Kanalchaos", "Der Server ist in System Entry, JARVIS SYSTEM, Developer Core, Test Lab, Community, Gaming, Voice Uplink und einen privaten Staff Core gegliedert. Neue Mitglieder wählen beim Einstieg ihre Interessen und erhalten dadurch eine verständliche Kanalauswahl."],
+      ["Berechtigungen mit klaren Grenzen", "Administration, Moderation, Entwicklung, Tests und Communityrollen sind getrennt. Bot-Administratorrechte wurden entfernt; Moderationsrechte bleiben auf ihre Aufgabe begrenzt. Sicherheitskanäle und interne Entwicklung liegen in einem nicht öffentlichen Staff-Bereich."],
+      ["Community ohne vorzeitige ISO-Freigabe", "Interessierte können Updates verfolgen, Feedback geben, Fehler strukturiert melden und sich über Hardware, Entwicklung oder Gaming austauschen. Der Community-Start ändert nichts am Release-Gate: Eine JARVIS-OS-ISO wird erst nach belastbaren Installations-, Recovery- und Hardwaretests öffentlich."]
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "modified": "2026-07-23",
     "code": "DISCOVERY-01",
     "state": "LIVE",
     "slug": "website-google-indexiert",
