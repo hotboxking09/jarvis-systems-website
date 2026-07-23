@@ -15,6 +15,7 @@
   const layers = { infrastructure: true, threat: true, honeypot: true };
   const nodesByScreen = [];
   const threatsByScreen = [];
+  const directsByScreen = [];
   let sensorByScreen = null;
   let width = 1;
   let height = 1;
@@ -197,14 +198,18 @@
     if (reducedMotion) draw();
   };
 
-  const drawArc = (ctx, start, end, color, progress = 1, widthValue = 1) => {
+  const curveControl = (start, end) => {
     const dx = end[0] - start[0];
     const dy = end[1] - start[1];
     const length = Math.hypot(dx, dy);
-    const control = [
+    return [
       (start[0] + end[0]) / 2 - dy * Math.min(0.24, 80 / Math.max(1, length)),
       (start[1] + end[1]) / 2 + dx * Math.min(0.24, 80 / Math.max(1, length))
     ];
+  };
+
+  const drawArc = (ctx, start, end, color, progress = 1, widthValue = 1) => {
+    const control = curveControl(start, end);
     ctx.beginPath();
     ctx.moveTo(start[0], start[1]);
     ctx.quadraticCurveTo(control[0], control[1], end[0], end[1]);
@@ -216,6 +221,26 @@
     ctx.shadowBlur = 7;
     ctx.stroke();
     ctx.setLineDash([]);
+    ctx.shadowBlur = 0;
+  };
+
+  const drawAttackArc = (ctx, start, end, phase, severity) => {
+    const color = severity === "high" ? "rgba(255,49,89,.98)" : "rgba(255,92,120,.9)";
+    drawArc(ctx, start, end, color, frame + phase, severity === "high" ? 2 : 1.45);
+    if (reducedMotion) return;
+    const control = curveControl(start, end);
+    for (let index = 0; index < 3; index += 1) {
+      const progress = (frame * 0.34 + phase + index / 3) % 1;
+      const inverse = 1 - progress;
+      const x = inverse * inverse * start[0] + 2 * inverse * progress * control[0] + progress * progress * end[0];
+      const y = inverse * inverse * start[1] + 2 * inverse * progress * control[1] + progress * progress * end[1];
+      ctx.fillStyle = index === 0 ? "#ffffff" : color;
+      ctx.shadowColor = color;
+      ctx.shadowBlur = index === 0 ? 15 : 9;
+      ctx.beginPath();
+      ctx.arc(x, y, index === 0 ? 2.1 : 1.4, 0, Math.PI * 2);
+      ctx.fill();
+    }
     ctx.shadowBlur = 0;
   };
 
@@ -292,6 +317,7 @@
     }
 
     sensorByScreen = null;
+    directsByScreen.length = 0;
     if (layers.honeypot && honeypot?.sensor) {
       const sensor = project(honeypot.sensor.position);
       const status = honeypot.sensor.state;
@@ -323,11 +349,31 @@
       sensorByScreen = { x: sensor[0], y: sensor[1], sensor: honeypot.sensor };
 
       if (status === "online" && Array.isArray(honeypot.events)) {
-        honeypot.events.forEach((event, index) => {
-          if (!Array.isArray(event.position)) return;
+        const directSources = new Map();
+        honeypot.events.forEach((event) => {
+          if (!Array.isArray(event.position) || event.position.length !== 2) return;
+          const key = `${event.source_alias}:${event.position.join(",")}`;
+          const existing = directSources.get(key);
+          if (existing) {
+            existing.count += Number(event.count) || 1;
+            existing.types.add(event.type);
+            if (event.severity === "high") existing.severity = "high";
+          } else {
+            directSources.set(key, {
+              ...event,
+              count: Number(event.count) || 1,
+              types: new Set([event.type])
+            });
+          }
+        });
+        [...directSources.values()].slice(0, 18).forEach((event, index) => {
           const source = project(event.position);
-          drawArc(context, source, sensor, "rgba(255,49,89,.9)", frame + index * 0.3, 1.5);
-          pulse(context, source[0], source[1], "rgba(255,49,89,.98)", index, 2);
+          drawAttackArc(context, source, sensor, index * 0.19, event.severity);
+          pulse(context, source[0], source[1], "rgba(255,49,89,.98)", index, event.severity === "high" ? 2.6 : 2);
+          context.fillStyle = "rgba(255,180,193,.88)";
+          context.font = "800 8px ui-monospace, monospace";
+          context.fillText(event.source_alias.replace("SRC-", ""), source[0] + 9, source[1] - 7);
+          directsByScreen.push({ x: source[0], y: source[1], event });
         });
       }
     }
@@ -536,6 +582,7 @@
   const nearest = (x, y) => {
     const candidates = [
       ...threatsByScreen.map((item) => ({ ...item, kind: "threat" })),
+      ...directsByScreen.map((item) => ({ ...item, kind: "direct" })),
       ...(sensorByScreen ? [{ ...sensorByScreen, kind: "sensor" }] : []),
       ...nodesByScreen.map((item) => ({ ...item, kind: "node" }))
     ];
@@ -562,7 +609,11 @@
       return;
     }
     let content = "";
-    if (item.kind === "threat") {
+    if (item.kind === "direct") {
+      const direct = item.event;
+      const network = Number.isInteger(direct.asn) ? `AS${direct.asn}` : "ASN N/A";
+      content = `<b>DIRECT JARVIS SENSOR EVENT</b><span>${escapeHtml(direct.source_alias)}</span><small>${escapeHtml(direct.country || "REGION N/A")} // ${escapeHtml(network)} // ×${number.format(direct.count)}<br>${escapeHtml([...direct.types].join(" + ").toUpperCase())}<br>COARSE 2° CELL — NO RAW IP</small>`;
+    } else if (item.kind === "threat") {
       const observation = item.observation;
       content = `<b>GLOBAL THREAT OBSERVATION</b><span>${escapeHtml(observation.operator)}</span><small>${escapeHtml(observation.country)} // ${number.format(observation.targets_reporting_scans)} meldende Ziele<br>EXTERNAL FEED — NOT A DIRECT JARVIS HIT</small>`;
     } else if (item.kind === "sensor") {

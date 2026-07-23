@@ -101,7 +101,7 @@
         <button type="button" class="map-layer is-active" data-layer="honeypot" aria-pressed="true"><i class="green"></i>JARVIS SENSOR</button>
       </div>
       <div class="map-viewport" id="threat-map-viewport">
-        <canvas id="threat-map-canvas" aria-label="Weltkarte mit öffentlichen RIPE-Atlas-Knoten, globalen DShield-Beobachtungen und dem Status des geplanten JARVIS-Honeypots"></canvas>
+        <canvas id="threat-map-canvas" aria-label="Weltkarte mit öffentlichen RIPE-Atlas-Knoten, globalen DShield-Beobachtungen und anonymisierten realen Ereignissen des JARVIS-Honeypots"></canvas>
         <div class="map-scanline" aria-hidden="true"></div>
         <div class="map-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         <div class="map-axis map-axis-top" aria-hidden="true"><span>180°W</span><span>120°W</span><span>060°W</span><span>000°</span><span>060°E</span><span>120°E</span><span>180°E</span></div>
@@ -112,6 +112,7 @@
       <div class="map-legend">
         <span><i class="legend-node"></i> Öffentliche Messknoten</span>
         <span><i class="legend-threat"></i> Globale externe Scanquellen</span>
+        <span><i class="legend-direct"></i> Authentifizierte JARVIS-Direktereignisse</span>
         <span><i class="legend-honeypot"></i> Verschleierter JARVIS-Sensorbereich</span>
         <b>LINIEN ZUM JARVIS-SENSOR ERSCHEINEN ERST BEI ECHTEN DIREKTEN EVENTS</b>
       </div>
@@ -189,7 +190,12 @@
       <b>EXTERNAL THREAT INTELLIGENCE</b>
     </article>
     <article class="truth-source-card reveal">
-      <span>SOURCE // 04</span><h3>JARVIS Sensor Feed</h3>
+      <span>SOURCE // 04</span><h3>DB-IP Lite</h3>
+      <p>Quell-IP-Geodaten werden ausschließlich lokal mit DB-IP Lite nachgeschlagen und vor jeder Übertragung auf ein grobes Zwei-Grad-Raster reduziert. Dadurch entstehen echte regionale Linien ohne Roh-IP oder vorgetäuschte Punktgenauigkeit.</p>
+      <b><a href="https://db-ip.com" rel="external">IP Geolocation by DB-IP</a> // CC BY 4.0</b>
+    </article>
+    <article class="truth-source-card reveal">
+      <span>SOURCE // 05</span><h3>JARVIS Sensor Feed</h3>
       <p>Der grüne Bereich zeigt nur eine grosszügig verschleierte Zielregion. Der reale Cowrie-Sensor sendet ausschließlich minimierte, pseudonymisierte Ereignisse über einen HMAC-gesicherten Empfänger. Der Livezustand wird im Browser direkt aus der öffentlichen API geprüft.</p>
       <b>DIRECT EVENTS // AUTHENTICATED + SANITIZED</b>
     </article>

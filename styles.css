@@ -634,6 +634,7 @@ blockquote { margin: 2rem 0; padding: 0; color: #c5dbe2; font-size: clamp(1.05re
 
 .observatory-console {
   position: relative;
+  width: min(calc(100% - 32px),1760px);
   margin-bottom: clamp(5rem,10vw,10rem);
   border: 1px solid rgba(79,244,255,.23);
   background: var(--console-bg);
@@ -681,7 +682,7 @@ blockquote { margin: 2rem 0; padding: 0; color: #c5dbe2; font-size: clamp(1.05re
 .observatory-metrics > div:nth-child(3) b { color: var(--threat-red); text-shadow: 0 0 14px rgba(255,49,89,.28); }
 .observatory-metrics > div:nth-child(4) b { color: var(--amber); text-shadow: 0 0 14px rgba(255,212,95,.2); }
 .observatory-metrics small { color: var(--muted); font-size: .43rem; letter-spacing: .08em; }
-.observatory-grid { display: grid; grid-template-columns: minmax(0,1fr) 345px; min-height: 690px; }
+.observatory-grid { display: grid; grid-template-columns: minmax(0,1fr) 380px; min-height: 830px; }
 .threat-map-panel { min-width: 0; display: grid; grid-template-rows: auto 1fr auto; border-right: 1px solid rgba(79,244,255,.14); }
 .map-toolbar { min-height: 52px; padding: .65rem .9rem; display: flex; flex-wrap: wrap; gap: .55rem; align-items: center; border-bottom: 1px solid rgba(79,244,255,.12); background: rgba(4,13,20,.8); }
 .map-layer { padding: .54rem .7rem; display: inline-flex; align-items: center; gap: .5rem; color: #66818a; border: 1px solid rgba(79,244,255,.1); background: rgba(2,8,13,.72); cursor: pointer; font: 800 .51rem monospace; letter-spacing: .08em; transition: color .2s,border-color .2s,background .2s; }
@@ -690,7 +691,7 @@ blockquote { margin: 2rem 0; padding: 0; color: #c5dbe2; font-size: clamp(1.05re
 .map-layer.is-active i.cyan { background: var(--signal-blue); box-shadow: 0 0 9px var(--signal-blue); }
 .map-layer.is-active i.red { background: var(--threat-red); box-shadow: 0 0 9px var(--threat-red); }
 .map-layer.is-active i.green { background: var(--sensor-green); box-shadow: 0 0 9px var(--sensor-green); }
-.map-viewport { position: relative; min-height: 620px; overflow: hidden; background: #010407; cursor: crosshair; }
+.map-viewport { position: relative; min-height: 760px; overflow: hidden; background: #010407; cursor: crosshair; }
 #threat-map-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .map-scanline {
   position: absolute;
@@ -752,6 +753,7 @@ blockquote { margin: 2rem 0; padding: 0; color: #c5dbe2; font-size: clamp(1.05re
 .map-legend i { width: 6px; height: 6px; margin-right: .4rem; display: inline-block; border-radius: 50%; vertical-align: 1px; }
 .legend-node { background: var(--signal-blue); box-shadow: 0 0 7px var(--signal-blue); }
 .legend-threat { background: var(--threat-red); box-shadow: 0 0 7px var(--threat-red); }
+.legend-direct { background: #fff; box-shadow: 0 0 4px #fff,0 0 11px var(--threat-red); }
 .legend-honeypot { background: var(--sensor-green); box-shadow: 0 0 7px var(--sensor-green); }
 
 .threat-intel-rail { min-width: 0; display: flex; flex-direction: column; background: linear-gradient(180deg,rgba(6,17,25,.94),rgba(10,3,12,.94)); }
@@ -906,11 +908,11 @@ blockquote { margin: 2rem 0; padding: 0; color: #c5dbe2; font-size: clamp(1.05re
 
 .threat-truth { border-top: 1px solid rgba(79,244,255,.09); }
 .threat-truth .section-heading { max-width: 1050px; }
-.truth-source-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; }
+.truth-source-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1rem; }
 .truth-source-card { position: relative; min-height: 275px; padding: 1.45rem; display: flex; flex-direction: column; overflow: hidden; border: 1px solid rgba(79,244,255,.15); background: linear-gradient(145deg,rgba(6,20,29,.88),rgba(4,7,13,.92)); }
 .truth-source-card::before { position: absolute; top: 0; left: 0; width: 42%; height: 2px; content: ""; background: var(--signal-blue); box-shadow: 0 0 13px var(--signal-blue); }
 .truth-source-card:nth-child(3)::before { background: var(--threat-red); box-shadow: 0 0 13px var(--threat-red); }
-.truth-source-card:nth-child(4)::before { background: var(--sensor-green); box-shadow: 0 0 13px var(--sensor-green); }
+.truth-source-card:nth-child(5)::before { background: var(--sensor-green); box-shadow: 0 0 13px var(--sensor-green); }
 .truth-source-card > span { color: var(--magenta); font: 800 .52rem monospace; letter-spacing: .12em; }
 .truth-source-card h3 { margin: auto 0 .7rem; font-size: 1.35rem; }
 .truth-source-card p { margin: 0 0 1rem; color: #90aab3; font-size: .78rem; line-height: 1.65; }

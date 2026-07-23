@@ -31,6 +31,14 @@ hosted webfont.
   reported-target count. The visualization attributes DShield and does not
   resell the data. Source and feed rules:
   <https://www.dshield.org/feeds_doc.html>.
+- Direct JARVIS sensor events may contain country, ASN and coarse two-degree
+  coordinates derived locally from the July 2026 DB-IP City Lite and ASN Lite
+  MMDB databases. DB-IP Lite is updated monthly and licensed under Creative
+  Commons Attribution 4.0 International. The website does not redistribute
+  the databases or raw lookup addresses. It publishes only reduced results
+  and provides the required attribution:
+  [IP Geolocation by DB-IP](https://db-ip.com) —
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 This file is an inventory, not a substitute for the licence notices that must
 accompany redistributed third-party software in any future operating-system

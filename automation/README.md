@@ -3,6 +3,8 @@
 GitHub Actions ruft stündlich die öffentliche JARVIS-Threat-API ab. Das
 Validierungsskript verwirft jede Antwort, die Rohdatenfelder, unbekannte
 Ereignisfelder oder eine unzulässige Kompromittierungsbehauptung enthält.
+Positionsdaten werden nur angenommen, wenn sie mit einem Land verbunden und
+auf das öffentliche Zwei-Grad-Raster begrenzt sind.
 
 `data/hourly-threat-ledger.json` wird nur geändert und committed, wenn sich die
 authentifizierten Ereignisdaten tatsächlich verändert haben. Laufende

@@ -66,6 +66,7 @@ def validate_event(event: object) -> dict:
         "source_alias",
         "country",
         "asn",
+        "position",
         "type",
         "label",
         "severity",
@@ -85,6 +86,18 @@ def validate_event(event: object) -> dict:
         not isinstance(event["asn"], int) or not 1 <= event["asn"] <= 4_294_967_295
     ):
         fail("invalid ASN")
+    position = event["position"]
+    if position is not None:
+        if (
+            not isinstance(position, list)
+            or len(position) != 2
+            or any(not isinstance(value, (int, float)) for value in position)
+            or not -180 <= position[0] <= 180
+            or not -90 <= position[1] <= 90
+            or any(abs(value / 2 - round(value / 2)) > 1e-9 for value in position)
+            or event["country"] is None
+        ):
+            fail("invalid coarse position")
     if event["severity"] not in SEVERITIES:
         fail("invalid severity")
     if event["outcome"] not in OUTCOMES:
@@ -159,7 +172,7 @@ def main() -> None:
         "sensor": {
             "state_at_update": sensor.get("state", "unknown"),
             "label": "JARVIS HONEYPOT",
-            "region": "CENTRAL EUROPE // APPROXIMATE",
+            "region": "GERMANY // FRANKFURT REGION // APPROXIMATE",
         },
         **semantic,
         "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
