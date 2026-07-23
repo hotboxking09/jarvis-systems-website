@@ -18,7 +18,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Check out generated website
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Fetch and validate privacy-bounded ledger
         run: python3 automation/update_threat_ledger.py
