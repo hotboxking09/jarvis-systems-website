@@ -66,7 +66,7 @@
   <div class="threat-truth-strip reveal" role="note">
     <div><span>PUBLIC INFRASTRUCTURE</span><b>RIPE ATLAS // VERIFIED SNAPSHOT</b></div>
     <div><span>GLOBAL THREAT PULSE</span><b>DShield // EXTERNAL OBSERVATIONS</b></div>
-    <div><span>DIRECT JARVIS EVENTS</span><b class="state-pending">SENSOR NOT DEPLOYED</b></div>
+    <div><span>DIRECT JARVIS EVENTS</span><b class="state-pending">SENSOR PRIVATE // PUBLIC LOCKED</b></div>
     <div><span>LOCATION POLICY</span><b>APPROXIMATE ONLY</b></div>
   </div>
 </section>
@@ -74,7 +74,7 @@
 <section
   class="observatory-console section-shell reveal"
   id="observatory-console"
-  data-api-endpoint=""
+  data-api-endpoint="https://jarvis-threat-observatory.jarvis-system-live.workers.dev"
   aria-labelledby="observatory-title"
 >
   <header class="observatory-command">
@@ -89,7 +89,7 @@
     <div><span>PUBLIC NODES AVAILABLE</span><b id="metric-public-total">-----</b><small>RIPE ATLAS CONNECTED</small></div>
     <div><span>NODES VISUALIZED</span><b id="metric-public-rendered">----</b><small>DETERMINISTIC SAMPLE</small></div>
     <div><span>GLOBAL THREAT SOURCES</span><b id="metric-threat-sources">--</b><small>DShield TOP NETWORKS</small></div>
-    <div><span>DIRECT HONEYPOT EVENTS</span><b id="metric-direct-events">00</b><small id="metric-sensor-state">SENSOR PENDING</small></div>
+    <div><span>DIRECT HONEYPOT EVENTS</span><b id="metric-direct-events">00</b><small id="metric-sensor-state">UPLINK STAGED</small></div>
     <div><span>DATA FRESHNESS</span><b id="metric-freshness">--</b><small>VERIFIED SNAPSHOT AGE</small></div>
   </div>
 
@@ -124,9 +124,9 @@
         <li class="feed-loading"><span>DATA LINK</span><b>WAITING FOR VERIFIED SNAPSHOT</b></li>
       </ol>
       <div class="sensor-lock">
-        <div class="sensor-lock-head"><span>JARVIS HONEYPOT UPLINK</span><b id="sensor-lock-state">NOT DEPLOYED</b></div>
+        <div class="sensor-lock-head"><span>JARVIS HONEYPOT UPLINK</span><b id="sensor-lock-state">PUBLIC LOCKED</b></div>
         <div class="sensor-lock-line"><i></i></div>
-        <p id="sensor-lock-copy">Noch existiert kein öffentlicher JARVIS-Sensor. Deshalb zeigt die Karte bewusst keine direkten Angriffslinien.</p>
+        <p id="sensor-lock-copy">Sensor und sicherer Empfänger existieren. TCP/22 und die Veröffentlichung direkter Ereignisse bleiben bis zur schriftlichen Providerfreigabe technisch gesperrt.</p>
       </div>
     </aside>
   </div>
@@ -141,7 +141,7 @@
       <span>DATA INTEGRITY MATRIX</span>
       <div><i class="ok"></i><p><b>NO ACTIVE SCANNING</b><small>Nur freiwillig veröffentlichte oder offiziell bereitgestellte Datenquellen</small></p></div>
       <div><i class="ok"></i><p><b>NO RAW PUBLIC ATTACKER IPs</b><small>Öffentliche Ansicht nutzt Regionen und Netzbetreiber statt Personenbehauptungen</small></p></div>
-      <div><i class="pending"></i><p><b>DIRECT SENSOR FEED PENDING</b><small>Wird erst nach realer Cowrie-/Netcup-Abnahme freigeschaltet</small></p></div>
+      <div><i class="pending"></i><p><b>DIRECT SENSOR FEED DUAL-LOCKED</b><small>Sensor- und Receiver-Gate werden erst nach schriftlicher Providerfreigabe geöffnet</small></p></div>
     </div>
   </div>
 </section>
@@ -170,8 +170,8 @@
     </article>
     <article class="truth-source-card reveal">
       <span>SOURCE // 04</span><h3>JARVIS Sensor Feed</h3>
-      <p>Der grüne Bereich zeigt nur eine grosszügig verschleierte Zielregion. Solange Cowrie und die sichere öffentliche API nicht real betrieben werden, bleibt der Sensorstatus auf PENDING und die Zahl direkter Ereignisse exakt null.</p>
-      <b>DIRECT EVENTS // LOCKED UNTIL REAL</b>
+      <p>Der grüne Bereich zeigt nur eine grosszügig verschleierte Zielregion. Cowrie und der HMAC-gesicherte Empfänger sind real vorhanden, laufen aber im privaten Stagingzustand. Bis zur Providerfreigabe bleibt die Zahl veröffentlichter Direkt-Ereignisse exakt null.</p>
+      <b>DIRECT EVENTS // DUAL-GATED</b>
     </article>
   </div>
   <div class="threat-future-pipeline reveal">

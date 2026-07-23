@@ -288,7 +288,11 @@
     if (layers.honeypot && honeypot?.sensor) {
       const sensor = project(honeypot.sensor.position);
       const status = honeypot.sensor.state;
-      const color = status === "online" ? "rgba(104,255,178,.95)" : "rgba(255,212,95,.92)";
+      const color = status === "online"
+        ? "rgba(104,255,178,.95)"
+        : status === "offline"
+          ? "rgba(255,49,89,.92)"
+          : "rgba(255,212,95,.92)";
       const radius = Math.max(28, Math.min(62, width * 0.045));
       const glow = context.createRadialGradient(sensor[0], sensor[1], 0, sensor[0], sensor[1], radius);
       glow.addColorStop(0, status === "online" ? "rgba(104,255,178,.24)" : "rgba(255,212,95,.18)");
@@ -301,7 +305,14 @@
       pulse(context, sensor[0], sensor[1], color, 2.4, 2.6);
       context.fillStyle = color;
       context.font = "800 9px ui-monospace, monospace";
-      context.fillText(status === "online" ? "JARVIS HONEYPOT // ONLINE" : "JARVIS HONEYPOT // PENDING", sensor[0] + 14, sensor[1] + 4);
+      const sensorLabel = status === "online"
+        ? "JARVIS HONEYPOT // ONLINE"
+        : status === "staged"
+          ? "JARVIS HONEYPOT // STAGED"
+          : status === "offline"
+            ? "JARVIS HONEYPOT // OFFLINE"
+            : "JARVIS HONEYPOT // PENDING";
+      context.fillText(sensorLabel, sensor[0] + 14, sensor[1] + 4);
       sensorByScreen = { x: sensor[0], y: sensor[1], sensor: honeypot.sensor };
 
       if (status === "online" && Array.isArray(honeypot.events)) {
@@ -336,19 +347,37 @@
     metricPublicTotal.textContent = number.format(infrastructure.available_connected_public);
     metricPublicRendered.textContent = number.format(infrastructure.rendered_sample);
     metricThreatSources.textContent = String(globalThreat.observations.length).padStart(2, "0");
-    metricDirectEvents.textContent = String(honeypot.events?.length || 0).padStart(2, "0");
-    const online = honeypot.sensor?.state === "online";
-    metricSensorState.textContent = online ? "AUTHENTICATED SENSOR" : "SENSOR PENDING";
+    const directEvents = Number(honeypot.counts?.direct_events_24h ?? honeypot.events?.length ?? 0);
+    metricDirectEvents.textContent = number.format(Math.max(0, directEvents));
+    const state = honeypot.sensor?.state || "pending";
+    const online = state === "online";
+    const staged = state === "staged";
+    const offline = state === "offline";
+    metricSensorState.textContent = online
+      ? "AUTHENTICATED SENSOR // 24H"
+      : staged
+        ? "SECURE UPLINK STAGED"
+        : offline
+          ? "SENSOR OFFLINE"
+          : "UPLINK PENDING";
     metricFreshness.textContent = ageLabel(globalThreat.source_updated_at || globalThreat.generated_at);
-    sensorState.textContent = online ? "ONLINE" : "NOT DEPLOYED";
-    sensorState.dataset.state = online ? "online" : "pending";
+    sensorState.textContent = online ? "ONLINE" : staged ? "STAGED" : offline ? "OFFLINE" : "PENDING";
+    sensorState.dataset.state = online ? "online" : staged ? "staged" : offline ? "offline" : "pending";
     sensorCopy.textContent = online
       ? "Der öffentliche Feed ist aktiv. Angezeigt werden ausschließlich vergröberte Regionen und aggregierte Ereignisse."
-      : "Noch existiert kein öffentlicher JARVIS-Sensor. Deshalb zeigt die Karte bewusst keine direkten Angriffslinien.";
+      : staged
+        ? "Der echte Sensor und der signierte Empfänger laufen im privaten Stagingmodus. Veröffentlichte Direkt-Ereignisse bleiben absichtlich null."
+        : offline
+          ? "Der Empfänger ist erreichbar, aber der Sensor-Heartbeat ist veraltet. Es werden keine Direkt-Ereignisse als live ausgegeben."
+          : "Der sichere Empfänger ist vorbereitet. Bis zum authentifizierten Sensor-Heartbeat bleiben direkte Angriffslinien aus.";
     feedMode.textContent = "EXTERNAL FEED";
     statusLabel.textContent = online
       ? "VERIFIED SNAPSHOTS + AUTHENTICATED JARVIS FEED"
-      : "VERIFIED SNAPSHOTS // JARVIS SENSOR PENDING";
+      : staged
+        ? "VERIFIED SNAPSHOTS // SECURE SENSOR STAGED"
+        : offline
+          ? "VERIFIED SNAPSHOTS // SENSOR OFFLINE"
+          : "VERIFIED SNAPSHOTS // JARVIS UPLINK PENDING";
     syncState.textContent = "VERIFIED SNAPSHOTS LOADED";
   };
 
