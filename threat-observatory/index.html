@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="de-CH" data-release-state="public-release">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#02060a">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Interaktive JARVIS-Weltkarte mit echten öffentlichen RIPE-Atlas-Infrastrukturdaten, datierten DShield-Beobachtungen und einem ehrlichen Status für den geplanten eigenen Honeypot.">
+  <meta name="author" content="Oliver-Frank Pristaff">
+  <meta name="creator" content="Oliver-Frank Pristaff">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:site_name" content="JARVIS SYSTEM">
+  <meta property="og:title" content="Globales Threat Observatory // JARVIS SYSTEM">
+  <meta property="og:description" content="Interaktive JARVIS-Weltkarte mit echten öffentlichen RIPE-Atlas-Infrastrukturdaten, datierten DShield-Beobachtungen und einem ehrlichen Status für den geplanten eigenen Honeypot.">
+  <meta property="og:url" content="https://jarvisserver.org/threat-observatory/">
+  <meta property="og:image" content="https://jarvisserver.org/assets/og-card.png">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="JARVIS SYSTEM – unabhängiges Betriebssystemprojekt">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Globales Threat Observatory // JARVIS SYSTEM">
+  <meta name="twitter:description" content="Interaktive JARVIS-Weltkarte mit echten öffentlichen RIPE-Atlas-Infrastrukturdaten, datierten DShield-Beobachtungen und einem ehrlichen Status für den geplanten eigenen Honeypot.">
+  <meta name="twitter:image" content="https://jarvisserver.org/assets/og-card.png">
+  <link rel="canonical" href="https://jarvisserver.org/threat-observatory/">
+  <link rel="alternate" type="application/atom+xml" title="JARVIS SYSTEM Updates" href="/feed.xml">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="/styles.css">
+  <title>Globales Threat Observatory // JARVIS SYSTEM</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://jarvisserver.org/#website","url":"https://jarvisserver.org/","name":"JARVIS SYSTEM","alternateName":"JARVIS OS","inLanguage":"de-CH","publisher":{"@id":"https://jarvisserver.org/#project"}},{"@type":"Organization","@id":"https://jarvisserver.org/#project","name":"JARVIS SYSTEM","description":"Unabhängiges Betriebssystemprojekt aus der Schweiz.","url":"https://jarvisserver.org/","sameAs":["https://github.com/hotboxking09/jarvis-systems-website","https://discord.gg/DWBwuUhXmv"],"logo":{"@type":"ImageObject","url":"https://jarvisserver.org/assets/jarvis-core-head.png","width":1024,"height":1024},"founder":{"@id":"https://jarvisserver.org/#founder"}},{"@type":"Person","@id":"https://jarvisserver.org/#founder","name":"Oliver-Frank Pristaff","url":"https://jarvisserver.org/gruender/","jobTitle":"Gründer und Entwickler von JARVIS SYSTEM","sameAs":["https://github.com/hotboxking09"],"nationality":{"@type":"Country","name":"Schweiz"}},{"@type":"TechArticle","@id":"https://jarvisserver.org/threat-observatory/#page","url":"https://jarvisserver.org/threat-observatory/","name":"Globales Threat Observatory","headline":"Globales Threat Observatory","description":"Interaktive JARVIS-Weltkarte mit echten öffentlichen RIPE-Atlas-Infrastrukturdaten, datierten DShield-Beobachtungen und einem ehrlichen Status für den geplanten eigenen Honeypot.","inLanguage":"de-CH","isPartOf":{"@id":"https://jarvisserver.org/#website"},"datePublished":"2026-07-23","dateModified":"2026-07-23","author":{"@id":"https://jarvisserver.org/#founder"},"publisher":{"@id":"https://jarvisserver.org/#project"},"image":"https://jarvisserver.org/assets/og-card.png"},{"@type":"BreadcrumbList","@id":"https://jarvisserver.org/threat-observatory/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"JARVIS SYSTEM","item":"https://jarvisserver.org/"},{"@type":"ListItem","position":2,"name":"Globales Threat Observatory","item":"https://jarvisserver.org/threat-observatory/"}]}]}</script>
+</head>
+<body class="content-page threat-observatory-page">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas><div class="noise-layer" aria-hidden="true"></div>
+  
+  <header class="site-header" id="top">
+    <a class="brand" href="/" aria-label="JARVIS SYSTEM Startseite">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>JARVIS</strong><small>SYSTEM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENÜ</button>
+      <div class="nav-links" id="nav-links"><a href="/jarvis-os/">JARVIS OS</a><a href="/technik/">Technik</a><a href="/entwicklung/">Entwicklung</a><a href="/updates/">Updates</a><a href="/roadmap/">Roadmap</a><a href="/community/">Community</a><a href="/threat-observatory/" aria-current="page">Threat Map</a><a href="/gruender/">Gründer</a><a href="/faq/">FAQ</a></div>
+    </nav>
+    <div class="header-state"><span></span> ENGINEERING ONLINE</div>
+  </header>
+  <main id="main"><section class="threat-hero section-shell">
+  <div class="threat-hero-copy reveal">
+    <nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">JARVIS SYSTEM</a><span>/</span><span aria-current="page">Threat Map</span></nav>
+    <p class="eyebrow">09 // GLOBAL SECURITY VISUALIZATION</p>
+    <h1>THREAT<br><span>OBSERVATORY</span></h1>
+    <p class="content-intro">Eine hochauflösende, interaktive Weltansicht für echte öffentliche Netzwerkknoten, globale Threat-Intelligence und später die datenschutzbegrenzten Ereignisse des eigenen JARVIS-Honeypots. Keine erfundenen Angriffe, keine heimlichen Scans und keine vorgetäuschte Genauigkeit.</p>
+    <div class="threat-hero-actions">
+      <a class="button button-primary" href="#observatory-console">OBSERVATORY ÖFFNEN <span>↓</span></a>
+      <a class="button button-ghost" href="#truth-contract">DATENVERTRAG</a>
+    </div>
+  </div>
+  <div class="threat-hero-core reveal" aria-hidden="true">
+    <div class="threat-orbit threat-orbit-a"></div>
+    <div class="threat-orbit threat-orbit-b"></div>
+    <picture><source srcset="/assets/jarvis-core-head.webp" type="image/webp"><img src="/assets/jarvis-core-head.png" width="1024" height="1024" alt="" decoding="async"></picture>
+    <span>SECURITY CORE // OBSERVE ONLY</span>
+  </div>
+  <div class="threat-truth-strip reveal" role="note">
+    <div><span>PUBLIC INFRASTRUCTURE</span><b>RIPE ATLAS // VERIFIED SNAPSHOT</b></div>
+    <div><span>GLOBAL THREAT PULSE</span><b>DShield // EXTERNAL OBSERVATIONS</b></div>
+    <div><span>DIRECT JARVIS EVENTS</span><b class="state-pending">SENSOR NOT DEPLOYED</b></div>
+    <div><span>LOCATION POLICY</span><b>APPROXIMATE ONLY</b></div>
+  </div>
+</section>
+
+<section
+  class="observatory-console section-shell reveal"
+  id="observatory-console"
+  data-api-endpoint=""
+  aria-labelledby="observatory-title"
+>
+  <header class="observatory-command">
+    <div>
+      <span class="observatory-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <div><small>JARVIS SECURITY NETWORK</small><h2 id="observatory-title">GLOBAL SIGNAL FIELD</h2></div>
+    </div>
+    <div class="observatory-clock"><span id="threat-clock">--:--:-- UTC</span><b id="threat-sync-state">LOADING VERIFIED DATA</b></div>
+  </header>
+
+  <div class="observatory-metrics" aria-live="polite">
+    <div><span>PUBLIC NODES AVAILABLE</span><b id="metric-public-total">-----</b><small>RIPE ATLAS CONNECTED</small></div>
+    <div><span>NODES VISUALIZED</span><b id="metric-public-rendered">----</b><small>DETERMINISTIC SAMPLE</small></div>
+    <div><span>GLOBAL THREAT SOURCES</span><b id="metric-threat-sources">--</b><small>DShield TOP NETWORKS</small></div>
+    <div><span>DIRECT HONEYPOT EVENTS</span><b id="metric-direct-events">00</b><small id="metric-sensor-state">SENSOR PENDING</small></div>
+    <div><span>DATA FRESHNESS</span><b id="metric-freshness">--</b><small>VERIFIED SNAPSHOT AGE</small></div>
+  </div>
+
+  <div class="observatory-grid">
+    <div class="threat-map-panel">
+      <div class="map-toolbar" aria-label="Kartenebenen">
+        <button type="button" class="map-layer is-active" data-layer="infrastructure" aria-pressed="true"><i class="cyan"></i>PUBLIC NODES</button>
+        <button type="button" class="map-layer is-active" data-layer="threat" aria-pressed="true"><i class="red"></i>GLOBAL THREAT</button>
+        <button type="button" class="map-layer is-active" data-layer="honeypot" aria-pressed="true"><i class="green"></i>JARVIS SENSOR</button>
+      </div>
+      <div class="map-viewport" id="threat-map-viewport">
+        <canvas id="threat-map-canvas" aria-label="Weltkarte mit öffentlichen RIPE-Atlas-Knoten, globalen DShield-Beobachtungen und dem Status des geplanten JARVIS-Honeypots"></canvas>
+        <div class="map-scanline" aria-hidden="true"></div>
+        <div class="map-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="map-axis map-axis-top" aria-hidden="true"><span>180°W</span><span>120°W</span><span>060°W</span><span>000°</span><span>060°E</span><span>120°E</span><span>180°E</span></div>
+        <div class="map-axis map-axis-side" aria-hidden="true"><span>75°N</span><span>45°N</span><span>00°</span><span>45°S</span><span>75°S</span></div>
+        <div class="map-status-tag"><i></i><span id="map-status-label">REAL SNAPSHOTS // INITIALIZING</span></div>
+        <div class="map-tooltip" id="map-tooltip" role="status" aria-live="polite" hidden></div>
+      </div>
+      <div class="map-legend">
+        <span><i class="legend-node"></i> Öffentliche Messknoten</span>
+        <span><i class="legend-threat"></i> Globale externe Scanquellen</span>
+        <span><i class="legend-honeypot"></i> Verschleierter JARVIS-Sensorbereich</span>
+        <b>LINIEN ZUM JARVIS-SENSOR ERSCHEINEN ERST BEI ECHTEN DIREKTEN EVENTS</b>
+      </div>
+    </div>
+
+    <aside class="threat-intel-rail" aria-labelledby="threat-feed-title">
+      <header><div><span>LIVE INTERCEPT BUFFER</span><h3 id="threat-feed-title">THREAT SIGNALS</h3></div><b id="feed-mode">EXTERNAL FEED</b></header>
+      <div class="feed-notice"><i></i><p>DShield-Beobachtungen sind reale globale Meldungen, aber <strong>keine direkten Angriffe auf JARVIS</strong>. Eine Netzwerkquelle beweist keine Personenidentität.</p></div>
+      <ol class="threat-feed" id="threat-feed">
+        <li class="feed-loading"><span>DATA LINK</span><b>WAITING FOR VERIFIED SNAPSHOT</b></li>
+      </ol>
+      <div class="sensor-lock">
+        <div class="sensor-lock-head"><span>JARVIS HONEYPOT UPLINK</span><b id="sensor-lock-state">NOT DEPLOYED</b></div>
+        <div class="sensor-lock-line"><i></i></div>
+        <p id="sensor-lock-copy">Noch existiert kein öffentlicher JARVIS-Sensor. Deshalb zeigt die Karte bewusst keine direkten Angriffslinien.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="observatory-lower">
+    <div class="signal-spectrum">
+      <span>REGIONAL SIGNAL DENSITY</span>
+      <canvas id="threat-spectrum-canvas" aria-label="Animierte Dichteanzeige auf Basis der geladenen realen Daten"></canvas>
+      <b>AGGREGATED // NO PAYLOAD CONTENT</b>
+    </div>
+    <div class="observatory-integrity">
+      <span>DATA INTEGRITY MATRIX</span>
+      <div><i class="ok"></i><p><b>NO ACTIVE SCANNING</b><small>Nur freiwillig veröffentlichte oder offiziell bereitgestellte Datenquellen</small></p></div>
+      <div><i class="ok"></i><p><b>NO RAW PUBLIC ATTACKER IPs</b><small>Öffentliche Ansicht nutzt Regionen und Netzbetreiber statt Personenbehauptungen</small></p></div>
+      <div><i class="pending"></i><p><b>DIRECT SENSOR FEED PENDING</b><small>Wird erst nach realer Cowrie-/Netcup-Abnahme freigeschaltet</small></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="threat-truth section-shell section-pad" id="truth-contract" aria-labelledby="truth-title">
+  <div class="section-heading reveal">
+    <p class="eyebrow">DATA TRUTH CONTRACT // NO CINEMA FAKES</p>
+    <h2 id="truth-title">Sieht nach Film aus.<br><span>Bleibt trotzdem ehrlich.</span></h2>
+    <p>Die Karte darf spektakulär animiert sein, aber jeder technische Punkt besitzt eine echte Quelle und einen klaren Gültigkeitsbereich. Sie ist ausdrücklich kein vollständiger Scan des Internets. Private Server werden weder gesucht noch dargestellt. Öffentlich sichtbare Infrastrukturpunkte stammen aus dem freiwilligen RIPE-Atlas-Messnetz; deren Positionen werden bereits durch RIPE zum Schutz der Betreiber räumlich verschleiert.</p>
+  </div>
+  <div class="truth-source-grid">
+    <article class="truth-source-card reveal">
+      <span>SOURCE // 01</span><h3>Natural Earth</h3>
+      <p>Die hochauflösende Ländergeometrie basiert auf dem frei nutzbaren 1:50m-Datensatz. Sie dient nur als kartografische Grundlage und behauptet keine Netzwerkaktivität.</p>
+      <b>MAP GEOMETRY // VERSIONED</b>
+    </article>
+    <article class="truth-source-card reveal">
+      <span>SOURCE // 02</span><h3>RIPE Atlas</h3>
+      <p>Blaue Punkte sind echte verbundene öffentliche Messknoten aus einem datierten API-Snapshot. Für flüssige Darstellung wird eine reproduzierbare Auswahl gezeichnet; die vollständige verfügbare Anzahl bleibt separat sichtbar.</p>
+      <b>PUBLIC MEASUREMENT NETWORK</b>
+    </article>
+    <article class="truth-source-card reveal">
+      <span>SOURCE // 03</span><h3>SANS ISC / DShield</h3>
+      <p>Rote Regionen repräsentieren die aktuell veröffentlichten aktivsten Quellnetze, die DShield-Teilnehmer in den letzten Tagen mit Scans beobachtet haben. Sie sind kein Identitätsnachweis und kein direkter JARVIS-Honeypot-Log.</p>
+      <b>EXTERNAL THREAT INTELLIGENCE</b>
+    </article>
+    <article class="truth-source-card reveal">
+      <span>SOURCE // 04</span><h3>JARVIS Sensor Feed</h3>
+      <p>Der grüne Bereich zeigt nur eine grosszügig verschleierte Zielregion. Solange Cowrie und die sichere öffentliche API nicht real betrieben werden, bleibt der Sensorstatus auf PENDING und die Zahl direkter Ereignisse exakt null.</p>
+      <b>DIRECT EVENTS // LOCKED UNTIL REAL</b>
+    </article>
+  </div>
+  <div class="threat-future-pipeline reveal">
+    <div><span>01</span><b>COWRIE SENSOR</b><small>isolierte Security-Node</small></div><i></i>
+    <div><span>02</span><b>SANITIZE GATE</b><small>IP entfernen, Region vergröbern</small></div><i></i>
+    <div><span>03</span><b>PUBLIC API</b><small>signierte Aggregate, Rate Limit</small></div><i></i>
+    <div><span>04</span><b>MAP + DISCORD</b><small>Website-Visualisierung und private Logs</small></div>
+  </div>
+  <div class="content-callout reveal">PRIVACY BOUNDARY // Der spätere öffentliche Feed enthält keine Roh-IP, keinen echten Namen, keine Malware, keine Passwörter und keine vollständigen Eingaben. Detaillierte Sicherheitslogs bleiben geschützt, zeitlich begrenzt und für öffentliche Anzeigen pseudonymisiert beziehungsweise aggregiert.</div>
+</section>
+</main>
+  
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><b>JARVIS SYSTEM</b><span>INDEPENDENT ENGINEERING PROJECT</span></div>
+    <nav class="footer-map" aria-label="Seitennavigation">
+      <a href="/jarvis-os/">JARVIS OS</a><a href="/technik/">Technik</a><a href="/entwicklung/">Entwicklung</a>
+      <a href="/updates/">Updates</a><a href="/roadmap/">Roadmap</a><a href="/community/">Community</a><a href="/threat-observatory/">Threat Map</a><a href="/gruender/">Gründer</a><a href="/faq/">FAQ</a>
+    </nav>
+    <div class="footer-legal">
+      <p>© 2026 Oliver-Frank Pristaff. Alle Rechte vorbehalten. Keine ISO-Verteilung.</p>
+      <a href="/legal.html">Rechte, Hinweise &amp; Datenschutz</a> ·
+      <a href="https://discord.gg/DWBwuUhXmv">Discord-Community</a> ·
+      <a href="https://github.com/hotboxking09">GitHub-Profil</a> ·
+      <a href="https://github.com/hotboxking09/jarvis-systems-website">Website-Repository</a>
+    </div>
+    <div class="footer-state"><span></span> PROJECT SIGNAL ACTIVE</div>
+  </footer>
+  <noscript><div class="noscript">Die Datenquellen und Erklärungen bleiben lesbar. Die interaktive Karte benötigt JavaScript.</div></noscript>
+  <script src="/app.js" defer></script>
+  <script src="/threat-observatory.js" defer></script>
+</body>
+</html>
