@@ -6,6 +6,14 @@
   <updated>2026-07-24T00:00:00+02:00</updated>
   <subtitle>Verifizierte Entwicklungsschritte von JARVIS OS.</subtitle>
   <entry>
+    <title>Offizieller JARVIS Support-Uplink veröffentlicht</title>
+    <id>https://jarvisserver.org/updates/support-uplink-live/</id><link href="https://jarvisserver.org/updates/support-uplink-live/"/>
+    <updated>2026-07-24T00:00:00+02:00</updated>
+    <published>2026-07-24T00:00:00+02:00</published>
+    <author><name>Oliver-Frank Pristaff</name></author>
+    <summary>Das freiwillige Unterstützungsmodell ist mit transparenter Website, Ko-fi-Tiers, klaren Discord-Rollen und konsistenten Verweisen auf den öffentlichen Projektprofilen live.</summary>
+  </entry>
+  <entry>
     <title>Sichere JARVIS-Plattform-Synchronisation vollständig abgenommen</title>
     <id>https://jarvisserver.org/updates/sichere-plattform-synchronisation/</id><link href="https://jarvisserver.org/updates/sichere-plattform-synchronisation/"/>
     <updated>2026-07-24T00:00:00+02:00</updated>

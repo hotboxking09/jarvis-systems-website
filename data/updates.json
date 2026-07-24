@@ -2,6 +2,37 @@
   {
     "date": "2026-07-24",
     "modified": "2026-07-24",
+    "code": "SUPPORT-01",
+    "state": "LIVE",
+    "slug": "support-uplink-live",
+    "title": "Offizieller JARVIS Support-Uplink veröffentlicht",
+    "summary": "Das freiwillige Unterstützungsmodell ist mit transparenter Website, Ko-fi-Tiers, klaren Discord-Rollen und konsistenten Verweisen auf den öffentlichen Projektprofilen live.",
+    "sections": [
+      [
+        "Freiwillige Unterstützung mit klaren Stufen",
+        "Einmalige Unterstützung ist ab fünf Euro möglich. JARVIS VIP kostet sechs Euro pro Monat, FOUNDING SUPPORTER sechzehn Euro pro Monat. Die Community und der öffentliche Projektzugang bleiben kostenlos."
+      ],
+      [
+        "Offizielle Wege statt verstreuter Zahlungslinks",
+        "Das Supportportal dokumentiert Modell, Grenzen und Regeln. Zahlungen werden ausschließlich über das offizielle Ko-fi-Profil JARVIS SYSTEM geführt. Website, GitHub, Discord, X und LinkedIn verweisen auf denselben nachvollziehbaren Ursprung."
+      ],
+      [
+        "Discord-Rollen an die Memberships gebunden",
+        "Die Ko-fi-Discord-Integration ist konfiguriert: JARVIS VIP und FOUNDING SUPPORTER besitzen ihre vorgesehenen Rollen. Die praktische Zustellung nach einer realen Zahlung wird beim ersten echten Supportfall kontrolliert und dokumentiert."
+      ],
+      [
+        "Founding 100 ohne falsche Versprechen",
+        "Eine dauerhafte Anerkennung entsteht erst nach drei erfolgreich bezahlten Folgemonaten und ausdrücklichem Opt-in für Name oder Alias. Founding Supporter bedeutet nicht Firmengründer und schafft keine Anteile, Team-, Tester-, Admin-, Eigentums- oder Governance-Rechte."
+      ],
+      [
+        "Transparenz bleibt wichtiger als Showwerte",
+        "Kostenabdeckung, Supporterzahl und Einnahmen bleiben N/A, bis belegte Daten vorliegen. JARVIS SYSTEM veröffentlicht keine erfundenen Finanzwerte und bezeichnet freiwillige Unterstützung weder als Investment noch pauschal als steuerlich abzugsfähige Spende."
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-24",
+    "modified": "2026-07-24",
     "code": "PUB-PUBLISHCORE",
     "state": "APPROVED",
     "slug": "sichere-plattform-synchronisation",
