@@ -1,5 +1,98 @@
 [
   {
+    "date": "2026-07-24",
+    "modified": "2026-07-24",
+    "code": "SECURITY-03",
+    "state": "LIVE",
+    "slug": "threat-observatory-live-sensorfeed",
+    "title": "Threat Observatory mit echtem Sensorfeed live",
+    "summary": "Der isolierte JARVIS-Honeypot, der signierte Datenschutz-Uplink, die vergrößerte Weltkarte und der stündliche GitHub-/Discord-Ledger sind jetzt Ende-zu-Ende aktiv.",
+    "sections": [
+      [
+        "Getrennte Sensorzone statt Showserver",
+        "Der öffentliche Sensor läuft in einer eigenen Vertrauenszone ohne direkten Zugriff auf Website, Discord-Bots oder interne Projektdaten. Er emuliert einen SSH-Dienst kontrolliert und besitzt einen dokumentierten Not-Aus-, Wiederanlauf- und Healthcheck-Pfad. Das Ziel ist Beobachtung und Forschung – nicht das Zurückhacken fremder Systeme."
+      ],
+      [
+        "Minimierte und signierte Datenkette",
+        "Ereignisse durchlaufen lokal einen Sanitizer und anschließend einen HMAC-signierten Receiver mit Replay-Schutz, Rate-Limit und strikter Feld-Allowlist. Roh-IP-Adressen, Zugangsdaten, vollständige Eingaben, Befehle, URLs, Payloads und Malwaredateien werden nicht öffentlich übertragen. Ein Netzwerkpseudonym ist ausdrücklich keine Personenidentität."
+      ],
+      [
+        "Echte Geo-/ASN-Daten mit grober Datenschutzgrenze",
+        "Land und Netzbetreiber werden ausschließlich lokal aus einer versionierten DB-IP-Lite-Datenbank ermittelt. Vor dem Uplink werden Positionen auf ein Zwei-Grad-Raster reduziert; fehlende Zuordnungen bleiben N/A. Der Standort des JARVIS-Sensors wird ebenfalls nur als großzügige Region dargestellt."
+      ],
+      [
+        "Größere Karte und reale Signallinien",
+        "Das Threat Observatory nutzt echte öffentliche RIPE-Atlas-Infrastrukturpunkte, einen datierten DShield-Snapshot und authentifizierte Ereignisse des eigenen Sensors. Direkte Linien zum JARVIS-Sensor entstehen ausschließlich bei realen, zulässig grob verorteten Sensorereignissen. Die Karte darf nach Hackerfilm aussehen – die Daten darunter bleiben nachvollziehbar und ehrlich."
+      ],
+      [
+        "GitHub-Ledger und stiller Discord-Feed",
+        "Bei tatsächlichen Datenänderungen veröffentlicht GitHub höchstens stündlich einen streng validierten, sanitisierten Ledger. Ein eigener Discord-Webhook meldet denselben Stand ohne Mentions im JARVIS-News-Kanal und verlinkt die öffentliche Historie. Ein kontrollierter echter Sensorwechsel wurde vollständig bis zum sichtbaren Discord-Embed abgenommen."
+      ],
+      [
+        "Was dieser Meilenstein noch nicht bedeutet",
+        "Das System behauptet weder die Identität einer angreifenden Person noch einen kompromittierten Fremdhost. Die öffentliche Ansicht ist kein vollständiger Scan des Internets. Weitere Arbeit betrifft Langzeitbeobachtung, optionale zusätzliche Provider-Firewallregeln und saubere Betriebs- und Recoverytests."
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-24",
+    "modified": "2026-07-24",
+    "code": "COMMUNITY-03",
+    "state": "ACTIVE",
+    "slug": "discord-team-welcome-securityfeed",
+    "title": "Discord-Teamstruktur und Automationen verfeinert",
+    "summary": "Der Community-Server besitzt jetzt klar getrennte Team- und Testbereiche, eine persönliche JARVIS-Begrüssung, gezielte Protokolle und einen automatischen öffentlichen Securityfeed.",
+    "sections": [
+      [
+        "Team und Testlabor bewusst getrennt",
+        "JARVIS TEAM erhält Zugriff auf den privaten Staff Core. Das Test Lab ist nur für die zusammengesetzte Freigabe JARVIS TEST TEAM sichtbar. Dadurch wird niemand allein durch eine allgemeine Interessenrolle versehentlich Teil interner Entwicklung oder Tests."
+      ],
+      [
+        "Mehr Struktur ohne alte Inhalte zu zerstören",
+        "Bestehende Basisnamen und Communitybereiche blieben erhalten und wurden einheitlich dekoriert. Der Staff Core wurde um Teamchat, Ankündigungen, Backupstatus, Fehler und Vorfälle, Serverlogs, Botstatus sowie Freigaben und Entscheidungen ergänzt."
+      ],
+      [
+        "Persönliche Begrüssung mit JARVIS-Identität",
+        "ProBot begrüsst neue Mitglieder im Willkommenskanal mit kurzem menschlichem Text, dynamischem Avatar und einer eigenen JARVIS-Grafik. Discords zusätzliche generische Systembegrüssung wurde deaktiviert, damit neue Mitglieder nicht doppelt empfangen werden."
+      ],
+      [
+        "Gezielte Logs statt Bot-Vollzugriff",
+        "Ausgewählte Mitglieder-, Rollen-, Kanal-, Berechtigungs- und Moderationsereignisse landen ausschließlich im privaten Serverlog. Der neue Threat-Observatory-Webhook besitzt nur seinen vorgesehenen Nachrichtenpfad. Ein zusätzlicher eigener Dauerbot wird erst gebaut, wenn Tickets, Builds oder echte 24/7-Automationen ihn rechtfertigen."
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-24",
+    "modified": "2026-07-24",
+    "code": "WEB-02",
+    "state": "ONLINE",
+    "slug": "engineering-signal-und-projektkern",
+    "title": "Website zeigt jetzt den echten Engineering-Puls",
+    "summary": "Website, GitHub und Discord bilden einen gemeinsamen öffentlichen Projektkern – mit einem datenschutzbegrenzten Live-Arbeitssignal, sauberem Entwicklungslog und klaren Releasegrenzen.",
+    "sections": [
+      [
+        "Echter Arbeitsstatus ohne Chatüberwachung",
+        "Das JARVIS Work Signal zeigt, ob die Entwicklungsumgebung aktiv ist, wie lange eine Sitzung läuft und wie sich ein grober Prozesspuls verändert. Prompts, Chattexte, Befehle, Dateinamen, Audio, Hardwarekennungen und IP-Adressen werden nicht veröffentlicht."
+      ],
+      [
+        "Website, GitHub und Discord verbunden",
+        "Die offizielle Domain verweist auf das öffentliche Quell- und Dokumentationsrepository sowie die Community. Discord verweist zurück auf Website, Roadmap und Entwicklungslog. Dadurch existiert ein nachvollziehbarer öffentlicher Projektpfad statt vieler voneinander getrennter Einzelstände."
+      ],
+      [
+        "Entwicklungslabor wiederholbar stabilisiert",
+        "Das isolierte JARVIS-VM-Netz wird beim Start der Entwicklungsumgebung wieder automatisch bereitgestellt. Damit bleibt die virtuelle Testumgebung reproduzierbar erreichbar, ohne daraus eine Aussage über reale Hardwarekompatibilität oder den späteren Produktionsbetrieb abzuleiten."
+      ],
+      [
+        "Suchbarkeit und maschinenlesbare Dokumentation",
+        "HTTPS, Canonical-URLs, Sitemap, Atom-Feed, strukturierte Daten, robots.txt und Search-Console-Verifikation sind aktiv. Neue Entwicklungsberichte werden als eigene indexierbare Seiten gebaut und erscheinen zusätzlich im Feed."
+      ],
+      [
+        "Offen entwickeln, aber nicht unfertig verteilen",
+        "Fortschritt, Architektur und Abnahmegrenzen bleiben öffentlich nachvollziehbar. Eine ISO wird trotzdem erst nach belastbaren Installations-, Recovery-, Sicherheits- und Hardwaretests freigegeben. Transparenz ersetzt keine Qualitätskontrolle – sie macht sie sichtbar."
+      ]
+    ]
+  },
+  {
     "date": "2026-07-23",
     "modified": "2026-07-23",
     "code": "COMMUNITY-02",

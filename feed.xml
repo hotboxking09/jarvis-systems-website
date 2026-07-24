@@ -3,8 +3,32 @@
   <title>JARVIS SYSTEM // Entwicklungsupdates</title>
   <id>https://jarvisserver.org/</id><link href="https://jarvisserver.org/feed.xml" rel="self"/>
   <link href="https://jarvisserver.org/updates/"/>
-  <updated>2026-07-23T00:00:00+02:00</updated>
+  <updated>2026-07-24T00:00:00+02:00</updated>
   <subtitle>Verifizierte Entwicklungsschritte von JARVIS OS.</subtitle>
+  <entry>
+    <title>Threat Observatory mit echtem Sensorfeed live</title>
+    <id>https://jarvisserver.org/updates/threat-observatory-live-sensorfeed/</id><link href="https://jarvisserver.org/updates/threat-observatory-live-sensorfeed/"/>
+    <updated>2026-07-24T00:00:00+02:00</updated>
+    <published>2026-07-24T00:00:00+02:00</published>
+    <author><name>Oliver-Frank Pristaff</name></author>
+    <summary>Der isolierte JARVIS-Honeypot, der signierte Datenschutz-Uplink, die vergrößerte Weltkarte und der stündliche GitHub-/Discord-Ledger sind jetzt Ende-zu-Ende aktiv.</summary>
+  </entry>
+  <entry>
+    <title>Discord-Teamstruktur und Automationen verfeinert</title>
+    <id>https://jarvisserver.org/updates/discord-team-welcome-securityfeed/</id><link href="https://jarvisserver.org/updates/discord-team-welcome-securityfeed/"/>
+    <updated>2026-07-24T00:00:00+02:00</updated>
+    <published>2026-07-24T00:00:00+02:00</published>
+    <author><name>Oliver-Frank Pristaff</name></author>
+    <summary>Der Community-Server besitzt jetzt klar getrennte Team- und Testbereiche, eine persönliche JARVIS-Begrüssung, gezielte Protokolle und einen automatischen öffentlichen Securityfeed.</summary>
+  </entry>
+  <entry>
+    <title>Website zeigt jetzt den echten Engineering-Puls</title>
+    <id>https://jarvisserver.org/updates/engineering-signal-und-projektkern/</id><link href="https://jarvisserver.org/updates/engineering-signal-und-projektkern/"/>
+    <updated>2026-07-24T00:00:00+02:00</updated>
+    <published>2026-07-24T00:00:00+02:00</published>
+    <author><name>Oliver-Frank Pristaff</name></author>
+    <summary>Website, GitHub und Discord bilden einen gemeinsamen öffentlichen Projektkern – mit einem datenschutzbegrenzten Live-Arbeitssignal, sauberem Entwicklungslog und klaren Releasegrenzen.</summary>
+  </entry>
   <entry>
     <title>Discord-Onboarding und Rollenmatrix automatisiert</title>
     <id>https://jarvisserver.org/updates/discord-onboarding-automatisiert/</id><link href="https://jarvisserver.org/updates/discord-onboarding-automatisiert/"/>
