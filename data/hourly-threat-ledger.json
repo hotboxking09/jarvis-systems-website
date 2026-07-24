@@ -1,12 +1,12 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 11,
-      "connection": 21,
-      "disconnect": 21,
-      "login_attempt": 7
+      "client_observed": 8,
+      "connection": 14,
+      "disconnect": 14,
+      "login_attempt": 4
     },
-    "direct_events_24h": 60,
+    "direct_events_24h": 40,
     "direct_events_7d": 60
   },
   "events": [
@@ -377,118 +377,6 @@
       "time_window": "2026-07-23T23:35:00.000Z",
       "type": "disconnect",
       "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 2,
-      "country": null,
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": null,
-      "severity": "low",
-      "source_alias": "SRC-AB0A972A931D",
-      "time_window": "2026-07-23T23:00:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 2,
-      "country": null,
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": null,
-      "severity": "info",
-      "source_alias": "SRC-AB0A972A931D",
-      "time_window": "2026-07-23T23:00:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 3,
-      "country": null,
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": null,
-      "severity": "info",
-      "source_alias": "SRC-C7672C52BDAC",
-      "time_window": "2026-07-23T22:55:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 3,
-      "country": null,
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": null,
-      "severity": "low",
-      "source_alias": "SRC-C7672C52BDAC",
-      "time_window": "2026-07-23T22:55:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 3,
-      "country": null,
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": null,
-      "severity": "info",
-      "source_alias": "SRC-C7672C52BDAC",
-      "time_window": "2026-07-23T22:55:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 3,
-      "country": null,
-      "host_compromised": false,
-      "label": "LOGIN ATTEMPT",
-      "outcome": "emulated_authentication",
-      "position": null,
-      "severity": "medium",
-      "source_alias": "SRC-C7672C52BDAC",
-      "time_window": "2026-07-23T22:55:00.000Z",
-      "type": "login_attempt",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 2,
-      "country": null,
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": null,
-      "severity": "low",
-      "source_alias": "SRC-AB0A972A931D",
-      "time_window": "2026-07-23T22:50:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 2,
-      "country": null,
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": null,
-      "severity": "info",
-      "source_alias": "SRC-AB0A972A931D",
-      "time_window": "2026-07-23T22:50:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
@@ -502,7 +390,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "7fa88afbd2d16f9caa35ab3f23096214b0bd15d6e7f1c73405d85a2be06e32f0",
-  "updated_at": "2026-07-24T17:50:46Z",
+  "source_fingerprint": "8b84f31d291885bda9201bc1b064ebb468f57293874cca26a5a71d222fab0c21",
+  "updated_at": "2026-07-24T23:15:36Z",
   "window": "rolling-24h-events-with-7d-total"
 }
