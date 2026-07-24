@@ -2,14 +2,48 @@
   "counts": {
     "by_type_24h": {
       "client_observed": 8,
-      "connection": 16,
-      "disconnect": 16,
+      "connection": 18,
+      "disconnect": 18,
       "login_attempt": 4
     },
-    "direct_events_24h": 44,
-    "direct_events_7d": 44
+    "direct_events_24h": 48,
+    "direct_events_7d": 48
   },
   "events": [
+    {
+      "asn": 37963,
+      "count": 2,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": [
+        120,
+        30
+      ],
+      "severity": "low",
+      "source_alias": "SRC-EFA46EF66019",
+      "time_window": "2026-07-24T12:40:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 37963,
+      "count": 2,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": [
+        120,
+        30
+      ],
+      "severity": "info",
+      "source_alias": "SRC-EFA46EF66019",
+      "time_window": "2026-07-24T12:40:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
     {
       "asn": 396982,
       "count": 1,
@@ -391,7 +425,7 @@
   ],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-07-24T02:31:57.000Z",
+  "last_direct_event": "2026-07-24T12:41:36.000Z",
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -400,7 +434,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "edd17c8a92cb2dacb72cb92d47db8db414d2b4e4ed870c7a01fd65c99a2d06d4",
-  "updated_at": "2026-07-24T03:42:50Z",
+  "source_fingerprint": "93674c2a915292bc603e82741467f9c432be431ab1b7e501291f1eb28441a956",
+  "updated_at": "2026-07-24T14:11:50Z",
   "window": "rolling-24h-events-with-7d-total"
 }
