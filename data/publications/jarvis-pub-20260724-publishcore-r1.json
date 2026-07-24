@@ -1,0 +1,64 @@
+{
+  "schema": "jarvis-publication-public/v1",
+  "id": "JARVIS-PUB-20260724-PUBLISHCORE",
+  "revision": 1,
+  "kind": "project_update",
+  "created_at": "2026-07-24T02:13:18Z",
+  "publish_after": null,
+  "title": "Sichere JARVIS-Plattform-Synchronisation vollständig abgenommen",
+  "summary": "JARVIS SYSTEM besitzt jetzt einen getesteten Publishing-Kern für Website, GitHub und Discord – mit exakter Inhaltsfreigabe, Datenschutzprüfung, Deduplizierung, Teilfehler-Recovery und standardmäßig aktivem Not-Aus.",
+  "canonical_url": "https://jarvisserver.org/updates/sichere-plattform-synchronisation/",
+  "tags": [
+    "engineering",
+    "publishing",
+    "automation",
+    "security",
+    "documentation"
+  ],
+  "body": [
+    {
+      "heading": "Ein gemeinsamer Ursprung statt widersprüchlicher Updates",
+      "paragraphs": [
+        "Website, GitHub und Discord sollen denselben verifizierten Projektstand zeigen. Dafür wurde ein kanonischer Publishing-Kern entwickelt. Ein Bericht besitzt nun eine stabile ID, eine Revision, klare Zielkanäle, eine Datenschutzklasse und belegte technische Aussagen.",
+        "Die Plattformen werden nicht mehr als voneinander getrennte Textablagen behandelt. Jeder spätere Zieladapter arbeitet aus demselben geprüften Datensatz."
+      ]
+    },
+    {
+      "heading": "Freigabe ist an den exakten Inhalt gebunden",
+      "paragraphs": [
+        "Eine Freigabe speichert den SHA-256-Fingerabdruck des vollständigen Inhalts. Wird danach auch nur der Text, ein Nachweis, ein Zeitpunkt oder ein Zielkanal verändert, passt der Fingerabdruck nicht mehr und die Veröffentlichung wird blockiert.",
+        "Entwürfe im Zustand pending können grundsätzlich keinen Auslieferungsplan erzeugen. Dadurch kann ein unfertiger oder nachträglich veränderter Bericht nicht versehentlich veröffentlicht werden."
+      ]
+    },
+    {
+      "heading": "Getrennte Adapter für Website, GitHub und Discord",
+      "paragraphs": [
+        "Der Website-Adapter erzeugt einen staged Update-Feed, ohne die echte Quelldatei zu verändern. Dieser Feed wurde erfolgreich durch den vollständigen Release-Builder geführt und als zusätzliche Artikelseite getestet.",
+        "Der GitHub-Adapter übernimmt ausschließlich öffentlich freigegebene Nachweise. Der Discord-Adapter erzeugt ein stilles Payload ohne Mentions. X bleibt technisch deaktiviert, bis Profil, Regeln, API-Zugang und Kosten separat geprüft sind."
+      ]
+    },
+    {
+      "heading": "Datenschutz und Sicherheitsgrenzen",
+      "paragraphs": [
+        "Öffentliche Publikationen blockieren rohe IP-Adressen, lokale Dateipfade, Private-Key-, Bearer-, API-Key-, Passwort- und Webhook-Muster. Teaminterne Inhalte dürfen keine öffentlichen Zielkanäle verwenden.",
+        "Discord-Publishing verwendet später einen eigenen minimal berechtigten Webhook und niemals den bestehenden Threat-Observatory-Webhook. Zugangsdaten erscheinen weder im Datensatz noch in Git, Website-Artefakten, Journalen oder Projektmemory."
+      ]
+    },
+    {
+      "heading": "Echte lokale Transaktion und Recovery getestet",
+      "paragraphs": [
+        "Die vollständige Transaktion wurde mit temporären Git-Repositories, einem lokalen Bare-Remote und einem lokalen Fake-Discord-Endpunkt getestet. Source-Commit, Release-Build, Pages-Push, Remote-HEAD-Verifikation und drei bestätigte Receipts funktionierten Ende-zu-Ende.",
+        "In einem zweiten Test antwortete Discord nach erfolgreichem Git-Push absichtlich mit HTTP 500. Website und GitHub blieben korrekt als zugestellt gespeichert. Der Wiederanlauf plante ausschließlich Discord und führte keinen zweiten Git-Push aus."
+      ]
+    },
+    {
+      "heading": "Noch keine automatische Dauerveröffentlichung",
+      "paragraphs": [
+        "Der Live-Pfad bleibt standardmäßig durch einen lokalen Not-Aus gesperrt. Vor einer echten Zustellung werden der vollständige Text, die Publikations-ID, der Inhalts-Hash und alle Zielkanäle ausdrücklich bestätigt.",
+        "Als nächste Schritte folgen eine auf das öffentliche Repository begrenzte GitHub-Schreibidentität, ein eigener Discord-Publishing-Webhook und danach genau eine kontrollierte erste Veröffentlichung. Automatische X-Beiträge und finanzielle Funktionen sind nicht Bestandteil dieses Meilensteins."
+      ]
+    }
+  ],
+  "evidence": [],
+  "content_sha256": "2cfb399c475cc4042723c382962aa583312b67400b7bf041fe7ecc715207523b"
+}

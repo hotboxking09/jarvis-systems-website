@@ -6,6 +6,14 @@
   <updated>2026-07-24T00:00:00+02:00</updated>
   <subtitle>Verifizierte Entwicklungsschritte von JARVIS OS.</subtitle>
   <entry>
+    <title>Sichere JARVIS-Plattform-Synchronisation vollständig abgenommen</title>
+    <id>https://jarvisserver.org/updates/sichere-plattform-synchronisation/</id><link href="https://jarvisserver.org/updates/sichere-plattform-synchronisation/"/>
+    <updated>2026-07-24T00:00:00+02:00</updated>
+    <published>2026-07-24T00:00:00+02:00</published>
+    <author><name>Oliver-Frank Pristaff</name></author>
+    <summary>JARVIS SYSTEM besitzt jetzt einen getesteten Publishing-Kern für Website, GitHub und Discord – mit exakter Inhaltsfreigabe, Datenschutzprüfung, Deduplizierung, Teilfehler-Recovery und standardmäßig aktivem Not-Aus.</summary>
+  </entry>
+  <entry>
     <title>Threat Observatory mit echtem Sensorfeed live</title>
     <id>https://jarvisserver.org/updates/threat-observatory-live-sensorfeed/</id><link href="https://jarvisserver.org/updates/threat-observatory-live-sensorfeed/"/>
     <updated>2026-07-24T00:00:00+02:00</updated>
