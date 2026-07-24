@@ -11,5 +11,8 @@ authentifizierten Ereignisdaten tatsächlich verändert haben. Laufende
 Heartbeats erzeugen deshalb keine künstlichen GitHub-Updates.
 
 Eine Discord-Nachricht wird ebenfalls nur bei einer echten Datenänderung
-versendet und enthält keine Erwähnungen. Sie bleibt deaktiviert, solange das
+versendet und enthält keine Erwähnungen. Der Embed nennt ausschließlich ein
+validiertes Netzquellen-Pseudonym, grobes Land/ASN, Ereignistyp, Schweregrad
+und den öffentlichen GitHub-Ledger; er behauptet ausdrücklich keine
+Personenidentität. Die Benachrichtigung bleibt deaktiviert, solange das
 Repository-Secret `DISCORD_THREAT_WEBHOOK_URL` nicht eingerichtet ist.
