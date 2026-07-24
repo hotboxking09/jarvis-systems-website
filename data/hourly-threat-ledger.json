@@ -1,15 +1,66 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 3,
-      "connection": 9,
-      "disconnect": 9,
+      "client_observed": 5,
+      "connection": 11,
+      "disconnect": 11,
       "login_attempt": 3
     },
-    "direct_events_24h": 24,
-    "direct_events_7d": 24
+    "direct_events_24h": 30,
+    "direct_events_7d": 30
   },
   "events": [
+    {
+      "asn": 41549,
+      "count": 2,
+      "country": "CH",
+      "host_compromised": false,
+      "label": "CLIENT OBSERVED",
+      "outcome": "client_fingerprint_observed",
+      "position": [
+        10,
+        48
+      ],
+      "severity": "info",
+      "source_alias": "SRC-AB0A972A931D",
+      "time_window": "2026-07-23T23:55:00.000Z",
+      "type": "client_observed",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 41549,
+      "count": 2,
+      "country": "CH",
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": [
+        10,
+        48
+      ],
+      "severity": "low",
+      "source_alias": "SRC-AB0A972A931D",
+      "time_window": "2026-07-23T23:55:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 41549,
+      "count": 2,
+      "country": "CH",
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": [
+        10,
+        48
+      ],
+      "severity": "info",
+      "source_alias": "SRC-AB0A972A931D",
+      "time_window": "2026-07-23T23:55:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
     {
       "asn": 41549,
       "count": 1,
@@ -187,7 +238,7 @@
   ],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-07-23T23:51:48.000Z",
+  "last_direct_event": "2026-07-23T23:59:53.000Z",
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -196,7 +247,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "af615e166435e275febe0be3fa3c04832e494955d3663cffa9343d40836d1c03",
-  "updated_at": "2026-07-23T23:55:07Z",
+  "source_fingerprint": "8b2c016f540c13728985b7d2a9b75731e532794b2dcb7738428cb0360865c7e3",
+  "updated_at": "2026-07-24T00:10:15Z",
   "window": "rolling-24h-events-with-7d-total"
 }
