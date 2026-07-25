@@ -8,7 +8,7 @@ User-agent: ChatGPT-User
 Allow: /
 
 User-agent: GPTBot
-Allow: /
+Disallow: /
 
 User-agent: *
 Allow: /

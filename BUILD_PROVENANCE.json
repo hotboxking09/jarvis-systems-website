@@ -1,7 +1,7 @@
 {
   "project": "JARVIS SYSTEM Website",
   "mode": "release",
-  "generated_utc": "2026-07-25T20:05:24+00:00",
+  "generated_utc": "2026-07-25T21:34:48+00:00",
   "copyright": "© 2026 Oliver-Frank Pristaff. All rights reserved.",
   "public_iso_available": false,
   "indexed_pages": 26,
@@ -47,7 +47,7 @@
     "jarvis-os/index.html": "e5c8cd21066d0bbd43dd4327810e0db1371e1fd0696b6467a6e241c43941574c",
     "legal.html": "f990839e25a97377e8ad0dbb68bcaa96deabb3e160654f4ed186395970b94e77",
     "roadmap/index.html": "03523ce22cfc6626d755ff7c4124b4cbc2bb18b5ddd664e8fae851b617bb2c1d",
-    "robots.txt": "38167b69bf9da1c4230342b0ead4d8ee46ac7a88a3d0082f48fc5eb9a37e54aa",
+    "robots.txt": "20996c38bbce25a3d3a5f7406628024af4d5530bcb64637d4f8662d898433e92",
     "site.webmanifest": "0d395f64bb7ebce1f19df0a71c3f611d1e2780cf3dfb8183ef3bfa36cc8ce906",
     "sitemap.xml": "ea73d1caa16f0a6481f683d042d79e089c2b28610abaa5ef898d18b0e3b3e9a2",
     "styles.css": "fd7cdb378704fc6c32b4e7764ae69bbd8380f8f224d01b7788526ff33272dbd8",
