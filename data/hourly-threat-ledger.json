@@ -1,12 +1,12 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 5,
-      "connection": 6,
-      "disconnect": 6,
-      "login_attempt": 4
+      "client_observed": 2,
+      "connection": 3,
+      "disconnect": 3,
+      "login_attempt": 1
     },
-    "direct_events_24h": 21,
+    "direct_events_24h": 9,
     "direct_events_7d": 326
   },
   "events": [
@@ -162,74 +162,6 @@
       "time_window": "2026-07-26T21:40:00.000Z",
       "type": "disconnect",
       "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 24940,
-      "count": 3,
-      "country": "FI",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        24,
-        60
-      ],
-      "severity": "info",
-      "source_alias": "SRC-86C0772455FC",
-      "time_window": "2026-07-26T17:10:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 24940,
-      "count": 3,
-      "country": "FI",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        24,
-        60
-      ],
-      "severity": "low",
-      "source_alias": "SRC-86C0772455FC",
-      "time_window": "2026-07-26T17:10:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 24940,
-      "count": 3,
-      "country": "FI",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        24,
-        60
-      ],
-      "severity": "info",
-      "source_alias": "SRC-86C0772455FC",
-      "time_window": "2026-07-26T17:10:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 24940,
-      "count": 3,
-      "country": "FI",
-      "host_compromised": false,
-      "label": "LOGIN ATTEMPT",
-      "outcome": "emulated_authentication",
-      "position": [
-        24,
-        60
-      ],
-      "severity": "medium",
-      "source_alias": "SRC-86C0772455FC",
-      "time_window": "2026-07-26T17:10:00.000Z",
-      "type": "login_attempt",
-      "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
@@ -243,7 +175,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "c874d5b748d4f5137ee93d0d5e3dc7043003424ea32de5187bcabbf24fb21a04",
-  "updated_at": "2026-07-27T17:07:18Z",
+  "source_fingerprint": "c82bc8c10824c2dad902b10f5261448f207dd9e8cd2171a38a2d7c2a26cd222f",
+  "updated_at": "2026-07-27T18:46:30Z",
   "window": "rolling-24h-events-with-7d-total"
 }
