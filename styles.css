@@ -487,6 +487,17 @@ blockquote { margin: 2rem 0; padding: 0; color: #c5dbe2; font-size: clamp(1.05re
 .article-hero .content-intro { max-width: 950px; }
 .article-meta { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: .7rem; }
 .article-meta > * { padding: .55rem .7rem; color: var(--green); border: 1px solid rgba(104,255,178,.25); font: 800 .55rem monospace; letter-spacing: .1em; }
+.article-evidence { position: relative; margin-bottom: clamp(4rem,8vw,8rem); padding: clamp(1rem,2vw,1.5rem); border: 1px solid rgba(0,234,255,.28); background: linear-gradient(135deg,rgba(0,234,255,.06),rgba(255,0,153,.035) 48%,rgba(2,8,13,.92)); box-shadow: 0 0 55px rgba(0,234,255,.07); overflow: hidden; }
+.article-evidence::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg,transparent,rgba(0,234,255,.08),transparent); transform: translateX(-100%); animation: evidence-scan 8s linear infinite; }
+.article-evidence-head { position: relative; max-width: 900px; padding: clamp(.5rem,1.5vw,1rem) clamp(.3rem,1.2vw,.8rem) clamp(1.2rem,2.4vw,2rem); }
+.article-evidence-head h2 { margin: .25rem 0 .8rem; font-size: clamp(2rem,4.5vw,4.5rem); line-height: .95; letter-spacing: -.05em; }
+.article-evidence-head > p:last-child { color: #9fb9c2; line-height: 1.75; }
+.article-evidence video { position: relative; display: block; width: 100%; aspect-ratio: 16/9; border: 1px solid rgba(0,234,255,.32); background: #000; box-shadow: 0 0 35px rgba(0,234,255,.08); }
+.article-evidence-overview { position: relative; display: block; margin-top: 1rem; color: var(--cyan); border: 1px solid rgba(0,234,255,.24); background: #010406; text-decoration: none; overflow: hidden; }
+.article-evidence-overview img { display: block; width: 100%; height: auto; opacity: .9; transition: transform .35s ease, opacity .35s ease; }
+.article-evidence-overview span { position: absolute; right: .8rem; bottom: .8rem; padding: .55rem .72rem; border: 1px solid rgba(0,234,255,.45); background: rgba(1,4,6,.9); font: 800 .62rem monospace; letter-spacing: .11em; }
+.article-evidence-overview:hover img { transform: scale(1.012); opacity: 1; }
+@keyframes evidence-scan { to { transform: translateX(100%); } }
 
 @media (max-width: 1100px) {
   .knowledge-grid { grid-template-columns: repeat(2,1fr); }

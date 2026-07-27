@@ -3,8 +3,16 @@
   <title>JARVIS SYSTEM // Entwicklungsupdates</title>
   <id>https://jarvisserver.org/</id><link href="https://jarvisserver.org/feed.xml" rel="self"/>
   <link href="https://jarvisserver.org/updates/"/>
-  <updated>2026-07-24T00:00:00+02:00</updated>
+  <updated>2026-07-27T00:00:00+02:00</updated>
   <subtitle>Verifizierte Entwicklungsschritte von JARVIS OS.</subtitle>
+  <entry>
+    <title>Vom alten Heim-PC zum eigenen Security Core: JARVIS AEGIS 0.4.2</title>
+    <id>https://jarvisserver.org/updates/aegis-0-4-2-security-core/</id><link href="https://jarvisserver.org/updates/aegis-0-4-2-security-core/"/>
+    <updated>2026-07-27T00:00:00+02:00</updated>
+    <published>2026-07-27T00:00:00+02:00</published>
+    <author><name>Oliver-Frank Pristaff</name></author>
+    <summary>Der erste eigene JARVIS Core Node, reale Event-Evidence, geprüfte Backup- und Recoveryketten, Founder-only Zero Trust, zwölf SOC-Workspaces und der erste signierte Browser-Updatepfad sind Ende-zu-Ende in Betrieb.</summary>
+  </entry>
   <entry>
     <title>Offizieller JARVIS Support-Uplink veröffentlicht</title>
     <id>https://jarvisserver.org/updates/support-uplink-live/</id><link href="https://jarvisserver.org/updates/support-uplink-live/"/>

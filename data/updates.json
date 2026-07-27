@@ -1,5 +1,58 @@
 [
   {
+    "date": "2026-07-27",
+    "modified": "2026-07-27",
+    "code": "AEGIS-0.4.2",
+    "state": "VERIFIED MILESTONE",
+    "slug": "aegis-0-4-2-security-core",
+    "title": "Vom alten Heim-PC zum eigenen Security Core: JARVIS AEGIS 0.4.2",
+    "summary": "Der erste eigene JARVIS Core Node, reale Event-Evidence, geprüfte Backup- und Recoveryketten, Founder-only Zero Trust, zwölf SOC-Workspaces und der erste signierte Browser-Updatepfad sind Ende-zu-Ende in Betrieb.",
+    "media": {
+      "video": "/assets/aegis-0.4.2/JARVIS_AEGIS_PANEL_UPDATE_0.4.2_PUBLIC_REDACTED.mp4",
+      "poster": "/assets/aegis-0.4.2/JARVIS_AEGIS_0.4.2_REPORT_POSTER_1920x1080_PUBLIC.png",
+      "overview": "/assets/aegis-0.4.2/JARVIS_AEGIS_0.4.2_12_PANEL_MILESTONE_4K_PUBLIC.png",
+      "caption": "Das Video und die Zwölf-Panel-Übersicht stammen aus echten Operator-Captures. Private Infrastrukturkennungen und interne Releasewerte wurden vor der Veröffentlichung irreversibel deckend entfernt."
+    },
+    "sections": [
+      [
+        "Aus Security-Ideen wurde JARVIS AEGIS",
+        "Seit dem letzten öffentlichen Update vom 24. Juli entstand ein zusammenhängendes Sicherheitsdach für Zero Trust, sichere Softwarelieferung, Telemetrie, Event Evidence, Backup, Recovery, Sensoren und das eigene SOC. AEGIS bezeichnet das gesamte Sicherheitsprogramm; AEGIS SOC NEXUS ist die darin enthaltene read-only Operatoroberfläche."
+      ],
+      [
+        "Der erste eigene JARVIS Core Node",
+        "Ein älterer Heim-PC wurde als erster privater JARVIS Core Node neu aufgebaut: minimales System ohne Desktop, UEFI mit LUKS/LVM, Key-only-Administration ohne Rootlogin, nftables Default-Deny, AppArmor und automatische Sicherheitsupdates. Es existiert keine Router-Portweiterleitung. Founder-Zugriff erfolgt ausschließlich über einen eng begrenzten Zero-Trust-Pfad."
+      ],
+      [
+        "Reale Events statt erfundener Telemetrie",
+        "Der eigene append-only Eventstore nimmt ausschließlich sanitisierte, policygebundene Core- und Founder-Health-Ereignisse auf. Source, Schema, Größe, Zeit und Integritätskette werden geprüft; ein öffentlicher Datenbankport existiert nicht. Fehlende Quellen bleiben sichtbar N/A, NOT CONNECTED oder SOURCE GATED."
+      ],
+      [
+        "Backup und Recovery praktisch bewiesen",
+        "Die Recoverykette besteht aus konsistentem SOC-Snapshot, age-verschlüsselter Ablage, externem Restore ausschließlich in tmpfs, erneuter SQLite- und Eventkettenprüfung, externem Ed25519-Checkpoint und einer physisch getrennten signierten Offlinekopie auf USB. Unmount, Remount und vollständiger Restore wurden real ausgeführt."
+      ],
+      [
+        "Zwölf eigene Kontrollbereiche",
+        "AEGIS SOC NEXUS 0.4.2 besitzt Global Sentinel, Event Command Center, Asset Matrix, Incident Control, Identity Core, Exposure und Patch Control, Development Security, Network Defense, Vault und Key Control, Backup und Recovery Core, Sensor Fabric sowie Business Services. Die Workspaces sind real; noch nicht akzeptierte Backendquellen werden nicht simuliert."
+      ],
+      [
+        "Erster signierter Browser-Updatepfad",
+        "Das echte Founder-Browserupdate von 0.4.1 auf 0.4.2 nutzte ein kanonisches Manifest, Ed25519-Signaturprüfung, exakte Basis- und Zielversion, Payload-Digest, 190 bestandene Tests, getrenntes Review und Arm, eine 60 Sekunden gültige Einmalfreigabe, transaktionalen Austausch und automatischen Rollback. Erst der Abschlussbeleg UPDATE_APPLIED / PASS schloss die Abnahme."
+      ],
+      [
+        "Fehler sichtbar gehalten",
+        "Eine zu aggressive Härtung des einzigen Remote-Connectors unterbrach den Zugang zeitweise. Core und Daten blieben intakt; die akzeptierte Baseline wurde wiederhergestellt. Daraus gilt verbindlich: keine Änderung am einzigen Managementpfad ohne unabhängigen Rollback und zweiten Zugang. Auch Lifecycle-, Socket-, Dateisystem- und Versionsfehler des Updatepfads wurden nicht umetikettiert, sondern blockierten oder rollten zurück und erhielten Regressiontests."
+      ],
+      [
+        "Nächste kontrollierte Gates",
+        "Als Nächstes werden weitere read-only Quellen einzeln und minimal berechtigt aufgenommen, Recovery-, Development- und Patch-Evidence produktiv gebunden, Identity- und Vulnerability- beziehungsweise SBOM-Quellen definiert sowie Incident Cases und Chain of Custody entwickelt. Weitere eigene Geräte und Dienste folgen als klar getrennte Collector. Aktive Reaktion bleibt einem späteren, autorisierten und auditierbaren Broker vorbehalten."
+      ],
+      [
+        "Transparenzgrenze",
+        "AEGIS ist noch kein fertiges Enterprise-SOC, aber auch kein UI-Mock-up mehr. Core Node, Eventaufnahme, Restore, Offline-Recovery, Founder Access und signierter Updatepfad sind real belegt. Kritische Aktionen bleiben NOT ARMED. Unser Grundsatz: reale Quellen, sichtbare Grenzen, keine Fake-Telemetrie und Recovery vor kritischer Automation."
+      ]
+    ]
+  },
+  {
     "date": "2026-07-24",
     "modified": "2026-07-24",
     "code": "SUPPORT-01",
