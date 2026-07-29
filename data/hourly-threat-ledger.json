@@ -1,12 +1,12 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 20,
-      "connection": 20,
-      "disconnect": 20,
-      "login_attempt": 16
+      "client_observed": 17,
+      "connection": 17,
+      "disconnect": 17,
+      "login_attempt": 13
     },
-    "direct_events_24h": 76,
+    "direct_events_24h": 64,
     "direct_events_7d": 438
   },
   "events": [
@@ -468,74 +468,6 @@
       "time_window": "2026-07-28T10:50:00.000Z",
       "type": "login_attempt",
       "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 45102,
-      "count": 3,
-      "country": "KR",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        126,
-        38
-      ],
-      "severity": "info",
-      "source_alias": "SRC-02C40F87F6C7",
-      "time_window": "2026-07-28T05:45:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 45102,
-      "count": 3,
-      "country": "KR",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        126,
-        38
-      ],
-      "severity": "low",
-      "source_alias": "SRC-02C40F87F6C7",
-      "time_window": "2026-07-28T05:45:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 45102,
-      "count": 3,
-      "country": "KR",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        126,
-        38
-      ],
-      "severity": "info",
-      "source_alias": "SRC-02C40F87F6C7",
-      "time_window": "2026-07-28T05:45:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 45102,
-      "count": 3,
-      "country": "KR",
-      "host_compromised": false,
-      "label": "LOGIN ATTEMPT",
-      "outcome": "emulated_authentication",
-      "position": [
-        126,
-        38
-      ],
-      "severity": "medium",
-      "source_alias": "SRC-02C40F87F6C7",
-      "time_window": "2026-07-28T05:45:00.000Z",
-      "type": "login_attempt",
-      "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
@@ -549,7 +481,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "846c9269be227c0d9def754fe5d07b8a0a807057945c083338e2a28c0a154b7e",
-  "updated_at": "2026-07-28T23:17:19Z",
+  "source_fingerprint": "78ae5c660cd574334edddb20cf9d344310e1166d33c872586f58b06e4381e9ad",
+  "updated_at": "2026-07-29T06:43:59Z",
   "window": "rolling-24h-events-with-7d-total"
 }
