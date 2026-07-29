@@ -3,13 +3,30 @@
     "by_type_24h": {
       "client_observed": 10,
       "connection": 11,
-      "disconnect": 11,
+      "disconnect": 12,
       "login_attempt": 10
     },
-    "direct_events_24h": 42,
-    "direct_events_7d": 480
+    "direct_events_24h": 43,
+    "direct_events_7d": 481
   },
   "events": [
+    {
+      "asn": 38365,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": [
+        116,
+        40
+      ],
+      "severity": "info",
+      "source_alias": "SRC-53D0907C8A0B",
+      "time_window": "2026-07-29T19:25:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
     {
       "asn": 21003,
       "count": 3,
@@ -421,7 +438,7 @@
   ],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-07-29T11:22:46.000Z",
+  "last_direct_event": "2026-07-29T19:26:01.000Z",
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -430,7 +447,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "22bbb532b1253124b17b93b379f3665203d32495d2d04777ed5f4dc524dfb9ca",
-  "updated_at": "2026-07-29T17:38:04Z",
+  "source_fingerprint": "289732155e653541643be2d74d48bd83029127337ec7ea78821074bfb32417db",
+  "updated_at": "2026-07-29T19:41:51Z",
   "window": "rolling-24h-events-with-7d-total"
 }
