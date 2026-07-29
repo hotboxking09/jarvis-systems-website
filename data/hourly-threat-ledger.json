@@ -1,12 +1,12 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 11,
-      "connection": 12,
-      "disconnect": 12,
+      "client_observed": 10,
+      "connection": 11,
+      "disconnect": 11,
       "login_attempt": 10
     },
-    "direct_events_24h": 45,
+    "direct_events_24h": 42,
     "direct_events_7d": 480
   },
   "events": [
@@ -417,57 +417,6 @@
       "time_window": "2026-07-29T08:45:00.000Z",
       "type": "login_attempt",
       "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 47583,
-      "count": 1,
-      "country": "MY",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        102,
-        4
-      ],
-      "severity": "info",
-      "source_alias": "SRC-C35C08E9BE4B",
-      "time_window": "2026-07-28T17:05:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 47583,
-      "count": 1,
-      "country": "MY",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        102,
-        4
-      ],
-      "severity": "low",
-      "source_alias": "SRC-C35C08E9BE4B",
-      "time_window": "2026-07-28T17:05:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 47583,
-      "count": 1,
-      "country": "MY",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        102,
-        4
-      ],
-      "severity": "info",
-      "source_alias": "SRC-C35C08E9BE4B",
-      "time_window": "2026-07-28T17:05:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
@@ -481,7 +430,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "55e2be4f21675ffc182bcc71909a0e2c05b8c32725b586abce4e8383ac54e0f6",
-  "updated_at": "2026-07-29T15:18:55Z",
+  "source_fingerprint": "22bbb532b1253124b17b93b379f3665203d32495d2d04777ed5f4dc524dfb9ca",
+  "updated_at": "2026-07-29T17:38:04Z",
   "window": "rolling-24h-events-with-7d-total"
 }
