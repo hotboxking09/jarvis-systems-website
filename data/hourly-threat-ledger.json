@@ -1,13 +1,13 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 17,
-      "connection": 20,
-      "disconnect": 20,
-      "login_attempt": 13
+      "client_observed": 9,
+      "connection": 9,
+      "disconnect": 9,
+      "login_attempt": 5
     },
-    "direct_events_24h": 70,
-    "direct_events_7d": 549
+    "direct_events_24h": 32,
+    "direct_events_7d": 545
   },
   "events": [
     {
@@ -420,7 +420,7 @@
     },
     {
       "asn": 14061,
-      "count": 2,
+      "count": 1,
       "country": "IN",
       "host_compromised": false,
       "label": "CLIENT OBSERVED",
@@ -437,7 +437,7 @@
     },
     {
       "asn": 14061,
-      "count": 2,
+      "count": 1,
       "country": "IN",
       "host_compromised": false,
       "label": "SESSION OPENED",
@@ -454,7 +454,7 @@
     },
     {
       "asn": 14061,
-      "count": 2,
+      "count": 1,
       "country": "IN",
       "host_compromised": false,
       "label": "SESSION CLOSED",
@@ -466,142 +466,6 @@
       "severity": "info",
       "source_alias": "SRC-C5C0DDFC3B28",
       "time_window": "2026-07-30T14:35:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 14061,
-      "count": 2,
-      "country": "IN",
-      "host_compromised": false,
-      "label": "LOGIN ATTEMPT",
-      "outcome": "emulated_authentication",
-      "position": [
-        78,
-        12
-      ],
-      "severity": "medium",
-      "source_alias": "SRC-C5C0DDFC3B28",
-      "time_window": "2026-07-30T14:35:00.000Z",
-      "type": "login_attempt",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": "IN",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        78,
-        12
-      ],
-      "severity": "info",
-      "source_alias": "SRC-B26B350D4BDC",
-      "time_window": "2026-07-30T14:30:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": "IN",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        78,
-        12
-      ],
-      "severity": "low",
-      "source_alias": "SRC-B26B350D4BDC",
-      "time_window": "2026-07-30T14:30:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": "IN",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        78,
-        12
-      ],
-      "severity": "info",
-      "source_alias": "SRC-B26B350D4BDC",
-      "time_window": "2026-07-30T14:30:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": "IN",
-      "host_compromised": false,
-      "label": "LOGIN ATTEMPT",
-      "outcome": "emulated_authentication",
-      "position": [
-        78,
-        12
-      ],
-      "severity": "medium",
-      "source_alias": "SRC-B26B350D4BDC",
-      "time_window": "2026-07-30T14:30:00.000Z",
-      "type": "login_attempt",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 14061,
-      "count": 1,
-      "country": "IN",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        78,
-        12
-      ],
-      "severity": "info",
-      "source_alias": "SRC-C5C0DDFC3B28",
-      "time_window": "2026-07-30T14:30:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 14061,
-      "count": 1,
-      "country": "IN",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        78,
-        12
-      ],
-      "severity": "low",
-      "source_alias": "SRC-C5C0DDFC3B28",
-      "time_window": "2026-07-30T14:30:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 14061,
-      "count": 1,
-      "country": "IN",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        78,
-        12
-      ],
-      "severity": "info",
-      "source_alias": "SRC-C5C0DDFC3B28",
-      "time_window": "2026-07-30T14:30:00.000Z",
       "type": "disconnect",
       "verified_direct_sensor_event": true
     },
@@ -618,76 +482,8 @@
       ],
       "severity": "medium",
       "source_alias": "SRC-C5C0DDFC3B28",
-      "time_window": "2026-07-30T14:30:00.000Z",
+      "time_window": "2026-07-30T14:35:00.000Z",
       "type": "login_attempt",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": "IN",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        78,
-        12
-      ],
-      "severity": "low",
-      "source_alias": "SRC-B26B350D4BDC",
-      "time_window": "2026-07-30T14:25:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": "IN",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        78,
-        12
-      ],
-      "severity": "info",
-      "source_alias": "SRC-B26B350D4BDC",
-      "time_window": "2026-07-30T14:25:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 14061,
-      "count": 2,
-      "country": "IN",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        78,
-        12
-      ],
-      "severity": "info",
-      "source_alias": "SRC-C5C0DDFC3B28",
-      "time_window": "2026-07-30T14:25:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 14061,
-      "count": 2,
-      "country": "IN",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        78,
-        12
-      ],
-      "severity": "low",
-      "source_alias": "SRC-C5C0DDFC3B28",
-      "time_window": "2026-07-30T14:25:00.000Z",
-      "type": "connection",
       "verified_direct_sensor_event": true
     }
   ],
@@ -702,7 +498,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "4d1c77c667e2455e3d7bbd38ea0a36ba1b65e2beb15aeff4f4cbc760483f0129",
-  "updated_at": "2026-07-31T09:58:58Z",
+  "source_fingerprint": "50787d5ac68b3f75e2b4df4889a01727a363d3810f1490a4f83ca9bf6f7c8bdb",
+  "updated_at": "2026-07-31T14:37:48Z",
   "window": "rolling-24h-events-with-7d-total"
 }
