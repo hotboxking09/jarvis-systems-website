@@ -2,7 +2,7 @@
   "counts": {
     "by_type_24h": {},
     "direct_events_24h": 0,
-    "direct_events_7d": 435
+    "direct_events_7d": 377
   },
   "events": [],
   "host_compromise_claim": false,
@@ -16,7 +16,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "7e4dbdd9117853b2429630ae40facea402a552682f5f32612d96f72f0512b6ee",
-  "updated_at": "2026-08-01T21:08:31Z",
+  "source_fingerprint": "64a9f31ea683d6802f66750aa24d4f09d897e627e886b8e7015af0cc168fb413",
+  "updated_at": "2026-08-01T23:10:07Z",
   "window": "rolling-24h-events-with-7d-total"
 }
