@@ -1,7 +1,7 @@
 # JARVIS SYSTEM — generated website deployment
 
 **Official website:** [jarvisserver.org](https://jarvisserver.org)<br>
-**Founder and developer:** [Oliver-Frank Pristaff](https://github.com/hotboxking09)<br>
+**Founder and developer:** [Oliver-frank Pristaff](https://github.com/hotboxking09)<br>
 **Support portal:** [Rules and transparency](https://jarvisserver.org/support/)<br>
 **Reddit:** [u/JarvisSystemCH](https://www.reddit.com/user/JarvisSystemCH/)<br>
 **Official support:** [One-time](https://ko-fi.com/jarvissystem) ·

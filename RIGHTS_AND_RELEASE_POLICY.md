@@ -4,7 +4,7 @@ Status: private website preview, 22 July 2026
 
 ## Binding project decisions
 
-- Oliver-Frank Pristaff is the named creator and project owner. He expressly
+- Oliver-frank Pristaff is the named creator and project owner. He expressly
   designated both the geometric System Core and metallic Boot Guardian as the
   intended official JARVIS visual identity on 22 July 2026. Source provenance
   and third-party-rights clearance remain release gates.

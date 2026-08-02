@@ -1,6 +1,6 @@
 # JARVIS SYSTEM Website — Proprietary Notice
 
-Copyright © 2026 **Oliver-Frank Pristaff**.
+Copyright © 2026 **Oliver-frank Pristaff**.
 All rights reserved.
 
 This repository and its original contents are proprietary. **No licence is

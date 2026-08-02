@@ -10,7 +10,7 @@
     <id>https://jarvisserver.org/updates/aegis-0-4-2-security-core/</id><link href="https://jarvisserver.org/updates/aegis-0-4-2-security-core/"/>
     <updated>2026-07-27T00:00:00+02:00</updated>
     <published>2026-07-27T00:00:00+02:00</published>
-    <author><name>Oliver-Frank Pristaff</name></author>
+    <author><name>Oliver-frank Pristaff</name></author>
     <summary>Der erste eigene JARVIS Core Node, reale Event-Evidence, geprüfte Backup- und Recoveryketten, Founder-only Zero Trust, zwölf SOC-Workspaces und der erste signierte Browser-Updatepfad sind Ende-zu-Ende in Betrieb.</summary>
   </entry>
   <entry>
@@ -18,7 +18,7 @@
     <id>https://jarvisserver.org/updates/support-uplink-live/</id><link href="https://jarvisserver.org/updates/support-uplink-live/"/>
     <updated>2026-07-24T00:00:00+02:00</updated>
     <published>2026-07-24T00:00:00+02:00</published>
-    <author><name>Oliver-Frank Pristaff</name></author>
+    <author><name>Oliver-frank Pristaff</name></author>
     <summary>Das freiwillige Unterstützungsmodell ist mit transparenter Website, Ko-fi-Tiers, klaren Discord-Rollen und konsistenten Verweisen auf den öffentlichen Projektprofilen live.</summary>
   </entry>
   <entry>
@@ -26,7 +26,7 @@
     <id>https://jarvisserver.org/updates/sichere-plattform-synchronisation/</id><link href="https://jarvisserver.org/updates/sichere-plattform-synchronisation/"/>
     <updated>2026-07-24T00:00:00+02:00</updated>
     <published>2026-07-24T00:00:00+02:00</published>
-    <author><name>Oliver-Frank Pristaff</name></author>
+    <author><name>Oliver-frank Pristaff</name></author>
     <summary>JARVIS SYSTEM besitzt jetzt einen getesteten Publishing-Kern für Website, GitHub und Discord – mit exakter Inhaltsfreigabe, Datenschutzprüfung, Deduplizierung, Teilfehler-Recovery und standardmäßig aktivem Not-Aus.</summary>
   </entry>
   <entry>
@@ -34,7 +34,7 @@
     <id>https://jarvisserver.org/updates/threat-observatory-live-sensorfeed/</id><link href="https://jarvisserver.org/updates/threat-observatory-live-sensorfeed/"/>
     <updated>2026-07-24T00:00:00+02:00</updated>
     <published>2026-07-24T00:00:00+02:00</published>
-    <author><name>Oliver-Frank Pristaff</name></author>
+    <author><name>Oliver-frank Pristaff</name></author>
     <summary>Der isolierte JARVIS-Honeypot, der signierte Datenschutz-Uplink, die vergrößerte Weltkarte und der stündliche GitHub-/Discord-Ledger sind jetzt Ende-zu-Ende aktiv.</summary>
   </entry>
   <entry>
@@ -42,7 +42,7 @@
     <id>https://jarvisserver.org/updates/discord-team-welcome-securityfeed/</id><link href="https://jarvisserver.org/updates/discord-team-welcome-securityfeed/"/>
     <updated>2026-07-24T00:00:00+02:00</updated>
     <published>2026-07-24T00:00:00+02:00</published>
-    <author><name>Oliver-Frank Pristaff</name></author>
+    <author><name>Oliver-frank Pristaff</name></author>
     <summary>Der Community-Server besitzt jetzt klar getrennte Team- und Testbereiche, eine persönliche JARVIS-Begrüssung, gezielte Protokolle und einen automatischen öffentlichen Securityfeed.</summary>
   </entry>
   <entry>
@@ -50,7 +50,7 @@
     <id>https://jarvisserver.org/updates/engineering-signal-und-projektkern/</id><link href="https://jarvisserver.org/updates/engineering-signal-und-projektkern/"/>
     <updated>2026-07-24T00:00:00+02:00</updated>
     <published>2026-07-24T00:00:00+02:00</published>
-    <author><name>Oliver-Frank Pristaff</name></author>
+    <author><name>Oliver-frank Pristaff</name></author>
     <summary>Website, GitHub und Discord bilden einen gemeinsamen öffentlichen Projektkern – mit einem datenschutzbegrenzten Live-Arbeitssignal, sauberem Entwicklungslog und klaren Releasegrenzen.</summary>
   </entry>
   <entry>
@@ -58,7 +58,7 @@
     <id>https://jarvisserver.org/updates/discord-onboarding-automatisiert/</id><link href="https://jarvisserver.org/updates/discord-onboarding-automatisiert/"/>
     <updated>2026-07-23T00:00:00+02:00</updated>
     <published>2026-07-23T00:00:00+02:00</published>
-    <author><name>Oliver-Frank Pristaff</name></author>
+    <author><name>Oliver-frank Pristaff</name></author>
     <summary>Die JARVIS-Community besitzt jetzt einen bereinigten Kanal- und Rollenaufbau, eine verpflichtende Interessenabfrage vor dem Beitritt und automatische, nicht privilegierte Rollenzuweisung.</summary>
   </entry>
   <entry>
@@ -66,7 +66,7 @@
     <id>https://jarvisserver.org/updates/discord-community-online/</id><link href="https://jarvisserver.org/updates/discord-community-online/"/>
     <updated>2026-07-23T00:00:00+02:00</updated>
     <published>2026-07-23T00:00:00+02:00</published>
-    <author><name>Oliver-Frank Pristaff</name></author>
+    <author><name>Oliver-frank Pristaff</name></author>
     <summary>Der Discord-Server von JARVIS SYSTEM ist mit klaren Bereichen für Entwicklung, Tests, Community und Gaming sowie einem sicheren Rollen- und Onboardingmodell gestartet.</summary>
   </entry>
   <entry>
@@ -74,7 +74,7 @@
     <id>https://jarvisserver.org/updates/website-google-indexiert/</id><link href="https://jarvisserver.org/updates/website-google-indexiert/"/>
     <updated>2026-07-23T00:00:00+02:00</updated>
     <published>2026-07-23T00:00:00+02:00</published>
-    <author><name>Oliver-Frank Pristaff</name></author>
+    <author><name>Oliver-frank Pristaff</name></author>
     <summary>Domain-Property, Sitemap und HTTPS wurden bestätigt. Google führt die öffentliche Startseite nun als indexiert und für Suchergebnisse berechtigt.</summary>
   </entry>
   <entry>
@@ -82,7 +82,7 @@
     <id>https://jarvisserver.org/updates/hardwareportabilitaet-verbindlich/</id><link href="https://jarvisserver.org/updates/hardwareportabilitaet-verbindlich/"/>
     <updated>2026-07-23T00:00:00+02:00</updated>
     <published>2026-07-22T00:00:00+02:00</published>
-    <author><name>Oliver-Frank Pristaff</name></author>
+    <author><name>Oliver-frank Pristaff</name></author>
     <summary>JARVIS SYSTEM wird für unterschiedliche reale x86-64-PCs gebaut. VM-Erfolge bleiben Vorstufen; eine reale Hardwarematrix ist Release-Pflicht.</summary>
   </entry>
   <entry>
@@ -90,7 +90,7 @@
     <id>https://jarvisserver.org/updates/efi-manager-maussteuerung/</id><link href="https://jarvisserver.org/updates/efi-manager-maussteuerung/"/>
     <updated>2026-07-23T00:00:00+02:00</updated>
     <published>2026-07-22T00:00:00+02:00</published>
-    <author><name>Oliver-Frank Pristaff</name></author>
+    <author><name>Oliver-frank Pristaff</name></author>
     <summary>Hover, Linksklick, flüssige Kartenhebung und animierte Signalstruktur wurden in OVMF real geprüft.</summary>
   </entry>
   <entry>
@@ -98,7 +98,7 @@
     <id>https://jarvisserver.org/updates/installer-iso-intern-verifiziert/</id><link href="https://jarvisserver.org/updates/installer-iso-intern-verifiziert/"/>
     <updated>2026-07-23T00:00:00+02:00</updated>
     <published>2026-07-22T00:00:00+02:00</published>
-    <author><name>Oliver-Frank Pristaff</name></author>
+    <author><name>Oliver-frank Pristaff</name></author>
     <summary>BIOS-/UEFI-Struktur, fixturefreie EFI-Identität und Medienstart bis zum Netzwerk-Preflight bestanden. Die ISO wird noch nicht öffentlich angeboten.</summary>
   </entry>
   <entry>
@@ -106,7 +106,7 @@
     <id>https://jarvisserver.org/updates/native-jarvis-laufzeit/</id><link href="https://jarvisserver.org/updates/native-jarvis-laufzeit/"/>
     <updated>2026-07-23T00:00:00+02:00</updated>
     <published>2026-07-20T00:00:00+02:00</published>
-    <author><name>Oliver-Frank Pristaff</name></author>
+    <author><name>Oliver-frank Pristaff</name></author>
     <summary>Eigener Login-Supervisor, Unified Shell, Frame Core, System Control und echte Telemetrie wurden in der isolierten Entwicklungsumgebung abgenommen.</summary>
   </entry>
 </feed>

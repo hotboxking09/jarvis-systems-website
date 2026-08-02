@@ -78,6 +78,128 @@
     ]
   },
   {
+    "slug": "solutions",
+    "nav": "Web & Hosting",
+    "kicker": "JARVIS SOLUTIONS // DIGITAL DELIVERY",
+    "title": "Websites und Hosting für reale Projekte",
+    "description": "JARVIS Solutions entwickelt branchenoffene Websites, Redesigns und kontrollierte technische Betreuung für Unternehmen, Selbstständige, Vereine, Gründer und private Projekte.",
+    "schema_type": "WebPage",
+    "date": "2026-08-02",
+    "modified": "2026-08-02",
+    "intro": "Von der ersten klaren Landingpage bis zum vollständigen Webauftritt: JARVIS Solutions unterstützt geeignete Unternehmen, Selbstständige, Vereine, Gründer, Organisationen und private Projekte unabhängig von ihrer Branche. Jede Anfrage beginnt mit einer ehrlichen technischen und wirtschaftlichen Einschätzung – nicht mit einem undurchsichtigen Standardpaket.",
+    "facts": [
+      [
+        "ZIELGRUPPE",
+        "BRANCHENOFFEN"
+      ],
+      [
+        "START",
+        "WEBSITE + REDESIGN"
+      ],
+      [
+        "HOSTING",
+        "NACH TECHNISCHER FREIGABE"
+      ],
+      [
+        "ANFRAGE",
+        "UNVERBINDLICH"
+      ]
+    ],
+    "sections": [
+      {
+        "id": "audience",
+        "eyebrow": "01 // FÜR WEN",
+        "heading": "Nicht nur Handwerk: gute Websites für jede passende Branche",
+        "paragraphs": [
+          "Handwerksbetriebe bleiben ein Bereich, den Gründer Oliver aus eigener Berufserfahrung besonders gut versteht. Das Angebot ist jedoch ausdrücklich nicht darauf begrenzt. Entscheidend sind ein seriöses Vorhaben, ein klarer Nutzen und ein technisch verantwortbarer Umfang – nicht die Branche.",
+          "Willkommen sind neue Unternehmen ohne Website, bestehende Betriebe mit einem veralteten Auftritt, Selbstständige, Vereine, lokale Organisationen, Start-ups und private Projekte. Auch einzelne Landingpages, Informationsseiten und kontrollierte Migrationen können geprüft werden."
+        ],
+        "bullets": [
+          "Neue Website für ein bisher nicht digital vertretenes Angebot",
+          "Redesign einer bestehenden, langsamen oder unübersichtlichen Seite",
+          "Landingpage für eine konkrete Leistung, Aktion oder Veranstaltung",
+          "Technische Pflege, Sicherheitsupdates und nachvollziehbare Änderungen",
+          "Migration und Hostingaufnahme nach separater technischer Prüfung"
+        ]
+      },
+      {
+        "id": "delivery",
+        "eyebrow": "02 // ABLAUF",
+        "heading": "Erst verstehen, dann bauen",
+        "paragraphs": [
+          "Die Anfrage beschreibt Ziel, Zielgruppe, vorhandene Domain und Inhalte sowie die wichtigsten Funktionen. Danach wird der Umfang eingegrenzt. Sie erhalten vor einer Beauftragung eine verständliche Einschätzung zu Lieferumfang, Abhängigkeiten, Zeit, Kosten und offenen Risiken.",
+          "Erst nach schriftlich bestätigtem Scope beginnt die Umsetzung. Zwischenstände werden kontrolliert gezeigt, Änderungen nachvollziehbar festgehalten und die Veröffentlichung erfolgt nur nach ausdrücklicher Freigabe."
+        ],
+        "bullets": [
+          "1. Bedarf und heutiger Stand",
+          "2. Scope, Inhalte, Risiken und Angebot",
+          "3. Entwurf und kontrollierte Zwischenabnahme",
+          "4. Technischer Test auf Desktop und Mobilgerät",
+          "5. Freigabe, Veröffentlichung und dokumentierte Übergabe"
+        ],
+        "callout": "TRANSPARENZ // Eine Anfrage ist noch kein Vertrag. Es werden keine Rankings, Leads, Umsätze oder eine absolute Verfügbarkeit garantiert."
+      },
+      {
+        "id": "hosting",
+        "eyebrow": "03 // HOSTING",
+        "heading": "Hosting ist Betrieb – nicht nur Speicherplatz",
+        "paragraphs": [
+          "JARVIS verfügt über eigene und gemietete Infrastruktur für Entwicklung, Tests und kontrollierte Dienste. Kundenhosting wird trotzdem nicht allein deshalb freigegeben, weil ein Server vorhanden ist. Jede produktive Aufnahme benötigt eine passende Betriebs- und Sicherheitsabnahme.",
+          "Für geeignete Websites sollen HTTPS, getrennte Kundenbereiche, Monitoring, Backups, Wiederherstellungstests, Updates, Ressourcenlimits, Incident-Ablauf und ein sauberer Exit- beziehungsweise Umzugsweg zusammengehören. Dynamische Dienste werden einzeln bewertet."
+        ],
+        "bullets": [
+          "Statische Websites und kontrollierte Webauftritte zuerst",
+          "Domains möglichst im Eigentum der Kundschaft",
+          "Backups mit überprüfbarem Wiederherstellungspfad",
+          "Keine offenen Root-Zugänge oder unkontrollierten Datenbanken",
+          "Keine anonymen Proxies, Mining-, GPU-Vermietungs- oder rechtswidrigen Dienste"
+        ],
+        "callout": "CURRENT GATE // Managed Hosting ist nur nach technischer Aufnahme und schriftlicher Leistungsdefinition verfügbar."
+      },
+      {
+        "id": "special",
+        "eyebrow": "04 // ZUSATZGATES",
+        "heading": "Sensible Funktionen werden nicht nebenbei eingebaut",
+        "paragraphs": [
+          "Shops, Kundenkonten, Buchungen, Datei-Uploads, Gesundheits- oder Finanzdaten sowie geschäftskritische Integrationen verändern Risiko, Aufwand und rechtliche Anforderungen. Solche Funktionen sind nicht automatisch in einer normalen Website enthalten.",
+          "Wenn ein Projekt diese Bereiche berührt, wird es separat geplant und nur angenommen, wenn Kompetenz, Datenschutz, Betrieb und Notfallwege belastbar geklärt sind. Ein zu riskanter Auftrag wird ehrlich abgelehnt oder in einen sicheren ersten Schritt verkleinert."
+        ]
+      },
+      {
+        "id": "request",
+        "eyebrow": "05 // PROJEKTANFRAGE",
+        "heading": "Diese Angaben reichen für den ersten Kontakt",
+        "paragraphs": [
+          "Senden Sie eine kurze Beschreibung per E-Mail. Benötigt werden noch keine Zugangsdaten und keine fertigen technischen Unterlagen. Ein klarer Ausgangspunkt genügt für die erste Einschätzung."
+        ],
+        "bullets": [
+          "Name der Organisation oder des Projekts und zuständige Kontaktperson",
+          "Bestehende Website oder Hinweis: noch keine Website",
+          "Gewünschtes Ziel und wichtigste Seiten beziehungsweise Funktionen",
+          "Vorhandene Domain, Texte, Logo und Bilder – falls vorhanden",
+          "Gewünschter Zeitraum und realistischer Budgetrahmen",
+          "Hinweis auf Shop, Login, Buchung, Uploads oder sensible Daten"
+        ],
+        "callout": "SICHERHEIT // Keine Passwörter, Recoverycodes, Zahlungsdaten, Ausweiskopien oder vertraulichen Kundendaten per Erstanfrage senden."
+      },
+      {
+        "id": "status",
+        "eyebrow": "06 // AKTUELLER STATUS",
+        "heading": "Persönliche Umsetzung in einer transparenten Aufbauphase",
+        "paragraphs": [
+          "JARVIS Solutions wird derzeit von Oliver-frank Pristaff als Founder-geführtes Angebot im Aufbau entwickelt. JARVIS SYSTEM ist das zentrale Technologieprojekt; Website- und Hosting-Leistungen sollen reale Einnahmen schaffen und gleichzeitig nach denselben Grundsätzen für Design, Dokumentation, Sicherheit und ehrliche technische Angaben entstehen.",
+          "Kapazität und Umfang werden bewusst begrenzt. So erhält jedes angenommene Projekt persönliche Aufmerksamkeit, anstatt durch automatisierte Massenabfertigung zu laufen."
+        ],
+        "quote": "Wir verkaufen keine leeren Versprechen. Wir bauen einen verständlichen, überprüfbaren digitalen Auftritt, der zum echten Projekt passt."
+      }
+    ],
+    "related": [
+      "gruender",
+      "entwicklung",
+      "faq"
+    ]
+  },
+  {
     "slug": "technik",
     "nav": "Technik",
     "kicker": "SYSTEM ARCHITECTURE // VERIFIED PATHS",
@@ -306,10 +428,10 @@
     "slug": "gruender",
     "nav": "Gründer",
     "kicker": "FOUNDER PROFILE // SWITZERLAND",
-    "title": "Oliver-Frank Pristaff – Gründer von JARVIS SYSTEM",
-    "description": "Die Geschichte von Oliver-Frank Pristaff aus der Schweiz: vom Maurerhandwerk und schweren Lebensphasen zur Entwicklung von JARVIS SYSTEM und JARVIS OS.",
+    "title": "Oliver-frank Pristaff – Gründer von JARVIS SYSTEM",
+    "description": "Die Geschichte von Oliver-frank Pristaff aus der Schweiz: vom Maurerhandwerk und schweren Lebensphasen zur Entwicklung von JARVIS SYSTEM und JARVIS OS.",
     "schema_type": "ProfilePage",
-    "intro": "Oliver-Frank Pristaff ist der Gründer und Entwickler hinter JARVIS SYSTEM. Sein Weg begann im Schweizer Handwerk und führte über jahrelanges eigenständiges Lernen mit Computern, Netzwerken, Servern und Softwareentwicklung zum eigenen Betriebssystemprojekt.",
+    "intro": "Oliver-frank Pristaff ist der Gründer und Entwickler hinter JARVIS SYSTEM. Sein Weg begann im Schweizer Handwerk und führte über jahrelanges eigenständiges Lernen mit Computern, Netzwerken, Servern und Softwareentwicklung zum eigenen Betriebssystemprojekt.",
     "facts": [
       [
         "NAME",
@@ -521,7 +643,7 @@
       ],
       [
         "Wer entwickelt JARVIS SYSTEM?",
-        "Gegründet und entwickelt wird das Projekt von Oliver-Frank Pristaff aus der Schweiz. Die Entwicklung wird durch strukturierte Dokumentation, reproduzierbare Builds und schrittweise Tests begleitet."
+        "Gegründet und entwickelt wird das Projekt von Oliver-frank Pristaff aus der Schweiz. Die Entwicklung wird durch strukturierte Dokumentation, reproduzierbare Builds und schrittweise Tests begleitet."
       ],
       [
         "Wie kann ich das Projekt unterstützen?",
