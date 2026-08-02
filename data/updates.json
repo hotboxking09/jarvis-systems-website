@@ -1,5 +1,48 @@
 [
   {
+    "date": "2026-08-03",
+    "modified": "2026-08-03",
+    "code": "PLATFORM-2026-08-03",
+    "state": "VERIFIED MILESTONE",
+    "slug": "jarvis-platform-solutions-ai-core-august-2026",
+    "title": "JARVIS wächst zur realen Plattform: AI Core, AEGIS 0.4.4 und offene Webprojekte",
+    "summary": "Seit dem letzten öffentlichen Meilenstein wurden der eigene AI Core, verschlüsselte lokale KI, sicherer Fernzugriff, AEGIS SOC 0.4.4, ESP32 Recon Lab und der neue JARVIS-Solutions-Eingang real aufgebaut und geprüft.",
+    "sections": [
+      [
+        "Zwei reale Core-Systeme statt eines einzelnen Entwicklungsrechners",
+        "Der private JARVIS Core Node und der neue AI Core arbeiten als getrennte Systeme. Beide besitzen begrenzte Zero-Trust-Zugänge, eigene Rollen und nachvollziehbare Betriebsgrenzen. Der Homeserver trägt Sicherheits-, SOC- und Recovery-Aufgaben; der leistungsstarke AI Core übernimmt lokale Modelle und spätere kontrollierte Worker. Direkte öffentliche Adminports bleiben geschlossen."
+      ],
+      [
+        "AEGIS SOC 0.4.4 und signierte Updates",
+        "Die Operatoroberfläche wurde von 0.4.2 auf 0.4.4 weiterentwickelt. Startreihenfolge, Eventstore-Konsistenz, Telemetrieversionen und der signierte Updatepfad erhielten zusätzliche Regressionstests und Rollbacks. Reale Quellen bleiben sichtbar, fehlende Daten bleiben N/A. Kritische Aktionen sind weiterhin nicht pauschal freigegeben."
+      ],
+      [
+        "Lokale KI auf eigener RTX-Infrastruktur",
+        "Auf dem AI Core läuft eine lokale, nur intern erreichbare Modellruntime mit einem verifizierten Qwen3-Coder-30B-Modell. Projektwissen wird über einen verschlüsselten, secret-geprüften Kontextindex bereitgestellt. Begrüßungen und allgemeine Fragen werden vom privaten Projektretrieval getrennt. Nach jedem abgeschlossenen Chat wird das Modell aus der GPU entladen, damit der Server im Leerlauf sparsam bleibt."
+      ],
+      [
+        "Verschlüsselte Daten und streng begrenzte Erweiterungen",
+        "KI-Modelle, Kontext, Memory, Projekte und spätere Worker liegen in einer eigenen LUKS2-Datengrenze ohne gespeicherten Auto-Unlock-Schlüssel. Der historische globale Privilegienmodus wurde ausdrücklich verworfen. Erweiterungen erhalten stattdessen einzelne AEGIS-Capabilities mit Policy, Bestätigung, isoliertem Worker und Auditbeleg."
+      ],
+      [
+        "ESP32 Recon Lab als physisches JARVIS-Gerät",
+        "Ein ideaspark ESP32 mit OLED wurde vollständig neu geflasht und als JARVIS ESP32 Recon Lab v0.2.1 aufgebaut. Bootanimation, lokale Statusseiten, serielle Konsole sowie ausdrücklich passive WLAN- und Bluetooth-Übersichten wurden real geprüft. Das Gerät bleibt wegen noch fehlender Flashverschlüsselung und Secure Boot bewusst ein Laborsystem."
+      ],
+      [
+        "JARVIS Solutions ist offen für reale Webprojekte",
+        "Unternehmen, Selbstständige, Vereine, Gründer, Organisationen und private Projekte können jetzt neue Websites, Redesigns, Landingpages und laufende Pflege unverbindlich anfragen. Managed Hosting wird nicht als leeres Versprechen verkauft: Die Aufnahme erfolgt erst nach technischer Prüfung von Isolation, HTTPS, Monitoring, Backup, Restore, Updates, Incident-Ablauf und Exitweg."
+      ],
+      [
+        "Earning- und Kommunikationspfad vereinheitlicht",
+        "Der öffentliche Projektkontakt und der private Earning-Mailadapter verwenden jetzt einheitlich pristaffoliver@gmail.com. Ein eigener Gmail-Read-only-Adapter prüft in einem engen Allowlist-Filter bekannte Projektantworten und Freelancer-Hinweise. Er besitzt keine Send-, Lösch-, Vertrags- oder Zahlungsbefugnis. Externe Antworten bleiben immer eine bewusste Founder-Entscheidung."
+      ],
+      [
+        "Was als Nächstes kommt",
+        "Der direkte Schwerpunkt liegt jetzt auf ersten bezahlten Webprojekten, einem vollständig verbundenen LinkedIn- und Reddit-Auftritt, weiteren seriösen Freelancerprofilen sowie der kontrollierten Hosting-Bereitschaft. Parallel bleibt JARVIS OS erhalten, wird aber nicht auf Kosten der aktuellen Einnahmen- und Plattformphase hektisch umgebaut."
+      ]
+    ]
+  },
+  {
     "date": "2026-07-27",
     "modified": "2026-07-27",
     "code": "AEGIS-0.4.2",
