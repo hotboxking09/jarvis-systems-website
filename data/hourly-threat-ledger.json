@@ -2,14 +2,48 @@
   "counts": {
     "by_type_24h": {
       "client_observed": 4,
-      "connection": 5,
-      "disconnect": 5,
+      "connection": 6,
+      "disconnect": 6,
       "login_attempt": 1
     },
-    "direct_events_24h": 15,
-    "direct_events_7d": 356
+    "direct_events_24h": 17,
+    "direct_events_7d": 354
   },
   "events": [
+    {
+      "asn": 14061,
+      "count": 1,
+      "country": "US",
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": [
+        -120,
+        36
+      ],
+      "severity": "low",
+      "source_alias": "SRC-57BCB3946D82",
+      "time_window": "2026-08-03T16:40:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 14061,
+      "count": 1,
+      "country": "US",
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": [
+        -120,
+        36
+      ],
+      "severity": "info",
+      "source_alias": "SRC-57BCB3946D82",
+      "time_window": "2026-08-03T16:40:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
     {
       "asn": 45102,
       "count": 1,
@@ -183,7 +217,7 @@
   ],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-08-03T10:13:00.000Z",
+  "last_direct_event": "2026-08-03T16:41:27.000Z",
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -192,7 +226,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "8676ee6709c3654acc4daf85df9a53a60f0cea664fec0d54855b4a0a08417b5c",
-  "updated_at": "2026-08-03T11:43:03Z",
+  "source_fingerprint": "03f83befec4d4698e4495f8ed6874faad718bafb13ec4ed47335bee392a2438d",
+  "updated_at": "2026-08-03T17:19:31Z",
   "window": "rolling-24h-events-with-7d-total"
 }
