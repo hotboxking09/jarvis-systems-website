@@ -81,20 +81,20 @@
     "slug": "solutions",
     "nav": "Web & Hosting",
     "kicker": "JARVIS SOLUTIONS // DIGITAL DELIVERY",
-    "title": "Websites und Hosting für reale Projekte",
-    "description": "JARVIS Solutions entwickelt branchenoffene Websites, Redesigns und kontrollierte technische Betreuung für Unternehmen, Selbstständige, Vereine, Gründer und private Projekte.",
+    "title": "Websites, Betreuung & digitale Lösungen",
+    "description": "JARVIS Solutions bietet branchenoffene Websites, Redesigns, technische Website-Checks, laufende Pflege sowie klar begrenzte Linux-, Server- und Automatisierungsarbeit.",
     "schema_type": "WebPage",
     "date": "2026-08-02",
     "modified": "2026-08-03",
-    "intro": "Von der ersten klaren Landingpage bis zum vollständigen Webauftritt: JARVIS Solutions unterstützt geeignete Unternehmen, Selbstständige, Vereine, Gründer, Organisationen und private Projekte unabhängig von ihrer Branche. Jede Anfrage beginnt mit einer ehrlichen technischen und wirtschaftlichen Einschätzung – nicht mit einem undurchsichtigen Standardpaket.",
+    "intro": "Vom ersten Website-Check bis zum vollständigen Webauftritt: JARVIS Solutions unterstützt geeignete Unternehmen, Selbstständige, Vereine, Gründer, Organisationen und private Projekte mit klar definierten digitalen Leistungen. Jede Anfrage beginnt mit einer ehrlichen technischen und wirtschaftlichen Einschätzung.",
     "facts": [
       [
-        "ZIELGRUPPE",
-        "BRANCHENOFFEN"
+        "ANGEBOT",
+        "WEBSITE · CHECK · CARE"
       ],
       [
-        "START",
-        "WEBSITE · REDESIGN · CARE"
+        "SYSTEMARBEIT",
+        "LINUX · SERVER · AUTOMATION"
       ],
       [
         "HOSTING",
@@ -107,8 +107,26 @@
     ],
     "sections": [
       {
+        "id": "services",
+        "eyebrow": "01 // HEUTE ANFRAGBAR",
+        "heading": "Konkrete Leistungen statt unklarer Alles-versprechen-Pakete",
+        "paragraphs": [
+          "JARVIS Solutions bündelt die heute real lieferbaren Leistungen an einem Ort. Umfang, Preis, Lieferzeit und Grenzen werden vor dem Start schriftlich festgehalten. Kleine Aufträge werden nicht künstlich aufgebläht; komplexe oder sensible Anforderungen erhalten zuerst eine eigene Machbarkeits- und Sicherheitsprüfung.",
+          "Der Website Klarheits- & Technik-Check ist bereits als fester Schweizer B2B-Service für EUR 59 buchbar. Individuelle Projekte beginnen mit einer unverbindlichen Anfrage und werden erst nach einem passenden Scope angenommen."
+        ],
+        "bullets": [
+          "Neue Websites und fokussierte Landingpages für Unternehmen, Selbstständige, Vereine und Projekte",
+          "Redesign, mobile Optimierung sowie verständlichere Struktur bestehender Websites",
+          "Passiver 16-Punkte Website Klarheits- & Technik-Check mit priorisiertem PDF-Bericht",
+          "Laufende Inhalts- und Technikpflege: Texte, Bilder, Ferienhinweise, Stellen und kontrollierte Änderungen",
+          "Kleine Linux-, Server- und Automatisierungsaufgaben nach Kompetenz-, Sicherheits- und Scopeprüfung",
+          "Individuelle Dashboard- und Statusprototypen nach Prüfung der echten Datenquellen und Betriebsgrenzen"
+        ],
+        "callout": "LIVE // Projektanfragen sind offen. Managed Hosting, komplexe Integrationen und sensible Datenpfade werden nur nach einem eigenen Produktionsgate zugesagt."
+      },
+      {
         "id": "audience",
-        "eyebrow": "01 // FÜR WEN",
+        "eyebrow": "02 // FÜR WEN",
         "heading": "Nicht nur Handwerk: gute Websites für jede passende Branche",
         "paragraphs": [
           "Handwerksbetriebe bleiben ein Bereich, den Gründer Oliver aus eigener Berufserfahrung besonders gut versteht. Das Angebot ist jedoch ausdrücklich nicht darauf begrenzt. Entscheidend sind ein seriöses Vorhaben, ein klarer Nutzen und ein technisch verantwortbarer Umfang – nicht die Branche.",
@@ -124,7 +142,7 @@
       },
       {
         "id": "delivery",
-        "eyebrow": "02 // ABLAUF",
+        "eyebrow": "03 // ABLAUF",
         "heading": "Erst verstehen, dann bauen",
         "paragraphs": [
           "Die Anfrage beschreibt Ziel, Zielgruppe, vorhandene Domain und Inhalte sowie die wichtigsten Funktionen. Danach wird der Umfang eingegrenzt. Sie erhalten vor einer Beauftragung eine verständliche Einschätzung zu Lieferumfang, Abhängigkeiten, Zeit, Kosten und offenen Risiken.",
@@ -141,7 +159,7 @@
       },
       {
         "id": "hosting",
-        "eyebrow": "03 // HOSTING",
+        "eyebrow": "04 // HOSTING",
         "heading": "Hosting ist Betrieb – nicht nur Speicherplatz",
         "paragraphs": [
           "JARVIS verfügt über eigene und gemietete Infrastruktur für Entwicklung, Tests und kontrollierte Dienste. Kundenhosting wird trotzdem nicht allein deshalb freigegeben, weil ein Server vorhanden ist. Jede produktive Aufnahme benötigt eine passende Betriebs- und Sicherheitsabnahme.",
@@ -158,7 +176,7 @@
       },
       {
         "id": "special",
-        "eyebrow": "04 // ZUSATZGATES",
+        "eyebrow": "05 // ZUSATZGATES",
         "heading": "Sensible Funktionen werden nicht nebenbei eingebaut",
         "paragraphs": [
           "Shops, Kundenkonten, Buchungen, Datei-Uploads, Gesundheits- oder Finanzdaten sowie geschäftskritische Integrationen verändern Risiko, Aufwand und rechtliche Anforderungen. Solche Funktionen sind nicht automatisch in einer normalen Website enthalten.",
@@ -167,7 +185,7 @@
       },
       {
         "id": "request",
-        "eyebrow": "05 // PROJEKTANFRAGE",
+        "eyebrow": "06 // PROJEKTANFRAGE",
         "heading": "Diese Angaben reichen für den ersten Kontakt",
         "paragraphs": [
           "Senden Sie eine kurze Beschreibung per E-Mail. Benötigt werden noch keine Zugangsdaten und keine fertigen technischen Unterlagen. Ein klarer Ausgangspunkt genügt für die erste Einschätzung."
@@ -184,7 +202,7 @@
       },
       {
         "id": "status",
-        "eyebrow": "06 // AKTUELLER STATUS",
+        "eyebrow": "07 // AKTUELLER STATUS",
         "heading": "Persönliche Umsetzung in einer transparenten Aufbauphase",
         "paragraphs": [
           "JARVIS Solutions wird derzeit von Oliver-frank Pristaff als Founder-geführtes Angebot im Aufbau entwickelt. Anfragen für Websites, Redesigns, Landingpages und laufende Pflege sind ab sofort offen. JARVIS SYSTEM ist das zentrale Technologieprojekt; jede Leistung folgt denselben Grundsätzen für Design, Dokumentation, Sicherheit und ehrliche technische Angaben.",
