@@ -1,7 +1,7 @@
 {
   "name": "JARVIS SYSTEM",
   "short_name": "JARVIS",
-  "description": "JARVIS SYSTEM ist ein unabhängiges Technologieprojekt aus der Schweiz: JARVIS OS bildet den Kern, JARVIS Solutions bietet Websites, Redesigns, technische Prüfungen, laufende Pflege und klar begrenzte Systemarbeit.",
+  "description": "JARVIS SYSTEM aus der Schweiz: Websites, Redesigns, technische Checks und laufende Pflege – mit JARVIS OS als eigenem Technologieprojekt.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#010407",

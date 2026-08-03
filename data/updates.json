@@ -40,7 +40,9 @@
         "Was als Nächstes kommt",
         "Der direkte Schwerpunkt liegt jetzt auf ersten bezahlten Webprojekten, einem vollständig verbundenen LinkedIn- und Reddit-Auftritt, weiteren seriösen Freelancerprofilen sowie der kontrollierten Hosting-Bereitschaft. Parallel bleibt JARVIS OS erhalten, wird aber nicht auf Kosten der aktuellen Einnahmen- und Plattformphase hektisch umgebaut."
       ]
-    ]
+    ],
+    "seo_title": "JARVIS Plattform: AI Core, AEGIS & Webprojekte",
+    "seo_description": "AI Core, lokale KI, Fernzugriff, AEGIS SOC 0.4.4, ESP32 Recon Lab und JARVIS Solutions wurden real aufgebaut und geprüft."
   },
   {
     "date": "2026-07-27",
@@ -93,7 +95,9 @@
         "Transparenzgrenze",
         "AEGIS ist noch kein fertiges Enterprise-SOC, aber auch kein UI-Mock-up mehr. Core Node, Eventaufnahme, Restore, Offline-Recovery, Founder Access und signierter Updatepfad sind real belegt. Kritische Aktionen bleiben NOT ARMED. Unser Grundsatz: reale Quellen, sichtbare Grenzen, keine Fake-Telemetrie und Recovery vor kritischer Automation."
       ]
-    ]
+    ],
+    "seo_title": "JARVIS AEGIS 0.4.2: eigener Security Core",
+    "seo_description": "Eigener Core Node, reale Events, Backup und Recovery, Zero Trust, zwölf SOC-Workspaces und ein signierter Updatepfad sind in Betrieb."
   },
   {
     "date": "2026-07-24",
@@ -124,7 +128,9 @@
         "Transparenz bleibt wichtiger als Showwerte",
         "Kostenabdeckung, Supporterzahl und Einnahmen bleiben N/A, bis belegte Daten vorliegen. JARVIS SYSTEM veröffentlicht keine erfundenen Finanzwerte und bezeichnet freiwillige Unterstützung weder als Investment noch pauschal als steuerlich abzugsfähige Spende."
       ]
-    ]
+    ],
+    "seo_title": "JARVIS Support-Uplink ist live",
+    "seo_description": "Das freiwillige Supportmodell ist mit Website, Ko-fi-Tiers, Discord-Rollen und konsistenten öffentlichen Verweisen live."
   },
   {
     "date": "2026-07-24",
@@ -159,7 +165,9 @@
         "Noch keine automatische Dauerveröffentlichung",
         "Der Live-Pfad bleibt standardmäßig durch einen lokalen Not-Aus gesperrt. Vor einer echten Zustellung werden der vollständige Text, die Publikations-ID, der Inhalts-Hash und alle Zielkanäle ausdrücklich bestätigt. Als nächste Schritte folgen eine auf das öffentliche Repository begrenzte GitHub-Schreibidentität, ein eigener Discord-Publishing-Webhook und danach genau eine kontrollierte erste Veröffentlichung. Automatische X-Beiträge und finanzielle Funktionen sind nicht Bestandteil dieses Meilensteins."
       ]
-    ]
+    ],
+    "seo_title": "Sichere JARVIS-Plattform-Synchronisation",
+    "seo_description": "Getesteter Publishing-Kern für Website, GitHub und Discord mit Freigabe, Datenschutz, Deduplizierung, Recovery und Not-Aus."
   },
   {
     "date": "2026-07-24",
@@ -194,7 +202,9 @@
         "Was dieser Meilenstein noch nicht bedeutet",
         "Das System behauptet weder die Identität einer angreifenden Person noch einen kompromittierten Fremdhost. Die öffentliche Ansicht ist kein vollständiger Scan des Internets. Weitere Arbeit betrifft Langzeitbeobachtung, optionale zusätzliche Provider-Firewallregeln und saubere Betriebs- und Recoverytests."
       ]
-    ]
+    ],
+    "seo_title": "JARVIS Threat Observatory mit echtem Sensorfeed",
+    "seo_description": "Isolierter Honeypot, Datenschutz-Uplink, Weltkarte und stündlicher GitHub-/Discord-Ledger sind Ende-zu-Ende aktiv."
   },
   {
     "date": "2026-07-24",
@@ -221,7 +231,9 @@
         "Gezielte Logs statt Bot-Vollzugriff",
         "Ausgewählte Mitglieder-, Rollen-, Kanal-, Berechtigungs- und Moderationsereignisse landen ausschließlich im privaten Serverlog. Der neue Threat-Observatory-Webhook besitzt nur seinen vorgesehenen Nachrichtenpfad. Ein zusätzlicher eigener Dauerbot wird erst gebaut, wenn Tickets, Builds oder echte 24/7-Automationen ihn rechtfertigen."
       ]
-    ]
+    ],
+    "seo_title": "JARVIS Discord: Teamstruktur & Automationen",
+    "seo_description": "Getrennte Team- und Testbereiche, persönliche Begrüssung, gezielte Protokolle und ein automatischer öffentlicher Securityfeed."
   },
   {
     "date": "2026-07-24",
@@ -252,7 +264,9 @@
         "Offen entwickeln, aber nicht unfertig verteilen",
         "Fortschritt, Architektur und Abnahmegrenzen bleiben öffentlich nachvollziehbar. Eine ISO wird trotzdem erst nach belastbaren Installations-, Recovery-, Sicherheits- und Hardwaretests freigegeben. Transparenz ersetzt keine Qualitätskontrolle – sie macht sie sichtbar."
       ]
-    ]
+    ],
+    "seo_title": "Der echte JARVIS Engineering-Puls",
+    "seo_description": "Website, GitHub und Discord bilden einen Projektkern mit begrenztem Live-Arbeitssignal, Entwicklungslog und klaren Releasegrenzen."
   },
   {
     "date": "2026-07-23",
@@ -283,7 +297,9 @@
         "Website und Discord gegenseitig verbunden",
         "Die offizielle Community-Seite unter jarvisserver.org/community/ dokumentiert Aufbau, Automatik, Sicherheitsgrenzen und Release-Status und führt über den permanenten Einladungslink zum Server. Im Discord verweisen Willkommens-, Rollen- und Updateinformationen zurück auf die offizielle Website und das öffentliche Entwicklungslog."
       ]
-    ]
+    ],
+    "seo_title": "JARVIS Discord-Onboarding automatisiert",
+    "seo_description": "Bereinigte Kanäle und Rollen, Interessenabfrage vor dem Beitritt und automatische, nicht privilegierte Rollenzuweisung."
   },
   {
     "date": "2026-07-23",
@@ -306,7 +322,9 @@
         "Community ohne vorzeitige ISO-Freigabe",
         "Interessierte können Updates verfolgen, Feedback geben, Fehler strukturiert melden und sich über Hardware, Entwicklung oder Gaming austauschen. Der Community-Start ändert nichts am Release-Gate: Eine JARVIS-OS-ISO wird erst nach belastbaren Installations-, Recovery- und Hardwaretests öffentlich."
       ]
-    ]
+    ],
+    "seo_title": "Die JARVIS Community ist online",
+    "seo_description": "Discord-Bereiche für Entwicklung, Tests, Community und Gaming mit sicherem Rollen- und Onboardingmodell."
   },
   {
     "date": "2026-07-23",

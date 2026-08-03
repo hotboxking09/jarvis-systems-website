@@ -4,7 +4,7 @@
     "nav": "JARVIS OS",
     "kicker": "SYSTEM PROFILE // INDEPENDENT OS PROJECT",
     "title": "Was ist JARVIS OS?",
-    "description": "JARVIS OS ist ein unabhängiges Betriebssystemprojekt aus der Schweiz mit eigener Bootoberfläche, Anmeldung, Shell, Systemsteuerung und ehrlicher Echtzeit-Telemetrie.",
+    "description": "JARVIS OS ist ein Schweizer Betriebssystemprojekt mit eigener Bootoberfläche, Anmeldung, Shell, Systemsteuerung und echter Echtzeit-Telemetrie.",
     "schema_type": "TechArticle",
     "intro": "JARVIS OS ist der Betriebssystemkern innerhalb von JARVIS SYSTEM. Das Projekt entwickelt einen durchgehenden eigenen Bedienpfad vom UEFI-Bootmanager über Anmeldung und Systemoberfläche bis zur Shell – nachvollziehbar dokumentiert und für unterschiedliche reale x86-64-PCs statt nur für eine einzelne VM.",
     "facts": [
@@ -82,7 +82,7 @@
     "nav": "Web & Hosting",
     "kicker": "JARVIS SOLUTIONS // DIGITAL DELIVERY",
     "title": "Websites, Betreuung & digitale Lösungen",
-    "description": "JARVIS Solutions bietet branchenoffene Websites, Redesigns, technische Website-Checks, laufende Pflege sowie klar begrenzte Linux-, Server- und Automatisierungsarbeit.",
+    "description": "Websites, Redesigns, technische Website-Checks und laufende Pflege für KMU, Selbstständige, Vereine und Projekte in der Schweiz.",
     "schema_type": "WebPage",
     "date": "2026-08-02",
     "modified": "2026-08-03",
@@ -293,7 +293,7 @@
     "nav": "Entwicklung",
     "kicker": "ENGINEERING PROCESS // BUILD TEST DOCUMENT",
     "title": "Wie JARVIS OS entwickelt wird",
-    "description": "Einblick in den dokumentierten Entwicklungsprozess von JARVIS OS: reproduzierbare Builds, VM-Tests, Hardwaretests, Backups, Release-Gates und ehrliche Statusangaben.",
+    "description": "So entsteht JARVIS OS: dokumentierte Builds, VM- und Hardwaretests, Backups, Release-Gates und nachvollziehbare Statusangaben.",
     "schema_type": "TechArticle",
     "intro": "JARVIS OS entsteht iterativ: planen, bauen, isoliert testen, Fehler reproduzieren, dokumentieren und erst danach den nächsten Bereich öffnen. Die professionelle Projektdokumentation hält Entscheidungen, Dateien, Prüfergebnisse und offene Risiken fest.",
     "facts": [
@@ -364,7 +364,7 @@
     "nav": "Roadmap",
     "kicker": "PUBLIC ROADMAP // GATES BEFORE RELEASE",
     "title": "Roadmap von JARVIS SYSTEM",
-    "description": "Die öffentliche JARVIS-OS-Roadmap von Foundation und Bootmanager über Hardwareportabilität, Secure Boot und Recovery bis zum kontrollierten Community-Release.",
+    "description": "Die JARVIS-OS-Roadmap: vom Bootmanager über Hardwareportabilität, Secure Boot und Recovery bis zum kontrollierten Community-Release.",
     "schema_type": "WebPage",
     "intro": "Die Roadmap beschreibt keine Wunschliste ohne Reihenfolge. Jede Phase besitzt technische Bedingungen, die vor dem nächsten Releasezustand erfüllt sein müssen. Bereits gebaute Komponenten bleiben testpflichtig, wenn sich Installer, Hardwarebasis oder Laufzeit verändern.",
     "facts": [
@@ -510,14 +510,15 @@
       "jarvis-os",
       "entwicklung",
       "updates"
-    ]
+    ],
+    "seo_title": "Oliver-frank Pristaff | Gründer von JARVIS SYSTEM"
   },
   {
     "slug": "community",
     "nav": "Community",
     "kicker": "COMMUNITY UPLINK // VERIFIED ENTRY",
     "title": "JARVIS SYSTEM Community",
-    "description": "Offizielle JARVIS-SYSTEM-Community mit Discord-Einladung, automatischem Pre-Join-Onboarding, Interessenrollen, Entwicklerbereichen, Testlabor und dokumentierter Moderationsstruktur.",
+    "description": "Die offizielle JARVIS-Community mit Discord-Onboarding, Interessenrollen, Entwicklerbereichen, Testlabor und dokumentierter Moderation.",
     "schema_type": "WebPage",
     "intro": "Die offizielle JARVIS-SYSTEM-Community verbindet Betriebssystementwicklung, technische Tests, Hardwarewissen, offenen Austausch und Gaming in einer klar gegliederten Discord-Kommandozentrale. Der Einstieg ist automatisiert, nachvollziehbar und benötigt keine manuelle Freischaltung.",
     "facts": [
