@@ -165,18 +165,140 @@
         "eyebrow": "02 // LOCAL IT & VOR ORT",
         "heading": "Technische Hilfe dort, wo sie im Alltag wirklich blockiert",
         "paragraphs": [
-          "JARVIS unterstützt Privatpersonen, Selbstständige, Vereine und kleine Betriebe in der Ostschweiz bei PCs, neuen Geräten, Datenübertragung, WLAN, Druckern, Backup-Grundlagen und digitalen Arbeitsplätzen. Vor jedem Termin werden Problem, Ziel, Preisrahmen, Reise und Berechtigung schriftlich eingegrenzt.",
+          "JARVIS unterstützt Privatpersonen, Selbstständige, Vereine und kleine Betriebe in der Ostschweiz bei PCs, neuen Geräten, Datenübertragung, WLAN, Druckern, Backup-Grundlagen und digitalen Arbeitsplätzen. Vor jedem Termin werden Problem, Ziel, Preis, Reise und Berechtigung schriftlich eingegrenzt.",
           "Passwörter, 2FA- und Recoverycodes gibt die Kundschaft selbst ein. Vor Neuinstallation, Klonen, Partitionierung oder Löschung wird die Backup- und Recoverylage bestätigt. Komplexe Datenrettungs-, Security-, Kassen-, Gesundheits-, Finanz- oder Personalsysteme werden nicht als schnelle Basishilfe verkauft."
         ],
         "bullets": [
-          "Quick Help für ein klar beschreibbares Einzelproblem per sichtbarer Fernhilfe",
-          "Vor-Ort-Service für PC, WLAN, Router, Drucker, Scanner und Peripherie",
-          "Geräte- und Datenpaket für Einrichtung, ausgewählte Migration und Backupziel",
-          "Kleinbetrieb Standort-Check mit verständlicher Prioritätenliste",
           "Servicegebiet: Goldach, Rorschach, St. Gallen, Arbon, Gossau SG, Herisau, Appenzell und Wil SG",
-          "Teile, Lizenzen, Datenträger und andere Drittkosten nur nach Bestätigung und Vorauszahlung"
+          "Teile, Lizenzen, Datenträger und andere Drittkosten nur nach Bestätigung und Vorauszahlung",
+          "Keine Zusatzarbeit, Verlängerung oder zweite Problemstellung ohne schriftliche Freigabe",
+          "Jeder Auftrag endet mit Funktionstest, offenen Grenzen und nachvollziehbarer Übergabe"
         ],
-        "callout": "REGIONAL ANFRAGBAR // Öffentliche Preisangaben folgen erst nach abschliessender Preis- und Fachprüfung. Schriftliche Anfragen sind bereits möglich."
+        "callout": "PREISE LIVE // Alle Beträge in CHF. Der konkrete Scope, die Reisezone und die Zahlungsbedingung werden vor Beginn schriftlich bestätigt.",
+        "offers": [
+          {
+            "code": "LOCAL-QH",
+            "title": "Quick Help remote",
+            "state": "LIVE",
+            "price": "CHF 49",
+            "unit": "BIS 30 MINUTEN",
+            "text": "Ein klar beschreibbares Problem an einem Gerät, sichtbar und kontrolliert per Fernhilfe.",
+            "details": [
+              "Verständliche Ergebnisnotiz",
+              "Danach CHF 22.25 je weitere 15 Minuten",
+              "Verlängerung nur nach Ihrer Bestätigung"
+            ]
+          },
+          {
+            "code": "LOCAL-PR",
+            "title": "Vor Ort – Privat",
+            "state": "LIVE",
+            "price": "CHF 89",
+            "unit": "PRO STUNDE",
+            "text": "Für PC, WLAN, Router, Drucker, Scanner oder Peripherie direkt bei Ihnen vor Ort.",
+            "details": [
+              "Erste Stunde als Mindestblock",
+              "Danach Abrechnung im 15-Minuten-Takt",
+              "Reisezone wird vorher bestätigt"
+            ]
+          },
+          {
+            "code": "LOCAL-KMU",
+            "title": "Vor Ort – Kleinbetrieb",
+            "state": "LIVE",
+            "price": "CHF 109",
+            "unit": "PRO STUNDE",
+            "text": "Begrenzte technische Hilfe für Selbstständige, Vereine und kleine Betriebe ohne eigene IT-Abteilung.",
+            "details": [
+              "Erste Stunde als Mindestblock",
+              "Danach Abrechnung im 15-Minuten-Takt",
+              "Produktive Änderungen nur im bestätigten Scope"
+            ]
+          },
+          {
+            "code": "LOCAL-ST",
+            "title": "Gerät Startklar",
+            "state": "LIVE",
+            "price": "CHF 189",
+            "unit": "BIS 2 AKTIVE STUNDEN",
+            "text": "Neuen PC oder Laptop aktualisieren und mit vereinbarter Basissoftware betriebsbereit einrichten.",
+            "details": [
+              "Systemupdates und verfügbare Standardtreiber",
+              "Ein lokales Benutzerprofil",
+              "Zusatzumfang nur nach neuer Freigabe"
+            ]
+          },
+          {
+            "code": "LOCAL-GD",
+            "title": "Gerät & Daten",
+            "state": "LIVE",
+            "price": "CHF 279",
+            "unit": "BIS 3 AKTIVE STUNDEN",
+            "text": "Startklar-Paket plus ausgewählte Datenübertragung aus einer lesbaren Quelle.",
+            "details": [
+              "Bis 250 GB ausgewählte Benutzerdateien",
+              "Vorhandenes geeignetes Backupziel",
+              "Keine professionelle Datenrettung"
+            ]
+          },
+          {
+            "code": "LOCAL-SC",
+            "title": "Kleinbetrieb Standort-Check",
+            "state": "LIVE",
+            "price": "CHF 249",
+            "unit": "90 MINUTEN + KURZBERICHT",
+            "text": "Erst Klarheit schaffen: eine strukturierte Bestandsaufnahme mit priorisierten nächsten Schritten.",
+            "details": [
+              "Ein Standort und 90 Minuten Aufnahme",
+              "Kurzbericht: sofort, bald, später",
+              "20 Minuten Ergebnisbesprechung"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "local-it-terms",
+        "eyebrow": "02B // REISE, ZAHLUNG & ANBIETER",
+        "heading": "Vor dem Termin steht fest, was kostet – und was nicht",
+        "paragraphs": [
+          "Der Reisebetrag gilt pro bestätigtem Termin und richtet sich nach dem tatsächlichen Einsatzort. Eine Privatadresse wird dafür nicht öffentlich genannt. Parkgebühren, Spezialtransport oder mehrere Anfahrten werden nur nach vorheriger schriftlicher Bestätigung weiterberechnet.",
+          "Anbieter der beschriebenen Leistungen ist Oliver-frank Pristaff – JARVIS SYSTEM, Schweiz. JARVIS SYSTEM wird auf dieser Website nicht als eingetragene GmbH dargestellt. Eine Anfrage ist unverbindlich; ein Auftrag beginnt erst mit einer individuellen schriftlichen Bestätigung."
+        ],
+        "zones": [
+          {
+            "code": "ZONE A",
+            "area": "Goldach & Rorschach",
+            "price": "CHF 0",
+            "note": "Kein zusätzlicher Reisebetrag pro bestätigtem Termin."
+          },
+          {
+            "code": "ZONE B",
+            "area": "St. Gallen · Arbon · Gossau SG · Herisau",
+            "price": "CHF 25",
+            "note": "Fester Reisebetrag pro bestätigtem Termin."
+          },
+          {
+            "code": "ZONE C",
+            "area": "Appenzell · Wil SG",
+            "price": "CHF 45",
+            "note": "Fester Reisebetrag pro bestätigtem Termin."
+          },
+          {
+            "code": "ZONE D",
+            "area": "Andere Orte",
+            "price": "AUF ANFRAGE",
+            "note": "Individuelle schriftliche Reiseofferte vor Terminannahme."
+          }
+        ],
+        "bullets": [
+          "Quick Help wird vor der Fernsitzung bezahlt",
+          "Bei Vor-Ort-Terminen werden Mindestblock und Reisebetrag vorab bestätigt und vorausbezahlt",
+          "Zusatzzeit wird nur nach Freigabe im 15-Minuten-Takt abgerechnet",
+          "Pakete, Standort-Check und genehmigte Fremdkosten werden vor Start beziehungsweise Bestellung bezahlt",
+          "Bei einer Absage durch JARVIS vor Arbeitsbeginn wird die noch nicht erbrachte JARVIS-Leistung zurückerstattet; genehmigte Drittkosten richten sich nach den Bedingungen des Anbieters",
+          "Rechnung, Leistungszeitraum, Scope, Reise und genehmigte Fremdkosten werden getrennt nachvollziehbar ausgewiesen"
+        ],
+        "callout": "MWST-STATUS // Oliver-frank Pristaff – JARVIS SYSTEM ist derzeit nicht im MWST-Register. Es wird keine MWST ausgewiesen. Stand: 4. August 2026; bei einer Statusänderung werden Offerten, Rechnungen und Website vor dem nächsten Auftrag angepasst."
       },
       {
         "id": "services",

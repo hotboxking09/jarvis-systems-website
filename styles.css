@@ -501,6 +501,25 @@ blockquote { margin: 2rem 0; padding: 0; color: #c5dbe2; font-size: clamp(1.05re
 .service-category-card[data-state="GATED"]::before,.service-category-card[data-state="PRÜFUNG"]::before { background: linear-gradient(90deg,var(--amber),transparent); box-shadow: 0 0 15px rgba(255,212,95,.5); }
 .service-category-card[data-state="GATED"] > b,.service-category-card[data-state="PRÜFUNG"] > b { color: var(--amber); }
 .service-category-card[data-state="REGIONAL"]::before { background: linear-gradient(90deg,var(--magenta),var(--cyan),transparent); box-shadow: 0 0 16px rgba(255,43,214,.48); }
+.local-offer-grid { margin-top: 2.2rem; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .9rem; }
+.local-offer-card { position: relative; min-height: 320px; padding: clamp(1.2rem,2.4vw,1.7rem); display: flex; flex-direction: column; overflow: hidden; border: 1px solid rgba(79,244,255,.2); background: radial-gradient(circle at 92% 8%,rgba(255,43,214,.1),transparent 30%),linear-gradient(145deg,rgba(6,20,29,.94),rgba(2,7,12,.98)); box-shadow: 0 18px 44px rgba(0,0,0,.22); }
+.local-offer-card::before { position: absolute; inset: 0 auto auto 0; width: 62%; height: 2px; content: ""; background: linear-gradient(90deg,var(--cyan),var(--magenta),transparent); box-shadow: 0 0 16px rgba(79,244,255,.55); }
+.local-offer-card header { display: flex; justify-content: space-between; gap: 1rem; color: var(--cyan); font: 900 .55rem monospace; letter-spacing: .12em; }
+.local-offer-card header b { color: var(--green); font-size: .48rem; }
+.local-offer-card h3 { margin: 1.7rem 0 .8rem; font-size: clamp(1.25rem,2.1vw,1.75rem); }
+.local-offer-price { display: flex; flex-wrap: wrap; gap: .45rem .8rem; align-items: baseline; padding-block: .8rem; border-block: 1px solid rgba(79,244,255,.1); }
+.local-offer-price strong { color: var(--cyan-hot); font-size: clamp(1.9rem,4vw,3rem); line-height: 1; text-shadow: 0 0 18px rgba(79,244,255,.24); }
+.local-offer-price small { color: #93b2bc; font: 800 .54rem monospace; letter-spacing: .08em; }
+.local-offer-card > p { margin: 1rem 0; color: #a8c0c9; font-size: .84rem; line-height: 1.7; }
+.local-offer-card ul { margin: auto 0 0; padding: 0; list-style: none; }
+.local-offer-card li { position: relative; padding: .42rem 0 .42rem 1.05rem; color: #bdd0d7; font-size: .72rem; line-height: 1.55; }
+.local-offer-card li::before { position: absolute; left: 0; top: .75rem; width: 5px; height: 5px; content: ""; background: var(--green); box-shadow: 0 0 8px var(--green); transform: rotate(45deg); }
+.local-zone-grid { margin-top: 2.2rem; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .75rem; }
+.local-zone-card { min-height: 210px; padding: 1.15rem; display: flex; flex-direction: column; border: 1px solid rgba(79,244,255,.16); background: linear-gradient(155deg,rgba(5,18,27,.86),rgba(2,8,13,.96)); }
+.local-zone-card > span { color: var(--magenta); font: 900 .55rem monospace; letter-spacing: .13em; }
+.local-zone-card h3 { margin: 1.25rem 0 .8rem; font-size: 1.02rem; line-height: 1.35; }
+.local-zone-card strong { color: var(--cyan-hot); font-size: clamp(1.35rem,2.3vw,2rem); }
+.local-zone-card p { margin: auto 0 0; padding-top: 1rem; color: #91abb5; border-top: 1px solid rgba(79,244,255,.09); font-size: .7rem; line-height: 1.55; }
 .content-quote { padding: clamp(1.7rem,4vw,3rem); display: grid; gap: 1rem; border: 1px solid rgba(79,244,255,.2); background: linear-gradient(110deg,rgba(79,244,255,.06),rgba(255,43,214,.04)); font-size: clamp(1.3rem,2.6vw,2.2rem); }
 .content-quote cite { color: var(--muted); font: 700 .62rem monospace; letter-spacing: .1em; }
 
@@ -553,11 +572,14 @@ blockquote { margin: 2rem 0; padding: 0; color: #c5dbe2; font-size: clamp(1.05re
   .content-index { position: static; }
   .content-checklist,.related-grid { grid-template-columns: 1fr; }
   .service-category-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .local-zone-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .footer-map { grid-template-columns: repeat(2,1fr); }
 }
 @media (max-width: 620px) {
   .service-category-grid { grid-template-columns: 1fr; }
   .service-category-card { min-height: 215px; }
+  .local-offer-grid,.local-zone-grid { grid-template-columns: 1fr; }
+  .local-offer-card { min-height: 0; }
 }
 @media (max-width: 460px) {
   .knowledge-grid { grid-template-columns: 1fr; }
