@@ -1,13 +1,13 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 6,
-      "connection": 9,
-      "disconnect": 9,
+      "client_observed": 5,
+      "connection": 7,
+      "disconnect": 7,
       "login_attempt": 3
     },
-    "direct_events_24h": 27,
-    "direct_events_7d": 326
+    "direct_events_24h": 22,
+    "direct_events_7d": 308
   },
   "events": [
     {
@@ -196,57 +196,6 @@
       "time_window": "2026-08-03T16:40:00.000Z",
       "type": "disconnect",
       "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 45102,
-      "count": 1,
-      "country": "US",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        -120,
-        36
-      ],
-      "severity": "info",
-      "source_alias": "SRC-4FD26C10DFD4",
-      "time_window": "2026-08-03T10:10:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 45102,
-      "count": 2,
-      "country": "US",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        -120,
-        36
-      ],
-      "severity": "low",
-      "source_alias": "SRC-4FD26C10DFD4",
-      "time_window": "2026-08-03T10:10:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 45102,
-      "count": 2,
-      "country": "US",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        -120,
-        36
-      ],
-      "severity": "info",
-      "source_alias": "SRC-4FD26C10DFD4",
-      "time_window": "2026-08-03T10:10:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
@@ -260,7 +209,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "98ffcb716981dc5eea8715aa90d95346f02588e0eab5feb16865c177e4b941dc",
-  "updated_at": "2026-08-04T06:39:50Z",
+  "source_fingerprint": "65e6c545507cff424042cd1eb53e8341ed26885cc7c517dae22882281f9288c3",
+  "updated_at": "2026-08-04T12:17:29Z",
   "window": "rolling-24h-events-with-7d-total"
 }
