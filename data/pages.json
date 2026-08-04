@@ -79,26 +79,26 @@
   },
   {
     "slug": "solutions",
-    "nav": "Web & Hosting",
-    "kicker": "JARVIS SOLUTIONS // DIGITAL DELIVERY",
-    "title": "Websites, Betreuung & digitale Lösungen",
-    "description": "Websites, Redesigns, technische Website-Checks und laufende Pflege für KMU, Selbstständige, Vereine und Projekte in der Schweiz.",
+    "nav": "Solutions",
+    "kicker": "JARVIS SOLUTIONS // DIGITAL + LOCAL DELIVERY",
+    "title": "Websites, Local IT & digitale Lösungen",
+    "description": "Websites, Local IT, Vor-Ort-Hilfe, technische Checks und laufende Pflege für Privatpersonen, KMU und Projekte in der Ostschweiz.",
     "schema_type": "WebPage",
     "date": "2026-08-02",
-    "modified": "2026-08-03",
-    "intro": "Vom ersten Website-Check bis zum vollständigen Webauftritt: JARVIS Solutions unterstützt geeignete Unternehmen, Selbstständige, Vereine, Gründer, Organisationen und private Projekte mit klar definierten digitalen Leistungen. Jede Anfrage beginnt mit einer ehrlichen technischen und wirtschaftlichen Einschätzung.",
+    "modified": "2026-08-04",
+    "intro": "Vom ersten Website-Check über den vollständigen Webauftritt bis zur regionalen IT-Hilfe: JARVIS Solutions unterstützt Privatpersonen, Unternehmen, Selbstständige, Vereine, Gründer und reale Projekte mit getrennten, klar definierten Leistungen. Jede Anfrage beginnt mit einer ehrlichen technischen und wirtschaftlichen Einschätzung.",
     "facts": [
       [
         "ANGEBOT",
-        "WEBSITE · CHECK · CARE"
+        "WEB · CHECK · CARE"
       ],
       [
-        "SYSTEMARBEIT",
-        "LINUX · SERVER · AUTOMATION"
+        "LOCAL IT",
+        "PC · DATEN · WLAN · VOR ORT"
       ],
       [
-        "HOSTING",
-        "NACH TECHNISCHER FREIGABE"
+        "SYSTEM & HOSTING",
+        "INDIVIDUELL · HOSTING GATED"
       ],
       [
         "ANFRAGE",
@@ -107,12 +107,84 @@
     ],
     "sections": [
       {
+        "id": "portfolio",
+        "eyebrow": "01 // ANGEBOTSKATEGORIEN",
+        "heading": "Ein JARVIS-Solutions-Dach – klar getrennte Leistungen",
+        "paragraphs": [
+          "Local IT ersetzt die bestehenden Web-, Care- oder Systemangebote nicht. Jede Leistung besitzt eine eigene Kategorie, einen eigenen Scope und einen sichtbaren Reifegrad. Dadurch bleibt erkennbar, was heute anfragbar, individuell zu prüfen oder noch technisch gesperrt ist.",
+          "Freelancer-Plattformen sind ein Vertriebskanal und keine Kundenleistung. Digitale Produkte erhalten später eine eigene Shop-Kategorie, sobald genau ein Produkt vollständig fertig, lizenziert und supportbar ist."
+        ],
+        "cards": [
+          {
+            "code": "WEB-01",
+            "title": "Websites & Redesign",
+            "state": "ANFRAGBAR",
+            "target": "services",
+            "text": "Neue Websites, Landingpages und verständliche Modernisierung bestehender Auftritte."
+          },
+          {
+            "code": "AUDIT-02",
+            "title": "Website-Check",
+            "state": "LIVE",
+            "target": "services",
+            "text": "Passiver Klarheits- und Technik-Check mit priorisiertem schriftlichem Bericht."
+          },
+          {
+            "code": "CARE-03",
+            "title": "Website Care",
+            "state": "ANFRAGBAR",
+            "target": "services",
+            "text": "Kontrollierte Inhalte, Ferienhinweise, Stellen, Bilder und technische Änderungen."
+          },
+          {
+            "code": "LOCAL-04",
+            "title": "Local IT & Vor Ort",
+            "state": "REGIONAL",
+            "target": "local-it",
+            "text": "PCs, neue Geräte, Daten, Backup, WLAN, Drucker und digitale Arbeitsplätze."
+          },
+          {
+            "code": "SYS-05",
+            "title": "Linux & Automation",
+            "state": "PRÜFUNG",
+            "target": "services",
+            "text": "Kleine klar begrenzte Linux-, Server-, Automatisierungs- und Dashboardaufgaben."
+          },
+          {
+            "code": "HOST-06",
+            "title": "Managed Hosting",
+            "state": "GATED",
+            "target": "hosting",
+            "text": "Nur nach technischer Aufnahme, Isolation, Backup, Monitoring und Exit-Prüfung."
+          }
+        ],
+        "callout": "PORTFOLIO // Sechs getrennte Kategorien. Kein Paket aktiviert automatisch Hosting, Fernzugriff oder eine andere Zusatzleistung."
+      },
+      {
+        "id": "local-it",
+        "eyebrow": "02 // LOCAL IT & VOR ORT",
+        "heading": "Technische Hilfe dort, wo sie im Alltag wirklich blockiert",
+        "paragraphs": [
+          "JARVIS unterstützt Privatpersonen, Selbstständige, Vereine und kleine Betriebe in der Ostschweiz bei PCs, neuen Geräten, Datenübertragung, WLAN, Druckern, Backup-Grundlagen und digitalen Arbeitsplätzen. Vor jedem Termin werden Problem, Ziel, Preisrahmen, Reise und Berechtigung schriftlich eingegrenzt.",
+          "Passwörter, 2FA- und Recoverycodes gibt die Kundschaft selbst ein. Vor Neuinstallation, Klonen, Partitionierung oder Löschung wird die Backup- und Recoverylage bestätigt. Komplexe Datenrettungs-, Security-, Kassen-, Gesundheits-, Finanz- oder Personalsysteme werden nicht als schnelle Basishilfe verkauft."
+        ],
+        "bullets": [
+          "Quick Help für ein klar beschreibbares Einzelproblem per sichtbarer Fernhilfe",
+          "Vor-Ort-Service für PC, WLAN, Router, Drucker, Scanner und Peripherie",
+          "Geräte- und Datenpaket für Einrichtung, ausgewählte Migration und Backupziel",
+          "Kleinbetrieb Standort-Check mit verständlicher Prioritätenliste",
+          "Servicegebiet: Goldach, Rorschach, St. Gallen, Arbon, Gossau SG, Herisau, Appenzell und Wil SG",
+          "Teile, Lizenzen, Datenträger und andere Drittkosten nur nach Bestätigung und Vorauszahlung"
+        ],
+        "callout": "REGIONAL ANFRAGBAR // Öffentliche Preisangaben folgen erst nach abschliessender Preis- und Fachprüfung. Schriftliche Anfragen sind bereits möglich."
+      },
+      {
         "id": "services",
-        "eyebrow": "01 // HEUTE ANFRAGBAR",
+        "eyebrow": "03 // WEB, CARE & SYSTEMARBEIT",
         "heading": "Konkrete Leistungen statt unklarer Alles-versprechen-Pakete",
         "paragraphs": [
-          "JARVIS Solutions bündelt die heute real lieferbaren Leistungen an einem Ort. Umfang, Preis, Lieferzeit und Grenzen werden vor dem Start schriftlich festgehalten. Kleine Aufträge werden nicht künstlich aufgebläht; komplexe oder sensible Anforderungen erhalten zuerst eine eigene Machbarkeits- und Sicherheitsprüfung.",
-          "Der Website Klarheits- & Technik-Check ist bereits als fester Schweizer B2B-Service für EUR 59 buchbar. Individuelle Projekte beginnen mit einer unverbindlichen Anfrage und werden erst nach einem passenden Scope angenommen."
+          "JARVIS Solutions bündelt die heute real lieferbaren digitalen Leistungen an einem Ort. Umfang, Preis, Lieferzeit und Grenzen werden vor dem Start schriftlich festgehalten. Kleine Aufträge werden nicht künstlich aufgebläht; komplexe oder sensible Anforderungen erhalten zuerst eine eigene Machbarkeits- und Sicherheitsprüfung.",
+          "Der Website Klarheits- & Technik-Check ist bereits als fester Schweizer B2B-Service für EUR 59 buchbar. Individuelle Web-, Care- und Systemprojekte beginnen mit einer unverbindlichen Anfrage und werden erst nach einem passenden Scope angenommen."
         ],
         "bullets": [
           "Neue Websites und fokussierte Landingpages für Unternehmen, Selbstständige, Vereine und Projekte",
@@ -126,7 +198,7 @@
       },
       {
         "id": "audience",
-        "eyebrow": "02 // FÜR WEN",
+        "eyebrow": "04 // FÜR WEN",
         "heading": "Nicht nur Handwerk: gute Websites für jede passende Branche",
         "paragraphs": [
           "Handwerksbetriebe bleiben ein Bereich, den Gründer Oliver aus eigener Berufserfahrung besonders gut versteht. Das Angebot ist jedoch ausdrücklich nicht darauf begrenzt. Entscheidend sind ein seriöses Vorhaben, ein klarer Nutzen und ein technisch verantwortbarer Umfang – nicht die Branche.",
@@ -142,7 +214,7 @@
       },
       {
         "id": "delivery",
-        "eyebrow": "03 // ABLAUF",
+        "eyebrow": "05 // ABLAUF",
         "heading": "Erst verstehen, dann bauen",
         "paragraphs": [
           "Die Anfrage beschreibt Ziel, Zielgruppe, vorhandene Domain und Inhalte sowie die wichtigsten Funktionen. Danach wird der Umfang eingegrenzt. Sie erhalten vor einer Beauftragung eine verständliche Einschätzung zu Lieferumfang, Abhängigkeiten, Zeit, Kosten und offenen Risiken.",
@@ -159,7 +231,7 @@
       },
       {
         "id": "hosting",
-        "eyebrow": "04 // HOSTING",
+        "eyebrow": "06 // HOSTING",
         "heading": "Hosting ist Betrieb – nicht nur Speicherplatz",
         "paragraphs": [
           "JARVIS verfügt über eigene und gemietete Infrastruktur für Entwicklung, Tests und kontrollierte Dienste. Kundenhosting wird trotzdem nicht allein deshalb freigegeben, weil ein Server vorhanden ist. Jede produktive Aufnahme benötigt eine passende Betriebs- und Sicherheitsabnahme.",
@@ -176,7 +248,7 @@
       },
       {
         "id": "special",
-        "eyebrow": "05 // ZUSATZGATES",
+        "eyebrow": "07 // ZUSATZGATES",
         "heading": "Sensible Funktionen werden nicht nebenbei eingebaut",
         "paragraphs": [
           "Shops, Kundenkonten, Buchungen, Datei-Uploads, Gesundheits- oder Finanzdaten sowie geschäftskritische Integrationen verändern Risiko, Aufwand und rechtliche Anforderungen. Solche Funktionen sind nicht automatisch in einer normalen Website enthalten.",
@@ -185,15 +257,17 @@
       },
       {
         "id": "request",
-        "eyebrow": "06 // PROJEKTANFRAGE",
+        "eyebrow": "08 // PROJEKTANFRAGE",
         "heading": "Diese Angaben reichen für den ersten Kontakt",
         "paragraphs": [
           "Senden Sie eine kurze Beschreibung per E-Mail. Benötigt werden noch keine Zugangsdaten und keine fertigen technischen Unterlagen. Ein klarer Ausgangspunkt genügt für die erste Einschätzung."
         ],
         "bullets": [
           "Name der Organisation oder des Projekts und zuständige Kontaktperson",
-          "Bestehende Website oder Hinweis: noch keine Website",
-          "Gewünschtes Ziel und wichtigste Seiten beziehungsweise Funktionen",
+          "Gewünschte Kategorie: Website, Check, Care, Local IT, Systemarbeit oder Hostingprüfung",
+          "Bei Webprojekten: bestehende Website oder Hinweis, dass noch keine Website vorhanden ist",
+          "Bei Local IT: Gerät, Betriebssystem, genaue Fehlermeldung, Ort und vorhandener Backupstatus",
+          "Gewünschtes Ziel und wichtigste Funktionen beziehungsweise das konkret zu lösende Problem",
           "Vorhandene Domain, Texte, Logo und Bilder – falls vorhanden",
           "Gewünschter Zeitraum und realistischer Budgetrahmen",
           "Hinweis auf Shop, Login, Buchung, Uploads oder sensible Daten"
@@ -202,10 +276,10 @@
       },
       {
         "id": "status",
-        "eyebrow": "07 // AKTUELLER STATUS",
+        "eyebrow": "09 // AKTUELLER STATUS",
         "heading": "Persönliche Umsetzung in einer transparenten Aufbauphase",
         "paragraphs": [
-          "JARVIS Solutions wird derzeit von Oliver-frank Pristaff als Founder-geführtes Angebot im Aufbau entwickelt. Anfragen für Websites, Redesigns, Landingpages und laufende Pflege sind ab sofort offen. JARVIS SYSTEM ist das zentrale Technologieprojekt; jede Leistung folgt denselben Grundsätzen für Design, Dokumentation, Sicherheit und ehrliche technische Angaben.",
+          "JARVIS Solutions wird derzeit von Oliver-frank Pristaff als Founder-geführtes Angebot im Aufbau entwickelt. Anfragen für Websites, Redesigns, Landingpages, laufende Pflege und regionale Local-IT-Hilfe sind ab sofort offen. JARVIS SYSTEM ist das zentrale Technologieprojekt; jede Leistung folgt denselben Grundsätzen für Design, Dokumentation, Sicherheit und ehrliche technische Angaben.",
           "Kapazität und Umfang werden bewusst begrenzt. So erhält jedes angenommene Projekt persönliche Aufmerksamkeit, anstatt durch automatisierte Massenabfertigung zu laufen."
         ],
         "quote": "Wir verkaufen keine leeren Versprechen. Wir bauen einen verständlichen, überprüfbaren digitalen Auftritt, der zum echten Projekt passt."
