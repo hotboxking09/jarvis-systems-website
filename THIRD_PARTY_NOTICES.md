@@ -14,6 +14,11 @@ hosted webfont.
 - `assets/jarvis-core-head.png` and `assets/jarvis-boot-guardian.png` are the
   intended JARVIS project visuals. Their source/provenance record is retained
   privately and must be cleared before release.
+- The code-native SVGs under `assets/brand/` and the screenshot under
+  `assets/portfolio/` are JARVIS project assets. Their checksums, immediate
+  project sources and truth-label requirements are recorded in
+  `docs/PRIVATE_ASSET_PROVENANCE.md`; they are not third-party endorsements or
+  customer references.
 - CSS uses only local system font names; no font file is redistributed.
 - `assets/threat-world-map.json` is a simplified derivative of Natural Earth
   1:50m Admin 0 Countries, version 5.1.1. Natural Earth vector and raster data

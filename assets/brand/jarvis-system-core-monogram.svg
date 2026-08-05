@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2048" viewBox="0 0 2048 2048" role="img" aria-labelledby="title desc">
+  <title id="title">JARVIS SYSTEM Core Monogram</title>
+  <desc id="desc">Geometric J and S core monogram with a central sentinel eye.</desc>
+  <g shape-rendering="geometricPrecision">
+
+      <g id="core-monogram">
+        <polygon points="1024,164 1504,442 1504,1004 1024,1284 544,1004 544,442"
+                 fill="none" stroke="#087D9E" stroke-width="22"/>
+        <path d="M1024 194 L1428 430 L1428 640 L1250 538 L1250 488 L1024 356 Z"
+              fill="#18D7F5"/>
+        <path d="M1452 674 L1452 988 L1048 1224 L1048 1018 L1270 888 L1270 778 Z"
+              fill="#18D7F5"/>
+        <path d="M1024 1224 L620 988 L620 778 L798 880 L798 930 L1024 1062 Z"
+              fill="#18D7F5"/>
+        <path d="M596 744 L596 430 L1000 194 L1000 400 L778 530 L778 640 Z"
+              fill="#18D7F5"/>
+        <path d="M720 714 L1024 536 L1328 714 L1024 892 Z" fill="#02070D" stroke="#F4FBFF" stroke-width="34"/>
+        <path d="M792 714 L1024 610 L1256 714 L1024 818 Z" fill="none" stroke="#18D7F5" stroke-width="18"/>
+        <circle cx="1024" cy="714" r="43" fill="#24F28C"/>
+        <path d="M662 714 L726 680 L726 748 Z M1386 714 L1322 680 L1322 748 Z" fill="#FF1593"/>
+        <path d="M1024 194 V356 M1452 674 L1270 778 M1024 1224 V1062 M596 744 L778 640"
+              stroke="#F4FBFF" stroke-width="10" opacity=".9"/>
+      </g>
+      <g id="jarvis-system-wordmark"><path d="M 301.79 1518.00 L 381.93 1518.00 L 381.93 1651.57 L 362.50 1688.00 L 313.93 1688.00 L 284.79 1658.86" fill="none" stroke="#F4FBFF" stroke-width="25" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 402.93 1688.00 L 451.50 1518.00 L 500.07 1688.00 M 424.79 1620.00 L 478.21 1620.00" fill="none" stroke="#F4FBFF" stroke-width="25" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 521.07 1688.00 L 521.07 1518.00 L 596.36 1518.00 L 618.21 1542.29 L 618.21 1590.86 L 596.36 1615.14 L 521.07 1615.14 M 579.36 1615.14 L 625.50 1688.00" fill="none" stroke="#F4FBFF" stroke-width="25" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 639.21 1518.00 L 687.79 1688.00 L 736.36 1518.00" fill="none" stroke="#F4FBFF" stroke-width="25" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 774.36 1518.00 L 837.50 1518.00 M 805.93 1518.00 L 805.93 1688.00 M 774.36 1688.00 L 837.50 1688.00" fill="none" stroke="#F4FBFF" stroke-width="25" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 972.64 1518.00 L 894.93 1518.00 L 875.50 1537.43 L 875.50 1586.00 L 894.93 1603.00 L 953.21 1603.00 L 972.64 1620.00 L 972.64 1668.57 L 953.21 1688.00 L 875.50 1688.00" fill="none" stroke="#F4FBFF" stroke-width="25" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1172.50 1518.00 L 1094.79 1518.00 L 1075.36 1537.43 L 1075.36 1586.00 L 1094.79 1603.00 L 1153.07 1603.00 L 1172.50 1620.00 L 1172.50 1668.57 L 1153.07 1688.00 L 1075.36 1688.00" fill="none" stroke="#F4FBFF" stroke-width="25" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1193.50 1518.00 L 1242.07 1603.00 L 1290.64 1518.00 M 1242.07 1603.00 L 1242.07 1688.00" fill="none" stroke="#F4FBFF" stroke-width="25" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1408.79 1518.00 L 1331.07 1518.00 L 1311.64 1537.43 L 1311.64 1586.00 L 1331.07 1603.00 L 1389.36 1603.00 L 1408.79 1620.00 L 1408.79 1668.57 L 1389.36 1688.00 L 1311.64 1688.00" fill="none" stroke="#F4FBFF" stroke-width="25" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1429.79 1518.00 L 1526.93 1518.00 M 1478.36 1518.00 L 1478.36 1688.00" fill="none" stroke="#F4FBFF" stroke-width="25" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1645.07 1518.00 L 1547.93 1518.00 L 1547.93 1688.00 L 1645.07 1688.00 M 1547.93 1603.00 L 1625.64 1603.00" fill="none" stroke="#F4FBFF" stroke-width="25" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1666.07 1688.00 L 1666.07 1518.00 L 1714.64 1593.29 L 1763.21 1518.00 L 1763.21 1688.00" fill="none" stroke="#F4FBFF" stroke-width="25" stroke-linecap="square" stroke-linejoin="miter"/></g>
+      <circle cx="1024" cy="1830" r="10" fill="#24F28C"/>
+      <path d="M608 1830 H970 M1078 1830 H1440" stroke="#087D9E" stroke-width="8"/>
+
+  </g>
+</svg>

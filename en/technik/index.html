@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-release-state="public-release">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src &#x27;self&#x27;; base-uri &#x27;self&#x27;; object-src &#x27;none&#x27;; script-src &#x27;self&#x27; &#x27;sha256-PfrgfppifMijqiYlZmKp3NeKX23M/wj+UW5bFRg0UHQ=&#x27; &#x27;sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U=&#x27;; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27; data:; font-src &#x27;self&#x27;; connect-src &#x27;self&#x27; https://jarvis-live-telemetry.jarvis-system-live.workers.dev https://jarvis-threat-observatory.jarvis-system-live.workers.dev; manifest-src &#x27;self&#x27;; media-src &#x27;self&#x27;; frame-src &#x27;none&#x27;; form-action &#x27;self&#x27;; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#02060a">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Technical overview of UEFI boot manager, runtime, unified shell, login, hardware detection and real telemetry of JARVIS OS.">
+  <meta name="author" content="Oliver-frank Pristaff">
+  <meta name="creator" content="Oliver-frank Pristaff">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="JARVIS SYSTEM">
+  <meta property="og:title" content="Technology behind JARVIS SYSTEM // JARVIS SYSTEM">
+  <meta property="og:description" content="Technical overview of UEFI boot manager, runtime, unified shell, login, hardware detection and real telemetry of JARVIS OS.">
+  <meta property="og:url" content="https://jarvisserver.org/en/technik/">
+  <meta property="og:image" content="https://jarvisserver.org/assets/og-card.png">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="JARVIS SYSTEM – independent operating system project">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Technology behind JARVIS SYSTEM // JARVIS SYSTEM">
+  <meta name="twitter:description" content="Technical overview of UEFI boot manager, runtime, unified shell, login, hardware detection and real telemetry of JARVIS OS.">
+  <meta name="twitter:image" content="https://jarvisserver.org/assets/og-card.png">
+  <link rel="canonical" href="https://jarvisserver.org/en/technik/">
+  <link rel="alternate" type="application/atom+xml" title="JARVIS SYSTEM Updates" href="/feed.xml">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="/styles.css?v=f010254c9f49">
+  <title>Technology behind JARVIS SYSTEM // JARVIS SYSTEM</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://jarvisserver.org/en/#website","url":"https://jarvisserver.org/en/","name":"JARVIS SYSTEM","alternateName":"JARVIS OS","inLanguage":"en","publisher":{"@id":"https://jarvisserver.org/en/#project"}},{"@type":"Organization","@id":"https://jarvisserver.org/en/#project","name":"JARVIS SYSTEM","description":"Independent technology project from Switzerland, with JARVIS OS at its core and carefully scoped digital services.","url":"https://jarvisserver.org/en/","sameAs":["https://github.com/hotboxking09","https://discord.gg/DWBwuUhXmv","https://x.com/JarvisSystemCH","https://www.linkedin.com/in/oliver-frank-pristaff/","https://www.linkedin.com/company/jarvis-systems-ch/","https://www.reddit.com/user/JarvisSystemCH/","https://ko-fi.com/jarvissystem"],"logo":{"@type":"ImageObject","url":"https://jarvisserver.org/assets/jarvis-core-head.png","width":1024,"height":1024},"founder":{"@id":"https://jarvisserver.org/en/#founder"}},{"@type":"Person","@id":"https://jarvisserver.org/en/#founder","name":"Oliver-frank Pristaff","url":"https://jarvisserver.org/en/gruender/","jobTitle":"Founder and developer of JARVIS SYSTEM","sameAs":["https://github.com/hotboxking09","https://www.linkedin.com/in/oliver-frank-pristaff/","https://www.reddit.com/user/JarvisSystemCH/"],"homeLocation":{"@type":"Country","name":"Switzerland"}},{"@type":"TechArticle","@id":"https://jarvisserver.org/en/technik/#page","url":"https://jarvisserver.org/en/technik/","name":"Technology behind JARVIS SYSTEM","headline":"Technology behind JARVIS SYSTEM","description":"Technical overview of UEFI boot manager, runtime, unified shell, login, hardware detection and real telemetry of JARVIS OS.","inLanguage":"en","isPartOf":{"@id":"https://jarvisserver.org/en/#website"},"datePublished":"2026-07-23","dateModified":"2026-08-05","author":{"@id":"https://jarvisserver.org/en/#founder"},"publisher":{"@id":"https://jarvisserver.org/en/#project"},"image":"https://jarvisserver.org/assets/og-card.png"},{"@type":"BreadcrumbList","@id":"https://jarvisserver.org/en/technik/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"JARVIS SYSTEM","item":"https://jarvisserver.org/en/"},{"@type":"ListItem","position":2,"name":"Technology behind JARVIS SYSTEM","item":"https://jarvisserver.org/en/technik/"}]}]}</script>
+
+  <link rel="alternate" hreflang="de-CH" href="https://jarvisserver.org/technik/">
+  <link rel="alternate" hreflang="en" href="https://jarvisserver.org/en/technik/">
+  <link rel="alternate" hreflang="x-default" href="https://jarvisserver.org/technik/">
+</head>
+<body class="content-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas><div class="noise-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="/en/">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>JARVIS</strong><small>SYSTEM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
+      <div class="nav-links" id="nav-links"><a href="/en/">Home</a><a href="/en/solutions/">Services</a><a href="/en/#projekte">Projects</a><a href="/en/#partner">Partners</a><a href="/en/jarvis-os/">JARVIS OS</a><a href="/en/threat-observatory/">AEGIS</a><a href="/en/updates/">Updates</a></div>
+    </nav>
+    <nav class="language-switch" aria-label="Language"><a href="/technik/" hreflang="de-CH" lang="de">DE</a><a href="/en/technik/" hreflang="en" lang="en" aria-current="true">EN</a></nav><a class="header-contact" href="/en/solutions/#request"><span></span> START AN INQUIRY</a>
+  </header>
+  <main id="main">
+    <section class="content-hero section-shell">
+      <div class="content-hero-copy reveal">
+        <nav class="breadcrumbs" aria-label="Breadcrumb navigation"><a href="/en/">JARVIS SYSTEM</a><span>/</span><span aria-current="page">Technology</span></nav>
+        <p class="eyebrow">SYSTEM ARCHITECTURE // VERIFIED PATHS</p>
+        <h1>Technology behind JARVIS SYSTEM</h1>
+        <p class="content-intro">The technical architecture of JARVIS SYSTEM deliberately separates visible product identity, operating system services and hardware base. This allows the JARVIS runtime to evolve while the kernel and drivers continue to provide stable hardware access.</p>
+      </div>
+      <div class="content-core reveal" aria-hidden="true">
+        <div class="core-rings"><i></i><i></i><i></i></div>
+        <picture><source srcset="/assets/jarvis-core-head.webp" type="image/webp"><img src="/assets/jarvis-core-head.png" width="1024" height="1024" alt="" decoding="async"></picture>
+        <span>TECHNOLOGY // ONLINE</span>
+      </div>
+      <div class="content-facts"><div><span>BOAT</span><b>NATIVE EFI</b></div><div><span>RUNTIME</span><b>JARVIS CORE</b></div><div><span>AUTH</span><b>PAM + FINGERPRINT</b></div><div><span>DATA</span><b>REAL SOURCES</b></div></div>
+    </section>
+    <div class="content-layout section-shell">
+      <aside class="content-index"><b>PAGE MATRIX</b><a href="#boot">01 // PREBOOT</a><a href="#runtime">02 // RUNTIME</a><a href="#telemetry">03 // TELEMETRY</a><a href="#portability">04 // HARDWARE</a><a href="/en/updates/">LIVE DEVELOPMENT LOG</a></aside>
+      <article class="content-copy"><section id="boot" class="content-block reveal">
+      <p class="eyebrow">01 // PREBOOT</p>
+      <h2>UEFI boot manager in front of the operating system</h2>
+      <p>The JARVIS EFI Manager runs in the UEFI environment before the actual system interface starts. It detects available launch targets and displays them as interactive system maps. Mouse, keyboard, countdown, and a safe fallback path have been tested in OVMF.</p><p>Detected third-party systems are only displayed if real boot data is available. The interface is not intended to invent Windows, Linux or hardware information. The selection can still be operated using the keyboard without a mouse.</p>
+    </section><section id="runtime" class="content-block reveal">
+      <p class="eyebrow">02 // RUNTIME</p>
+      <h2>Login, Unified Shell and Frame Core</h2>
+      <p>After the boot, the login supervisor takes over. Unlocking and system interface are designed as a coherent transition. Password and fingerprint are connected via established authentication services; Recovery must remain possible.</p><p>The Unified Shell is the persistent operator core. It launches commands, settings and applications. The Frame Core ensures that external programs can be opened, minimized, maximized, switched and closed in the foreground without replacing the fixed system core.</p>
+    </section><section id="telemetry" class="content-block reveal">
+      <p class="eyebrow">03 // TELEMETRY</p>
+      <h2>Real-time data without made-up metrics</h2>
+      <p>CPU usage and frequency, RAM pressure, network traffic, drive activity, battery, temperatures and other values are read from available system interfaces. Hardware-dependent sensors may be missing; in this case the surface must visibly mark the missing value.</p><p>The public website also shows a deliberately limited work signal. It only transmits aggregated active status, duration, pulse and process count. Chats, prompts, commands, files, audio, hardware IDs and IP addresses are expressly not included in the public payload.</p>
+    </section><section id="portability" class="content-block reveal">
+      <p class="eyebrow">04 // HARDWARE</p>
+      <h2>Capability discovery instead of laptop customization</h2>
+      <p>JARVIS OS is not designed just for the development computer. When starting, the display, input devices, graphics, network, storage, power supply and available sensors must be automatically recognized. Functions may only be activated if the respective ability is available.</p><p>The first target class is modern x86-64 PCs with UEFI, ACPI, and hardware supported by the underlying Linux driver stack. Broad Intel, AMD, NVIDIA, Wi-Fi, LAN, USB and display tests remain a key release gate.</p><div class="content-callout">ENGINEERING RULE // VM verified does not automatically mean hardware verified.</div>
+    </section></article>
+    </div>
+    <section class="related-section section-shell" aria-labelledby="related-title">
+      <p class="eyebrow">NEXT SIGNALS</p><h2 id="related-title">Continue exploring JARVIS</h2>
+      <div class="related-grid"><a class="related-card" href="/en/jarvis-os/"><span>JARVIS KNOWLEDGE</span><h3>What is JARVIS OS?</h3><p>JARVIS OS is a Swiss operating system project with its own boot interface, login, shell, control panel and true real-time telemetry.</p><b>OPEN →</b></a><a class="related-card" href="/en/entwicklung/"><span>JARVIS KNOWLEDGE</span><h3>How JARVIS OS is developed</h3><p>This is how JARVIS OS is created: documented builds, VM and hardware tests, backups, release gates and traceable status information.</p><b>OPEN →</b></a><a class="related-card" href="/en/roadmap/"><span>JARVIS KNOWLEDGE</span><h3>JARVIS SYSTEM roadmap</h3><p>The JARVIS OS roadmap: from the boot manager through hardware portability, secure boot, and recovery to the controlled community release.</p><b>OPEN →</b></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><b>JARVIS SYSTEM</b><span>TECHNOLOGY PROJECT + DIGITAL SOLUTIONS</span><p>Websites, local IT and technical solutions from Switzerland – with JARVIS OS as its own core project.</p><small>Provider: Oliver-frank Pristaff – JARVIS SYSTEM, Switzerland</small><a href="mailto:jarvissystem@jarvisserver.org">jarvissystem@jarvisserver.org</a></div>
+    <nav class="footer-directory" aria-label="Complete site navigation">
+      <div><b>SERVICES</b><a href="/en/solutions/">All offers</a><a href="/en/#projekte">Work examples</a><a href="/en/solutions/#local-it">Local IT &amp; On Site</a><a href="/en/solutions/#request">Request a project</a><a href="/en/solutions/#services">Website check</a></div>
+      <div><b>JARVIS OS</b><a href="/en/jarvis-os/">System profile</a><a href="/en/technik/">Technology</a><a href="/en/entwicklung/">Development</a><a href="/en/roadmap/">Roadmap</a></div>
+      <div><b>PROJECT</b><a href="/en/updates/">Updates</a><a href="/en/gruender/">Founder</a><a href="/en/community/">Community</a><a href="/en/threat-observatory/">Threat Map</a></div>
+      <div><b>ORIENTATION</b><a href="/en/#partner">Partner &amp; Founding 100</a><a href="/en/uebersicht/">Website index</a><a href="/en/connect/">Official profiles</a><a href="/en/support/">Support</a><a href="/en/faq/">FAQ</a></div>
+    </nav>
+    <div class="footer-legal">
+      <div><p>© 2026 Oliver-frank Pristaff. All rights reserved. No ISO distribution.</p>
+      <a href="/en/legal.html">Rights, notices &amp; privacy</a> ·
+      <a href="https://www.linkedin.com/company/jarvis-systems-ch/" rel="me">LinkedIn JARVIS</a> ·
+      <a href="https://www.linkedin.com/in/oliver-frank-pristaff/" rel="me">LinkedIn Oliver</a> ·
+      <a href="https://github.com/hotboxking09">GitHub</a> ·
+      <a href="https://discord.gg/DWBwuUhXmv">Discord</a> ·
+      <a href="https://x.com/JarvisSystemCH" rel="me">X</a> ·
+      <a href="https://www.reddit.com/user/JarvisSystemCH/" rel="me">Reddit</a></div>
+      <div class="footer-state"><span></span> PROJECT SIGNAL ACTIVE</div>
+    </div>
+  </footer>
+  <script src="/app.js?v=f010254c9f49" defer></script>
+</body>
+</html>

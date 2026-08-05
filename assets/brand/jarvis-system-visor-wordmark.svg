@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2048" viewBox="0 0 2048 2048" role="img" aria-labelledby="title desc">
+  <title id="title">JARVIS SYSTEM Visor Wordmark</title>
+  <desc id="desc">Abstract dual visor symbol and horizontal JARVIS SYSTEM wordmark.</desc>
+  <g shape-rendering="geometricPrecision">
+
+      <g id="visor-symbol">
+        <path d="M194 650 L690 760 L874 654 L824 836 L690 922 L252 844 Z" fill="#18D7F5"/>
+        <path d="M244 932 L680 932 L820 844 L780 1018 L690 1074 L304 1074 Z" fill="#18D7F5"/>
+        <path d="M780 1018 L824 836 L858 814 L826 1044 Z" fill="#FF1593"/>
+        <path d="M706 1092 L744 1070 L758 1096 L720 1118 Z" fill="#24F28C"/>
+        <path d="M194 650 L690 760" stroke="#F4FBFF" stroke-width="10" opacity=".75"/>
+      </g>
+      <g id="jarvis-wordmark"><path d="M 944.80 650.00 L 1061.71 650.00 L 1061.71 844.86 L 1033.37 898.00 L 962.51 898.00 L 920.00 855.49" fill="none" stroke="#F4FBFF" stroke-width="38" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1095.71 898.00 L 1166.57 650.00 L 1237.43 898.00 M 1127.60 798.80 L 1205.54 798.80" fill="none" stroke="#F4FBFF" stroke-width="38" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1271.43 898.00 L 1271.43 650.00 L 1381.26 650.00 L 1413.14 685.43 L 1413.14 756.29 L 1381.26 791.71 L 1271.43 791.71 M 1356.46 791.71 L 1423.77 898.00" fill="none" stroke="#F4FBFF" stroke-width="38" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1447.14 650.00 L 1518.00 898.00 L 1588.86 650.00" fill="none" stroke="#F4FBFF" stroke-width="38" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1647.66 650.00 L 1739.77 650.00 M 1693.71 650.00 L 1693.71 898.00 M 1647.66 898.00 L 1739.77 898.00" fill="none" stroke="#F4FBFF" stroke-width="38" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1940.29 650.00 L 1826.91 650.00 L 1798.57 678.34 L 1798.57 749.20 L 1826.91 774.00 L 1911.94 774.00 L 1940.29 798.80 L 1940.29 869.66 L 1911.94 898.00 L 1798.57 898.00" fill="none" stroke="#F4FBFF" stroke-width="38" stroke-linecap="square" stroke-linejoin="miter"/></g>
+      <g id="system-wordmark"><path d="M 993.14 1096.00 L 934.63 1096.00 L 920.00 1110.63 L 920.00 1147.20 L 934.63 1160.00 L 978.51 1160.00 L 993.14 1172.80 L 993.14 1209.37 L 978.51 1224.00 L 920.00 1224.00" fill="none" stroke="#F4FBFF" stroke-width="21" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1047.14 1096.00 L 1083.71 1160.00 L 1120.29 1096.00 M 1083.71 1160.00 L 1083.71 1224.00" fill="none" stroke="#F4FBFF" stroke-width="21" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1247.43 1096.00 L 1188.91 1096.00 L 1174.29 1110.63 L 1174.29 1147.20 L 1188.91 1160.00 L 1232.80 1160.00 L 1247.43 1172.80 L 1247.43 1209.37 L 1232.80 1224.00 L 1174.29 1224.00" fill="none" stroke="#F4FBFF" stroke-width="21" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1301.43 1096.00 L 1374.57 1096.00 M 1338.00 1096.00 L 1338.00 1224.00" fill="none" stroke="#F4FBFF" stroke-width="21" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1501.71 1096.00 L 1428.57 1096.00 L 1428.57 1224.00 L 1501.71 1224.00 M 1428.57 1160.00 L 1487.09 1160.00" fill="none" stroke="#F4FBFF" stroke-width="21" stroke-linecap="square" stroke-linejoin="miter"/><path d="M 1555.71 1224.00 L 1555.71 1096.00 L 1592.29 1152.69 L 1628.86 1096.00 L 1628.86 1224.00" fill="none" stroke="#F4FBFF" stroke-width="21" stroke-linecap="square" stroke-linejoin="miter"/></g>
+      <path d="M920 1388 H1772" stroke="#087D9E" stroke-width="9"/>
+      <path d="M920 1388 H1288" stroke="#FF1593" stroke-width="9"/>
+
+  </g>
+</svg>

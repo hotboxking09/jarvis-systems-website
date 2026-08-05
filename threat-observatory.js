@@ -428,8 +428,9 @@
         ? `${escapeHtml(event.country)}${Number.isInteger(event.asn) ? ` // AS${event.asn}` : ""}`
         : "REGION/ASN NOT SAFELY ENRICHED";
       const outcome = String(event.outcome || "observed").replaceAll("_", " ").toUpperCase();
+      const pageLanguage = document.documentElement.lang.startsWith("en") ? "en-GB" : "de-CH";
       const time = Number.isFinite(Date.parse(event.time_window))
-        ? new Date(event.time_window).toLocaleString("de-CH", {
+        ? new Date(event.time_window).toLocaleString(pageLanguage, {
           timeZone: "UTC",
           hour12: false,
           day: "2-digit",
@@ -493,16 +494,29 @@
     }
     if (directIntegrityCopy) {
       directIntegrityCopy.textContent = online
-        ? "HMAC-signiert, streng schemageprüft und ohne öffentliche Rohdaten"
-        : "Der öffentliche Zustand wird nicht vorgetäuscht; Snapshot bleibt als Fallback verfügbar";
+        ? (document.documentElement.lang.startsWith("en")
+          ? "HMAC-signed, strictly schema-validated and free of public raw data"
+          : "HMAC-signiert, streng schemageprüft und ohne öffentliche Rohdaten")
+        : (document.documentElement.lang.startsWith("en")
+          ? "The public state is never simulated; a verified snapshot remains available as fallback"
+          : "Der öffentliche Zustand wird nicht vorgetäuscht; Snapshot bleibt als Fallback verfügbar");
     }
+    const english = document.documentElement.lang.startsWith("en");
     sensorCopy.textContent = online
-      ? "Der öffentliche Feed ist aktiv. Angezeigt werden ausschließlich täglich wechselnde Quellpseudonyme, Zeitfenster und – nur wenn sicher verfügbar – vergröberte Regionen."
+      ? (english
+        ? "The public feed is active. It shows only daily rotating source pseudonyms, time windows and coarse regions when safely available."
+        : "Der öffentliche Feed ist aktiv. Angezeigt werden ausschließlich täglich wechselnde Quellpseudonyme, Zeitfenster und – nur wenn sicher verfügbar – vergröberte Regionen.")
       : staged
-        ? "Der echte Sensor und der signierte Empfänger laufen im privaten Stagingmodus. Veröffentlichte Direkt-Ereignisse bleiben absichtlich null."
+        ? (english
+          ? "The real sensor and signed receiver are operating in private staging mode. Published direct events deliberately remain at zero."
+          : "Der echte Sensor und der signierte Empfänger laufen im privaten Stagingmodus. Veröffentlichte Direkt-Ereignisse bleiben absichtlich null.")
         : offline
-          ? "Der Empfänger ist erreichbar, aber der Sensor-Heartbeat ist veraltet. Es werden keine Direkt-Ereignisse als live ausgegeben."
-          : "Der sichere Empfänger ist vorbereitet. Bis zum authentifizierten Sensor-Heartbeat bleiben direkte Angriffslinien aus.";
+          ? (english
+            ? "The receiver is reachable, but the sensor heartbeat is stale. No direct events are presented as live."
+            : "Der Empfänger ist erreichbar, aber der Sensor-Heartbeat ist veraltet. Es werden keine Direkt-Ereignisse als live ausgegeben.")
+          : (english
+            ? "The secure receiver is prepared. Direct attack lines remain disabled until an authenticated sensor heartbeat arrives."
+            : "Der sichere Empfänger ist vorbereitet. Bis zum authentifizierten Sensor-Heartbeat bleiben direkte Angriffslinien aus.");
     feedMode.textContent = "EXTERNAL FEED";
     statusLabel.textContent = online
       ? "VERIFIED SNAPSHOTS + AUTHENTICATED JARVIS FEED"

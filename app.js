@@ -1,6 +1,8 @@
 "use strict";
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const pageLanguage = document.documentElement.lang.startsWith("en") ? "en" : "de";
+const localizedRoute = (path) => pageLanguage === "en" ? `/en${path}` : path;
 
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
@@ -50,7 +52,7 @@ async function loadUpdates() {
   // readers without JavaScript and assistive tools receive the same content.
   if (feed.querySelector(".update-entry")) return;
   try {
-    const response = await fetch("data/updates.json", { cache: "no-store" });
+    const response = await fetch("/data/updates.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     const updates = Array.isArray(data) ? data : data.updates;
@@ -58,14 +60,112 @@ async function loadUpdates() {
     feed.innerHTML = updates.map((entry) => `
       <article class="update-entry reveal is-visible">
         <time class="update-date" datetime="${escapeHtml(entry.date)}">${escapeHtml(entry.date.split("-").reverse().join("."))}</time>
-        <div><h3><a href="/updates/${encodeURIComponent(entry.slug)}/">${escapeHtml(entry.title)}</a></h3><p>${escapeHtml(entry.summary)}</p><a class="text-link" href="/updates/${encodeURIComponent(entry.slug)}/">TECHNISCHEN BERICHT LESEN →</a></div>
+        <div><h3><a href="${localizedRoute(`/updates/${encodeURIComponent(entry.slug)}/`)}">${escapeHtml(entry.title)}</a></h3><p>${escapeHtml(entry.summary)}</p><a class="text-link" href="${localizedRoute(`/updates/${encodeURIComponent(entry.slug)}/`)}">${pageLanguage === "en" ? "READ TECHNICAL REPORT" : "TECHNISCHEN BERICHT LESEN"} →</a></div>
         <span class="update-tag">${escapeHtml(entry.state || entry.code)}</span>
       </article>`).join("");
   } catch (error) {
-    feed.innerHTML = "<p class='loading'>UPDATE-DATEN TEMPORÄR NICHT VERFÜGBAR.</p>";
+    feed.innerHTML = `<p class='loading'>${pageLanguage === "en" ? "UPDATE DATA TEMPORARILY UNAVAILABLE." : "UPDATE-DATEN TEMPORÄR NICHT VERFÜGBAR."}</p>`;
   }
 }
 loadUpdates();
+
+const requestAssistant = document.querySelector(".request-assistant");
+if (requestAssistant) {
+  const form = document.getElementById("project-request-form");
+  const result = document.getElementById("project-request-result");
+  const preview = document.getElementById("project-request-preview");
+  const mailto = document.getElementById("project-request-mailto");
+  const copyButton = document.getElementById("project-request-copy");
+  const editButton = document.getElementById("project-request-edit");
+  const copyState = document.getElementById("project-request-copy-state");
+  const goal = document.getElementById("request-goal");
+  const count = document.getElementById("request-count");
+  const contactEmail = requestAssistant.dataset.contactEmail || "";
+
+  const updateCount = () => {
+    if (goal && count) count.textContent = String(goal.value.length);
+  };
+  goal?.addEventListener("input", updateCount);
+  updateCount();
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.reportValidity() || !preview || !mailto || !result) return;
+    const data = new FormData(form);
+    const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const service = String(data.get("service") || "").trim();
+    const budget = String(data.get("budget") || "Nicht angegeben").trim();
+    const project = String(data.get("project") || "Nicht angegeben").trim();
+    const requestGoal = String(data.get("goal") || "").trim();
+    const subject = pageLanguage === "en" ? `JARVIS SYSTEM – Inquiry: ${service}` : `JARVIS SYSTEM – Anfrage: ${service}`;
+    const body = (pageLanguage === "en" ? [
+      "Hello Oliver",
+      "",
+      "I would like to request a non-binding review of the following project:",
+      "",
+      `Name: ${name}`,
+      `Reply address: ${email}`,
+      `Service: ${service}`,
+      `Company / project / website: ${project || "Not specified"}`,
+      `Budget range: ${budget}`,
+      "",
+      "Goal or problem:",
+      requestGoal,
+      "",
+      "I have not included passwords, recovery codes, payment details or confidential customer data in this initial inquiry.",
+      "",
+      "Kind regards",
+      name,
+    ] : [
+      "Guten Tag Oliver",
+      "",
+      "ich möchte folgende Anfrage unverbindlich prüfen lassen:",
+      "",
+      `Name: ${name}`,
+      `Antwortadresse: ${email}`,
+      `Bereich: ${service}`,
+      `Unternehmen / Projekt / Website: ${project || "Nicht angegeben"}`,
+      `Budgetrahmen: ${budget}`,
+      "",
+      "Ziel oder Problem:",
+      requestGoal,
+      "",
+      "Ich habe keine Passwörter, Recoverycodes, Zahlungsdaten oder vertraulichen Kundendaten in diese Erstanfrage aufgenommen.",
+      "",
+      "Freundliche Grüsse",
+      name,
+    ]).join("\n");
+    preview.value = body;
+    mailto.href = `mailto:${encodeURIComponent(contactEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    form.hidden = true;
+    result.hidden = false;
+    copyState.textContent = "";
+    result.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+  });
+
+  copyButton?.addEventListener("click", async () => {
+    if (!preview) return;
+    try {
+      await navigator.clipboard.writeText(preview.value);
+      copyState.textContent = pageLanguage === "en" ? "Text copied to the clipboard." : "Text wurde in die Zwischenablage kopiert.";
+    } catch {
+      preview.focus();
+      preview.select();
+      const copied = document.execCommand("copy");
+      copyState.textContent = copied
+        ? (pageLanguage === "en" ? "Text copied to the clipboard." : "Text wurde in die Zwischenablage kopiert.")
+        : (pageLanguage === "en" ? "Copying failed. Please select the text manually." : "Kopieren war nicht möglich. Bitte den Text manuell markieren.");
+    }
+  });
+
+  editButton?.addEventListener("click", () => {
+    if (!form || !result) return;
+    result.hidden = true;
+    form.hidden = false;
+    form.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+  });
+}
 
 const livePanel = document.getElementById("live-engineering-signal");
 if (livePanel) {
