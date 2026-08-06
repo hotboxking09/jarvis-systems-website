@@ -8,6 +8,13 @@
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const context = mapCanvas.getContext("2d", { alpha: false });
+  const globeCanvas = document.getElementById("threat-globe-canvas");
+  const globeGl = globeCanvas?.getContext("webgl2", {
+    alpha: false,
+    antialias: true,
+    depth: true,
+    powerPreference: "high-performance"
+  }) || null;
   const spectrumCanvas = document.getElementById("threat-spectrum-canvas");
   const spectrumContext = spectrumCanvas?.getContext("2d", { alpha: true });
   const tooltip = document.getElementById("map-tooltip");
@@ -28,6 +35,17 @@
   let staticMap = null;
   let infrastructureLayer = null;
   let animationHandle = 0;
+  let viewMode = "analysis";
+  let timeRangeHours = 24;
+  let behaviorFilter = "all";
+  let typeFilter = "all";
+  let confidenceFilter = "all";
+  let countryFilter = "all";
+  let asnFilter = null;
+  let selectedDirect = null;
+  let camera = { zoom: 1, panX: 0, panY: 0, rotation: 0 };
+  let drag = null;
+  let globeRenderer = null;
 
   const number = new Intl.NumberFormat("de-CH");
   const clock = document.getElementById("threat-clock");
@@ -50,6 +68,22 @@
   const directLedgerState = document.getElementById("direct-ledger-state");
   const directLedgerUpdated = document.getElementById("direct-ledger-updated");
   const directLedgerEvents = document.getElementById("direct-ledger-events");
+  const behaviorSelect = document.getElementById("behavior-filter");
+  const typeSelect = document.getElementById("type-filter");
+  const confidenceSelect = document.getElementById("confidence-filter");
+  const countrySelect = document.getElementById("country-filter");
+  const asnInput = document.getElementById("asn-filter");
+  const dnaCanvas = document.getElementById("threat-dna-canvas");
+  const dnaContext = dnaCanvas?.getContext("2d", { alpha: true });
+  const dnaState = document.getElementById("threat-dna-state");
+  const dnaDetails = document.getElementById("threat-dna-details");
+  const storyState = document.getElementById("session-story-state");
+  const storyEvents = document.getElementById("session-story-events");
+  const proofState = document.getElementById("proof-state");
+  const proofContract = document.getElementById("proof-contract");
+  const proofChain = document.getElementById("proof-chain");
+  const proofPrivacy = document.getElementById("proof-privacy");
+  const proofFreshness = document.getElementById("proof-freshness");
 
   const escapeHtml = (value) => String(value)
     .replaceAll("&", "&amp;")
@@ -57,6 +91,211 @@
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+
+  const createGlobeRenderer = (gl) => {
+    const vertexSource = `#version 300 es
+      in vec3 aPosition;
+      uniform float uRotation;
+      uniform vec2 uScale;
+      uniform vec2 uPan;
+      uniform float uPointSize;
+      uniform float uTime;
+      void main() {
+        float c = cos(uRotation);
+        float s = sin(uRotation);
+        vec3 p = vec3(aPosition.x * c + aPosition.z * s, aPosition.y, aPosition.z * c - aPosition.x * s);
+        gl_Position = vec4(p.x * uScale.x + uPan.x, p.y * uScale.y + uPan.y, -p.z, 1.0);
+        gl_PointSize = uPointSize * (1.0 + 0.16 * sin(uTime * 2.2 + aPosition.x * 11.0));
+      }`;
+    const fragmentSource = `#version 300 es
+      precision highp float;
+      uniform vec4 uColor;
+      uniform bool uPoint;
+      out vec4 outColor;
+      void main() {
+        if (uPoint) {
+          vec2 q = gl_PointCoord - vec2(0.5);
+          float distanceFromCenter = length(q);
+          if (distanceFromCenter > 0.5) discard;
+          float glow = 1.0 - smoothstep(0.08, 0.5, distanceFromCenter);
+          outColor = vec4(uColor.rgb, uColor.a * max(0.24, glow));
+        } else {
+          outColor = uColor;
+        }
+      }`;
+    const compile = (type, source) => {
+      const shader = gl.createShader(type);
+      gl.shaderSource(shader, source);
+      gl.compileShader(shader);
+      if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(shader) || "shader compile failed");
+      return shader;
+    };
+    const program = gl.createProgram();
+    gl.attachShader(program, compile(gl.VERTEX_SHADER, vertexSource));
+    gl.attachShader(program, compile(gl.FRAGMENT_SHADER, fragmentSource));
+    gl.linkProgram(program);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(program) || "shader link failed");
+    const location = {
+      position: gl.getAttribLocation(program, "aPosition"),
+      rotation: gl.getUniformLocation(program, "uRotation"),
+      scale: gl.getUniformLocation(program, "uScale"),
+      pan: gl.getUniformLocation(program, "uPan"),
+      pointSize: gl.getUniformLocation(program, "uPointSize"),
+      time: gl.getUniformLocation(program, "uTime"),
+      color: gl.getUniformLocation(program, "uColor"),
+      point: gl.getUniformLocation(program, "uPoint")
+    };
+    const buffers = new Map();
+    const sphere = (position, radius = 1) => {
+      const longitude = Number(position?.[0] || 0) * Math.PI / 180;
+      const latitude = Number(position?.[1] || 0) * Math.PI / 180;
+      return [
+        Math.cos(latitude) * Math.sin(longitude) * radius,
+        Math.sin(latitude) * radius,
+        Math.cos(latitude) * Math.cos(longitude) * radius
+      ];
+    };
+    const segments = (positions) => {
+      const output = [];
+      for (let index = 1; index < positions.length; index += 1) output.push(...positions[index - 1], ...positions[index]);
+      return output;
+    };
+    const arc = (start, end, steps = 28) => {
+      const a = sphere(start);
+      const b = sphere(end);
+      const points = [];
+      for (let index = 0; index <= steps; index += 1) {
+        const t = index / steps;
+        const x = a[0] * (1 - t) + b[0] * t;
+        const y = a[1] * (1 - t) + b[1] * t;
+        const z = a[2] * (1 - t) + b[2] * t;
+        const length = Math.hypot(x, y, z) || 1;
+        const lift = 1.015 + Math.sin(Math.PI * t) * .16;
+        points.push([x / length * lift, y / length * lift, z / length * lift]);
+      }
+      return segments(points);
+    };
+    const setBuffer = (name, data) => {
+      const prior = buffers.get(name);
+      const buffer = prior?.buffer || gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(data), gl.STATIC_DRAW);
+      buffers.set(name, { buffer, count: data.length / 3 });
+    };
+    const build = (world, nodes, threat, sensorSnapshot) => {
+      const surface = [];
+      const latitudes = 28;
+      const longitudes = 56;
+      for (let lat = 0; lat < latitudes; lat += 1) {
+        const latA = -90 + lat * 180 / latitudes;
+        const latB = -90 + (lat + 1) * 180 / latitudes;
+        for (let lon = 0; lon < longitudes; lon += 1) {
+          const lonA = -180 + lon * 360 / longitudes;
+          const lonB = -180 + (lon + 1) * 360 / longitudes;
+          const a = sphere([lonA, latA], .995);
+          const b = sphere([lonB, latA], .995);
+          const c = sphere([lonB, latB], .995);
+          const d = sphere([lonA, latB], .995);
+          surface.push(...a, ...b, ...c, ...a, ...c, ...d);
+        }
+      }
+      const grid = [];
+      for (let latitude = -60; latitude <= 60; latitude += 30) {
+        grid.push(...segments(Array.from({ length: 73 }, (_, index) => sphere([-180 + index * 5, latitude], 1.002))));
+      }
+      for (let longitude = -150; longitude <= 180; longitude += 30) {
+        grid.push(...segments(Array.from({ length: 37 }, (_, index) => sphere([longitude, -90 + index * 5], 1.002))));
+      }
+      const countries = [];
+      (world?.countries || []).forEach((country) => country.polygons.forEach((polygon) => polygon.forEach((ring) => {
+        countries.push(...segments(ring.map((position) => sphere(position, 1.008))));
+      })));
+      const nodePoints = (nodes?.nodes || []).map((node) => sphere(node.position, 1.012)).flat();
+      const threatPoints = (threat?.observations || []).filter((item) => item.position).map((item) => sphere(item.position, 1.025)).flat();
+      const externalArcs = [];
+      (threat?.observations || []).filter((item) => item.position).slice(0, 18).forEach((item) => externalArcs.push(...arc(item.position, [-25, 8], 20)));
+      const sensorPosition = sensorSnapshot?.sensor?.position;
+      const sensorPoints = sensorPosition ? sphere(sensorPosition, 1.04) : [];
+      const directPoints = [];
+      const directArcs = [];
+      if (sensorPosition && sensorSnapshot?.sensor?.state === "online") {
+        filteredDirectEvents().filter((event) => Array.isArray(event.position)).slice(0, 24).forEach((event) => {
+          directPoints.push(...sphere(event.position, 1.04));
+          directArcs.push(...arc(event.position, sensorPosition));
+        });
+      }
+      setBuffer("surface", surface);
+      setBuffer("grid", grid);
+      setBuffer("countries", countries);
+      setBuffer("nodes", nodePoints);
+      setBuffer("threats", threatPoints);
+      setBuffer("externalArcs", externalArcs);
+      setBuffer("sensor", sensorPoints);
+      setBuffer("directs", directPoints);
+      setBuffer("directArcs", directArcs);
+    };
+    const drawBuffer = (name, mode, color, pointSize = 1) => {
+      const item = buffers.get(name);
+      if (!item?.count) return;
+      gl.bindBuffer(gl.ARRAY_BUFFER, item.buffer);
+      gl.enableVertexAttribArray(location.position);
+      gl.vertexAttribPointer(location.position, 3, gl.FLOAT, false, 0, 0);
+      gl.uniform4fv(location.color, color);
+      gl.uniform1f(location.pointSize, pointSize * Math.min(window.devicePixelRatio || 1, 2));
+      gl.uniform1i(location.point, mode === gl.POINTS ? 1 : 0);
+      gl.drawArrays(mode, 0, item.count);
+    };
+    const render = (timeSeconds) => {
+      if (!globeCanvas || viewMode !== "globe") return;
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+      const rectangle = globeCanvas.getBoundingClientRect();
+      const targetWidth = Math.max(1, Math.floor(rectangle.width * pixelRatio));
+      const targetHeight = Math.max(1, Math.floor(rectangle.height * pixelRatio));
+      if (globeCanvas.width !== targetWidth || globeCanvas.height !== targetHeight) {
+        globeCanvas.width = targetWidth;
+        globeCanvas.height = targetHeight;
+      }
+      gl.viewport(0, 0, targetWidth, targetHeight);
+      gl.clearColor(.002, .012, .022, 1);
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+      gl.enable(gl.DEPTH_TEST);
+      gl.depthFunc(gl.LEQUAL);
+      gl.enable(gl.BLEND);
+      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+      gl.useProgram(program);
+      const radius = Math.min(rectangle.width * .43, rectangle.height * .43) * camera.zoom;
+      gl.uniform1f(location.rotation, camera.rotation * Math.PI / 180);
+      gl.uniform2f(location.scale, radius * 2 / rectangle.width, radius * 2 / rectangle.height);
+      gl.uniform2f(location.pan, camera.panX * 2 / rectangle.width, -camera.panY * 2 / rectangle.height);
+      gl.uniform1f(location.time, timeSeconds);
+      drawBuffer("surface", gl.TRIANGLES, [.008, .045, .065, 1]);
+      drawBuffer("grid", gl.LINES, [.10, .55, .62, .18]);
+      drawBuffer("countries", gl.LINES, [.31, .96, 1, .48]);
+      if (layers.infrastructure) drawBuffer("nodes", gl.POINTS, [.31, .96, 1, .68], 2.5);
+      if (layers.threat) {
+        drawBuffer("externalArcs", gl.LINES, [1, .19, .35, .25]);
+        drawBuffer("threats", gl.POINTS, [1, .19, .35, .9], 5.2);
+      }
+      if (layers.honeypot) {
+        drawBuffer("directArcs", gl.LINES, [1, .28, .42, .78]);
+        drawBuffer("directs", gl.POINTS, [1, .19, .35, 1], 7.5);
+        drawBuffer("sensor", gl.POINTS, [.41, 1, .70, 1], 10.5);
+      }
+    };
+    return { build, render };
+  };
+
+  if (globeGl) {
+    try {
+      globeRenderer = createGlobeRenderer(globeGl);
+      consoleRoot.dataset.webgl = "true";
+    } catch (error) {
+      consoleRoot.dataset.webgl = "false";
+      console.warn("Threat Observatory WebGL fallback:", error);
+    }
+  } else {
+    consoleRoot.dataset.webgl = "false";
+  }
 
   const updateClock = () => {
     if (clock) {
@@ -83,11 +322,23 @@
   const project = (position) => {
     const lon = Number(position?.[0]) || 0;
     const lat = Math.max(-86, Math.min(86, Number(position?.[1]) || 0));
+    if (viewMode === "globe") {
+      const lambda = (lon + camera.rotation) * Math.PI / 180;
+      const phi = lat * Math.PI / 180;
+      const visible = Math.cos(phi) * Math.cos(lambda) >= -0.015;
+      const radius = Math.min(width * 0.43, height * 0.43) * camera.zoom;
+      return [
+        width / 2 + camera.panX + radius * Math.cos(phi) * Math.sin(lambda),
+        height / 2 + camera.panY - radius * Math.sin(phi),
+        visible
+      ];
+    }
     const paddingX = Math.max(22, width * 0.025);
     const paddingY = Math.max(38, height * 0.09);
     return [
-      paddingX + ((lon + 180) / 360) * (width - paddingX * 2),
-      paddingY + ((90 - lat) / 180) * (height - paddingY * 2)
+      width / 2 + camera.panX + (paddingX + ((lon + 180) / 360) * (width - paddingX * 2) - width / 2) * camera.zoom,
+      height / 2 + camera.panY + (paddingY + ((90 - lat) / 180) * (height - paddingY * 2) - height / 2) * camera.zoom,
+      true
     ];
   };
 
@@ -108,6 +359,26 @@
     gradient.addColorStop(1, "#010407");
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, width, height);
+    if (viewMode === "globe") {
+      const radius = Math.min(width * 0.43, height * 0.43) * camera.zoom;
+      const cx = width / 2 + camera.panX;
+      const cy = height / 2 + camera.panY;
+      const sphere = ctx.createRadialGradient(cx - radius * .28, cy - radius * .34, radius * .05, cx, cy, radius);
+      sphere.addColorStop(0, "rgba(34,118,143,.28)");
+      sphere.addColorStop(.58, "rgba(5,31,43,.55)");
+      sphere.addColorStop(1, "rgba(0,3,7,.96)");
+      ctx.fillStyle = sphere;
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = "rgba(79,244,255,.5)";
+      ctx.lineWidth = 1.2;
+      ctx.shadowColor = "#4ff4ff";
+      ctx.shadowBlur = 18;
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+      return;
+    }
     ctx.strokeStyle = "rgba(79,244,255,.07)";
     ctx.lineWidth = 1;
     for (let lon = -180; lon <= 180; lon += 20) {
@@ -133,12 +404,18 @@
   };
 
   const traceRing = (ctx, ring) => {
+    let drawing = false;
     ring.forEach((coordinate, index) => {
-      const [x, y] = project(coordinate);
-      if (index === 0) ctx.moveTo(x, y);
+      const [x, y, visible] = project(coordinate);
+      if (!visible || !Number.isFinite(x) || !Number.isFinite(y)) {
+        drawing = false;
+        return;
+      }
+      if (index === 0 || !drawing) ctx.moveTo(x, y);
       else ctx.lineTo(x, y);
+      drawing = true;
     });
-    ctx.closePath();
+    if (drawing) ctx.closePath();
   };
 
   const rebuildStaticLayers = () => {
@@ -147,6 +424,13 @@
     const mapContext = staticMap.getContext("2d", { alpha: false });
     resizeCanvas(staticMap, mapContext, width, height);
     drawBackground(mapContext);
+    if (viewMode === "globe") {
+      const radius = Math.min(width * 0.43, height * 0.43) * camera.zoom;
+      mapContext.save();
+      mapContext.beginPath();
+      mapContext.arc(width / 2 + camera.panX, height / 2 + camera.panY, radius, 0, Math.PI * 2);
+      mapContext.clip();
+    }
     mapData.countries.forEach((country) => {
       mapContext.beginPath();
       country.polygons.forEach((polygon) => polygon.forEach((ring) => traceRing(mapContext, ring)));
@@ -160,6 +444,7 @@
       mapContext.lineWidth = 0.65;
       mapContext.stroke();
     });
+    if (viewMode === "globe") mapContext.restore();
     const vignette = mapContext.createRadialGradient(width / 2, height / 2, width * 0.2, width / 2, height / 2, width * 0.72);
     vignette.addColorStop(0, "rgba(0,0,0,0)");
     vignette.addColorStop(1, "rgba(0,0,0,.44)");
@@ -171,7 +456,8 @@
     resizeCanvas(infrastructureLayer, nodeContext, width, height);
     nodesByScreen.length = 0;
     infrastructure.nodes.forEach((node, index) => {
-      const [x, y] = project(node.position);
+      const [x, y, visible] = project(node.position);
+      if (!visible) return;
       const anchor = node.anchor === true;
       const radius = anchor ? 1.9 : 0.75;
       nodeContext.fillStyle = anchor ? "rgba(255,43,214,.9)" : "rgba(79,244,255,.62)";
@@ -194,7 +480,12 @@
       const spectrumRectangle = spectrumCanvas.getBoundingClientRect();
       resizeCanvas(spectrumCanvas, spectrumContext, Math.max(1, spectrumRectangle.width), Math.max(1, spectrumRectangle.height));
     }
+    if (dnaCanvas && dnaContext) {
+      const dnaRectangle = dnaCanvas.getBoundingClientRect();
+      resizeCanvas(dnaCanvas, dnaContext, Math.max(1, dnaRectangle.width), Math.max(1, dnaRectangle.height));
+    }
     rebuildStaticLayers();
+    renderThreatDna();
     if (reducedMotion) draw();
   };
 
@@ -209,6 +500,7 @@
   };
 
   const drawArc = (ctx, start, end, color, progress = 1, widthValue = 1) => {
+    if (!start?.[2] || !end?.[2]) return;
     const control = curveControl(start, end);
     ctx.beginPath();
     ctx.moveTo(start[0], start[1]);
@@ -225,6 +517,7 @@
   };
 
   const drawAttackArc = (ctx, start, end, phase, severity) => {
+    if (!start?.[2] || !end?.[2]) return;
     const color = severity === "high" ? "rgba(255,49,89,.98)" : "rgba(255,92,120,.9)";
     drawArc(ctx, start, end, color, frame + phase, severity === "high" ? 2 : 1.45);
     if (reducedMotion) return;
@@ -245,6 +538,7 @@
   };
 
   const pulse = (ctx, x, y, color, phase, base = 2.2) => {
+    if (!Number.isFinite(x) || !Number.isFinite(y)) return;
     const wave = reducedMotion ? 0.45 : (Math.sin(frame * 1.6 + phase) + 1) / 2;
     ctx.fillStyle = color;
     ctx.shadowColor = color;
@@ -291,8 +585,151 @@
     spectrumContext.fillRect(scan, 0, 1, sh);
   };
 
+  const filteredDirectEvents = () => {
+    const events = Array.isArray(honeypot?.events) ? honeypot.events : [];
+    const cutoff = Date.now() - timeRangeHours * 60 * 60 * 1000;
+    return events.filter((event) => {
+      const eventTime = Date.parse(event.time_window || event.time || "");
+      const inRange = !Number.isFinite(eventTime) || eventTime >= cutoff;
+      const category = event.behavior?.category || "legacy_event";
+      const confidence = event.behavior?.confidence || "legacy";
+      return inRange
+        && (behaviorFilter === "all" || category === behaviorFilter)
+        && (typeFilter === "all" || event.type === typeFilter)
+        && (confidenceFilter === "all" || confidence === confidenceFilter)
+        && (countryFilter === "all" || event.country === countryFilter)
+        && (asnFilter === null || event.asn === asnFilter);
+    });
+  };
+
+  const rebuildGlobe = () => {
+    if (globeRenderer && mapData && infrastructure && globalThreat && honeypot) {
+      globeRenderer.build(mapData, infrastructure, globalThreat, honeypot);
+    }
+  };
+
+  const populateRegionFilters = () => {
+    if (!countrySelect) return;
+    const selected = countrySelect.value || "all";
+    const countries = [...new Set(
+      (honeypot?.events || []).map((event) => event.country).filter((value) => /^[A-Z]{2}$/.test(value || ""))
+    )].sort();
+    countrySelect.innerHTML = '<option value="all">ALL COUNTRIES</option>'
+      + countries.map((country) => `<option value="${country}">${country}</option>`).join("");
+    countrySelect.value = countries.includes(selected) ? selected : "all";
+    countryFilter = countrySelect.value;
+  };
+
+  const renderThreatDna = () => {
+    if (!dnaCanvas || !dnaContext) return;
+    const rectangle = dnaCanvas.getBoundingClientRect();
+    const w = Math.max(1, rectangle.width);
+    const h = Math.max(1, rectangle.height);
+    dnaContext.clearRect(0, 0, w, h);
+    const background = dnaContext.createRadialGradient(w / 2, h / 2, 8, w / 2, h / 2, Math.max(w, h) * .6);
+    background.addColorStop(0, "rgba(79,244,255,.08)");
+    background.addColorStop(1, "rgba(0,0,0,0)");
+    dnaContext.fillStyle = background;
+    dnaContext.fillRect(0, 0, w, h);
+    const event = selectedDirect;
+    if (!event) {
+      dnaContext.strokeStyle = "rgba(79,244,255,.16)";
+      dnaContext.setLineDash([4, 8]);
+      dnaContext.beginPath();
+      dnaContext.arc(w / 2, h / 2, Math.min(w, h) * .28, 0, Math.PI * 2);
+      dnaContext.stroke();
+      dnaContext.setLineDash([]);
+      return;
+    }
+    const seed = String(event.proof?.event_hash || event.source_alias || "legacy");
+    const values = Array.from({ length: 8 }, (_, index) => {
+      const pair = seed.slice(index * 2, index * 2 + 2);
+      return .35 + (Number.parseInt(pair || "55", 16) / 255) * .62;
+    });
+    const cx = w / 2;
+    const cy = h / 2;
+    const radius = Math.min(w, h) * .34;
+    for (let ring = 1; ring <= 4; ring += 1) {
+      dnaContext.strokeStyle = `rgba(79,244,255,${.05 + ring * .035})`;
+      dnaContext.beginPath();
+      values.forEach((_value, index) => {
+        const angle = -Math.PI / 2 + index * Math.PI * 2 / values.length;
+        const x = cx + Math.cos(angle) * radius * ring / 4;
+        const y = cy + Math.sin(angle) * radius * ring / 4;
+        if (index === 0) dnaContext.moveTo(x, y); else dnaContext.lineTo(x, y);
+      });
+      dnaContext.closePath();
+      dnaContext.stroke();
+    }
+    dnaContext.beginPath();
+    values.forEach((value, index) => {
+      const angle = -Math.PI / 2 + index * Math.PI * 2 / values.length;
+      const x = cx + Math.cos(angle) * radius * value;
+      const y = cy + Math.sin(angle) * radius * value;
+      if (index === 0) dnaContext.moveTo(x, y); else dnaContext.lineTo(x, y);
+    });
+    dnaContext.closePath();
+    const fill = dnaContext.createLinearGradient(cx - radius, cy - radius, cx + radius, cy + radius);
+    fill.addColorStop(0, "rgba(79,244,255,.34)");
+    fill.addColorStop(1, "rgba(255,49,89,.28)");
+    dnaContext.fillStyle = fill;
+    dnaContext.fill();
+    dnaContext.strokeStyle = "rgba(255,255,255,.88)";
+    dnaContext.shadowColor = "#4ff4ff";
+    dnaContext.shadowBlur = 12;
+    dnaContext.lineWidth = 1.4;
+    dnaContext.stroke();
+    dnaContext.shadowBlur = 0;
+  };
+
+  const renderInvestigation = () => {
+    const events = filteredDirectEvents();
+    if (selectedDirect && !events.includes(selectedDirect)) {
+      selectedDirect = events.find((item) =>
+        item.source_alias === selectedDirect.source_alias
+        && item.type === selectedDirect.type
+        && (item.session_alias || null) === (selectedDirect.session_alias || null)
+      ) || null;
+    }
+    if (!selectedDirect && events.length) selectedDirect = events[0];
+    const event = selectedDirect;
+    if (dnaState) dnaState.textContent = event ? "VERIFIED EVENT SELECTED" : "AWAITING EVENT";
+    if (dnaDetails) {
+      const behavior = event?.behavior;
+      dnaDetails.innerHTML = event
+        ? `<dl><div><dt>CATEGORY</dt><dd>${escapeHtml((behavior?.category || "LEGACY EVENT").replaceAll("_", " ").toUpperCase())}</dd></div><div><dt>CONFIDENCE</dt><dd>${escapeHtml((behavior?.confidence || "N/A").toUpperCase())}</dd></div><div><dt>TECHNIQUE</dt><dd>${escapeHtml(behavior?.technique_id || "NOT ASSERTED")}</dd></div><div><dt>EVIDENCE</dt><dd>${number.format(Number(behavior?.evidence_count) || 1)} SIGNAL(S)</dd></div></dl>`
+        : "<p>Wähle ein echtes JARVIS-Direktereignis. Es werden nur datensparsame Metadaten dargestellt – niemals Rohbefehle.</p>";
+    }
+    renderThreatDna();
+
+    const session = event?.session_alias;
+    const story = session ? events.filter((item) => item.session_alias === session) : [];
+    if (storyState) storyState.textContent = session ? `${session} // ${story.length} EVENT(S)` : "NO V2 SESSION SELECTED";
+    if (storyEvents) storyEvents.innerHTML = story.length
+      ? story.map((item, index) => `<li><span>${String(index + 1).padStart(2, "0")}</span><div><b>${escapeHtml(item.label || item.type)}</b><small>${escapeHtml((item.behavior?.category || "legacy_event").replaceAll("_", " ").toUpperCase())} // ${escapeHtml(item.time_window || "TIME N/A")}</small></div></li>`).join("")
+      : "<li><b>NO V2 SESSION STORY AVAILABLE</b><small>Keine Timeline wird aus Schema-1-Daten erfunden.</small></li>";
+
+    const proof = honeypot?.proof || {};
+    const verifiedChain = honeypot?.schema === 2
+      && Number.isInteger(proof.chain_head_sequence)
+      && typeof proof.chain_head_hash === "string"
+      && proof.chain_head_hash.length === 64;
+    if (proofState) proofState.textContent = verifiedChain && proof.receiver_fresh
+      ? "CHAIN VERIFIED // FRESH"
+      : honeypot?.schema === 2
+        ? "V2 RECEIVER // CHAIN NOT ACTIVE"
+        : "V1 FALLBACK";
+    if (proofContract) proofContract.textContent = proof.event_contract || `SCHEMA V${honeypot?.schema || 1} FALLBACK`;
+    if (proofChain) proofChain.textContent = Number.isInteger(proof.chain_head_sequence) && proof.chain_head_hash
+      ? `#${number.format(proof.chain_head_sequence)} // ${String(proof.chain_head_hash).slice(0, 16).toUpperCase()}…`
+      : "NOT AVAILABLE";
+    if (proofPrivacy) proofPrivacy.textContent = String(proof.privacy_projection || honeypot?.privacy || "RAW DATA BLOCKED").replaceAll("_", " ").toUpperCase();
+    if (proofFreshness) proofFreshness.textContent = `${ageLabel(proof.chain_received_at || honeypot?.generated_at)} // ${proof.receiver_fresh === true ? "RECEIVER FRESH" : "SNAPSHOT"}`;
+  };
+
   const draw = () => {
     if (!staticMap) return;
+    globeRenderer?.render(frame);
     context.clearRect(0, 0, width, height);
     context.drawImage(staticMap, 0, 0, width * ratio, height * ratio, 0, 0, width, height);
     if (layers.infrastructure && infrastructureLayer) {
@@ -305,21 +742,30 @@
       globalThreat.observations.forEach((observation, index) => {
         if (!observation.position) return;
         const position = project(observation.position);
+        if (!position[2] || !threatHub[2]) return;
         drawArc(context, position, threatHub, "rgba(255,49,89,.34)", frame + index * 0.11, 0.75);
         pulse(context, position[0], position[1], "rgba(255,49,89,.95)", index * 0.65, 1.7);
         threatsByScreen.push({ x: position[0], y: position[1], observation });
       });
-      pulse(context, threatHub[0], threatHub[1], "rgba(255,43,214,.9)", 1.2, 2.8);
-      context.fillStyle = "rgba(255,173,239,.86)";
-      context.font = "700 9px ui-monospace, monospace";
-      context.letterSpacing = "1px";
-      context.fillText("EXTERNAL THREAT CORRELATION", threatHub[0] + 13, threatHub[1] - 10);
+      if (threatHub[2]) {
+        pulse(context, threatHub[0], threatHub[1], "rgba(255,43,214,.9)", 1.2, 2.8);
+        context.fillStyle = "rgba(255,173,239,.86)";
+        context.font = "700 9px ui-monospace, monospace";
+        context.letterSpacing = "1px";
+        context.fillText("EXTERNAL THREAT CORRELATION", threatHub[0] + 13, threatHub[1] - 10);
+      }
     }
 
     sensorByScreen = null;
     directsByScreen.length = 0;
     if (layers.honeypot && honeypot?.sensor) {
       const sensor = project(honeypot.sensor.position);
+      if (!sensor[2]) {
+        drawSpectrum();
+        frame += reducedMotion ? 0 : 0.022;
+        if (!reducedMotion) animationHandle = window.requestAnimationFrame(draw);
+        return;
+      }
       const status = honeypot.sensor.state;
       const color = status === "online"
         ? "rgba(104,255,178,.95)"
@@ -350,7 +796,7 @@
 
       if (status === "online" && Array.isArray(honeypot.events)) {
         const directSources = new Map();
-        honeypot.events.forEach((event) => {
+        filteredDirectEvents().forEach((event) => {
           if (!Array.isArray(event.position) || event.position.length !== 2) return;
           const key = `${event.source_alias}:${event.position.join(",")}`;
           const existing = directSources.get(key);
@@ -368,6 +814,7 @@
         });
         [...directSources.values()].slice(0, 18).forEach((event, index) => {
           const source = project(event.position);
+          if (!source[2]) return;
           drawAttackArc(context, source, sensor, index * 0.19, event.severity);
           pulse(context, source[0], source[1], "rgba(255,49,89,.98)", index, event.severity === "high" ? 2.6 : 2);
           context.fillStyle = "rgba(255,180,193,.88)";
@@ -398,7 +845,7 @@
 
   const renderDirectLedger = () => {
     if (!directLedgerEvents) return;
-    const events = Array.isArray(honeypot?.events) ? honeypot.events : [];
+    const events = filteredDirectEvents();
     const state = honeypot?.sensor?.state || "pending";
     if (directLedgerState) {
       directLedgerState.textContent = state === "online"
@@ -411,7 +858,8 @@
       directLedgerState.dataset.state = state;
     }
     if (directLedgerUpdated) {
-      directLedgerUpdated.textContent = `LAST EVENT // ${ageLabel(honeypot?.last_direct_event)}`;
+      const servedWindow = Number(honeypot?.window_hours || 24);
+      directLedgerUpdated.textContent = `LAST EVENT // ${ageLabel(honeypot?.last_direct_event)} // WINDOW ${servedWindow}H`;
     }
     if (events.length === 0) {
       directLedgerEvents.innerHTML = `
@@ -440,11 +888,11 @@
         })
         : "--";
       return `
-        <li data-severity="${severity}">
+        <li data-severity="${severity}" data-event-index="${index}" tabindex="0">
           <span>${String(index + 1).padStart(2, "0")} // ${escapeHtml(severity.toUpperCase())}</span>
           <div class="direct-ledger-main">
             <b>${escapeHtml(event.source_alias || "SRC-UNKNOWN")} // ${escapeHtml(event.label || event.type)}</b>
-            <small>${escapeHtml(location)} // ${escapeHtml(time)} UTC // ×${number.format(Number(event.count) || 1)}</small>
+            <small>${escapeHtml(location)} // ${escapeHtml(time)} UTC // ×${number.format(Number(event.count) || 1)}${event.behavior?.category ? ` // ${escapeHtml(event.behavior.category.replaceAll("_", " ").toUpperCase())}` : ""}</small>
           </div>
           <div class="direct-ledger-outcome">
             <small>OUTCOME</small><b>${escapeHtml(outcome)}</b><em>HOST COMPROMISED // NO</em>
@@ -452,6 +900,19 @@
           <i aria-hidden="true"></i>
         </li>`;
     }).join("");
+    directLedgerEvents.querySelectorAll("[data-event-index]").forEach((item) => {
+      const choose = () => {
+        selectedDirect = events[Number(item.dataset.eventIndex)] || null;
+        renderInvestigation();
+      };
+      item.addEventListener("click", choose);
+      item.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          choose();
+        }
+      });
+    });
   };
 
   const updateMetrics = () => {
@@ -546,15 +1007,18 @@
       ]);
       if (endpoint) {
         try {
-          const live = await loadJson(`${endpoint}/v1/public/attacks`);
-          if (live.schema === 1 && live.sensor && Array.isArray(live.events)) honeypot = live;
+          const live = await loadJson(`${endpoint}/v1/public/attacks?schema=2&hours=${timeRangeHours}`);
+          if ([1, 2].includes(live.schema) && live.sensor && Array.isArray(live.events)) honeypot = live;
         } catch {
           syncState.textContent = "LIVE SENSOR UNREACHABLE // SNAPSHOT ACTIVE";
         }
       }
       updateMetrics();
+      populateRegionFilters();
+      rebuildGlobe();
       renderFeed();
       renderDirectLedger();
+      renderInvestigation();
       resize();
       if (animationHandle) window.cancelAnimationFrame(animationHandle);
       draw();
@@ -569,13 +1033,16 @@
   const refreshLive = async () => {
     if (!endpoint) return;
     try {
-      const live = await loadJson(`${endpoint}/v1/public/attacks?refresh=${Date.now()}`);
-      if (live.schema !== 1 || !live.sensor || !Array.isArray(live.events)) {
+      const live = await loadJson(`${endpoint}/v1/public/attacks?schema=2&hours=${timeRangeHours}&refresh=${Date.now()}`);
+      if (![1, 2].includes(live.schema) || !live.sensor || !Array.isArray(live.events)) {
         throw new Error("invalid live schema");
       }
       honeypot = live;
       updateMetrics();
+      populateRegionFilters();
+      rebuildGlobe();
       renderDirectLedger();
+      renderInvestigation();
       if (reducedMotion) draw();
     } catch {
       syncState.textContent = "LIVE SENSOR UNREACHABLE // LAST VERIFIED VIEW";
@@ -589,8 +1056,88 @@
       layers[layer] = !layers[layer];
       button.classList.toggle("is-active", layers[layer]);
       button.setAttribute("aria-pressed", String(layers[layer]));
+      rebuildGlobe();
       if (reducedMotion) draw();
     });
+  });
+
+  const resetView = () => {
+    camera = { zoom: 1, panX: 0, panY: 0, rotation: 0 };
+    rebuildStaticLayers();
+    if (reducedMotion) draw();
+  };
+
+  const viewButtons = [...document.querySelectorAll("button[data-view]")];
+  viewButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      viewMode = button.dataset.view === "globe" ? "globe" : "analysis";
+      viewButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+      consoleRoot.dataset.view = viewMode;
+      if (globeCanvas) globeCanvas.hidden = viewMode !== "globe" || !globeRenderer;
+      rebuildGlobe();
+      resetView();
+    });
+  });
+  const requestedView = new URLSearchParams(window.location.search).get("view");
+  if (requestedView === "globe") viewButtons.find((button) => button.dataset.view === "globe")?.click();
+  document.querySelectorAll("[data-range]").forEach((button) => {
+    button.addEventListener("click", () => {
+      timeRangeHours = Number(button.dataset.range) || 24;
+      document.querySelectorAll("[data-range]").forEach((item) => item.classList.toggle("is-active", item === button));
+      renderDirectLedger();
+      renderInvestigation();
+      rebuildGlobe();
+      void refreshLive();
+    });
+  });
+  behaviorSelect?.addEventListener("change", () => {
+    behaviorFilter = behaviorSelect.value;
+    renderDirectLedger();
+    renderInvestigation();
+    rebuildGlobe();
+  });
+  typeSelect?.addEventListener("change", () => {
+    typeFilter = typeSelect.value;
+    renderDirectLedger();
+    renderInvestigation();
+    rebuildGlobe();
+  });
+  confidenceSelect?.addEventListener("change", () => {
+    confidenceFilter = confidenceSelect.value;
+    renderDirectLedger();
+    renderInvestigation();
+    rebuildGlobe();
+  });
+  countrySelect?.addEventListener("change", () => {
+    countryFilter = countrySelect.value;
+    renderDirectLedger();
+    renderInvestigation();
+    rebuildGlobe();
+  });
+  asnInput?.addEventListener("input", () => {
+    const text = asnInput.value.trim().toUpperCase().replace(/^AS/, "");
+    asnFilter = /^\d{1,10}$/.test(text) ? Number(text) : null;
+    renderDirectLedger();
+    renderInvestigation();
+    rebuildGlobe();
+  });
+  document.getElementById("map-reset")?.addEventListener("click", resetView);
+  document.getElementById("tv-mode")?.addEventListener("click", async () => {
+    const active = document.body.classList.toggle("observatory-tv-mode");
+    const button = document.getElementById("tv-mode");
+    if (button) button.textContent = active ? "EXIT TV" : "TV / 4K";
+    if (active && document.fullscreenEnabled && !document.fullscreenElement) {
+      try { await consoleRoot.requestFullscreen(); } catch { /* browser chrome remains as fallback */ }
+    } else if (!active && document.fullscreenElement) {
+      try { await document.exitFullscreen(); } catch { /* no-op */ }
+    }
+    window.setTimeout(resize, 80);
+  });
+  document.addEventListener("fullscreenchange", () => {
+    if (!document.fullscreenElement) document.body.classList.remove("observatory-tv-mode");
+    const button = document.getElementById("tv-mode");
+    if (button) button.textContent = document.body.classList.contains("observatory-tv-mode") ? "EXIT TV" : "TV / 4K";
+    window.setTimeout(resize, 80);
   });
 
   const nearest = (x, y) => {
@@ -642,11 +1189,50 @@
     tooltip.style.top = `${Math.max(8, Math.min(rectangle.height - 110, y + 14))}px`;
   };
 
-  mapViewport.addEventListener("pointermove", showTooltip);
+  mapViewport.addEventListener("pointermove", (event) => {
+    if (drag) {
+      const dx = event.clientX - drag.x;
+      const dy = event.clientY - drag.y;
+      if (viewMode === "globe") {
+        camera.rotation = drag.rotation + dx * .28 / camera.zoom;
+        camera.panY = Math.max(-height * .25, Math.min(height * .25, drag.panY + dy));
+      } else {
+        camera.panX = drag.panX + dx;
+        camera.panY = drag.panY + dy;
+      }
+      rebuildStaticLayers();
+      if (reducedMotion) draw();
+      return;
+    }
+    showTooltip(event);
+  });
   mapViewport.addEventListener("pointerleave", () => {
     if (tooltip) tooltip.hidden = true;
   });
-  mapViewport.addEventListener("pointerdown", showTooltip);
+  mapViewport.addEventListener("pointerdown", (event) => {
+    mapViewport.setPointerCapture?.(event.pointerId);
+    drag = { x: event.clientX, y: event.clientY, panX: camera.panX, panY: camera.panY, rotation: camera.rotation };
+    showTooltip(event);
+  });
+  const endDrag = (event) => {
+    if (!drag) return;
+    const rectangle = mapCanvas.getBoundingClientRect();
+    const item = nearest(event.clientX - rectangle.left, event.clientY - rectangle.top);
+    if (Math.hypot(event.clientX - drag.x, event.clientY - drag.y) < 7 && item?.kind === "direct") {
+      selectedDirect = item.event;
+      renderInvestigation();
+    }
+    drag = null;
+  };
+  mapViewport.addEventListener("pointerup", endDrag);
+  mapViewport.addEventListener("pointercancel", () => { drag = null; });
+  mapViewport.addEventListener("wheel", (event) => {
+    event.preventDefault();
+    camera.zoom = Math.max(.65, Math.min(5, camera.zoom * (event.deltaY > 0 ? .88 : 1.14)));
+    rebuildStaticLayers();
+    if (reducedMotion) draw();
+  }, { passive: false });
+  mapViewport.addEventListener("dblclick", resetView);
 
   const observer = new ResizeObserver(resize);
   observer.observe(mapViewport);

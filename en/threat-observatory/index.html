@@ -29,7 +29,7 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="/site.webmanifest">
   <script>document.documentElement.classList.add("js")</script>
-  <link rel="stylesheet" href="/styles.css?v=f010254c9f49">
+  <link rel="stylesheet" href="/styles.css?v=00f3c7f5f33d">
   <title>Global Threat Observatory // JARVIS SYSTEM</title>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://jarvisserver.org/en/#website","url":"https://jarvisserver.org/en/","name":"JARVIS SYSTEM","alternateName":"JARVIS OS","inLanguage":"en","publisher":{"@id":"https://jarvisserver.org/en/#project"}},{"@type":"Organization","@id":"https://jarvisserver.org/en/#project","name":"JARVIS SYSTEM","description":"Independent technology project from Switzerland, with JARVIS OS at its core and carefully scoped digital services.","url":"https://jarvisserver.org/en/","sameAs":["https://github.com/hotboxking09","https://discord.gg/DWBwuUhXmv","https://x.com/JarvisSystemCH","https://www.linkedin.com/in/oliver-frank-pristaff/","https://www.linkedin.com/company/jarvis-systems-ch/","https://www.reddit.com/user/JarvisSystemCH/","https://ko-fi.com/jarvissystem"],"logo":{"@type":"ImageObject","url":"https://jarvisserver.org/assets/jarvis-core-head.png","width":1024,"height":1024},"founder":{"@id":"https://jarvisserver.org/en/#founder"}},{"@type":"Person","@id":"https://jarvisserver.org/en/#founder","name":"Oliver-frank Pristaff","url":"https://jarvisserver.org/en/gruender/","jobTitle":"Founder and developer of JARVIS SYSTEM","sameAs":["https://github.com/hotboxking09","https://www.linkedin.com/in/oliver-frank-pristaff/","https://www.reddit.com/user/JarvisSystemCH/"],"homeLocation":{"@type":"Country","name":"Switzerland"}},{"@type":"TechArticle","@id":"https://jarvisserver.org/en/threat-observatory/#page","url":"https://jarvisserver.org/en/threat-observatory/","name":"Global Threat Observatory","headline":"Global Threat Observatory","description":"Interactive JARVIS world map with public RIPE Atlas data, dated DShield observations and transparent honeypot status.","inLanguage":"en","isPartOf":{"@id":"https://jarvisserver.org/en/#website"},"datePublished":"2026-07-23","dateModified":"2026-08-05","author":{"@id":"https://jarvisserver.org/en/#founder"},"publisher":{"@id":"https://jarvisserver.org/en/#project"},"image":"https://jarvisserver.org/assets/og-card.png"},{"@type":"BreadcrumbList","@id":"https://jarvisserver.org/en/threat-observatory/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"JARVIS SYSTEM","item":"https://jarvisserver.org/en/"},{"@type":"ListItem","position":2,"name":"Global Threat Observatory","item":"https://jarvisserver.org/en/threat-observatory/"}]}]}</script>
 
@@ -91,6 +91,15 @@
     <div class="observatory-clock"><span id="threat-clock">--:--:-- UTC</span><b id="threat-sync-state">LOADING VERIFIED DATA</b></div>
   </header>
 
+  <div class="observatory-viewbar" aria-label="Observatory view and analysis filters">
+    <div class="viewbar-group"><span>VIEW</span><button type="button" class="view-control is-active" data-view="analysis">2D ANALYSIS</button><button type="button" class="view-control" data-view="globe">CINEMATIC GLOBE</button></div>
+    <div class="viewbar-group"><span>WINDOW</span><button type="button" class="range-control" data-range="1">1H</button><button type="button" class="range-control is-active" data-range="24">24H</button><button type="button" class="range-control" data-range="168">7D</button></div>
+    <div class="viewbar-group"><span>BEHAVIOR</span><select id="behavior-filter" aria-label="Behavior filter"><option value="all">ALL SIGNALS</option><option value="password_guessing">PASSWORD GUESSING</option><option value="system_discovery">DISCOVERY</option><option value="download_intent">DOWNLOAD INTENT</option><option value="persistence_intent">PERSISTENCE</option><option value="privilege_escalation_intent">PRIVILEGE ESCALATION</option><option value="cryptomining_intent">CRYPTOMINING</option></select></div>
+    <div class="viewbar-group"><span>EVIDENCE</span><select id="type-filter" aria-label="Event type"><option value="all">ALL TYPES</option><option value="connection">CONNECTION</option><option value="login_attempt">LOGIN</option><option value="command_observed">COMMAND META</option><option value="client_observed">CLIENT META</option><option value="disconnect">DISCONNECT</option></select><select id="confidence-filter" aria-label="Confidence"><option value="all">ALL CONFIDENCE</option><option value="high">HIGH</option><option value="medium">MEDIUM</option><option value="low">LOW</option></select></div>
+    <div class="viewbar-group"><span>REGION</span><select id="country-filter" aria-label="Country"><option value="all">ALL COUNTRIES</option></select><input id="asn-filter" inputmode="numeric" maxlength="10" placeholder="ASN" aria-label="Autonomous System Number"></div>
+    <div class="viewbar-group viewbar-actions"><button type="button" class="view-action" id="map-reset">RESET VIEW</button><button type="button" class="view-action" id="tv-mode">TV / 4K</button></div>
+  </div>
+
   <div class="observatory-metrics" aria-live="polite">
     <div><span>PUBLIC NODES AVAILABLE</span><b id="metric-public-total">-----</b><small>RIPE ATLAS CONNECTED</small></div>
     <div><span>NODES VISUALIZED</span><b id="metric-public-rendered">----</b><small>DETERMINISTIC SAMPLE</small></div>
@@ -105,8 +114,10 @@
         <button type="button" class="map-layer is-active" data-layer="infrastructure" aria-pressed="true"><i class="cyan"></i>PUBLIC NODES</button>
         <button type="button" class="map-layer is-active" data-layer="threat" aria-pressed="true"><i class="red"></i>GLOBAL THREAT</button>
         <button type="button" class="map-layer is-active" data-layer="honeypot" aria-pressed="true"><i class="green"></i>JARVIS SENSOR</button>
+        <span class="map-interaction-hint">DRAG TO MOVE // WHEEL TO ZOOM // SELECT EVENT FOR THREAT DNA</span>
       </div>
       <div class="map-viewport" id="threat-map-viewport">
+        <canvas id="threat-globe-canvas" aria-label="WebGL rendering of the interactive threat globe" hidden></canvas>
         <canvas id="threat-map-canvas" aria-label="World map with public RIPE Atlas nodes, global DShield observations and anonymized real events from the JARVIS honeypot"></canvas>
         <div class="map-scanline" aria-hidden="true"></div>
         <div class="map-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
@@ -150,6 +161,28 @@
       <div><i class="ok"></i><p><b>NO RAW PUBLIC ATTACKER IPs</b><small>Public view uses regions and network operators instead of personal claims</small></p></div>
       <div><i class="ok" id="direct-integrity-light"></i><p><b id="direct-integrity-title">AUTHENTICATED DIRECT SENSOR FEED</b><small id="direct-integrity-copy">Double approved, HMAC signed and strictly schema checked</small></p></div>
     </div>
+  </div>
+
+  <div class="threat-investigation-grid">
+    <section class="threat-dna-panel" aria-labelledby="threat-dna-title">
+      <header><span>BEHAVIORAL SIGNATURE</span><h3 id="threat-dna-title">THREAT DNA</h3><b id="threat-dna-state">AWAITING EVENT</b></header>
+      <canvas id="threat-dna-canvas" aria-label="Privacy-bounded behavioral signature of the selected event"></canvas>
+      <div id="threat-dna-details" class="threat-dna-details"><p>Select a real JARVIS direct event. Only behavior category, confidence, evidence count, and public technique ID are shown—never raw commands.</p></div>
+    </section>
+    <section class="session-story-panel" aria-labelledby="session-story-title">
+      <header><span>PSEUDONYMOUS TIMELINE</span><h3 id="session-story-title">SESSION STORY</h3><b id="session-story-state">NO SESSION SELECTED</b></header>
+      <ol id="session-story-events"><li><b>WAITING FOR VERIFIED V2 EVENTS</b><small>Schema 1 data remains compatible but does not yet include a session timeline.</small></li></ol>
+    </section>
+    <section class="proof-panel" aria-labelledby="proof-title">
+      <header><span>PROOF OF REALITY</span><h3 id="proof-title">VERIFICATION CHAIN</h3><b id="proof-state">CHECKING</b></header>
+      <dl>
+        <div><dt>TRANSPORT</dt><dd id="proof-transport">HMAC-SHA256</dd></div>
+        <div><dt>EVENT CONTRACT</dt><dd id="proof-contract">SCHEMA V1 FALLBACK</dd></div>
+        <div><dt>CHAIN HEAD</dt><dd id="proof-chain">NOT AVAILABLE</dd></div>
+        <div><dt>PRIVACY</dt><dd id="proof-privacy">RAW DATA BLOCKED</dd></div>
+        <div><dt>FRESHNESS</dt><dd id="proof-freshness">CHECKING</dd></div>
+      </dl>
+    </section>
   </div>
 
   <section class="direct-ledger" aria-labelledby="direct-ledger-title">
@@ -237,7 +270,7 @@
     </div>
   </footer>
   <noscript><div class="noscript">The data sources and explanations remain readable. The interactive map requires JavaScript.</div></noscript>
-  <script src="/app.js?v=f010254c9f49" defer></script>
+  <script src="/app.js?v=00f3c7f5f33d" defer></script>
   <script src="/threat-observatory.js" defer></script>
 </body>
 </html>
