@@ -53,10 +53,17 @@ class ThreatDigestTests(unittest.TestCase):
         payload = digest.build_payload(value, "2026-08-06")
         self.assertEqual(payload["allowed_mentions"], {"parse": []})
         self.assertEqual(payload["content"], "")
+        self.assertEqual(len(payload["embeds"]), 2)
+        self.assertEqual(
+            payload["avatar_url"],
+            "https://jarvisserver.org/assets/jarvis-core-head.png",
+        )
         encoded = json.dumps(payload, ensure_ascii=False)
         self.assertIn("Echte", encoded)
-        self.assertIn("Real events", encoded)
-        self.assertIn("Receipt #20", encoded)
+        self.assertIn("Real sensor events", encoded)
+        self.assertIn("RECEIPT #20", encoded)
+        self.assertIn("THREAT DNA", encoded)
+        self.assertIn("PUBLIC RAW DATA", encoded)
 
     def test_raw_identifier_field_is_rejected(self):
         value = snapshot()

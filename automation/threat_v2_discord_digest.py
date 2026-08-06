@@ -191,58 +191,102 @@ def build_payload(snapshot: dict[str, Any], day: str) -> dict[str, Any]:
         ),
         key=lambda item: (-item[1], item[0]),
     )[:3]
+    maximum_behavior = max((count for _name, count in behaviors), default=1)
     behavior_text = "\n".join(
-        f"`{name.replace('_', ' ')}` · {count}" for name, count in behaviors
-    ) or "Keine klassifizierte Aktivität / No classified activity"
+        "`{:<30}` {:>5}  {}".format(
+            name.replace("_", " ").upper()[:30],
+            count,
+            "▰" * max(1, round(count / maximum_behavior * 8)),
+        )
+        for name, count in behaviors
+    ) or "`NO CLASSIFIED ACTIVITY`"
     state = str(snapshot["sensor"]["state"]).upper()
     direct = _bounded_count(counts["direct_events_24h"])
+    weekly = _bounded_count(counts["direct_events_7d"])
     sequence = proof["chain_head_sequence"]
+    generated_at = str(snapshot["generated_at"])
+    brand_icon = "https://jarvisserver.org/assets/jarvis-core-head.png"
+    observatory = "https://jarvisserver.org/threat-observatory/"
     return {
-        "username": "JARVIS Threat Observatory",
+        "username": "JARVIS AEGIS // Threat Observatory",
+        "avatar_url": brand_icon,
         "content": "",
         "allowed_mentions": {"parse": []},
         "embeds": [
             {
-                "title": "JARVIS THREAT OBSERVATORY // 24H",
+                "author": {
+                    "name": "JARVIS SYSTEM // AEGIS NETWORK",
+                    "url": observatory,
+                    "icon_url": brand_icon,
+                },
+                "title": "◈ GLOBAL THREAT INTERCEPT // 24H",
                 "description": (
-                    "Echte, direkt am isolierten Sensor beobachtete und "
-                    "datenschutzbegrenzt verarbeitete Ereignisse.\n"
-                    "Real events observed by the isolated sensor and processed "
-                    "through the privacy-bounded pipeline."
+                    "```text\n"
+                    "AEGIS SENSOR LINK       " + state.ljust(16)[:16] + "\n"
+                    f"DIRECT SIGNALS / 24H   {direct:>8}\n"
+                    f"DIRECT SIGNALS / 7D    {weekly:>8}\n"
+                    f"CHAIN RECEIPT           #{sequence:<7}\n"
+                    "PUBLIC RAW DATA         BLOCKED\n"
+                    "```\n"
+                    "**Echte Sensorereignisse. Keine Demo. Keine Simulation.**\n"
+                    "Real sensor events. No demo. No simulation."
                 ),
-                "url": "https://jarvisserver.org/threat-observatory/",
-                "color": 6881202,
+                "url": observatory,
+                "color": 5240063,
+                "thumbnail": {"url": brand_icon},
                 "fields": [
-                    {"name": "SENSOR", "value": state, "inline": True},
                     {
-                        "name": "DIREKTE EVENTS // 24H",
-                        "value": str(direct),
-                        "inline": True,
-                    },
-                    {
-                        "name": "INTEGRITÄTSKETTE",
-                        "value": f"Receipt #{sequence}",
-                        "inline": True,
-                    },
-                    {
-                        "name": "VERHALTEN // BEHAVIOR",
-                        "value": behavior_text,
+                        "name": "◉ LIVE PIPELINE",
+                        "value": (
+                            "`ISOLATED SENSOR` → `SIGNED RECEIVER` → "
+                            "`PRIVACY PROJECTION` → `PUBLIC MAP`"
+                        ),
                         "inline": False,
                     },
                     {
-                        "name": "WAHRHEITSGRENZE // TRUTH BOUNDARY",
+                        "name": "↗ LIVE OBSERVATORY",
+                        "value": "[Interaktive Weltkarte öffnen / Open live globe](https://jarvisserver.org/threat-observatory/)",
+                        "inline": False,
+                    },
+                ],
+            },
+            {
+                "title": "THREAT DNA // BEHAVIOR MATRIX",
+                "description": (
+                    "Relative Verteilung der klassifizierten, datensparsamen "
+                    "24H-Signale.\nRelative distribution of classified, "
+                    "privacy-bounded 24H signals."
+                ),
+                "color": 16724281,
+                "fields": [
+                    {
+                        "name": "SIGNAL CLASSES",
+                        "value": f"```text\n{behavior_text}\n```",
+                        "inline": False,
+                    },
+                    {
+                        "name": "✓ INTEGRITY",
                         "value": (
-                            "Keine Roh-IP, Zugangsdaten, Befehle oder Payloads. "
-                            "Ereignisse sind keine eindeutigen Personen; kein "
-                            "Host-Kompromiss wird behauptet.\n"
-                            "No raw IPs, credentials, commands or payloads. Events "
-                            "are not unique people; no host compromise is claimed."
+                            f"`CHAIN VERIFIED`  `RECEIPT #{sequence}`  "
+                            "`RECEIVER FRESH`"
+                        ),
+                        "inline": False,
+                    },
+                    {
+                        "name": "⚿ TRUTH BOUNDARY",
+                        "value": (
+                            "Keine Roh-IP, Zugangsdaten, Befehle, URLs oder Payloads. "
+                            "Keine Personenattribution und kein behaupteter Host-Kompromiss.\n"
+                            "No raw IPs, credentials, commands, URLs or payloads. "
+                            "No person attribution and no claimed host compromise."
                         ),
                         "inline": False,
                     },
                 ],
+                "timestamp": generated_at,
                 "footer": {
-                    "text": f"JARVIS SYSTEM // {day} UTC // silent // no mentions"
+                    "text": f"JARVIS AEGIS // {day} UTC // AUTHENTIC DATA // SILENT DIGEST",
+                    "icon_url": brand_icon,
                 },
             }
         ],

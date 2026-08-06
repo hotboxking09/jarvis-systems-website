@@ -7,11 +7,16 @@
   if (!consoleRoot || !mapCanvas || !mapViewport) return;
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+  const hardwareConcurrency = Number(navigator.hardwareConcurrency) || 4;
+  const balancedRendering = coarsePointer || hardwareConcurrency <= 4;
+  const globePixelRatioCap = balancedRendering ? 1.25 : 1.6;
+  const frameInterval = 1000 / (balancedRendering ? 30 : 45);
   const context = mapCanvas.getContext("2d", { alpha: false });
   const globeCanvas = document.getElementById("threat-globe-canvas");
   const globeGl = globeCanvas?.getContext("webgl2", {
     alpha: false,
-    antialias: true,
+    antialias: !balancedRendering,
     depth: true,
     powerPreference: "high-performance"
   }) || null;
@@ -34,7 +39,14 @@
   let honeypot = null;
   let staticMap = null;
   let infrastructureLayer = null;
+  let spectrumLayer = null;
   let animationHandle = 0;
+  let staticRebuildHandle = 0;
+  let tooltipHandle = 0;
+  let queuedTooltipPoint = null;
+  let lastFrameTimestamp = 0;
+  let lastSpectrumTimestamp = 0;
+  let screenTargetsDirty = true;
   let viewMode = "analysis";
   let timeRangeHours = 24;
   let behaviorFilter = "all";
@@ -45,6 +57,8 @@
   let selectedDirect = null;
   let camera = { zoom: 1, panX: 0, panY: 0, rotation: 0 };
   let drag = null;
+  let pinch = null;
+  const activePointers = new Map();
   let globeRenderer = null;
 
   const number = new Intl.NumberFormat("de-CH");
@@ -73,6 +87,8 @@
   const confidenceSelect = document.getElementById("confidence-filter");
   const countrySelect = document.getElementById("country-filter");
   const asnInput = document.getElementById("asn-filter");
+  const zoomInButton = document.getElementById("map-zoom-in");
+  const zoomOutButton = document.getElementById("map-zoom-out");
   const dnaCanvas = document.getElementById("threat-dna-canvas");
   const dnaContext = dnaCanvas?.getContext("2d", { alpha: true });
   const dnaState = document.getElementById("threat-dna-state");
@@ -208,7 +224,9 @@
       }
       const countries = [];
       (world?.countries || []).forEach((country) => country.polygons.forEach((polygon) => polygon.forEach((ring) => {
-        countries.push(...segments(ring.map((position) => sphere(position, 1.008))));
+        const stride = balancedRendering ? 3 : 2;
+        const outline = ring.filter((position, index) => index % stride === 0 || index === ring.length - 1);
+        countries.push(...segments(outline.map((position) => sphere(position, 1.008))));
       })));
       const nodePoints = (nodes?.nodes || []).map((node) => sphere(node.position, 1.012)).flat();
       const threatPoints = (threat?.observations || []).filter((item) => item.position).map((item) => sphere(item.position, 1.025)).flat();
@@ -241,13 +259,13 @@
       gl.enableVertexAttribArray(location.position);
       gl.vertexAttribPointer(location.position, 3, gl.FLOAT, false, 0, 0);
       gl.uniform4fv(location.color, color);
-      gl.uniform1f(location.pointSize, pointSize * Math.min(window.devicePixelRatio || 1, 2));
+      gl.uniform1f(location.pointSize, pointSize * Math.min(window.devicePixelRatio || 1, globePixelRatioCap));
       gl.uniform1i(location.point, mode === gl.POINTS ? 1 : 0);
       gl.drawArrays(mode, 0, item.count);
     };
     const render = (timeSeconds) => {
       if (!globeCanvas || viewMode !== "globe") return;
-      const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, globePixelRatioCap);
       const rectangle = globeCanvas.getBoundingClientRect();
       const targetWidth = Math.max(1, Math.floor(rectangle.width * pixelRatio));
       const targetHeight = Math.max(1, Math.floor(rectangle.height * pixelRatio));
@@ -268,19 +286,21 @@
       gl.uniform2f(location.scale, radius * 2 / rectangle.width, radius * 2 / rectangle.height);
       gl.uniform2f(location.pan, camera.panX * 2 / rectangle.width, -camera.panY * 2 / rectangle.height);
       gl.uniform1f(location.time, timeSeconds);
-      drawBuffer("surface", gl.TRIANGLES, [.008, .045, .065, 1]);
-      drawBuffer("grid", gl.LINES, [.10, .55, .62, .18]);
-      drawBuffer("countries", gl.LINES, [.31, .96, 1, .48]);
-      if (layers.infrastructure) drawBuffer("nodes", gl.POINTS, [.31, .96, 1, .68], 2.5);
+      drawBuffer("surface", gl.TRIANGLES, [.006, .052, .078, 1]);
+      gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
+      drawBuffer("grid", gl.LINES, [.08, .65, .76, .24]);
+      drawBuffer("countries", gl.LINES, [.31, .96, 1, .66]);
+      if (layers.infrastructure) drawBuffer("nodes", gl.POINTS, [.31, .96, 1, .82], 2.8);
       if (layers.threat) {
-        drawBuffer("externalArcs", gl.LINES, [1, .19, .35, .25]);
-        drawBuffer("threats", gl.POINTS, [1, .19, .35, .9], 5.2);
+        drawBuffer("externalArcs", gl.LINES, [1, .15, .34, .42]);
+        drawBuffer("threats", gl.POINTS, [1, .14, .32, .98], 5.8);
       }
       if (layers.honeypot) {
-        drawBuffer("directArcs", gl.LINES, [1, .28, .42, .78]);
-        drawBuffer("directs", gl.POINTS, [1, .19, .35, 1], 7.5);
-        drawBuffer("sensor", gl.POINTS, [.41, 1, .70, 1], 10.5);
+        drawBuffer("directArcs", gl.LINES, [1, .22, .40, .94]);
+        drawBuffer("directs", gl.POINTS, [1, .12, .31, 1], 8.2);
+        drawBuffer("sensor", gl.POINTS, [.34, 1, .72, 1], 11.5);
       }
+      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
     };
     return { build, render };
   };
@@ -469,6 +489,7 @@
       if (index % 5 === 0 || anchor) nodesByScreen.push({ x, y, node });
     });
     nodeContext.shadowBlur = 0;
+    screenTargetsDirty = true;
   };
 
   const resize = () => {
@@ -479,6 +500,7 @@
     if (spectrumCanvas && spectrumContext) {
       const spectrumRectangle = spectrumCanvas.getBoundingClientRect();
       resizeCanvas(spectrumCanvas, spectrumContext, Math.max(1, spectrumRectangle.width), Math.max(1, spectrumRectangle.height));
+      rebuildSpectrumLayer();
     }
     if (dnaCanvas && dnaContext) {
       const dnaRectangle = dnaCanvas.getBoundingClientRect();
@@ -556,30 +578,50 @@
     ctx.globalAlpha = 1;
   };
 
-  const drawSpectrum = () => {
+  const rebuildSpectrumLayer = () => {
     if (!spectrumCanvas || !spectrumContext || !infrastructure) return;
     const sw = spectrumCanvas.getBoundingClientRect().width;
     const sh = spectrumCanvas.getBoundingClientRect().height;
+    spectrumLayer = document.createElement("canvas");
+    const layerContext = spectrumLayer.getContext("2d", { alpha: true });
+    resizeCanvas(spectrumLayer, layerContext, sw, sh);
     const bins = new Array(72).fill(0);
     infrastructure.nodes.forEach((node) => {
       const index = Math.max(0, Math.min(bins.length - 1, Math.floor(((node.position[0] + 180) / 360) * bins.length)));
       bins[index] += 1;
     });
     const max = Math.max(...bins, 1);
-    spectrumContext.clearRect(0, 0, sw, sh);
-    spectrumContext.fillStyle = "rgba(3,13,20,.72)";
-    spectrumContext.fillRect(0, 0, sw, sh);
+    layerContext.fillStyle = "rgba(3,13,20,.72)";
+    layerContext.fillRect(0, 0, sw, sh);
     const bar = sw / bins.length;
     bins.forEach((value, index) => {
       const normalized = value / max;
       const h = Math.max(1, normalized * sh * 0.78);
-      const gradient = spectrumContext.createLinearGradient(0, sh - h, 0, sh);
+      const gradient = layerContext.createLinearGradient(0, sh - h, 0, sh);
       gradient.addColorStop(0, "rgba(79,244,255,.95)");
       gradient.addColorStop(0.7, "rgba(20,116,145,.62)");
       gradient.addColorStop(1, "rgba(255,43,214,.20)");
-      spectrumContext.fillStyle = gradient;
-      spectrumContext.fillRect(index * bar, sh - h, Math.max(1, bar - 1), h);
+      layerContext.fillStyle = gradient;
+      layerContext.fillRect(index * bar, sh - h, Math.max(1, bar - 1), h);
     });
+  };
+
+  const drawSpectrum = () => {
+    if (!spectrumCanvas || !spectrumContext || !spectrumLayer) return;
+    const sw = spectrumCanvas.getBoundingClientRect().width;
+    const sh = spectrumCanvas.getBoundingClientRect().height;
+    spectrumContext.clearRect(0, 0, sw, sh);
+    spectrumContext.drawImage(
+      spectrumLayer,
+      0,
+      0,
+      spectrumLayer.width,
+      spectrumLayer.height,
+      0,
+      0,
+      sw,
+      sh
+    );
     const scan = ((frame * 36) % Math.max(1, sw));
     spectrumContext.fillStyle = "rgba(104,255,178,.65)";
     spectrumContext.fillRect(scan, 0, 1, sh);
@@ -606,6 +648,85 @@
     if (globeRenderer && mapData && infrastructure && globalThreat && honeypot) {
       globeRenderer.build(mapData, infrastructure, globalThreat, honeypot);
     }
+    screenTargetsDirty = true;
+  };
+
+  const isWebglGlobe = () => viewMode === "globe"
+    && Boolean(globeRenderer)
+    && consoleRoot.dataset.webgl === "true";
+
+  const directSourceGroups = (limit = 18) => {
+    const groups = new Map();
+    filteredDirectEvents().forEach((event) => {
+      if (!Array.isArray(event.position) || event.position.length !== 2) return;
+      const key = `${event.source_alias}:${event.position.join(",")}`;
+      const existing = groups.get(key);
+      if (existing) {
+        existing.count += Number(event.count) || 1;
+        existing.types.add(event.type);
+        if (event.severity === "high") existing.severity = "high";
+      } else {
+        groups.set(key, {
+          ...event,
+          count: Number(event.count) || 1,
+          types: new Set([event.type])
+        });
+      }
+    });
+    return [...groups.values()].slice(0, limit);
+  };
+
+  const rebuildGlobeScreenTargets = () => {
+    nodesByScreen.length = 0;
+    threatsByScreen.length = 0;
+    directsByScreen.length = 0;
+    sensorByScreen = null;
+    if (layers.infrastructure) {
+      (infrastructure?.nodes || []).forEach((node, index) => {
+        if (index % 5 !== 0 && node.anchor !== true) return;
+        const [x, y, visible] = project(node.position);
+        if (visible) nodesByScreen.push({ x, y, node });
+      });
+    }
+    if (layers.threat) {
+      (globalThreat?.observations || []).forEach((observation) => {
+        if (!observation.position) return;
+        const [x, y, visible] = project(observation.position);
+        if (visible) threatsByScreen.push({ x, y, observation });
+      });
+    }
+    if (layers.honeypot && honeypot?.sensor) {
+      const [sensorX, sensorY, sensorVisible] = project(honeypot.sensor.position);
+      if (sensorVisible) {
+        sensorByScreen = { x: sensorX, y: sensorY, sensor: honeypot.sensor };
+      }
+      if (honeypot.sensor.state === "online") {
+        directSourceGroups().forEach((event) => {
+          const [x, y, visible] = project(event.position);
+          if (visible) directsByScreen.push({ x, y, event });
+        });
+      }
+    }
+    screenTargetsDirty = false;
+  };
+
+  const scheduleStaticRebuild = () => {
+    if (staticRebuildHandle) return;
+    staticRebuildHandle = window.requestAnimationFrame(() => {
+      staticRebuildHandle = 0;
+      rebuildStaticLayers();
+      screenTargetsDirty = true;
+      if (reducedMotion) draw();
+    });
+  };
+
+  const refreshCameraLayers = () => {
+    screenTargetsDirty = true;
+    if (isWebglGlobe()) {
+      if (reducedMotion) draw();
+      return;
+    }
+    scheduleStaticRebuild();
   };
 
   const populateRegionFilters = () => {
@@ -691,13 +812,17 @@
         && (item.session_alias || null) === (selectedDirect.session_alias || null)
       ) || null;
     }
-    if (!selectedDirect && events.length) selectedDirect = events[0];
+    if (!selectedDirect && events.length) {
+      selectedDirect = events.find((item) => item.behavior && item.proof && item.session_alias)
+        || events.find((item) => item.behavior)
+        || events[0];
+    }
     const event = selectedDirect;
     if (dnaState) dnaState.textContent = event ? "VERIFIED EVENT SELECTED" : "AWAITING EVENT";
     if (dnaDetails) {
       const behavior = event?.behavior;
       dnaDetails.innerHTML = event
-        ? `<dl><div><dt>CATEGORY</dt><dd>${escapeHtml((behavior?.category || "LEGACY EVENT").replaceAll("_", " ").toUpperCase())}</dd></div><div><dt>CONFIDENCE</dt><dd>${escapeHtml((behavior?.confidence || "N/A").toUpperCase())}</dd></div><div><dt>TECHNIQUE</dt><dd>${escapeHtml(behavior?.technique_id || "NOT ASSERTED")}</dd></div><div><dt>EVIDENCE</dt><dd>${number.format(Number(behavior?.evidence_count) || 1)} SIGNAL(S)</dd></div></dl>`
+        ? `<dl><div><dt>CATEGORY</dt><dd>${escapeHtml((behavior?.category || "NO V2 CLASSIFICATION").replaceAll("_", " ").toUpperCase())}</dd></div><div><dt>CONFIDENCE</dt><dd>${escapeHtml((behavior?.confidence || "NOT CLASSIFIED").toUpperCase())}</dd></div><div><dt>TECHNIQUE</dt><dd>${escapeHtml(behavior?.technique_id || "NOT ASSERTED")}</dd></div><div><dt>EVIDENCE</dt><dd>${number.format(Number(behavior?.evidence_count) || 1)} SIGNAL(S)</dd></div></dl>`
         : "<p>Wähle ein echtes JARVIS-Direktereignis. Es werden nur datensparsame Metadaten dargestellt – niemals Rohbefehle.</p>";
     }
     renderThreatDna();
@@ -706,7 +831,7 @@
     const story = session ? events.filter((item) => item.session_alias === session) : [];
     if (storyState) storyState.textContent = session ? `${session} // ${story.length} EVENT(S)` : "NO V2 SESSION SELECTED";
     if (storyEvents) storyEvents.innerHTML = story.length
-      ? story.map((item, index) => `<li><span>${String(index + 1).padStart(2, "0")}</span><div><b>${escapeHtml(item.label || item.type)}</b><small>${escapeHtml((item.behavior?.category || "legacy_event").replaceAll("_", " ").toUpperCase())} // ${escapeHtml(item.time_window || "TIME N/A")}</small></div></li>`).join("")
+      ? story.map((item, index) => `<li><span>${String(index + 1).padStart(2, "0")}</span><div><b>${escapeHtml(item.label || item.type)}</b><small>${escapeHtml((item.behavior?.category || "not_classified").replaceAll("_", " ").toUpperCase())} // ${escapeHtml(item.time_window || "TIME WINDOW NOT AVAILABLE")}</small></div></li>`).join("")
       : "<li><b>NO V2 SESSION STORY AVAILABLE</b><small>Keine Timeline wird aus Schema-1-Daten erfunden.</small></li>";
 
     const proof = honeypot?.proof || {};
@@ -722,14 +847,32 @@
     if (proofContract) proofContract.textContent = proof.event_contract || `SCHEMA V${honeypot?.schema || 1} FALLBACK`;
     if (proofChain) proofChain.textContent = Number.isInteger(proof.chain_head_sequence) && proof.chain_head_hash
       ? `#${number.format(proof.chain_head_sequence)} // ${String(proof.chain_head_hash).slice(0, 16).toUpperCase()}…`
-      : "NOT AVAILABLE";
+      : "NO VERIFIED RECEIPT";
     if (proofPrivacy) proofPrivacy.textContent = String(proof.privacy_projection || honeypot?.privacy || "RAW DATA BLOCKED").replaceAll("_", " ").toUpperCase();
     if (proofFreshness) proofFreshness.textContent = `${ageLabel(proof.chain_received_at || honeypot?.generated_at)} // ${proof.receiver_fresh === true ? "RECEIVER FRESH" : "SNAPSHOT"}`;
   };
 
-  const draw = () => {
+  const draw = (timestamp = window.performance.now()) => {
     if (!staticMap) return;
-    globeRenderer?.render(frame);
+    if (!reducedMotion && lastFrameTimestamp && timestamp - lastFrameTimestamp < frameInterval) {
+      animationHandle = window.requestAnimationFrame(draw);
+      return;
+    }
+    const elapsed = lastFrameTimestamp ? Math.min(80, timestamp - lastFrameTimestamp) : frameInterval;
+    lastFrameTimestamp = timestamp;
+    frame += reducedMotion ? 0 : elapsed / 1000 * 1.1;
+
+    if (isWebglGlobe()) {
+      if (screenTargetsDirty) rebuildGlobeScreenTargets();
+      globeRenderer.render(frame);
+      if (timestamp - lastSpectrumTimestamp >= 100) {
+        drawSpectrum();
+        lastSpectrumTimestamp = timestamp;
+      }
+      if (!reducedMotion) animationHandle = window.requestAnimationFrame(draw);
+      return;
+    }
+
     context.clearRect(0, 0, width, height);
     context.drawImage(staticMap, 0, 0, width * ratio, height * ratio, 0, 0, width, height);
     if (layers.infrastructure && infrastructureLayer) {
@@ -762,7 +905,6 @@
       const sensor = project(honeypot.sensor.position);
       if (!sensor[2]) {
         drawSpectrum();
-        frame += reducedMotion ? 0 : 0.022;
         if (!reducedMotion) animationHandle = window.requestAnimationFrame(draw);
         return;
       }
@@ -795,24 +937,7 @@
       sensorByScreen = { x: sensor[0], y: sensor[1], sensor: honeypot.sensor };
 
       if (status === "online" && Array.isArray(honeypot.events)) {
-        const directSources = new Map();
-        filteredDirectEvents().forEach((event) => {
-          if (!Array.isArray(event.position) || event.position.length !== 2) return;
-          const key = `${event.source_alias}:${event.position.join(",")}`;
-          const existing = directSources.get(key);
-          if (existing) {
-            existing.count += Number(event.count) || 1;
-            existing.types.add(event.type);
-            if (event.severity === "high") existing.severity = "high";
-          } else {
-            directSources.set(key, {
-              ...event,
-              count: Number(event.count) || 1,
-              types: new Set([event.type])
-            });
-          }
-        });
-        [...directSources.values()].slice(0, 18).forEach((event, index) => {
+        directSourceGroups().forEach((event, index) => {
           const source = project(event.position);
           if (!source[2]) return;
           drawAttackArc(context, source, sensor, index * 0.19, event.severity);
@@ -825,7 +950,6 @@
       }
     }
     drawSpectrum();
-    frame += reducedMotion ? 0 : 0.022;
     if (!reducedMotion) animationHandle = window.requestAnimationFrame(draw);
   };
 
@@ -1063,8 +1187,7 @@
 
   const resetView = () => {
     camera = { zoom: 1, panX: 0, panY: 0, rotation: 0 };
-    rebuildStaticLayers();
-    if (reducedMotion) draw();
+    refreshCameraLayers();
   };
 
   const viewButtons = [...document.querySelectorAll("button[data-view]")];
@@ -1172,8 +1295,8 @@
     let content = "";
     if (item.kind === "direct") {
       const direct = item.event;
-      const network = Number.isInteger(direct.asn) ? `AS${direct.asn}` : "ASN N/A";
-      content = `<b>DIRECT JARVIS SENSOR EVENT</b><span>${escapeHtml(direct.source_alias)}</span><small>${escapeHtml(direct.country || "REGION N/A")} // ${escapeHtml(network)} // ×${number.format(direct.count)}<br>${escapeHtml([...direct.types].join(" + ").toUpperCase())}<br>COARSE 2° CELL — NO RAW IP</small>`;
+      const network = Number.isInteger(direct.asn) ? `AS${direct.asn}` : "ASN NOT SAFELY ENRICHED";
+      content = `<b>DIRECT JARVIS SENSOR EVENT</b><span>${escapeHtml(direct.source_alias)}</span><small>${escapeHtml(direct.country || "REGION NOT SAFELY ENRICHED")} // ${escapeHtml(network)} // ×${number.format(direct.count)}<br>${escapeHtml([...direct.types].join(" + ").toUpperCase())}<br>COARSE 2° CELL — NO RAW IP</small>`;
     } else if (item.kind === "threat") {
       const observation = item.observation;
       content = `<b>GLOBAL THREAT OBSERVATION</b><span>${escapeHtml(observation.operator)}</span><small>${escapeHtml(observation.country)} // ${number.format(observation.targets_reporting_scans)} meldende Ziele<br>EXTERNAL FEED — NOT A DIRECT JARVIS HIT</small>`;
@@ -1190,6 +1313,16 @@
   };
 
   mapViewport.addEventListener("pointermove", (event) => {
+    if (activePointers.has(event.pointerId)) {
+      activePointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    }
+    if (pinch && activePointers.size >= 2) {
+      const [first, second] = [...activePointers.values()];
+      const distance = Math.max(1, Math.hypot(second.x - first.x, second.y - first.y));
+      camera.zoom = Math.max(.65, Math.min(5, pinch.zoom * distance / pinch.distance));
+      refreshCameraLayers();
+      return;
+    }
     if (drag) {
       const dx = event.clientX - drag.x;
       const dy = event.clientY - drag.y;
@@ -1200,21 +1333,43 @@
         camera.panX = drag.panX + dx;
         camera.panY = drag.panY + dy;
       }
-      rebuildStaticLayers();
-      if (reducedMotion) draw();
+      refreshCameraLayers();
       return;
     }
-    showTooltip(event);
+    queuedTooltipPoint = { clientX: event.clientX, clientY: event.clientY };
+    if (!tooltipHandle) {
+      tooltipHandle = window.requestAnimationFrame(() => {
+        tooltipHandle = 0;
+        if (queuedTooltipPoint) showTooltip(queuedTooltipPoint);
+        queuedTooltipPoint = null;
+      });
+    }
   });
   mapViewport.addEventListener("pointerleave", () => {
     if (tooltip) tooltip.hidden = true;
   });
   mapViewport.addEventListener("pointerdown", (event) => {
     mapViewport.setPointerCapture?.(event.pointerId);
+    activePointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    if (activePointers.size >= 2) {
+      const [first, second] = [...activePointers.values()];
+      pinch = {
+        distance: Math.max(1, Math.hypot(second.x - first.x, second.y - first.y)),
+        zoom: camera.zoom
+      };
+      drag = null;
+      return;
+    }
     drag = { x: event.clientX, y: event.clientY, panX: camera.panX, panY: camera.panY, rotation: camera.rotation };
     showTooltip(event);
   });
   const endDrag = (event) => {
+    activePointers.delete(event.pointerId);
+    if (pinch) {
+      if (activePointers.size < 2) pinch = null;
+      drag = null;
+      return;
+    }
     if (!drag) return;
     const rectangle = mapCanvas.getBoundingClientRect();
     const item = nearest(event.clientX - rectangle.left, event.clientY - rectangle.top);
@@ -1225,12 +1380,20 @@
     drag = null;
   };
   mapViewport.addEventListener("pointerup", endDrag);
-  mapViewport.addEventListener("pointercancel", () => { drag = null; });
+  mapViewport.addEventListener("pointercancel", (event) => {
+    activePointers.delete(event.pointerId);
+    if (activePointers.size < 2) pinch = null;
+    drag = null;
+  });
+  const applyZoom = (factor) => {
+    camera.zoom = Math.max(.65, Math.min(5, camera.zoom * factor));
+    refreshCameraLayers();
+  };
+  zoomInButton?.addEventListener("click", () => applyZoom(1.22));
+  zoomOutButton?.addEventListener("click", () => applyZoom(.82));
   mapViewport.addEventListener("wheel", (event) => {
     event.preventDefault();
-    camera.zoom = Math.max(.65, Math.min(5, camera.zoom * (event.deltaY > 0 ? .88 : 1.14)));
-    rebuildStaticLayers();
-    if (reducedMotion) draw();
+    applyZoom(event.deltaY > 0 ? .88 : 1.14);
   }, { passive: false });
   mapViewport.addEventListener("dblclick", resetView);
 

@@ -795,12 +795,23 @@ blockquote { margin: 2rem 0; padding: 0; color: #c5dbe2; font-size: clamp(1.05re
 .map-layer.is-active i.cyan { background: var(--signal-blue); box-shadow: 0 0 9px var(--signal-blue); }
 .map-layer.is-active i.red { background: var(--threat-red); box-shadow: 0 0 9px var(--threat-red); }
 .map-layer.is-active i.green { background: var(--sensor-green); box-shadow: 0 0 9px var(--sensor-green); }
-.map-viewport { position: relative; min-height: 760px; overflow: hidden; background: #010407; cursor: crosshair; }
+.map-zoom-controls { display: inline-flex; align-items: center; border: 1px solid rgba(79,244,255,.16); background: rgba(1,7,11,.78); }
+.map-zoom-controls span { padding: 0 .48rem; color: #627d86; font: 800 .46rem monospace; letter-spacing: .12em; }
+.map-zoom-controls button { width: 34px; min-height: 32px; padding: 0; color: var(--signal-blue); border: 0; background: transparent; cursor: pointer; font: 800 1rem monospace; }
+.map-zoom-controls button:hover,.map-zoom-controls button:focus-visible { color: var(--white); background: rgba(79,244,255,.1); outline: 1px solid rgba(79,244,255,.45); outline-offset: -1px; }
+.map-viewport { position: relative; min-height: 760px; overflow: hidden; contain: layout paint; touch-action: none; background: #010407; cursor: crosshair; }
 .map-viewport:active { cursor: grabbing; }
 .observatory-console[data-view="globe"] .map-axis { opacity: .18; }
-.observatory-console[data-view="globe"] .map-viewport { background: radial-gradient(circle at center,#071923,#010407 68%); }
+.observatory-console[data-view="globe"] .map-viewport {
+  background:
+    radial-gradient(circle at 50% 50%,rgba(26,160,178,.18),transparent 39%),
+    radial-gradient(circle at 23% 70%,rgba(255,43,214,.08),transparent 31%),
+    radial-gradient(circle at 76% 25%,rgba(255,49,89,.07),transparent 28%),
+    #010407;
+  box-shadow: inset 0 0 120px rgba(0,0,0,.82),inset 0 0 38px rgba(79,244,255,.07);
+}
 #threat-map-canvas,#threat-globe-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-#threat-globe-canvas { z-index: 1; pointer-events: none; background: #010407; }
+#threat-globe-canvas { z-index: 1; pointer-events: none; background: transparent; transform: translateZ(0); }
 #threat-globe-canvas[hidden] { display: none; }
 .observatory-console[data-view="globe"][data-webgl="true"] #threat-map-canvas { visibility: hidden; }
 .observatory-console[data-view="globe"][data-webgl="true"] #threat-globe-canvas { display: block; }
@@ -1114,12 +1125,23 @@ blockquote { margin: 2rem 0; padding: 0; color: #c5dbe2; font-size: clamp(1.05re
   .observatory-metrics { grid-template-columns: 1fr 1fr; }
   .observatory-viewbar { align-items: flex-start; }
   .viewbar-group { width: 100%; flex-wrap: wrap; }
+  .viewbar-group > span { width: 100%; margin: 0 0 .18rem; font-size: .58rem; }
+  .view-control,.range-control,.view-action,#behavior-filter,#type-filter,#confidence-filter,#country-filter,#asn-filter { min-height: 40px; font-size: .64rem; }
+  #behavior-filter,#type-filter,#confidence-filter,#country-filter { flex: 1 1 150px; max-width: none; }
+  #asn-filter { width: 96px; }
   .viewbar-actions { margin-left: 0; }
-  .map-interaction-hint { width: 100%; margin-left: 0; line-height: 1.45; }
+  .map-toolbar { gap: .48rem; }
+  .map-layer { min-height: 38px; font-size: .6rem; }
+  .map-zoom-controls { margin-left: auto; }
+  .map-zoom-controls button { width: 40px; min-height: 38px; }
+  .map-zoom-controls span { font-size: .55rem; }
+  .map-interaction-hint { width: 100%; margin-left: 0; color: #77939c; font-size: .56rem; line-height: 1.55; }
   .map-viewport { min-height: 500px; }
   .map-axis { display: none; }
   .map-status-tag { left: 12px; right: auto; bottom: 12px; max-width: calc(100% - 24px); font-size: .44rem; }
   .map-legend b { width: 100%; margin-left: 0; line-height: 1.5; }
+  .observatory-metrics span { font-size: .54rem; }
+  .observatory-metrics small { font-size: .5rem; }
   .direct-ledger > header { align-items: flex-start; }
   .direct-ledger-status { max-width: 45%; }
   .direct-ledger-contract { margin: .8rem; }
