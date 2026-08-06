@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: hourly-threat-ledger
+  group: threat-publication
   cancel-in-progress: false
 
 jobs:
@@ -42,85 +42,3 @@ jobs:
           git add data/hourly-threat-ledger.json
           git commit -m "Update sanitized hourly threat ledger"
           git push
-
-      - name: Send silent Discord update when configured
-        if: steps.changed.outputs.value == 'true'
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_THREAT_WEBHOOK_URL }}
-        shell: bash
-        run: |
-          if [[ -z "$DISCORD_WEBHOOK_URL" ]]; then
-            echo "Discord webhook secret is not configured; notification skipped."
-            exit 0
-          fi
-          python3 - <<'PY'
-          import json
-          import os
-          import urllib.request
-
-          ledger = json.load(open("data/hourly-threat-ledger.json", encoding="utf-8"))
-          counts = ledger["counts"]
-          events = ledger.get("events", [])
-          noteworthy = next(
-              (
-                  event
-                  for event in events
-                  if event.get("type") not in {"connection", "disconnect"}
-              ),
-              events[0] if events else None,
-          )
-          source_summary = "Keine neue Ereigniszeile verfügbar."
-          if noteworthy:
-              country = noteworthy.get("country") or "N/A"
-              asn = (
-                  f"AS{noteworthy['asn']}"
-                  if noteworthy.get("asn") is not None
-                  else "ASN N/A"
-              )
-              source_summary = (
-                  f"`{noteworthy['source_alias']}` // {country} // {asn}\n"
-                  f"{noteworthy['label']} × {noteworthy['count']} // "
-                  f"Schweregrad `{noteworthy['severity']}`\n"
-                  "Netzquellen-Pseudonym – keine Personenidentität."
-              )
-          payload = {
-              "username": "JARVIS Threat Observatory",
-              "content": "",
-              "allowed_mentions": {"parse": []},
-              "embeds": [{
-                  "title": "Authentifizierter Sensor-Ledger aktualisiert",
-                  "description": (
-                      "Neue anonymisierte Sensorereignisse wurden in den "
-                      "stündlichen GitHub-Snapshot übernommen."
-                  ),
-                  "url": "https://jarvisserver.org/threat-observatory/",
-                  "color": 6881202,
-                  "fields": [
-                      {"name": "Direkte Events // 24H", "value": str(counts["direct_events_24h"]), "inline": True},
-                      {"name": "Direkte Events // 7D", "value": str(counts["direct_events_7d"]), "inline": True},
-                      {"name": "Letztes relevantes Signal", "value": source_summary, "inline": False},
-                      {
-                          "name": "Öffentlicher GitHub-Ledger",
-                          "value": (
-                              "[Sanitisierte JSON-Historie öffnen]"
-                              "(https://github.com/hotboxking09/"
-                              "jarvis-systems-website/blob/main/"
-                              "data/hourly-threat-ledger.json)"
-                          ),
-                          "inline": False,
-                      },
-                      {"name": "Datenschutz", "value": "Keine Roh-IP, Passwörter, Befehle oder Payloads.", "inline": False},
-                  ],
-                  "footer": {"text": "JARVIS SYSTEM // silent update // no mentions"},
-              }],
-          }
-          request = urllib.request.Request(
-              os.environ["DISCORD_WEBHOOK_URL"],
-              data=json.dumps(payload).encode(),
-              headers={"Content-Type": "application/json", "User-Agent": "JARVIS-GitHub-Actions/1.0"},
-              method="POST",
-          )
-          with urllib.request.urlopen(request, timeout=20) as response:
-              if response.status not in (200, 204):
-                  raise SystemExit(f"Discord returned HTTP {response.status}")
-          PY

@@ -1,0 +1,46 @@
+name: Daily privacy-bounded Threat V2 Discord digest
+
+on:
+  schedule:
+    - cron: "27 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: threat-publication
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out generated website
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+
+      - name: Prepare one real V2 digest per UTC day
+        id: digest
+        run: python3 automation/threat_v2_discord_digest.py prepare
+
+      - name: Send silent bilingual Discord digest
+        if: steps.digest.outputs.due == 'true'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_THREAT_WEBHOOK_URL }}
+        run: python3 automation/threat_v2_discord_digest.py send
+
+      - name: Persist hashed delivery receipt
+        if: steps.digest.outputs.due == 'true'
+        run: python3 automation/threat_v2_discord_digest.py record
+
+      - name: Commit delivery state
+        if: steps.digest.outputs.due == 'true'
+        shell: bash
+        run: |
+          git config user.name "JARVIS Security Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add .github/state/threat-v2-discord.json
+          git commit -m "Record silent daily Threat V2 digest receipt"
+          git pull --rebase
+          git push

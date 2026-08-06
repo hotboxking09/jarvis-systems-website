@@ -10,9 +10,12 @@ auf das öffentliche Zwei-Grad-Raster begrenzt sind.
 authentifizierten Ereignisdaten tatsächlich verändert haben. Laufende
 Heartbeats erzeugen deshalb keine künstlichen GitHub-Updates.
 
-Eine Discord-Nachricht wird ebenfalls nur bei einer echten Datenänderung
-versendet und enthält keine Erwähnungen. Der Embed nennt ausschließlich ein
-validiertes Netzquellen-Pseudonym, grobes Land/ASN, Ereignistyp, Schweregrad
-und den öffentlichen GitHub-Ledger; er behauptet ausdrücklich keine
-Personenidentität. Die Benachrichtigung bleibt deaktiviert, solange das
-Repository-Secret `DISCORD_THREAT_WEBHOOK_URL` nicht eingerichtet ist.
+Discord ist von der stündlichen Website-Aktualisierung getrennt. Der tägliche
+V2-Workflow liest ausschließlich den exakten öffentlichen Schema-2-Endpunkt,
+prüft dessen Datenschutz-, Wahrheits- und Integritätsvertrag und sendet
+höchstens einen zweisprachigen, stillen Digest pro UTC-Tag. Erwähnungen sind
+gesperrt. Erst nach einem echten Discord-Receipt wird ein Zustand gespeichert;
+dieser enthält nur Datum, Notice-ID, öffentliche Quellsequenz und den Hash des
+Receipts – niemals Webhook oder Nachrichten-ID. Die Benachrichtigung bleibt
+deaktiviert, solange das Repository-Secret `DISCORD_THREAT_WEBHOOK_URL` nicht
+eingerichtet ist.
