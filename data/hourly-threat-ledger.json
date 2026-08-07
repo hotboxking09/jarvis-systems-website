@@ -1,12 +1,12 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 16,
-      "connection": 18,
-      "disconnect": 18,
-      "login_attempt": 7
+      "client_observed": 12,
+      "connection": 14,
+      "disconnect": 14,
+      "login_attempt": 4
     },
-    "direct_events_24h": 59,
+    "direct_events_24h": 44,
     "direct_events_7d": 418
   },
   "events": [
@@ -536,125 +536,6 @@
       "time_window": "2026-08-06T19:55:00.000Z",
       "type": "login_attempt",
       "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 45102,
-      "count": 3,
-      "country": "PH",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        120,
-        14
-      ],
-      "severity": "info",
-      "source_alias": "SRC-9B3E9E786C51",
-      "time_window": "2026-08-06T19:10:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 45102,
-      "count": 3,
-      "country": "PH",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        120,
-        14
-      ],
-      "severity": "low",
-      "source_alias": "SRC-9B3E9E786C51",
-      "time_window": "2026-08-06T19:10:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 45102,
-      "count": 3,
-      "country": "PH",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        120,
-        14
-      ],
-      "severity": "info",
-      "source_alias": "SRC-9B3E9E786C51",
-      "time_window": "2026-08-06T19:10:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 45102,
-      "count": 3,
-      "country": "PH",
-      "host_compromised": false,
-      "label": "LOGIN ATTEMPT",
-      "outcome": "emulated_authentication",
-      "position": [
-        120,
-        14
-      ],
-      "severity": "medium",
-      "source_alias": "SRC-9B3E9E786C51",
-      "time_window": "2026-08-06T19:10:00.000Z",
-      "type": "login_attempt",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 41549,
-      "count": 1,
-      "country": "CH",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        10,
-        48
-      ],
-      "severity": "info",
-      "source_alias": "SRC-4695C2CAC818",
-      "time_window": "2026-08-06T19:05:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 41549,
-      "count": 1,
-      "country": "CH",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        10,
-        48
-      ],
-      "severity": "low",
-      "source_alias": "SRC-4695C2CAC818",
-      "time_window": "2026-08-06T19:05:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 41549,
-      "count": 1,
-      "country": "CH",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        10,
-        48
-      ],
-      "severity": "info",
-      "source_alias": "SRC-4695C2CAC818",
-      "time_window": "2026-08-06T19:05:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
@@ -668,7 +549,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "726af8741d1bbdb39b764a2440b563f83b4a6e835700e2f1358a6e027fad560e",
-  "updated_at": "2026-08-07T18:00:57Z",
+  "source_fingerprint": "2c5e52567386ed93cc0466957e086b67695e75b7d5da757d05ec3c92067c50fb",
+  "updated_at": "2026-08-07T19:13:59Z",
   "window": "rolling-24h-events-with-7d-total"
 }
