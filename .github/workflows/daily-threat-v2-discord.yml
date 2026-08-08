@@ -2,7 +2,10 @@ name: Daily privacy-bounded Threat V2 Discord digest
 
 on:
   schedule:
-    - cron: "27 6 * * *"
+    # The persisted UTC-day receipt keeps delivery idempotent.  Four daily
+    # opportunities make a missed GitHub scheduler window self-healing after
+    # a temporary Actions outage without producing duplicate Discord posts.
+    - cron: "27 0,6,12,18 * * *"
   workflow_dispatch:
 
 permissions:
