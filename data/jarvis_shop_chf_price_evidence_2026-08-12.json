@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-08-12T16:04:12+00:00",
+  "source": "Fourthwall Storefront API v1 / single-product endpoints / currency=CHF",
+  "storefront_token_recorded": false,
+  "mutation": false,
+  "products": [
+    {
+      "product_id": "cs01-tshirt-deep-navy",
+      "offer_id": "5d90c315-8144-44b4-ab87-86f4aae714ad",
+      "slug": "core-series-01-abyss-navy-heavyweight-t-shirt",
+      "state": "AVAILABLE",
+      "access": "HIDDEN",
+      "currency": "CHF",
+      "prices": {
+        "S": "37.00",
+        "M": "37.00",
+        "L": "37.00",
+        "XL": "37.00",
+        "2XL": "37.82",
+        "3XL": "38.65",
+        "4XL": "39.48"
+      }
+    },
+    {
+      "product_id": "cs01-hoodie-deep-navy",
+      "offer_id": "4105d5fc-3b74-4a63-bf09-1ea3487b6216",
+      "slug": "core-series-01-abyss-navy-premium-hoodie",
+      "state": "AVAILABLE",
+      "access": "HIDDEN",
+      "currency": "CHF",
+      "prices": {
+        "S": "58.93",
+        "M": "58.93",
+        "L": "58.93",
+        "XL": "58.93",
+        "2XL": "59.76",
+        "3XL": "60.58"
+      }
+    },
+    {
+      "product_id": "cs01-tshirt-core-cream",
+      "offer_id": "608e3914-6efe-4f5b-8001-a9b9dc61b60b",
+      "slug": "core-series-01-ivory-cream-heavyweight-t-shirt",
+      "state": "AVAILABLE",
+      "access": "HIDDEN",
+      "currency": "CHF",
+      "prices": {
+        "S": "37.00",
+        "M": "37.00",
+        "L": "37.00",
+        "XL": "37.00",
+        "2XL": "37.82",
+        "3XL": "38.65",
+        "4XL": "39.48"
+      }
+    },
+    {
+      "product_id": "cs01-hoodie-core-cream",
+      "offer_id": "d4442b10-fab0-44a6-8adc-4c6571f36bcb",
+      "slug": "core-series-01-ivory-cream-premium-hoodie",
+      "state": "AVAILABLE",
+      "access": "HIDDEN",
+      "currency": "CHF",
+      "prices": {
+        "S": "58.93",
+        "M": "58.93",
+        "L": "58.93",
+        "XL": "58.93",
+        "2XL": "59.76",
+        "3XL": "60.58"
+      }
+    },
+    {
+      "product_id": "cs01-tshirt-midnight-purple",
+      "offer_id": "d866c932-060e-41fb-946b-8ec5825c7941",
+      "slug": "core-series-01-midnight-purple-heavyweight-t-shirt",
+      "state": "AVAILABLE",
+      "access": "HIDDEN",
+      "currency": "CHF",
+      "prices": {
+        "S": "37.00",
+        "M": "37.00",
+        "L": "37.00",
+        "XL": "37.00",
+        "2XL": "37.82",
+        "3XL": "38.65",
+        "4XL": "39.48"
+      }
+    },
+    {
+      "product_id": "cs01-hoodie-midnight-purple",
+      "offer_id": "f6f1a528-153f-4369-b5cf-08e17686ff22",
+      "slug": "core-series-01-midnight-purple-premium-hoodie",
+      "state": "AVAILABLE",
+      "access": "HIDDEN",
+      "currency": "CHF",
+      "prices": {
+        "S": "58.93",
+        "M": "58.93",
+        "L": "58.93",
+        "XL": "58.93",
+        "2XL": "59.76",
+        "3XL": "60.58"
+      }
+    },
+    {
+      "product_id": "cs01-tshirt-obsidian-violet",
+      "offer_id": "eafaff1b-e54a-4f49-baee-b1823c892ce6",
+      "slug": "core-series-01-obsidian-violet-heavyweight-t-shirt",
+      "state": "AVAILABLE",
+      "access": "HIDDEN",
+      "currency": "CHF",
+      "prices": {
+        "S": "37.00",
+        "M": "37.00",
+        "L": "37.00",
+        "XL": "37.00",
+        "2XL": "37.82",
+        "3XL": "38.65",
+        "4XL": "39.48"
+      }
+    },
+    {
+      "product_id": "cs01-hoodie-obsidian-violet",
+      "offer_id": "9009249c-3cbf-4178-a8cd-6de69eab5025",
+      "slug": "core-series-01-obsidian-violet-premium-hoodie",
+      "state": "AVAILABLE",
+      "access": "HIDDEN",
+      "currency": "CHF",
+      "prices": {
+        "S": "58.93",
+        "M": "58.93",
+        "L": "58.93",
+        "XL": "58.93",
+        "2XL": "59.76",
+        "3XL": "60.58"
+      }
+    },
+    {
+      "product_id": "cs01-tshirt-signal-white",
+      "offer_id": "38089689-47bb-475f-bcc7-ad2cc7a5d466",
+      "slug": "core-series-01-pure-white-heavyweight-t-shirt",
+      "state": "AVAILABLE",
+      "access": "HIDDEN",
+      "currency": "CHF",
+      "prices": {
+        "S": "37.00",
+        "M": "37.00",
+        "L": "37.00",
+        "XL": "37.00",
+        "2XL": "37.82",
+        "3XL": "38.65",
+        "4XL": "39.48"
+      }
+    },
+    {
+      "product_id": "cs01-hoodie-signal-white",
+      "offer_id": "ea063c67-77d7-4a3c-af95-e979072687a7",
+      "slug": "core-series-01-pure-white-premium-hoodie",
+      "state": "AVAILABLE",
+      "access": "HIDDEN",
+      "currency": "CHF",
+      "prices": {
+        "S": "58.93",
+        "M": "58.93",
+        "L": "58.93",
+        "XL": "58.93",
+        "2XL": "59.76",
+        "3XL": "60.58"
+      }
+    },
+    {
+      "product_id": "cs01-tshirt-void-black",
+      "offer_id": "c12f246b-0c61-47b2-ba9a-73c93d3dab07",
+      "slug": "core-series-01-void-black-heavyweight-t-shirt",
+      "state": "AVAILABLE",
+      "access": "HIDDEN",
+      "currency": "CHF",
+      "prices": {
+        "S": "37.00",
+        "M": "37.00",
+        "L": "37.00",
+        "XL": "37.00",
+        "2XL": "37.82",
+        "3XL": "38.65",
+        "4XL": "39.48"
+      }
+    },
+    {
+      "product_id": "cs01-hoodie-void-black",
+      "offer_id": "4fb0bfd8-f0d5-40be-8922-8a8dfbc07fe9",
+      "slug": "core-series-01-void-black-premium-hoodie",
+      "state": "AVAILABLE",
+      "access": "HIDDEN",
+      "currency": "CHF",
+      "prices": {
+        "S": "58.93",
+        "M": "58.93",
+        "L": "58.93",
+        "XL": "58.93",
+        "2XL": "59.76",
+        "3XL": "60.58"
+      }
+    }
+  ],
+  "summary": {
+    "products": 12,
+    "variants": 78,
+    "currency": "CHF",
+    "cors": "PASS"
+  }
+}
