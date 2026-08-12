@@ -1,5 +1,54 @@
 [
   {
+    "date": "2026-08-12",
+    "modified": "2026-08-12",
+    "code": "SHOP-2026-08-12",
+    "state": "LIVE",
+    "slug": "core-series-01-shop-live",
+    "title": "JARVIS Shop ist live: CORE SERIES 01 und der nächste Plattform-Meilenstein",
+    "summary": "Der erste JARVIS-Shop ist offiziell geöffnet: zwölf Produkte, sechs Farbwelten, 78 verifizierte Grössenvarianten, ein eigener bilingualer Warenkorb und ein gebrandeter CHF-Checkout – ergänzt um die wichtigsten Plattformfortschritte seit dem letzten öffentlichen Update.",
+    "sections": [
+      [
+        "CORE SERIES 01 ist offiziell erhältlich",
+        "Der erste JARVIS-Drop umfasst sechs Heavyweight T-Shirts und sechs Premium Hoodies in den Farbwelten VOID BLACK, OBSIDIAN VIOLET, CORE CREAM, DEEP NAVY, SIGNAL WHITE und MIDNIGHT PURPLE. T-Shirts sind je nach Produkt von S bis 4XL, Hoodies von S bis 3XL verfügbar. Alle Artikel werden erst nach der Bestellung produziert; JARVIS hält kein vorfinanziertes Lager."
+      ],
+      [
+        "JARVIS-Erlebnis bis zum sicheren Zahlungsabschluss",
+        "Auswahl, Produktdetails, Grössenwahl und Warenkorb bleiben vollständig auf jarvisserver.org. Erst der eindeutig gekennzeichnete Zahlungsabschluss wechselt zum gebrandeten Checkout auf checkout.jarvisserver.org. Eine Bestellung wird vorher nicht ausgelöst. Ein Kundenkonto ist nicht verpflichtend."
+      ],
+      [
+        "Echte CHF-Preise statt erfundener Umrechnung",
+        "Der Shop synchronisiert die aktuell verfügbaren Varianten und CHF-Preise direkt mit dem offiziellen Storefront-System. Stimmen Produkt, Variante, Währung oder Datenquelle nicht exakt, werden Preis, Warenkorb und Checkout gesperrt statt mit veralteten oder geschätzten Werten weiterzulaufen."
+      ],
+      [
+        "International, aber mit klarer Grenze",
+        "Bestellt werden kann in den Ländern und Regionen, die der Live-Checkout für das jeweilige Produkt tatsächlich unterstützt. Versand, Steuern und mögliche Importkosten werden im Checkout vor der verbindlichen Bestellung angezeigt beziehungsweise erklärt. Produktion und Versand erfolgen als Print-on-Demand über Fourthwall."
+      ],
+      [
+        "Website und öffentliches Projektprofil neu geordnet",
+        "Seit dem letzten Plattformupdate wurden Leistungen, Shop, Projekte, Partner, JARVIS OS und AEGIS auf der Website klarer getrennt. Besucher ohne technisches Vorwissen finden schneller zu Websites, Local IT, digitalen Lösungen und Kontakt; technische Nachweise bleiben als eigener Projektbereich erhalten."
+      ],
+      [
+        "AEGIS Threat Observatory V2 und reale Sensorbelege",
+        "Das Threat Observatory wurde um einen intensiveren interaktiven Globus, datensparsam angereicherte Honeypot-Signale, Threat-DNA-Metadaten und eine klarere Trennung zwischen echten Direktereignissen und öffentlicher Infrastruktur erweitert. Discord erhält weiterhin nur bereinigte Signale; Roh-IP-Adressen, Passwörter, Befehle und private Infrastruktur bleiben ausgeschlossen."
+      ],
+      [
+        "JARVIS Community Control und NEXUS",
+        "Der Discord-Server besitzt inzwischen ein verbindliches Onboarding, zweisprachige Orientierung, einen privaten Service Desk und unseren eigenen dauerhaft betriebenen Community-Bot. JARVIS NEXUS unterstützt die Community in einer getrennten, datensparsamen Instanz ohne Zugriff auf interne JARVIS- oder AEGIS-Geheimnisse und ohne automatische Vergabe privilegierter Rollen."
+      ],
+      [
+        "Transparente Launchgrenze",
+        "Der digitale Shop-, Preis-, Checkout-, Support- und Auszahlungsweg ist technisch live geprüft. Noch offen ist die physische Musterabnahme von Druck, Stofffarbe, Position, Passform und Waschverhalten. Deshalb behauptet JARVIS keine bereits physisch verifizierte Produktqualität. Der Musterauftrag folgt, sobald Budget vorhanden ist; die erste echte Bestellung wird zusätzlich kontrolliert überwacht."
+      ],
+      [
+        "Der nächste Schritt",
+        "Jetzt zählt reale Nutzung: Shop besuchen, Designs vergleichen, den Discord-Meilenstein mitverfolgen und JARVIS weiterempfehlen. Parallel werden der erste Musterauftrag, die erste echte Bestellung, weitere Kundenprojekte und die kontrollierte Weiterentwicklung von AEGIS, JARVIS AI und JARVIS OS dokumentiert."
+      ]
+    ],
+    "seo_title": "JARVIS Shop live: CORE SERIES 01",
+    "seo_description": "CORE SERIES 01 ist live: 12 Produkte, 6 Farbwelten, 78 Varianten, bilingualer JARVIS-Warenkorb und gebrandeter CHF-Checkout."
+  },
+  {
     "date": "2026-08-03",
     "modified": "2026-08-03",
     "code": "PLATFORM-2026-08-03",

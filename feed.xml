@@ -3,8 +3,16 @@
   <title>JARVIS SYSTEM // Entwicklungsupdates</title>
   <id>https://jarvisserver.org/</id><link href="https://jarvisserver.org/feed.xml" rel="self"/>
   <link href="https://jarvisserver.org/updates/"/>
-  <updated>2026-08-03T00:00:00+02:00</updated>
+  <updated>2026-08-12T00:00:00+02:00</updated>
   <subtitle>Verifizierte Entwicklungsschritte von JARVIS OS.</subtitle>
+  <entry>
+    <title>JARVIS Shop ist live: CORE SERIES 01 und der nächste Plattform-Meilenstein</title>
+    <id>https://jarvisserver.org/updates/core-series-01-shop-live/</id><link href="https://jarvisserver.org/updates/core-series-01-shop-live/"/>
+    <updated>2026-08-12T00:00:00+02:00</updated>
+    <published>2026-08-12T00:00:00+02:00</published>
+    <author><name>Oliver-frank Pristaff</name></author>
+    <summary>Der erste JARVIS-Shop ist offiziell geöffnet: zwölf Produkte, sechs Farbwelten, 78 verifizierte Grössenvarianten, ein eigener bilingualer Warenkorb und ein gebrandeter CHF-Checkout – ergänzt um die wichtigsten Plattformfortschritte seit dem letzten öffentlichen Update.</summary>
+  </entry>
   <entry>
     <title>JARVIS wächst zur realen Plattform: AI Core, AEGIS 0.4.4 und offene Webprojekte</title>
     <id>https://jarvisserver.org/updates/jarvis-platform-solutions-ai-core-august-2026/</id><link href="https://jarvisserver.org/updates/jarvis-platform-solutions-ai-core-august-2026/"/>
