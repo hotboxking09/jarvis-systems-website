@@ -1,16 +1,67 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 36,
-      "connection": 40,
-      "disconnect": 40,
+      "client_observed": 37,
+      "connection": 41,
+      "disconnect": 41,
       "login_attempt": 35
     },
-    "direct_events_24h": 151,
-    "direct_events_7d": 614
+    "direct_events_24h": 154,
+    "direct_events_7d": 617
   },
   "events": [
     {
+      "asn": 396982,
+      "count": 1,
+      "country": "US",
+      "host_compromised": false,
+      "label": "CLIENT OBSERVED",
+      "outcome": "client_fingerprint_observed",
+      "position": [
+        -122,
+        38
+      ],
+      "severity": "info",
+      "source_alias": "SRC-595C49F7C1DA",
+      "time_window": "2026-08-14T04:25:00.000Z",
+      "type": "client_observed",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 396982,
+      "count": 1,
+      "country": "US",
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": [
+        -122,
+        38
+      ],
+      "severity": "low",
+      "source_alias": "SRC-595C49F7C1DA",
+      "time_window": "2026-08-14T04:25:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 396982,
+      "count": 1,
+      "country": "US",
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": [
+        -122,
+        38
+      ],
+      "severity": "info",
+      "source_alias": "SRC-595C49F7C1DA",
+      "time_window": "2026-08-14T04:25:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
+    {
       "asn": 10439,
       "count": 1,
       "country": "US",
@@ -637,63 +688,12 @@
       "source_alias": "SRC-E1DA7E9E3890",
       "time_window": "2026-08-13T14:45:00.000Z",
       "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 14061,
-      "count": 1,
-      "country": "US",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        -74,
-        40
-      ],
-      "severity": "info",
-      "source_alias": "SRC-E1DA7E9E3890",
-      "time_window": "2026-08-13T14:45:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 14061,
-      "count": 1,
-      "country": "US",
-      "host_compromised": false,
-      "label": "LOGIN ATTEMPT",
-      "outcome": "emulated_authentication",
-      "position": [
-        -74,
-        40
-      ],
-      "severity": "medium",
-      "source_alias": "SRC-E1DA7E9E3890",
-      "time_window": "2026-08-13T14:45:00.000Z",
-      "type": "login_attempt",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 14061,
-      "count": 1,
-      "country": "SG",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        104,
-        2
-      ],
-      "severity": "info",
-      "source_alias": "SRC-D2CD67C328D4",
-      "time_window": "2026-08-13T14:40:00.000Z",
-      "type": "client_observed",
       "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-08-13T19:11:34.000Z",
+  "last_direct_event": "2026-08-14T04:26:53.000Z",
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -702,7 +702,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "579352d64e9e40a5b7ca213f6c2ad7f98a81c6cc2f3b48c1bd8694ff5d3505c2",
-  "updated_at": "2026-08-14T02:44:47Z",
+  "source_fingerprint": "2bbc5e697113ecc9418d27c17005c135663cf62c3ce32f6d974416f4af538831",
+  "updated_at": "2026-08-14T05:01:02Z",
   "window": "rolling-24h-events-with-7d-total"
 }
