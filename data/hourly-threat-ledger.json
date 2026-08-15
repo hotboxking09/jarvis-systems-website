@@ -1,13 +1,13 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 4,
-      "connection": 4,
-      "disconnect": 4,
+      "client_observed": 3,
+      "connection": 3,
+      "disconnect": 3,
       "login_attempt": 2
     },
-    "direct_events_24h": 14,
-    "direct_events_7d": 525
+    "direct_events_24h": 11,
+    "direct_events_7d": 514
   },
   "events": [
     {
@@ -196,57 +196,6 @@
       "time_window": "2026-08-14T10:45:00.000Z",
       "type": "disconnect",
       "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 396982,
-      "count": 1,
-      "country": "US",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        -122,
-        38
-      ],
-      "severity": "info",
-      "source_alias": "SRC-595C49F7C1DA",
-      "time_window": "2026-08-14T04:25:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 396982,
-      "count": 1,
-      "country": "US",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        -122,
-        38
-      ],
-      "severity": "low",
-      "source_alias": "SRC-595C49F7C1DA",
-      "time_window": "2026-08-14T04:25:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 396982,
-      "count": 1,
-      "country": "US",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        -122,
-        38
-      ],
-      "severity": "info",
-      "source_alias": "SRC-595C49F7C1DA",
-      "time_window": "2026-08-14T04:25:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
@@ -260,7 +209,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "d86dcd6d2eed6a7b20f0dc8765968f61d183924acef3455208d0485ba4b72199",
-  "updated_at": "2026-08-15T03:03:51Z",
+  "source_fingerprint": "0b8027a99ccff8af7b843c2f4350530a28f8db69aa7695066432580dc45daa41",
+  "updated_at": "2026-08-15T04:46:01Z",
   "window": "rolling-24h-events-with-7d-total"
 }
