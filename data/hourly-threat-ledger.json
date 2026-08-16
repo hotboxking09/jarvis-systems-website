@@ -1,15 +1,83 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 10,
-      "connection": 11,
-      "disconnect": 11,
-      "login_attempt": 1
+      "client_observed": 11,
+      "connection": 12,
+      "disconnect": 12,
+      "login_attempt": 2
     },
-    "direct_events_24h": 33,
-    "direct_events_7d": 538
+    "direct_events_24h": 37,
+    "direct_events_7d": 542
   },
   "events": [
+    {
+      "asn": 45102,
+      "count": 1,
+      "country": "HK",
+      "host_compromised": false,
+      "label": "CLIENT OBSERVED",
+      "outcome": "client_fingerprint_observed",
+      "position": [
+        114,
+        22
+      ],
+      "severity": "info",
+      "source_alias": "SRC-BB924D887AD8",
+      "time_window": "2026-08-16T23:30:00.000Z",
+      "type": "client_observed",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 45102,
+      "count": 1,
+      "country": "HK",
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": [
+        114,
+        22
+      ],
+      "severity": "low",
+      "source_alias": "SRC-BB924D887AD8",
+      "time_window": "2026-08-16T23:30:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 45102,
+      "count": 1,
+      "country": "HK",
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": [
+        114,
+        22
+      ],
+      "severity": "info",
+      "source_alias": "SRC-BB924D887AD8",
+      "time_window": "2026-08-16T23:30:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 45102,
+      "count": 1,
+      "country": "HK",
+      "host_compromised": false,
+      "label": "LOGIN ATTEMPT",
+      "outcome": "emulated_authentication",
+      "position": [
+        114,
+        22
+      ],
+      "severity": "medium",
+      "source_alias": "SRC-BB924D887AD8",
+      "time_window": "2026-08-16T23:30:00.000Z",
+      "type": "login_attempt",
+      "verified_direct_sensor_event": true
+    },
     {
       "asn": 14593,
       "count": 1,
@@ -574,7 +642,7 @@
   ],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-08-16T21:42:18.000Z",
+  "last_direct_event": "2026-08-16T23:31:20.000Z",
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -583,7 +651,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "c2698b0a98324afcd1cd6ec472e5e2e1149316c666731f4243c7745ae675a4dc",
-  "updated_at": "2026-08-16T22:35:24Z",
+  "source_fingerprint": "cf974ba155484c852b51069d26f6b1fd35ec532f02d54749a0263df826da624c",
+  "updated_at": "2026-08-16T23:33:05Z",
   "window": "rolling-24h-events-with-7d-total"
 }
