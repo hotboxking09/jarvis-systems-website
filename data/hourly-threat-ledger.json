@@ -1,15 +1,66 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 9,
-      "connection": 10,
-      "disconnect": 10,
+      "client_observed": 10,
+      "connection": 11,
+      "disconnect": 11,
       "login_attempt": 1
     },
-    "direct_events_24h": 30,
-    "direct_events_7d": 535
+    "direct_events_24h": 33,
+    "direct_events_7d": 538
   },
   "events": [
+    {
+      "asn": 14593,
+      "count": 1,
+      "country": "MX",
+      "host_compromised": false,
+      "label": "CLIENT OBSERVED",
+      "outcome": "client_fingerprint_observed",
+      "position": [
+        -100,
+        20
+      ],
+      "severity": "info",
+      "source_alias": "SRC-24042A4B6FCB",
+      "time_window": "2026-08-16T21:40:00.000Z",
+      "type": "client_observed",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 14593,
+      "count": 1,
+      "country": "MX",
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": [
+        -100,
+        20
+      ],
+      "severity": "low",
+      "source_alias": "SRC-24042A4B6FCB",
+      "time_window": "2026-08-16T21:40:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 14593,
+      "count": 1,
+      "country": "MX",
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": [
+        -100,
+        20
+      ],
+      "severity": "info",
+      "source_alias": "SRC-24042A4B6FCB",
+      "time_window": "2026-08-16T21:40:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
     {
       "asn": 396982,
       "count": 1,
@@ -523,7 +574,7 @@
   ],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-08-16T02:11:13.000Z",
+  "last_direct_event": "2026-08-16T21:42:18.000Z",
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -532,7 +583,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "114cf8fe957f57b99cf77fe81fd2ae1b6b6fd548f7c47cb5808775c48aec3780",
-  "updated_at": "2026-08-16T17:32:39Z",
+  "source_fingerprint": "c2698b0a98324afcd1cd6ec472e5e2e1149316c666731f4243c7745ae675a4dc",
+  "updated_at": "2026-08-16T22:35:24Z",
   "window": "rolling-24h-events-with-7d-total"
 }
