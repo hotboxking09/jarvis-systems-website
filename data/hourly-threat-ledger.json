@@ -1,48 +1,10 @@
 {
   "counts": {
-    "by_type_24h": {
-      "connection": 1,
-      "disconnect": 1
-    },
-    "direct_events_24h": 2,
+    "by_type_24h": {},
+    "direct_events_24h": 0,
     "direct_events_7d": 469
   },
-  "events": [
-    {
-      "asn": 15723,
-      "count": 1,
-      "country": "AZ",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        50,
-        40
-      ],
-      "severity": "low",
-      "source_alias": "SRC-19B1ABE794B7",
-      "time_window": "2026-08-17T12:30:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 15723,
-      "count": 1,
-      "country": "AZ",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        50,
-        40
-      ],
-      "severity": "info",
-      "source_alias": "SRC-19B1ABE794B7",
-      "time_window": "2026-08-17T12:30:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    }
-  ],
+  "events": [],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
   "last_direct_event": "2026-08-17T12:32:09.000Z",
@@ -54,7 +16,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "4d81a7102d05b54dbf2849f815017e14f2a5c66bb3cb45007c5de846acd5cbfe",
-  "updated_at": "2026-08-18T04:50:39Z",
+  "source_fingerprint": "73837e513324780dd796182554b8c64c1387e4a0daaef9f5deba469f069704a3",
+  "updated_at": "2026-08-18T13:06:37Z",
   "window": "rolling-24h-events-with-7d-total"
 }
