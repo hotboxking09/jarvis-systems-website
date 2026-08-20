@@ -1,15 +1,219 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 5,
-      "connection": 8,
-      "disconnect": 8,
-      "login_attempt": 1
+      "client_observed": 8,
+      "connection": 11,
+      "disconnect": 11,
+      "login_attempt": 4
     },
-    "direct_events_24h": 22,
-    "direct_events_7d": 360
+    "direct_events_24h": 34,
+    "direct_events_7d": 372
   },
   "events": [
+    {
+      "asn": 4134,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "CLIENT OBSERVED",
+      "outcome": "client_fingerprint_observed",
+      "position": [
+        118,
+        32
+      ],
+      "severity": "info",
+      "source_alias": "SRC-2272F8EE96CD",
+      "time_window": "2026-08-20T20:55:00.000Z",
+      "type": "client_observed",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 4134,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": [
+        118,
+        32
+      ],
+      "severity": "low",
+      "source_alias": "SRC-2272F8EE96CD",
+      "time_window": "2026-08-20T20:55:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 4134,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": [
+        118,
+        32
+      ],
+      "severity": "info",
+      "source_alias": "SRC-2272F8EE96CD",
+      "time_window": "2026-08-20T20:55:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 4134,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "LOGIN ATTEMPT",
+      "outcome": "emulated_authentication",
+      "position": [
+        118,
+        32
+      ],
+      "severity": "medium",
+      "source_alias": "SRC-2272F8EE96CD",
+      "time_window": "2026-08-20T20:55:00.000Z",
+      "type": "login_attempt",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 4134,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "CLIENT OBSERVED",
+      "outcome": "client_fingerprint_observed",
+      "position": [
+        118,
+        32
+      ],
+      "severity": "info",
+      "source_alias": "SRC-2272F8EE96CD",
+      "time_window": "2026-08-20T20:55:00.000Z",
+      "type": "client_observed",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 4134,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": [
+        118,
+        32
+      ],
+      "severity": "low",
+      "source_alias": "SRC-2272F8EE96CD",
+      "time_window": "2026-08-20T20:55:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 4134,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": [
+        118,
+        32
+      ],
+      "severity": "info",
+      "source_alias": "SRC-2272F8EE96CD",
+      "time_window": "2026-08-20T20:55:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 4134,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "LOGIN ATTEMPT",
+      "outcome": "emulated_authentication",
+      "position": [
+        118,
+        32
+      ],
+      "severity": "medium",
+      "source_alias": "SRC-2272F8EE96CD",
+      "time_window": "2026-08-20T20:55:00.000Z",
+      "type": "login_attempt",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 4134,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "CLIENT OBSERVED",
+      "outcome": "client_fingerprint_observed",
+      "position": [
+        118,
+        32
+      ],
+      "severity": "info",
+      "source_alias": "SRC-2272F8EE96CD",
+      "time_window": "2026-08-20T20:55:00.000Z",
+      "type": "client_observed",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 4134,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": [
+        118,
+        32
+      ],
+      "severity": "low",
+      "source_alias": "SRC-2272F8EE96CD",
+      "time_window": "2026-08-20T20:55:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 4134,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": [
+        118,
+        32
+      ],
+      "severity": "info",
+      "source_alias": "SRC-2272F8EE96CD",
+      "time_window": "2026-08-20T20:55:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 4134,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "LOGIN ATTEMPT",
+      "outcome": "emulated_authentication",
+      "position": [
+        118,
+        32
+      ],
+      "severity": "medium",
+      "source_alias": "SRC-2272F8EE96CD",
+      "time_window": "2026-08-20T20:55:00.000Z",
+      "type": "login_attempt",
+      "verified_direct_sensor_event": true
+    },
     {
       "asn": 14061,
       "count": 1,
@@ -387,7 +591,7 @@
   ],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-08-20T15:02:50.000Z",
+  "last_direct_event": "2026-08-20T20:55:27.000Z",
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -396,7 +600,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "ad5782a2f0b12148251e5292f10cf082318600ad6f1a22ae213183e3d4f4e6d3",
-  "updated_at": "2026-08-20T19:44:44Z",
+  "source_fingerprint": "baf5eea8fadeb07421eedbe8ee38bec34286fa938b07900c0ca4e6068a88c0f0",
+  "updated_at": "2026-08-20T21:42:40Z",
   "window": "rolling-24h-events-with-7d-total"
 }
