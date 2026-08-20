@@ -2,15 +2,49 @@
   "counts": {
     "by_type_24h": {
       "client_observed": 17,
-      "connection": 18,
-      "disconnect": 18,
+      "connection": 19,
+      "disconnect": 19,
       "login_attempt": 13
     },
-    "direct_events_24h": 66,
-    "direct_events_7d": 498
+    "direct_events_24h": 68,
+    "direct_events_7d": 500
   },
   "events": [
     {
+      "asn": 37963,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": [
+        116,
+        40
+      ],
+      "severity": "low",
+      "source_alias": "SRC-A2B95930A64B",
+      "time_window": "2026-08-20T12:00:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 37963,
+      "count": 1,
+      "country": "CN",
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": [
+        116,
+        40
+      ],
+      "severity": "info",
+      "source_alias": "SRC-A2B95930A64B",
+      "time_window": "2026-08-20T12:00:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
+    {
       "asn": 396982,
       "count": 1,
       "country": "BE",
@@ -654,46 +688,12 @@
       "source_alias": "SRC-DD2B6511F9AA",
       "time_window": "2026-08-19T16:55:00.000Z",
       "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 7552,
-      "count": 1,
-      "country": "VN",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        106,
-        22
-      ],
-      "severity": "info",
-      "source_alias": "SRC-DD2B6511F9AA",
-      "time_window": "2026-08-19T16:55:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 7552,
-      "count": 1,
-      "country": "VN",
-      "host_compromised": false,
-      "label": "LOGIN ATTEMPT",
-      "outcome": "emulated_authentication",
-      "position": [
-        106,
-        22
-      ],
-      "severity": "medium",
-      "source_alias": "SRC-DD2B6511F9AA",
-      "time_window": "2026-08-19T16:55:00.000Z",
-      "type": "login_attempt",
       "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-08-20T03:09:10.000Z",
+  "last_direct_event": "2026-08-20T12:04:20.000Z",
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -702,7 +702,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "5b1bb1aeb8923bc64747bca2e5843a8766fdd79162a08d241cdeebd143ab9043",
-  "updated_at": "2026-08-20T11:41:33Z",
+  "source_fingerprint": "1380c4a748cbeea884b6161d78c1c254170d220bcc7b51c2c1bb91916ec18a54",
+  "updated_at": "2026-08-20T13:10:02Z",
   "window": "rolling-24h-events-with-7d-total"
 }
