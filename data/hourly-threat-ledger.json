@@ -1,12 +1,12 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 5,
-      "connection": 5,
-      "disconnect": 5,
-      "login_attempt": 5
+      "client_observed": 2,
+      "connection": 2,
+      "disconnect": 2,
+      "login_attempt": 2
     },
-    "direct_events_24h": 20,
+    "direct_events_24h": 8,
     "direct_events_7d": 374
   },
   "events": [
@@ -145,210 +145,6 @@
       "time_window": "2026-08-21T10:40:00.000Z",
       "type": "login_attempt",
       "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 4134,
-      "count": 1,
-      "country": "CN",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        118,
-        32
-      ],
-      "severity": "info",
-      "source_alias": "SRC-2272F8EE96CD",
-      "time_window": "2026-08-20T20:55:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 4134,
-      "count": 1,
-      "country": "CN",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        118,
-        32
-      ],
-      "severity": "low",
-      "source_alias": "SRC-2272F8EE96CD",
-      "time_window": "2026-08-20T20:55:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 4134,
-      "count": 1,
-      "country": "CN",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        118,
-        32
-      ],
-      "severity": "info",
-      "source_alias": "SRC-2272F8EE96CD",
-      "time_window": "2026-08-20T20:55:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 4134,
-      "count": 1,
-      "country": "CN",
-      "host_compromised": false,
-      "label": "LOGIN ATTEMPT",
-      "outcome": "emulated_authentication",
-      "position": [
-        118,
-        32
-      ],
-      "severity": "medium",
-      "source_alias": "SRC-2272F8EE96CD",
-      "time_window": "2026-08-20T20:55:00.000Z",
-      "type": "login_attempt",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 4134,
-      "count": 1,
-      "country": "CN",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        118,
-        32
-      ],
-      "severity": "info",
-      "source_alias": "SRC-2272F8EE96CD",
-      "time_window": "2026-08-20T20:55:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 4134,
-      "count": 1,
-      "country": "CN",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        118,
-        32
-      ],
-      "severity": "low",
-      "source_alias": "SRC-2272F8EE96CD",
-      "time_window": "2026-08-20T20:55:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 4134,
-      "count": 1,
-      "country": "CN",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        118,
-        32
-      ],
-      "severity": "info",
-      "source_alias": "SRC-2272F8EE96CD",
-      "time_window": "2026-08-20T20:55:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 4134,
-      "count": 1,
-      "country": "CN",
-      "host_compromised": false,
-      "label": "LOGIN ATTEMPT",
-      "outcome": "emulated_authentication",
-      "position": [
-        118,
-        32
-      ],
-      "severity": "medium",
-      "source_alias": "SRC-2272F8EE96CD",
-      "time_window": "2026-08-20T20:55:00.000Z",
-      "type": "login_attempt",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 4134,
-      "count": 1,
-      "country": "CN",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        118,
-        32
-      ],
-      "severity": "info",
-      "source_alias": "SRC-2272F8EE96CD",
-      "time_window": "2026-08-20T20:55:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 4134,
-      "count": 1,
-      "country": "CN",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        118,
-        32
-      ],
-      "severity": "low",
-      "source_alias": "SRC-2272F8EE96CD",
-      "time_window": "2026-08-20T20:55:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 4134,
-      "count": 1,
-      "country": "CN",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        118,
-        32
-      ],
-      "severity": "info",
-      "source_alias": "SRC-2272F8EE96CD",
-      "time_window": "2026-08-20T20:55:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 4134,
-      "count": 1,
-      "country": "CN",
-      "host_compromised": false,
-      "label": "LOGIN ATTEMPT",
-      "outcome": "emulated_authentication",
-      "position": [
-        118,
-        32
-      ],
-      "severity": "medium",
-      "source_alias": "SRC-2272F8EE96CD",
-      "time_window": "2026-08-20T20:55:00.000Z",
-      "type": "login_attempt",
-      "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
@@ -362,7 +158,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "befa48f8a5a0b0e1aa632e07a9d66a95c43c54bf650ad6f4f06eb0f80d35e486",
-  "updated_at": "2026-08-21T15:47:13Z",
+  "source_fingerprint": "d0a08282044af16a45d905b917f98d46b4b3531745e46955fc310a59f523ade3",
+  "updated_at": "2026-08-21T21:37:01Z",
   "window": "rolling-24h-events-with-7d-total"
 }
