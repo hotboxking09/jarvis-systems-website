@@ -1,12 +1,12 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 4,
-      "connection": 5,
-      "disconnect": 5,
-      "login_attempt": 3
+      "client_observed": 2,
+      "connection": 3,
+      "disconnect": 3,
+      "login_attempt": 1
     },
-    "direct_events_24h": 17,
+    "direct_events_24h": 9,
     "direct_events_7d": 375
   },
   "events": [
@@ -162,142 +162,6 @@
       "time_window": "2026-08-22T02:40:00.000Z",
       "type": "login_attempt",
       "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 198967,
-      "count": 1,
-      "country": "DE",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        8,
-        52
-      ],
-      "severity": "info",
-      "source_alias": "SRC-E3B530C79678",
-      "time_window": "2026-08-21T10:40:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 198967,
-      "count": 1,
-      "country": "DE",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        8,
-        52
-      ],
-      "severity": "low",
-      "source_alias": "SRC-E3B530C79678",
-      "time_window": "2026-08-21T10:40:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 198967,
-      "count": 1,
-      "country": "DE",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        8,
-        52
-      ],
-      "severity": "info",
-      "source_alias": "SRC-E3B530C79678",
-      "time_window": "2026-08-21T10:40:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 198967,
-      "count": 1,
-      "country": "DE",
-      "host_compromised": false,
-      "label": "LOGIN ATTEMPT",
-      "outcome": "emulated_authentication",
-      "position": [
-        8,
-        52
-      ],
-      "severity": "medium",
-      "source_alias": "SRC-E3B530C79678",
-      "time_window": "2026-08-21T10:40:00.000Z",
-      "type": "login_attempt",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 198967,
-      "count": 1,
-      "country": "DE",
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": [
-        8,
-        52
-      ],
-      "severity": "info",
-      "source_alias": "SRC-E3B530C79678",
-      "time_window": "2026-08-21T10:40:00.000Z",
-      "type": "client_observed",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 198967,
-      "count": 1,
-      "country": "DE",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        8,
-        52
-      ],
-      "severity": "low",
-      "source_alias": "SRC-E3B530C79678",
-      "time_window": "2026-08-21T10:40:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 198967,
-      "count": 1,
-      "country": "DE",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        8,
-        52
-      ],
-      "severity": "info",
-      "source_alias": "SRC-E3B530C79678",
-      "time_window": "2026-08-21T10:40:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 198967,
-      "count": 1,
-      "country": "DE",
-      "host_compromised": false,
-      "label": "LOGIN ATTEMPT",
-      "outcome": "emulated_authentication",
-      "position": [
-        8,
-        52
-      ],
-      "severity": "medium",
-      "source_alias": "SRC-E3B530C79678",
-      "time_window": "2026-08-21T10:40:00.000Z",
-      "type": "login_attempt",
-      "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
@@ -311,7 +175,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "1554746ca1d7b5e83a784e349283da22609489a91b7e3e9a68f705ffba21bc26",
-  "updated_at": "2026-08-22T03:06:33Z",
+  "source_fingerprint": "a2530fb598b752fa96028a2a2197f0b45f8c8a7b252c529cb412f6eab61c531a",
+  "updated_at": "2026-08-22T11:33:57Z",
   "window": "rolling-24h-events-with-7d-total"
 }
