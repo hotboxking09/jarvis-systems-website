@@ -2,12 +2,12 @@
   "counts": {
     "by_type_24h": {
       "client_observed": 6,
-      "connection": 9,
-      "disconnect": 9,
+      "connection": 8,
+      "disconnect": 8,
       "login_attempt": 1
     },
-    "direct_events_24h": 25,
-    "direct_events_7d": 366
+    "direct_events_24h": 23,
+    "direct_events_7d": 360
   },
   "events": [
     {
@@ -400,40 +400,6 @@
       "time_window": "2026-08-25T02:30:00.000Z",
       "type": "login_attempt",
       "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 6849,
-      "count": 1,
-      "country": "UA",
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": [
-        24,
-        50
-      ],
-      "severity": "low",
-      "source_alias": "SRC-3AB10CC4AC79",
-      "time_window": "2026-08-24T16:20:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": 6849,
-      "count": 1,
-      "country": "UA",
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": [
-        24,
-        50
-      ],
-      "severity": "info",
-      "source_alias": "SRC-3AB10CC4AC79",
-      "time_window": "2026-08-24T16:20:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
@@ -447,7 +413,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "515a991bb398b957822022252ead20629b0af145a0e9342b06914ea29fc1f703",
-  "updated_at": "2026-08-25T15:04:05Z",
+  "source_fingerprint": "eb8cd5c7c04521d151ec8d510179d5ea8432ee857a527552d09f4954484e4c5e",
+  "updated_at": "2026-08-25T16:54:03Z",
   "window": "rolling-24h-events-with-7d-total"
 }
