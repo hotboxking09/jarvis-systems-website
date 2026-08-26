@@ -5,7 +5,7 @@
       "disconnect": 1
     },
     "direct_events_24h": 2,
-    "direct_events_7d": 196
+    "direct_events_7d": 155
   },
   "events": [
     {
@@ -54,7 +54,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "7e4c8eddebe470620ca4f3d3f0def4522c7b57edd48ed101d5dd74db3be9b263",
-  "updated_at": "2026-08-26T15:52:06Z",
+  "source_fingerprint": "cc184aa84e2d3538200ff24ae9f71a9d05e045c0c12c5a1ee8bc8bb8185d2ba0",
+  "updated_at": "2026-08-26T16:58:37Z",
   "window": "rolling-24h-events-with-7d-total"
 }
