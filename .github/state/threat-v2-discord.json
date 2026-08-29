@@ -1,8 +1,8 @@
 {
-  "delivered_day": "2026-08-28",
-  "notice_id": "threat-v2-daily-2026-08-28",
+  "delivered_day": "2026-08-29",
+  "notice_id": "threat-v2-daily-2026-08-29",
   "privacy": "no-webhook-no-message-id-no-raw-identifiers",
-  "receipt_sha256": "4884466caa9b7ee6f46dbd942c990f8011f76c7dccb59c0b7c4cc6ccee045673",
+  "receipt_sha256": "4677cb185849bbadbc6021af012c699dbf532325c8f488d4a3c5f4e0ca393b6f",
   "schema": 1,
-  "source_sequence": 1130
+  "source_sequence": 1233
 }
