@@ -2,14 +2,48 @@
   "counts": {
     "by_type_24h": {
       "client_observed": 8,
-      "connection": 9,
-      "disconnect": 9,
+      "connection": 10,
+      "disconnect": 10,
       "login_attempt": 4
     },
-    "direct_events_24h": 30,
-    "direct_events_7d": 219
+    "direct_events_24h": 32,
+    "direct_events_7d": 221
   },
   "events": [
+    {
+      "asn": 6128,
+      "count": 1,
+      "country": "US",
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": [
+        -74,
+        42
+      ],
+      "severity": "low",
+      "source_alias": "SRC-573032552572",
+      "time_window": "2026-09-01T05:20:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 6128,
+      "count": 1,
+      "country": "US",
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": [
+        -74,
+        42
+      ],
+      "severity": "info",
+      "source_alias": "SRC-573032552572",
+      "time_window": "2026-09-01T05:20:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
     {
       "asn": null,
       "count": 1,
@@ -523,7 +557,7 @@
   ],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-09-01T04:20:42.000Z",
+  "last_direct_event": "2026-09-01T05:22:54.000Z",
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -532,7 +566,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "9310a724f5ea6e5ae0e52aa798015c29b633fc6a1a6f297d010689dd5878333f",
-  "updated_at": "2026-09-01T05:05:57Z",
+  "source_fingerprint": "88b06d3b6230694b50c2819f9e54258842df3a04a1876c41b016adbd2a997c2f",
+  "updated_at": "2026-09-01T10:04:54Z",
   "window": "rolling-24h-events-with-7d-total"
 }
