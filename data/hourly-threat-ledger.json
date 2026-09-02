@@ -1,12 +1,12 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 15,
-      "connection": 19,
-      "disconnect": 19,
-      "login_attempt": 15
+      "client_observed": 9,
+      "connection": 11,
+      "disconnect": 11,
+      "login_attempt": 9
     },
-    "direct_events_24h": 68,
+    "direct_events_24h": 40,
     "direct_events_7d": 276
   },
   "events": [
@@ -702,7 +702,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "433f09325abfa1a422a41f38b4f1059d8976daf68b31ec4d34b3a75898a1df42",
-  "updated_at": "2026-09-02T09:36:29Z",
+  "source_fingerprint": "d13217a6d4cf8fa0e91db0169c2f8ca54c98650f0718c1de4bf10188950c274d",
+  "updated_at": "2026-09-02T14:28:34Z",
   "window": "rolling-24h-events-with-7d-total"
 }
