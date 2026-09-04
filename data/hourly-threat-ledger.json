@@ -2,14 +2,48 @@
   "counts": {
     "by_type_24h": {
       "client_observed": 3,
-      "connection": 3,
-      "disconnect": 3,
+      "connection": 4,
+      "disconnect": 4,
       "login_attempt": 2
     },
-    "direct_events_24h": 11,
-    "direct_events_7d": 289
+    "direct_events_24h": 13,
+    "direct_events_7d": 279
   },
   "events": [
+    {
+      "asn": 33871,
+      "count": 1,
+      "country": "RU",
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": [
+        88,
+        70
+      ],
+      "severity": "low",
+      "source_alias": "SRC-756C90BE1D14",
+      "time_window": "2026-09-04T03:25:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": 33871,
+      "count": 1,
+      "country": "RU",
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": [
+        88,
+        70
+      ],
+      "severity": "info",
+      "source_alias": "SRC-756C90BE1D14",
+      "time_window": "2026-09-04T03:25:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
     {
       "asn": 8151,
       "count": 1,
@@ -200,7 +234,7 @@
   ],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-09-03T22:30:24.000Z",
+  "last_direct_event": "2026-09-04T03:27:36.000Z",
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -209,7 +243,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "9df2fc1321c11e3b1d91691553af3a092b5bad91cee07ec6bc366953cc4f0aad",
-  "updated_at": "2026-09-04T00:05:13Z",
+  "source_fingerprint": "d58cd5bc3f0049f0e730ca0015ad5db8bbb8b6c363baf3d06924315ec8e6a327",
+  "updated_at": "2026-09-04T04:30:36Z",
   "window": "rolling-24h-events-with-7d-total"
 }
