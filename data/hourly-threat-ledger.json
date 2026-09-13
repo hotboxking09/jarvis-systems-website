@@ -2,12 +2,12 @@
   "counts": {
     "by_type_24h": {},
     "direct_events_24h": 0,
-    "direct_events_7d": 5
+    "direct_events_7d": 0
   },
   "events": [],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-09-06T02:56:56.000Z",
+  "last_direct_event": null,
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -16,7 +16,7 @@
     "state_at_update": "offline"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "e150f9a570706a897efe9ce26fe23fcc4a74a8ef4cc81a8da209843aae4fa2d5",
-  "updated_at": "2026-09-12T22:16:21Z",
+  "source_fingerprint": "a5d3bd6d19dad75b016e01439325e75c1b8d0cf005319a4260cc2da2290628dc",
+  "updated_at": "2026-09-13T04:45:27Z",
   "window": "rolling-24h-events-with-7d-total"
 }
