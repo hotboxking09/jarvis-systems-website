@@ -54,6 +54,11 @@ FORBIDDEN_KEYS = {
     "token",
 }
 HASH = re.compile(r"^[a-f0-9]{64}$")
+ONLINE_TRUTH = (
+    "Authenticated direct sensor aggregates with privacy projection; "
+    "no raw IPs, credentials, commands, URLs, payloads or attribution claims."
+)
+OFFLINE_TRUTH = "Secure receiver available; public sensor events remain locked or offline."
 
 
 def fail(message: str) -> None:
@@ -88,10 +93,8 @@ def validate_snapshot(value: Any) -> dict[str, Any]:
         fail("schema is not V2")
     if _contains_forbidden_key(value):
         fail("forbidden raw-data field detected")
-    if value.get("truth") != (
-        "Authenticated direct sensor aggregates with privacy projection; "
-        "no raw IPs, credentials, commands, URLs, payloads or attribution claims."
-    ):
+    truth = value.get("truth")
+    if truth not in {ONLINE_TRUTH, OFFLINE_TRUTH}:
         fail("truth contract rejected")
     sensor = value.get("sensor")
     counts = value.get("counts")
@@ -126,8 +129,17 @@ def validate_snapshot(value: Any) -> dict[str, Any]:
         or not HASH.fullmatch(chain_hash)
     ):
         fail("invalid integrity receipt")
-    if proof.get("receiver_fresh") is not True:
-        fail("receiver is not fresh")
+    receiver_fresh = proof.get("receiver_fresh")
+    if not isinstance(receiver_fresh, bool):
+        fail("receiver freshness is invalid")
+    # An offline receiver is public status, not a reason to manufacture a
+    # Discord security digest. Only the exact offline contract may report it.
+    if receiver_fresh is False and not (
+        truth == OFFLINE_TRUTH and sensor.get("state") == "offline"
+    ):
+        fail("receiver freshness contract rejected")
+    if receiver_fresh is True and truth != ONLINE_TRUTH:
+        fail("fresh receiver truth contract rejected")
     if (
         proof.get("event_contract") != "jarvis.sensor.event/v2"
         or proof.get("privacy_projection") != "jarvis.public.sensor/v2"
@@ -295,6 +307,14 @@ def build_payload(snapshot: dict[str, Any], day: str) -> dict[str, Any]:
 
 def prepare(state_path: Path, payload_path: Path, metadata_path: Path) -> bool:
     snapshot = fetch_snapshot()
+    # Offline/unfresh is a safe no-op. The public API remains truthful, while
+    # this workflow neither sends a stale alert nor creates a false failure.
+    if (
+        snapshot["sensor"]["state"] == "offline"
+        or snapshot["proof"]["receiver_fresh"] is not True
+    ):
+        print("Threat V2 receiver is offline or not fresh; no Discord digest due.")
+        return False
     day = _utc_day(snapshot)
     previous: dict[str, Any] = {}
     if state_path.exists():

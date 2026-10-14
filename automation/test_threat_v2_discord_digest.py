@@ -84,6 +84,28 @@ class ThreatDigestTests(unittest.TestCase):
                 state.write_text(json.dumps({"delivered_day": "2026-08-06"}))
                 self.assertFalse(digest.prepare(state, payload, metadata))
 
+    def test_offline_contract_is_valid_but_never_delivered(self):
+        value = snapshot()
+        value["truth"] = digest.OFFLINE_TRUTH
+        value["sensor"] = {"state": "offline"}
+        value["proof"]["receiver_fresh"] = False
+        self.assertEqual(digest.validate_snapshot(value)["sensor"]["state"], "offline")
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            with mock.patch.object(digest, "fetch_snapshot", return_value=value):
+                self.assertFalse(
+                    digest.prepare(
+                        root / "state.json", root / "payload.json", root / "metadata.json"
+                    )
+                )
+            self.assertFalse((root / "payload.json").exists())
+
+    def test_unfresh_online_snapshot_is_rejected(self):
+        value = snapshot()
+        value["proof"]["receiver_fresh"] = False
+        with self.assertRaises(SystemExit):
+            digest.validate_snapshot(value)
+
     def test_record_keeps_only_hashed_receipt(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
