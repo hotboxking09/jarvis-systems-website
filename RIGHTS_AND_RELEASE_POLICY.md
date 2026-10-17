@@ -27,7 +27,7 @@ Status: private website preview, 22 July 2026
 4. Keep source assets, ISO files, internal reports, credentials and private
    biographies out of the public deployment package.
 5. Run name/trademark clearance before broad or commercial launch. Consider a
-   professional Swiss trademark search and registration if appropriate.
+   professional German and EU trademark search and registration if appropriate.
 6. Preserve release archives and SHA-256 manifests as evidence of publication
    state. These measures support provenance but do not replace legal advice.
 

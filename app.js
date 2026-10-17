@@ -20,6 +20,151 @@ if (navToggle && navLinks) {
   document.addEventListener("keydown", (event) => event.key === "Escape" && closeNav());
 }
 
+// Local-only public navigation search.  Queries stay in the browser and the
+// index is generated exclusively from public pages, FAQs and update copy.
+const searchOpeners = Array.from(document.querySelectorAll("[data-site-search-open]"));
+if (searchOpeners.length && "HTMLDialogElement" in window) {
+  const searchCopy = pageLanguage === "en" ? {
+    title: "SEARCH JARVIS SYSTEM", hint: "Search public pages, FAQs and updates.",
+    placeholder: "Search by topic, service or update", empty: "No matching public content found.",
+    loading: "Loading public index…", failed: "Public search index is temporarily unavailable.",
+    result: "result", results: "results", close: "Close search"
+  } : {
+    title: "JARVIS SYSTEM DURCHSUCHEN", hint: "Durchsuche öffentliche Seiten, FAQs und Updates.",
+    placeholder: "Suche nach Thema, Leistung oder Update", empty: "Keine passenden öffentlichen Inhalte gefunden.",
+    loading: "Öffentlicher Index wird geladen…", failed: "Der öffentliche Suchindex ist vorübergehend nicht verfügbar.",
+    result: "Treffer", results: "Treffer", close: "Suche schließen"
+  };
+  const dialog = document.createElement("dialog");
+  dialog.id = "site-search-dialog";
+  dialog.className = "site-search-dialog";
+  dialog.setAttribute("aria-label", pageLanguage === "en" ? "Public site search" : "Öffentliche Seitensuche");
+  const shell = document.createElement("div");
+  shell.className = "site-search-shell";
+  const top = document.createElement("div");
+  top.className = "site-search-top";
+  const title = document.createElement("div");
+  const kicker = document.createElement("span");
+  kicker.textContent = "LOCAL INDEX // NO TRACKING";
+  const heading = document.createElement("h2");
+  heading.textContent = searchCopy.title;
+  const hint = document.createElement("p");
+  hint.textContent = searchCopy.hint;
+  title.append(kicker, heading, hint);
+  const close = document.createElement("button");
+  close.type = "button";
+  close.className = "site-search-close";
+  close.setAttribute("aria-label", searchCopy.close);
+  close.textContent = "×";
+  top.append(title, close);
+  const form = document.createElement("form");
+  form.className = "site-search-form";
+  form.setAttribute("role", "search");
+  const input = document.createElement("input");
+  input.type = "search";
+  input.autocomplete = "off";
+  input.spellcheck = false;
+  input.placeholder = searchCopy.placeholder;
+  input.setAttribute("aria-label", searchCopy.placeholder);
+  const key = document.createElement("kbd");
+  key.textContent = "ESC";
+  form.append(input, key);
+  const status = document.createElement("p");
+  status.className = "site-search-status";
+  status.setAttribute("aria-live", "polite");
+  const results = document.createElement("div");
+  results.className = "site-search-results";
+  results.setAttribute("role", "list");
+  shell.append(top, form, status, results);
+  dialog.append(shell);
+  document.body.append(dialog);
+
+  let indexPromise = null;
+  let index = [];
+  let lastOpener = null;
+  const normalized = (value) => String(value || "").toLocaleLowerCase();
+  const clearResults = () => results.replaceChildren();
+  const addResult = (record) => {
+    const link = document.createElement("a");
+    link.className = "site-search-result";
+    link.href = localizedRoute(record.url);
+    link.setAttribute("role", "listitem");
+    const kind = document.createElement("span");
+    kind.textContent = record.kind || "SEITE";
+    const resultTitle = document.createElement("b");
+    resultTitle.textContent = record.title;
+    const summary = document.createElement("p");
+    summary.textContent = record.summary;
+    link.append(kind, resultTitle, summary);
+    link.addEventListener("click", () => dialog.close());
+    results.append(link);
+  };
+  const render = () => {
+    const terms = normalized(input.value).trim().split(/\s+/).filter(Boolean);
+    clearResults();
+    if (!terms.length) {
+      status.textContent = searchCopy.hint;
+      return;
+    }
+    const matches = index.map((record) => {
+      const titleText = normalized(record.title);
+      const summaryText = normalized(record.summary);
+      const bodyText = normalized(record.text);
+      if (!terms.every((term) => `${titleText} ${summaryText} ${bodyText}`.includes(term))) return null;
+      const score = terms.reduce((total, term) => total
+        + (titleText.includes(term) ? 12 : 0)
+        + (summaryText.includes(term) ? 5 : 0)
+        + (bodyText.includes(term) ? 1 : 0), 0);
+      return { record, score };
+    }).filter(Boolean).sort((left, right) => right.score - left.score || left.record.title.localeCompare(right.record.title)).slice(0, 10);
+    if (!matches.length) {
+      status.textContent = searchCopy.empty;
+      return;
+    }
+    status.textContent = `${matches.length} ${matches.length === 1 ? searchCopy.result : searchCopy.results}`;
+    matches.forEach(({ record }) => addResult(record));
+  };
+  const loadIndex = async () => {
+    if (!indexPromise) {
+      indexPromise = fetch("/data/search-index.json", { cache: "no-store" })
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.json();
+        })
+        .then((payload) => {
+          if (!Array.isArray(payload)) throw new Error("invalid search index");
+          index = payload.filter((record) => record && typeof record.title === "string" && typeof record.url === "string");
+          return index;
+        });
+    }
+    return indexPromise;
+  };
+  const openSearch = async (opener) => {
+    lastOpener = opener;
+    if (!dialog.open) dialog.showModal();
+    input.focus();
+    status.textContent = searchCopy.loading;
+    try {
+      await loadIndex();
+      render();
+    } catch {
+      status.textContent = searchCopy.failed;
+    }
+  };
+  searchOpeners.forEach((opener) => opener.addEventListener("click", () => openSearch(opener)));
+  input.addEventListener("input", render);
+  form.addEventListener("submit", (event) => { event.preventDefault(); render(); });
+  close.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
+  dialog.addEventListener("close", () => lastOpener?.focus());
+  document.addEventListener("keydown", (event) => {
+    if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
+      event.preventDefault();
+      openSearch(searchOpeners[0]);
+    }
+  });
+}
+
 document.querySelectorAll("a[aria-disabled='true']").forEach((link) => {
   link.addEventListener("click", (event) => event.preventDefault());
 });
@@ -189,6 +334,7 @@ if (livePanel) {
     sessionSeconds: 0,
     todaySeconds: 0,
     freshnessSeconds: null,
+    lastSeen: null,
     receivedAt: performance.now()
   };
 
@@ -208,9 +354,11 @@ if (livePanel) {
   };
 
   const updateReadouts = () => {
-    const elapsed = signal.online ? Math.floor((performance.now() - signal.receivedAt) / 1000) : 0;
-    values.session.textContent = duration(signal.sessionSeconds + elapsed);
-    values.today.textContent = duration(signal.todaySeconds + elapsed);
+    // Session and daily duration remain exactly as last reported by the public
+    // relay.  Only the explicitly labelled age is allowed to advance locally.
+    const elapsed = signal.freshnessSeconds === null ? 0 : Math.floor((performance.now() - signal.receivedAt) / 1000);
+    values.session.textContent = duration(signal.sessionSeconds);
+    values.today.textContent = duration(signal.todaySeconds);
     values.pulse.textContent = `${String(Math.round(signal.pulse)).padStart(3, "0")}%`;
     values.process.textContent = String(signal.processes).padStart(2, "0");
     values.freshness.textContent = signal.freshnessSeconds === null
@@ -229,6 +377,10 @@ if (livePanel) {
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       const online = data.schema === 1 && data.codex_active === true && data.state === "engineering";
+      const parsedLastSeen = Date.parse(String(data.last_seen || ""));
+      const lastSeen = Number.isFinite(parsedLastSeen)
+        ? new Date(parsedLastSeen).toISOString().replace("T", " ").replace("Z", " UTC")
+        : null;
       signal = {
         online,
         pulse: online ? Math.min(100, Math.max(0, Number(data.pulse) || 0)) : 0,
@@ -237,12 +389,15 @@ if (livePanel) {
         sessionSeconds: online ? Math.max(0, Number(data.session_seconds) || 0) : 0,
         todaySeconds: Math.max(0, Number(data.active_seconds_today) || 0),
         freshnessSeconds: data.freshness_seconds === null ? null : Math.max(0, Number(data.freshness_seconds) || 0),
+        lastSeen,
         receivedAt: performance.now()
       };
       setVisualState(
         online ? "online" : "offline",
         online ? "ENGINEERING LIVE" : "SYSTEM STANDBY",
-        online ? "AUTHENTICATED CODEX CARRIER DETECTED" : "NO ACTIVE CODEX CARRIER"
+        online
+          ? `VERIFIED PUBLIC RELAY // LAST SEEN ${lastSeen || "UNAVAILABLE"}`
+          : "NO ACTIVE CODEX CARRIER"
       );
       updateReadouts();
     } catch {
@@ -250,6 +405,10 @@ if (livePanel) {
       signal.pulse = 0;
       signal.compute = 0;
       signal.processes = 0;
+      signal.sessionSeconds = 0;
+      signal.todaySeconds = 0;
+      signal.freshnessSeconds = null;
+      signal.lastSeen = null;
       setVisualState("error", "SIGNAL LOST", "PUBLIC RELAY TEMPORARILY UNREACHABLE");
       updateReadouts();
     }
@@ -324,10 +483,10 @@ if (shopDialog) {
     remove: "REMOVE",
     itemCount: (count) => `${count} ${count === 1 ? "ITEM" : "ITEMS"}`,
     alt: (type, colour, view) => `${type} in ${colour} // ${view}`,
-    priceLoading: "CHF PRICE LOADING",
-    priceUnavailable: "CHF PRICE TEMPORARILY UNAVAILABLE",
-    syncReady: "CHF LIVE PRICES // FOURTHWALL VERIFIED",
-    syncFailed: "CHF PRICE CONNECTION UNAVAILABLE // PURCHASE LOCKED",
+    priceLoading: "EUR PRICE LOADING",
+    priceUnavailable: "EUR PRICE TEMPORARILY UNAVAILABLE",
+    syncReady: "EUR LIVE PRICES // FOURTHWALL VERIFIED",
+    syncFailed: "EUR PRICE CONNECTION UNAVAILABLE // PURCHASE LOCKED",
     from: "FROM"
   } : {
     front: "VORDERSEITE",
@@ -338,10 +497,10 @@ if (shopDialog) {
     remove: "ENTFERNEN",
     itemCount: (count) => `${count} ${count === 1 ? "ARTIKEL" : "ARTIKEL"}`,
     alt: (type, colour, view) => `${type} in ${colour} // ${view}`,
-    priceLoading: "CHF-PREIS WIRD GELADEN",
-    priceUnavailable: "CHF-PREIS VORÜBERGEHEND NICHT VERFÜGBAR",
-    syncReady: "CHF LIVE-PREISE // FOURTHWALL VERIFIZIERT",
-    syncFailed: "CHF-PREISVERBINDUNG NICHT VERFÜGBAR // KAUF GESPERRT",
+    priceLoading: "EUR-PREIS WIRD GELADEN",
+    priceUnavailable: "EUR-PREIS VORÜBERGEHEND NICHT VERFÜGBAR",
+    syncReady: "EUR LIVE-PREISE // FOURTHWALL VERIFIZIERT",
+    syncFailed: "EUR-PREISVERBINDUNG NICHT VERFÜGBAR // KAUF GESPERRT",
     from: "AB"
   };
 
@@ -435,7 +594,7 @@ if (shopDialog) {
   const priceStatus = document.querySelector("[data-shop-price-status]");
   let priceSyncReady = false;
 
-  const formatPrice = (value) => `CHF ${Number(value).toFixed(2)}`;
+  const formatPrice = (value) => `EUR ${Number(value).toFixed(2)}`;
 
   const saveCart = () => {
     try {
@@ -533,8 +692,8 @@ if (shopDialog) {
     product.variants.forEach((variantId, size) => {
       const variant = byId.get(variantId);
       const value = Number(variant?.unitPrice?.value);
-      if (variant?.unitPrice?.currency !== "CHF" || !Number.isFinite(value) || value <= 0) {
-        throw new Error(`invalid CHF price for ${product.id} ${size}`);
+      if (variant?.unitPrice?.currency !== "EUR" || !Number.isFinite(value) || value <= 0) {
+        throw new Error(`invalid EUR price for ${product.id} ${size}`);
       }
       prices.set(size, value);
     });
@@ -563,7 +722,7 @@ if (shopDialog) {
     await Promise.all(Array.from(products.values(), async (product) => {
       const url = new URL(`${api.href.replace(/\/$/, "")}/products/${encodeURIComponent(product.providerSlug)}`);
       url.searchParams.set("storefront_token", storefrontToken);
-      url.searchParams.set("currency", "CHF");
+      url.searchParams.set("currency", "EUR");
       const response = await fetch(url, {
         cache: "no-store",
         credentials: "omit",
@@ -735,10 +894,10 @@ if (shopDialog) {
     if (items.length !== cart.length) return;
     const checkoutUrl = new URL("/cart/checkout", checkoutBase);
     checkoutUrl.searchParams.set("products", items.join(","));
-    // CHF is the explicit catalogue and checkout reference currency for the
+    // EUR is the explicit catalogue and checkout reference currency for the
     // international launch candidate. Do not rely on geolocation or an old
     // cookie to silently change the advertised amount.
-    checkoutUrl.searchParams.set("currency", "CHF");
+    checkoutUrl.searchParams.set("currency", "EUR");
     window.location.assign(checkoutUrl.href);
   });
 

@@ -61,7 +61,7 @@
   const activePointers = new Map();
   let globeRenderer = null;
 
-  const number = new Intl.NumberFormat("de-CH");
+  const number = new Intl.NumberFormat("de-DE");
   const clock = document.getElementById("threat-clock");
   const syncState = document.getElementById("threat-sync-state");
   const statusLabel = document.getElementById("map-status-label");
@@ -319,7 +319,7 @@
 
   const updateClock = () => {
     if (clock) {
-      clock.textContent = `${new Date().toLocaleTimeString("de-CH", {
+      clock.textContent = `${new Date().toLocaleTimeString("de-DE", {
         timeZone: "UTC", hour12: false
       })} UTC`;
     }
@@ -1000,7 +1000,7 @@
         ? `${escapeHtml(event.country)}${Number.isInteger(event.asn) ? ` // AS${event.asn}` : ""}`
         : "REGION/ASN NOT SAFELY ENRICHED";
       const outcome = String(event.outcome || "observed").replaceAll("_", " ").toUpperCase();
-      const pageLanguage = document.documentElement.lang.startsWith("en") ? "en-GB" : "de-CH";
+      const pageLanguage = document.documentElement.lang.startsWith("en") ? "en-GB" : "de-DE";
       const time = Number.isFinite(Date.parse(event.time_window))
         ? new Date(event.time_window).toLocaleString(pageLanguage, {
           timeZone: "UTC",
