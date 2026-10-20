@@ -82,11 +82,11 @@
     "nav": "Solutions",
     "kicker": "JARVIS SOLUTIONS // DIGITAL + LOCAL DELIVERY",
     "title": "Websites, IT-Hilfe & digitale Lösungen",
-    "description": "Websites, Redesign, Pflege, Website-Check und persönliche IT-Hilfe aus Deutschland – verständlich erklärt und klar vereinbart.",
+    "description": "Websites, Local IT, Smart Home, Automatisierung und sicherheitsorientierte Systeme aus Deutschland – verständlich erklärt und klar vereinbart.",
     "schema_type": "WebPage",
     "date": "2026-08-02",
-    "modified": "2026-08-05",
-    "intro": "Du brauchst eine neue Website, möchtest einen bestehenden Auftritt verbessern oder hast ein konkretes IT-Problem? Beschreibe dein Ziel in normalen Worten. Wir prüfen ehrlich, ob wir helfen können, und klären Umfang, Kosten und nächsten Schritt schriftlich.",
+    "modified": "2026-10-20",
+    "intro": "Du brauchst eine Website, möchtest Technik im Alltag vereinfachen oder planst Local IT, Smart Home, Automatisierung oder ein sicherheitsorientiertes System? Beschreibe dein Ziel in normalen Worten. Wir prüfen ehrlich, ob wir helfen können, und klären Umfang, Zuständigkeit, Kosten und nächsten Schritt schriftlich.",
     "facts": [
       [
         "WEBSITES",
@@ -97,8 +97,12 @@
         "SÜDSCHWARZWALD · REGIONAL"
       ],
       [
-        "WEBSITE-CHECK",
-        "INDIVIDUELLE PRÜFUNG"
+        "SMART HOME",
+        "EINRICHTUNG · AUTOMATION"
+      ],
+      [
+        "SICHERHEIT",
+        "KLARER SCOPE"
       ],
       [
         "ERSTANFRAGE",
@@ -111,15 +115,17 @@
         "eyebrow": "01 // WAS WIR LÖSEN",
         "heading": "Konkrete Hilfe statt technischer Umwege",
         "paragraphs": [
-          "JARVIS SYSTEM entwickelt neue Websites und Landingpages, verbessert bestehende Auftritte und übernimmt klar vereinbarte Inhalts- und Technikpflege. Für regionale IT-Probleme gibt es persönliche Hilfe bei PCs, Datenübertragung, WLAN, Druckern und digitalen Arbeitsplätzen.",
-          "Website-Checks, Linux-, Server- und Automatisierungsaufgaben werden individuell geprüft. Umfang, Preis, Termin und Grenzen werden erst vor Beginn schriftlich bestätigt."
+          "JARVIS SYSTEM entwickelt neue Websites und Landingpages, verbessert bestehende Auftritte und übernimmt klar vereinbarte Inhalts- und Technikpflege. Für regionale IT-Probleme gibt es persönliche Hilfe bei PCs, Datenübertragung, WLAN, Druckern, Netzwerken und digitalen Arbeitsplätzen.",
+          "Wir planen und richten außerdem passende Smart-Home-, Automatisierungs- und sicherheitsorientierte Systeme mit kundeneigener Hardware ein. Website-Checks, Linux-, Server- und Automatisierungsaufgaben werden individuell geprüft. Umfang, Preis, Termin, Zuständigkeit und Grenzen werden erst vor Beginn schriftlich bestätigt."
         ],
         "bullets": [
           "Neue Websites und fokussierte Landingpages für Unternehmen, Selbstständige, Vereine und Projekte",
           "Redesign, mobile Optimierung und verständlichere Struktur bestehender Websites",
           "Website Klarheits- & Technik-Check nach individueller Prüfung mit schriftlichem Bericht",
           "Laufende Pflege für Texte, Bilder, Ferienhinweise, Stellen und kontrollierte technische Änderungen",
-          "Regionale Hilfe bei PCs, neuen Geräten, Daten, WLAN, Druckern und digitalen Arbeitsplätzen",
+          "Regionale Hilfe bei PCs, neuen Geräten, Daten, WLAN, Druckern, Netzwerken und digitalen Arbeitsplätzen",
+          "Smart Home, Sensoren, vernetzte Geräte und klar abgegrenzte Automatisierungen",
+          "Sicherheitsorientierte Kamera-, Tür-/Zutritts-, Sensor- und Benachrichtigungssysteme nach individueller Prüfung",
           "Kleine Linux-, Server-, Dashboard- und Automatisierungsaufgaben nach individueller Prüfung"
         ],
         "callout": "ERST VERSTEHEN // Umfang, Preis, Lieferzeit und Grenzen werden vor dem Start verständlich und schriftlich bestätigt."
@@ -159,7 +165,7 @@
             "title": "Local IT & Vor Ort",
             "state": "REGIONAL",
             "target": "local-it",
-            "text": "PCs, neue Geräte, Daten, Backup, WLAN, Drucker und digitale Arbeitsplätze."
+            "text": "PCs, Netzwerke, Daten, Backup, WLAN, Smart Home, Automatisierung und digitale Arbeitsplätze."
           },
           {
             "code": "SYS-05",
@@ -183,15 +189,16 @@
         "eyebrow": "03 // FÜR WEN",
         "heading": "Branchenoffen – nicht nur für Handwerksbetriebe",
         "paragraphs": [
-          "Olivers eigener Hintergrund im Handwerk hilft besonders beim Verständnis lokaler Betriebe. Das Angebot richtet sich aber ausdrücklich an jede passende Branche sowie an Selbstständige, Vereine, Gründer und Privatpersonen.",
-          "Willkommen sind neue Projekte ohne Website, bestehende Unternehmen mit einem veralteten Auftritt und Personen, die bei einer klar eingrenzbaren technischen Aufgabe Unterstützung benötigen."
+          "Olivers eigener Hintergrund im Handwerk hilft besonders beim Verständnis lokaler Betriebe. Das Angebot richtet sich aber ausdrücklich an passende Privatpersonen, Familien, Selbstständige, Vereine, Gründer und Unternehmen.",
+          "Willkommen sind neue Projekte ohne Website, bestehende Unternehmen mit einem veralteten Auftritt und Personen oder Teams, die bei einer klar eingrenzbaren technischen Aufgabe Unterstützung benötigen. Größere Unternehmensprojekte werden nur nach separater Kapazitäts-, Berechtigungs- und Datenschutzprüfung angenommen."
         ],
         "bullets": [
           "Neue Website für ein bisher nicht digital vertretenes Angebot",
           "Redesign einer bestehenden, langsamen oder unübersichtlichen Seite",
           "Landingpage für eine konkrete Leistung, Aktion oder Veranstaltung",
           "Technische Pflege, Sicherheitsupdates und nachvollziehbare Änderungen",
-          "Migration und Hostingaufnahme nach separater technischer Prüfung"
+          "Migration und Hostingaufnahme nach separater technischer Prüfung",
+          "Smart-Home-, Automatisierungs- und sicherheitsorientierte Systeme nach geprüfter Geräte-, Zuständigkeits- und Datenschutzlage"
         ]
       },
       {
@@ -214,14 +221,16 @@
       {
         "id": "local-it",
         "eyebrow": "05 // LOCAL IT & VOR ORT",
-        "heading": "Technische Hilfe, wenn der Alltag blockiert",
+        "heading": "Local IT, Smart Home & Systeme vor Ort",
         "paragraphs": [
-          "JARVIS plant regionale Unterstützung für Privatpersonen, Selbstständige, Vereine und kleine Betriebe im Südschwarzwald – zunächst mit Fokus auf Rickenbach und den Landkreis Waldshut.",
-          "Vor dem Termin werden Problem, Ziel, Preis und Anfahrt schriftlich bestätigt. Passwörter und Sicherheitscodes gibst du selbst ein. Bei Änderungen an Datenträgern oder Betriebssystemen wird die Backup- und Wiederherstellungslage vorher gemeinsam geprüft."
+          "JARVIS plant regionale Unterstützung für Privatpersonen, Familien, Selbstständige, Vereine und Unternehmen im Südschwarzwald – zunächst mit Fokus auf Rickenbach und den Landkreis Waldshut. Dazu gehören PCs, Netzwerke, Geräte, Smart Home, Automatisierung und klar abgegrenzte sicherheitsorientierte Systeme.",
+          "Vor dem Termin werden Problem, Ziel, Preis, Zuständigkeit und Anfahrt schriftlich bestätigt. Passwörter und Sicherheitscodes gibst du selbst ein. Bei Änderungen an Datenträgern, Betriebssystemen oder vernetzten Systemen wird die Backup-, Wiederherstellungs- und Zugriffsituation vorher gemeinsam geprüft."
         ],
         "bullets": [
           "Regionaler Fokus: Südschwarzwald · Rickenbach · Landkreis Waldshut",
+          "PCs, WLAN, Router, Netzwerke, Sensoren, Smart Home und Automatisierung nach schriftlicher Prüfung",
           "Teile, Lizenzen, Datenträger und andere Drittkosten nur nach Bestätigung und Vorauszahlung",
+          "Keine Elektroinstallation, keine Leitstelle, keine garantierte 24/7-Überwachung und keine Schutzumgehung",
           "Keine Zusatzarbeit, Verlängerung oder zweite Problemstellung ohne schriftliche Freigabe",
           "Jeder Auftrag endet mit Funktionstest, offenen Grenzen und nachvollziehbarer Übergabe"
         ],
@@ -294,11 +303,11 @@
           },
           {
             "code": "LOCAL-SC",
-            "title": "Kleinbetrieb Standort-Check",
+            "title": "System- & Standort-Check",
             "state": "NACH ANFRAGE",
             "price": "INDIVIDUELL",
             "unit": "90 MINUTEN + KURZBERICHT",
-            "text": "Erst Klarheit schaffen: eine strukturierte Bestandsaufnahme mit priorisierten nächsten Schritten.",
+            "text": "Erst Klarheit schaffen: eine strukturierte Bestandsaufnahme für Geräte, Netzwerk, Smart Home oder sicherheitsorientierte Systeme mit priorisierten nächsten Schritten.",
             "details": [
               "Ein Standort und 90 Minuten Aufnahme",
               "Kurzbericht: sofort, bald, später",
@@ -400,6 +409,14 @@
           [
             "Brauche ich beim Erstkontakt Zugangsdaten?",
             "Nein. Bitte keine Passwörter, Recoverycodes oder vertraulichen Daten senden. Zugriffe werden erst später für einen bestätigten Auftrag kontrolliert geklärt."
+          ],
+          [
+            "Kann JARVIS Smart Home oder Sicherheitsgeräte einrichten?",
+            "Ja, nach Prüfung von Hardware, Eigentum, Zuständigkeit, Datenschutz und dem konkreten Ziel. Elektroarbeiten, Leitstellen, garantierte Überwachung und unklare Systeme gehören nicht zum Grundangebot."
+          ],
+          [
+            "Bietet JARVIS bereits eigene lokale KI-Modelle an?",
+            "Noch nicht als Kundenleistung. Eigene lokale KI und KI-gestützte Smart-Home-Abläufe sind ein späterer Entwicklungsschritt und werden erst nach Hardware-, Sicherheits- und Datenschutzprüfung angeboten."
           ]
         ]
       },
@@ -420,8 +437,8 @@
         "eyebrow": "11 // AKTUELLER STATUS",
         "heading": "Persönlich geführt und transparent im Aufbau",
         "paragraphs": [
-          "JARVIS SYSTEM wird derzeit von Oliver-frank Pristaff als persönlich geführtes Angebot im Aufbau entwickelt. Anfragen für Websites, Redesigns, Landingpages, Pflege, Website-Checks und regionale Local-IT-Hilfe sind offen.",
-          "Kapazität und Umfang bleiben bewusst begrenzt. Managed Hosting, sensible Integrationen und komplexe Systemarbeit werden erst nach ihrer jeweiligen technischen Prüfung zugesagt."
+          "JARVIS SYSTEM wird derzeit von Oliver-frank Pristaff als persönlich geführtes Angebot im Aufbau entwickelt. Anfragen für Websites, Redesigns, Landingpages, Pflege, Website-Checks, regionale Local IT, Smart Home, Automatisierung und klar abgegrenzte sicherheitsorientierte Systeme sind willkommen.",
+          "Kapazität und Umfang bleiben bewusst begrenzt. Managed Hosting, Elektroinstallation, sensible Integrationen, garantierte Überwachung, komplexe Systemarbeit und spätere lokale KI-Modelle werden erst nach ihrer jeweiligen technischen, rechtlichen und organisatorischen Prüfung zugesagt."
         ],
         "quote": "Wir verkaufen keine leeren Versprechen. Wir bauen einen verständlichen, überprüfbaren digitalen Auftritt, der zum echten Projekt passt."
       }
@@ -431,8 +448,8 @@
       "entwicklung",
       "faq"
     ],
-    "seo_title": "Websites & IT-Hilfe Deutschland | JARVIS SYSTEM",
-    "seo_description": "Websites, Redesign, Pflege und IT-Hilfe aus Deutschland. Regionaler Start im Südschwarzwald mit Fokus auf Rickenbach und Landkreis Waldshut."
+    "seo_title": "Websites, Local IT & Smart Home Deutschland | JARVIS SYSTEM",
+    "seo_description": "Websites, Local IT, Smart Home, Automatisierung und sicherheitsorientierte Systeme aus Deutschland. Regionaler Start im Südschwarzwald."
   },
   {
     "slug": "technik",
