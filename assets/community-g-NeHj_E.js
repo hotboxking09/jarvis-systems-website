@@ -1,0 +1,77 @@
+var e=`<a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas><div class="noise-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>JARVIS</strong><small>SYSTEM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENÜ</button>
+      <div class="nav-links" id="nav-links"><a href="/">Start</a><a href="/solutions/">Leistungen</a><a href="/shop/">Shop</a><a href="/#projekte">Projekte</a><a href="/#partner">Partner</a><a href="/jarvis-os/">JARVIS OS</a><a href="/threat-observatory/">AEGIS</a><a href="/updates/">Updates</a></div>
+    </nav>
+    <button class="header-search" type="button" data-site-search-open aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="Seite durchsuchen"><span aria-hidden="true">⌕</span><span>SUCHEN</span><kbd>⌘K</kbd></button>
+    <nav class="language-switch" aria-label="Sprache"><a href="/community/" hreflang="de-DE" lang="de" aria-current="true">DE</a><a href="/en/community/" hreflang="en" lang="en">EN</a></nav><a class="header-contact" href="/solutions/#request"><span></span> ANFRAGE STARTEN</a>
+  </header>
+  <main id="main">
+    <section class="content-hero section-shell">
+      <div class="content-hero-copy reveal">
+        <nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">JARVIS SYSTEM</a><span>/</span><span aria-current="page">Community</span></nav>
+        <p class="eyebrow">COMMUNITY UPLINK // VERIFIED ENTRY</p>
+        <h1>JARVIS SYSTEM Community</h1>
+        <p class="content-intro">Die offizielle JARVIS-SYSTEM-Community verbindet Betriebssystementwicklung, technische Tests, Hardwarewissen, offenen Austausch und Gaming in einer klar gegliederten Discord-Kommandozentrale. Der Einstieg ist automatisiert, nachvollziehbar und benötigt keine manuelle Freischaltung.</p><a class="button button-ghost" href="https://discord.gg/DWBwuUhXmv">DISCORD BEITRETEN →</a>
+      </div>
+      <div class="content-core reveal" aria-hidden="true">
+        <div class="core-rings"><i></i><i></i><i></i></div>
+        <picture><source srcset="/assets/jarvis-core-head.webp" type="image/webp"><img src="/assets/jarvis-core-head.png" width="1024" height="1024" alt="" decoding="async"></picture>
+        <span>COMMUNITY // ONLINE</span>
+      </div>
+      <div class="content-facts"><div><span>STATUS</span><b>ONLINE</b></div><div><span>ENTRY</span><b>PRE-JOIN</b></div><div><span>ROLES</span><b>AUTOMATISCH</b></div><div><span>PUBLIC ISO</span><b>LOCKED</b></div></div>
+    </section>
+    <div class="content-layout section-shell">
+      <aside class="content-index"><b>PAGE MATRIX</b><a href="#entry">01 // SYSTEM ENTRY</a><a href="#automation">02 // ACCESS MATRIX</a><a href="#structure">03 // CHANNEL MATRIX</a><a href="#security">04 // SECURITY &amp; CLEANUP</a><a href="#documentation">05 // DOCUMENT EVERYTHING</a><a href="/updates/">LIVE DEVELOPMENT LOG</a></aside>
+      <article class="content-copy"><section id="entry" class="content-block reveal">
+      <p class="eyebrow">01 // SYSTEM ENTRY</p>
+      <h2>Ein klarer Einstieg statt Kanalchaos</h2>
+      <p>Neue Mitglieder beginnen im Bereich 00 // SYSTEM ENTRY. Dort stehen Ankündigungen, Willkommen, Regeln und Sicherheit, Rollenauswahl, Vorstellungen sowie FAQ und offizielle Links. Der Server Guide führt anschliessend durch die wichtigsten ersten Schritte.</p><p>Vor dem vollständigen Beitritt stellt Discord verpflichtend die Frage, wofür sich das neue Mitglied interessiert. Mehrere Antworten sind möglich. Dadurch bleibt der Einstieg kurz, während jede Person unmittelbar die passenden Bereiche und Rollen erhält.</p><div class="content-callout">OFFICIAL ENTRY // Der permanente Einladungslink führt ausschliesslich zum Server JARVIS SYSTEM // COMMUNITY.</div>
+    </section><section id="automation" class="content-block reveal">
+      <p class="eyebrow">02 // ACCESS MATRIX</p>
+      <h2>Automatische Interessenrollen und passende Kanäle</h2>
+      <p>Die Auswahl JARVIS OS &amp; Entwicklung vergibt COMMUNITY MEMBER und OS &amp; DEVELOPMENT. Testen &amp; Hardware vergibt COMMUNITY MEMBER und HARDWARE &amp; TESTING. Community &amp; Gaming vergibt COMMUNITY MEMBER und COMMUNITY &amp; GAMING. Die Interessenrollen besitzen keine administrativen Sonderrechte.</p><p>Mit jeder Antwort werden gleichzeitig die dazugehörigen Kanäle eingeblendet. Mitglieder können ihre Auswahl später in Discord unter Kanäle &amp; Rollen ändern. Die Umsetzung nutzt Discords natives Community-Onboarding; ein selbst gehosteter Bot, ein externer Server oder ein kostenpflichtiger Automationsdienst ist dafür nicht notwendig.</p><ul class="content-checklist"><li>JARVIS OS &amp; Entwicklung</li><li>Testen &amp; Hardware</li><li>Community &amp; Gaming</li><li>Mehrfachauswahl möglich</li><li>Keine manuelle Freischaltung erforderlich</li></ul>
+    </section><section id="structure" class="content-block reveal">
+      <p class="eyebrow">03 // CHANNEL MATRIX</p>
+      <h2>Projekt, Entwicklung, Tests und Community sauber getrennt</h2>
+      <p>Der öffentliche Projektbereich enthält JARVIS-News, Systemdiskussion, Ideen, Entwicklungslog, Roadmap, Website-Updates sowie Screenshots und Demos. Developer Core trennt Code und Architektur, Linux und Kernel, UEFI und Boot, Treiber und Hardware sowie Shell und Runtime in eigene Fachkanäle.</p><p>Das Test Lab bündelt Bugreports, Testerinformationen und VM- oder Bare-Metal-Prüfungen. Community- und Gaming-Bereiche ermöglichen lockeren Austausch, Technikgespräche, Mitspielersuche und Medien. Voice Uplink bietet getrennte Räume für Community, Entwicklung und Gaming. Interne Moderation und nicht veröffentlichte Entwicklung bleiben im privaten Staff Core.</p>
+    </section><section id="security" class="content-block reveal">
+      <p class="eyebrow">04 // SECURITY &amp; CLEANUP</p>
+      <h2>Alte Strukturen entfernt, Rechte bewusst begrenzt</h2>
+      <p>Beim Neubau wurden sämtliche alten Kanäle und Kategorien gelöscht. Alte editierbare Rollen wurden ebenfalls entfernt; nur die bestehende Rolle Member blieb für vorhandene Mitglieder erhalten. Die neue Rollenstruktur trennt Eigentümer, Administration, Moderation, Entwicklung, Tests und Community voneinander.</p><p>Nicht mehr benötigte Zähl-, Statistik-, Stream- und Verwaltungsbots wurden entfernt. ProBot bleibt für Moderationsunterstützung, DISBOARD.org und Discord Me für die Auffindbarkeit des Servers. Die native Onboarding-Automatik reduziert zusätzliche Bot-Abhängigkeiten und damit unnötige Berechtigungsflächen.</p><div class="content-callout">SECURITY RULE // Rollen für Interessen gewähren Zugang zu Inhalten, aber keine Moderations- oder Administratorrechte.</div>
+    </section><section id="documentation" class="content-block reveal">
+      <p class="eyebrow">05 // DOCUMENT EVERYTHING</p>
+      <h2>Community-Änderungen gehören zum Entwicklungsprotokoll</h2>
+      <p>JARVIS SYSTEM dokumentiert nicht nur Betriebssystemcode. Auch Website, GitHub, Community-Struktur, Rollenmodell, Sicherheitsentscheidungen und Automatisierung werden mit Datum, betroffenen Bereichen und offenen Prüfungen festgehalten. So bleibt nachvollziehbar, wie das Ökosystem entsteht.</p><p>Der Discord-Start ändert nichts am technischen Release-Gate. Es gibt weiterhin keine öffentliche ISO. Freiwillige Tester werden erst dann in einen kontrollierten Systemtest einbezogen, wenn Installation, Recovery, Secure Boot und Hardwareportabilität ausreichend vorbereitet und dokumentiert sind.</p>
+    </section></article>
+    </div>
+    <section class="related-section section-shell" aria-labelledby="related-title">
+      <p class="eyebrow">NEXT SIGNALS</p><h2 id="related-title">JARVIS weiter erkunden</h2>
+      <div class="related-grid"><a class="related-card" href="/updates/"><span>DEVELOPMENT LOG</span><h3>Aktuelle Updates</h3><p>Nachvollziehbare Entwicklungsstände und verifizierte Meilensteine.</p><b>ÖFFNEN →</b></a><a class="related-card" href="/entwicklung/"><span>JARVIS KNOWLEDGE</span><h3>Wie JARVIS OS entwickelt wird</h3><p>So entsteht JARVIS OS: dokumentierte Builds, VM- und Hardwaretests, Backups, Release-Gates und nachvollziehbare Statusangaben.</p><b>ÖFFNEN →</b></a><a class="related-card" href="/roadmap/"><span>JARVIS KNOWLEDGE</span><h3>Roadmap von JARVIS SYSTEM</h3><p>Die JARVIS-OS-Roadmap: vom Bootmanager über Hardwareportabilität, Secure Boot und Recovery bis zum kontrollierten Community-Release.</p><b>ÖFFNEN →</b></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><b>JARVIS SYSTEM</b><span>TECHNOLOGY PROJECT + DIGITAL SOLUTIONS</span><p>Websites, Local IT und technische Lösungen aus Deutschland – mit JARVIS OS als eigenem Kernprojekt.</p><small>Öffentlicher Standort: Deutschland · Baden-Württemberg · Landkreis Waldshut</small><a href="mailto:jarvissystem@jarvisserver.org">jarvissystem@jarvisserver.org</a></div>
+    <nav class="footer-directory" aria-label="Vollständige Seitennavigation">
+      <div><b>LEISTUNGEN</b><a href="/solutions/">Alle Angebote</a><a href="/shop/">Shop</a><a href="/#projekte">Arbeitsbeispiele</a><a href="/solutions/#local-it">Local IT &amp; Vor Ort</a><a href="/solutions/#request">Projekt anfragen</a><a href="/solutions/#services">Website-Check</a></div>
+      <div><b>JARVIS OS</b><a href="/jarvis-os/">Systemprofil</a><a href="/technik/">Technik</a><a href="/entwicklung/">Entwicklung</a><a href="/roadmap/">Roadmap</a></div>
+      <div><b>PROJEKT</b><a href="/updates/">Updates</a><a href="/gruender/">Gründer</a><a href="/community/">Community</a><a href="/threat-observatory/">Threat Map</a></div>
+      <div><b>ORIENTIERUNG</b><a href="/#partner">Partner &amp; Founding 100</a><a href="/uebersicht/">Website-Index</a><a href="/connect/">Offizielle Profile</a><a href="/support/">Support</a><a href="/faq/">FAQ</a></div>
+    </nav>
+    <div class="footer-legal">
+      <div><p>© 2026 Oliver-frank Pristaff. Alle Rechte vorbehalten. Keine ISO-Verteilung.</p>
+      <a href="/legal.html">Rechte, Hinweise &amp; Datenschutz</a> ·
+      <a href="https://www.linkedin.com/in/oliver-frank-pristaff/" rel="me">LinkedIn Oliver</a> ·
+      <a href="https://github.com/hotboxking09">GitHub</a> ·
+      <a href="https://discord.gg/DWBwuUhXmv">Discord</a></div>
+      <div class="footer-state"><span></span> PROJECT SIGNAL ACTIVE</div>
+    </div>
+  </footer>`;export{e as default};

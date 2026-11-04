@@ -1,0 +1,230 @@
+var e=`<a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas><div class="noise-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>JARVIS</strong><small>SYSTEM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENÜ</button>
+      <div class="nav-links" id="nav-links"><a href="/">Start</a><a href="/solutions/">Leistungen</a><a href="/shop/">Shop</a><a href="/#projekte">Projekte</a><a href="/#partner">Partner</a><a href="/jarvis-os/">JARVIS OS</a><a href="/threat-observatory/" aria-current="page">AEGIS</a><a href="/updates/">Updates</a></div>
+    </nav>
+    <button class="header-search" type="button" data-site-search-open aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="Seite durchsuchen"><span aria-hidden="true">⌕</span><span>SUCHEN</span><kbd>⌘K</kbd></button>
+    <nav class="language-switch" aria-label="Sprache"><a href="/threat-observatory/" hreflang="de-DE" lang="de" aria-current="true">DE</a><a href="/en/threat-observatory/" hreflang="en" lang="en">EN</a></nav><a class="header-contact" href="/solutions/#request"><span></span> ANFRAGE STARTEN</a>
+  </header>
+  <main id="main"><section class="threat-hero section-shell">
+  <div class="threat-hero-copy reveal">
+    <nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">JARVIS SYSTEM</a><span>/</span><span aria-current="page">Threat Map</span></nav>
+    <p class="eyebrow">09 // GLOBAL SECURITY VISUALIZATION</p>
+    <h1>THREAT<br><span>OBSERVATORY</span></h1>
+    <p class="content-intro">Eine hochauflösende, interaktive Weltansicht für echte öffentliche Netzwerkknoten, globale Threat-Intelligence und die datenschutzbegrenzten Ereignisse des eigenen JARVIS-Honeypots. Keine erfundenen Angriffe, keine heimlichen Scans und keine vorgetäuschte Genauigkeit.</p>
+    <div class="threat-hero-actions">
+      <a class="button button-primary" href="#observatory-console">OBSERVATORY ÖFFNEN <span>↓</span></a>
+      <a class="button button-ghost" href="#truth-contract">DATENVERTRAG</a>
+    </div>
+  </div>
+  <div class="threat-hero-core reveal" aria-hidden="true">
+    <div class="threat-orbit threat-orbit-a"></div>
+    <div class="threat-orbit threat-orbit-b"></div>
+    <picture><source srcset="/assets/jarvis-core-head.webp" type="image/webp"><img src="/assets/jarvis-core-head.png" width="1024" height="1024" alt="" decoding="async"></picture>
+    <span>SECURITY CORE // OBSERVE ONLY</span>
+  </div>
+  <div class="threat-truth-strip reveal" role="note">
+    <div><span>PUBLIC INFRASTRUCTURE</span><b>RIPE ATLAS // VERIFIED SNAPSHOT</b></div>
+    <div><span>GLOBAL THREAT PULSE</span><b>DShield // EXTERNAL OBSERVATIONS</b></div>
+    <div><span>DIRECT JARVIS EVENTS</span><b id="direct-hero-state">AUTHENTICATED FEED // CHECKING</b></div>
+    <div><span>LOCATION POLICY</span><b>APPROXIMATE ONLY</b></div>
+  </div>
+</section>
+
+<section
+  class="observatory-console section-shell reveal"
+  id="observatory-console"
+  data-api-endpoint="https://jarvis-threat-observatory.jarvis-system-live.workers.dev"
+  aria-labelledby="observatory-title"
+>
+  <header class="observatory-command">
+    <div>
+      <span class="observatory-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <div><small>JARVIS SECURITY NETWORK</small><h2 id="observatory-title">GLOBAL SIGNAL FIELD</h2></div>
+    </div>
+    <div class="observatory-clock"><span id="threat-clock">--:--:-- UTC</span><b id="threat-sync-state">LOADING VERIFIED DATA</b></div>
+  </header>
+
+  <div class="observatory-viewbar" aria-label="Observatory Ansicht und Analysefilter">
+    <div class="viewbar-group"><span>VIEW</span><button type="button" class="view-control is-active" data-view="analysis">2D ANALYSIS</button><button type="button" class="view-control" data-view="globe">CINEMATIC GLOBE</button></div>
+    <div class="viewbar-group"><span>WINDOW</span><button type="button" class="range-control" data-range="1">1H</button><button type="button" class="range-control is-active" data-range="24">24H</button><button type="button" class="range-control" data-range="168">7D</button></div>
+    <div class="viewbar-group"><span>BEHAVIOR</span><select id="behavior-filter" aria-label="Verhaltensfilter"><option value="all">ALL SIGNALS</option><option value="password_guessing">PASSWORD GUESSING</option><option value="system_discovery">DISCOVERY</option><option value="download_intent">DOWNLOAD INTENT</option><option value="persistence_intent">PERSISTENCE</option><option value="privilege_escalation_intent">PRIVILEGE ESCALATION</option><option value="cryptomining_intent">CRYPTOMINING</option></select></div>
+    <div class="viewbar-group"><span>EVIDENCE</span><select id="type-filter" aria-label="Ereignistyp"><option value="all">ALL TYPES</option><option value="connection">CONNECTION</option><option value="login_attempt">LOGIN</option><option value="command_observed">COMMAND META</option><option value="client_observed">CLIENT META</option><option value="disconnect">DISCONNECT</option></select><select id="confidence-filter" aria-label="Konfidenz"><option value="all">ALL CONFIDENCE</option><option value="high">HIGH</option><option value="medium">MEDIUM</option><option value="low">LOW</option></select></div>
+    <div class="viewbar-group"><span>REGION</span><select id="country-filter" aria-label="Land"><option value="all">ALL COUNTRIES</option></select><input id="asn-filter" inputmode="numeric" maxlength="10" placeholder="ASN" aria-label="Autonomous System Number"></div>
+    <div class="viewbar-group viewbar-actions"><button type="button" class="view-action" id="map-reset">RESET VIEW</button><button type="button" class="view-action" id="tv-mode">TV / 4K</button></div>
+  </div>
+
+  <div class="observatory-metrics" aria-live="polite">
+    <div><span>PUBLIC NODES AVAILABLE</span><b id="metric-public-total">-----</b><small>RIPE ATLAS CONNECTED</small></div>
+    <div><span>NODES VISUALIZED</span><b id="metric-public-rendered">----</b><small>DETERMINISTIC SAMPLE</small></div>
+    <div><span>GLOBAL THREAT SOURCES</span><b id="metric-threat-sources">--</b><small>DShield TOP NETWORKS</small></div>
+    <div><span>DIRECT HONEYPOT EVENTS</span><b id="metric-direct-events">00</b><small id="metric-sensor-state">UPLINK STAGED</small></div>
+    <div><span>DATA FRESHNESS</span><b id="metric-freshness">--</b><small>VERIFIED SNAPSHOT AGE</small></div>
+  </div>
+
+  <div class="observatory-grid">
+    <div class="threat-map-panel">
+      <div class="map-toolbar" aria-label="Kartenebenen">
+        <button type="button" class="map-layer is-active" data-layer="infrastructure" aria-pressed="true"><i class="cyan"></i>PUBLIC NODES</button>
+        <button type="button" class="map-layer is-active" data-layer="threat" aria-pressed="true"><i class="red"></i>GLOBAL THREAT</button>
+        <button type="button" class="map-layer is-active" data-layer="honeypot" aria-pressed="true"><i class="green"></i>JARVIS SENSOR</button>
+        <div class="map-zoom-controls" aria-label="Kartenzoom"><button type="button" id="map-zoom-out" aria-label="Karte verkleinern">−</button><span>ZOOM</span><button type="button" id="map-zoom-in" aria-label="Karte vergrößern">+</button></div>
+        <span class="map-interaction-hint">DRAG TO MOVE // WHEEL OR BUTTONS TO ZOOM // TOUCH: DRAG OR PINCH</span>
+      </div>
+      <div class="map-viewport" id="threat-map-viewport">
+        <canvas id="threat-globe-canvas" aria-label="WebGL-Darstellung des interaktiven Threat-Globus" hidden></canvas>
+        <canvas id="threat-map-canvas" aria-label="Weltkarte mit öffentlichen RIPE-Atlas-Knoten, globalen DShield-Beobachtungen und anonymisierten realen Ereignissen des JARVIS-Honeypots"></canvas>
+        <div class="map-scanline" aria-hidden="true"></div>
+        <div class="map-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="map-axis map-axis-top" aria-hidden="true"><span>180°W</span><span>120°W</span><span>060°W</span><span>000°</span><span>060°E</span><span>120°E</span><span>180°E</span></div>
+        <div class="map-axis map-axis-side" aria-hidden="true"><span>75°N</span><span>45°N</span><span>00°</span><span>45°S</span><span>75°S</span></div>
+        <div class="map-status-tag"><i></i><span id="map-status-label">CHECKING VERIFIED SOURCES</span></div>
+        <div class="map-tooltip" id="map-tooltip" role="status" aria-live="polite" hidden></div>
+      </div>
+      <div class="map-legend">
+        <span><i class="legend-node"></i> Öffentliche Messknoten</span>
+        <span><i class="legend-threat"></i> Globale externe Scanquellen</span>
+        <span><i class="legend-direct"></i> Authentifizierte JARVIS-Direktereignisse</span>
+        <span><i class="legend-honeypot"></i> Verschleierter JARVIS-Sensorbereich</span>
+        <b>LINIEN ZUM JARVIS-SENSOR ERSCHEINEN ERST BEI ECHTEN DIREKTEN EVENTS</b>
+      </div>
+    </div>
+
+    <aside class="threat-intel-rail" aria-labelledby="threat-feed-title">
+      <header><div><span>LIVE INTERCEPT BUFFER</span><h3 id="threat-feed-title">THREAT SIGNALS</h3></div><b id="feed-mode">EXTERNAL FEED</b></header>
+      <div class="feed-notice"><i></i><p>DShield-Beobachtungen sind reale globale Meldungen, aber <strong>keine direkten Angriffe auf JARVIS</strong>. Eine Netzwerkquelle beweist keine Personenidentität.</p></div>
+      <ol class="threat-feed" id="threat-feed">
+        <li class="feed-loading"><span>DATA LINK</span><b>WAITING FOR VERIFIED SNAPSHOT</b></li>
+      </ol>
+      <div class="sensor-lock">
+        <div class="sensor-lock-head"><span>JARVIS HONEYPOT UPLINK</span><b id="sensor-lock-state">CHECKING</b></div>
+        <div class="sensor-lock-line"><i></i></div>
+        <p id="sensor-lock-copy">Der Browser prüft den signierten, datenschutzbegrenzten JARVIS-Sensorfeed. Roh-IP, Zugangsdaten, Befehle und Payloads werden nicht veröffentlicht.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="observatory-lower">
+    <div class="signal-spectrum">
+      <span>REGIONAL SIGNAL DENSITY</span>
+      <canvas id="threat-spectrum-canvas" aria-label="Animierte Dichteanzeige auf Basis der geladenen realen Daten"></canvas>
+      <b>AGGREGATED // NO PAYLOAD CONTENT</b>
+    </div>
+    <div class="observatory-integrity">
+      <span>DATA INTEGRITY MATRIX</span>
+      <div><i class="ok"></i><p><b>NO ACTIVE SCANNING</b><small>Nur freiwillig veröffentlichte oder offiziell bereitgestellte Datenquellen</small></p></div>
+      <div><i class="ok"></i><p><b>NO RAW PUBLIC ATTACKER IPs</b><small>Öffentliche Ansicht nutzt Regionen und Netzbetreiber statt Personenbehauptungen</small></p></div>
+      <div><i class="ok" id="direct-integrity-light"></i><p><b id="direct-integrity-title">AUTHENTICATED DIRECT SENSOR FEED</b><small id="direct-integrity-copy">Doppelt freigegeben, HMAC-signiert und streng schemageprüft</small></p></div>
+    </div>
+  </div>
+
+  <div class="threat-investigation-grid">
+    <section class="threat-dna-panel" aria-labelledby="threat-dna-title">
+      <header><span>BEHAVIORAL SIGNATURE</span><h3 id="threat-dna-title">THREAT DNA</h3><b id="threat-dna-state">AWAITING EVENT</b></header>
+      <canvas id="threat-dna-canvas" aria-label="Datensparsame Verhaltenssignatur des ausgewählten Ereignisses"></canvas>
+      <div id="threat-dna-details" class="threat-dna-details"><p>Wähle ein echtes JARVIS-Direktereignis. Es werden nur Verhaltenskategorie, Confidence, Evidenzanzahl und öffentliche Technik-ID dargestellt – niemals Rohbefehle.</p></div>
+    </section>
+    <section class="session-story-panel" aria-labelledby="session-story-title">
+      <header><span>PSEUDONYMOUS TIMELINE</span><h3 id="session-story-title">SESSION STORY</h3><b id="session-story-state">NO SESSION SELECTED</b></header>
+      <ol id="session-story-events"><li><b>WAITING FOR VERIFIED V2 EVENTS</b><small>Schema-1-Daten bleiben kompatibel, enthalten aber noch keine Session-Timeline.</small></li></ol>
+    </section>
+    <section class="proof-panel" aria-labelledby="proof-title">
+      <header><span>PROOF OF REALITY</span><h3 id="proof-title">VERIFICATION CHAIN</h3><b id="proof-state">CHECKING</b></header>
+      <dl>
+        <div><dt>TRANSPORT</dt><dd id="proof-transport">HMAC-SHA256</dd></div>
+        <div><dt>EVENT CONTRACT</dt><dd id="proof-contract">SCHEMA V1 FALLBACK</dd></div>
+        <div><dt>CHAIN HEAD</dt><dd id="proof-chain">NOT AVAILABLE</dd></div>
+        <div><dt>PRIVACY</dt><dd id="proof-privacy">RAW DATA BLOCKED</dd></div>
+        <div><dt>FRESHNESS</dt><dd id="proof-freshness">CHECKING</dd></div>
+      </dl>
+    </section>
+  </div>
+
+  <section class="direct-ledger" aria-labelledby="direct-ledger-title">
+    <header>
+      <div>
+        <span>PRIVACY-BOUNDED EVENT STREAM // 24H</span>
+        <h3 id="direct-ledger-title">DIRECT THREAT LEDGER</h3>
+      </div>
+      <div class="direct-ledger-status">
+        <b id="direct-ledger-state">CHECKING SENSOR</b>
+        <small id="direct-ledger-updated">LAST EVENT // --</small>
+      </div>
+    </header>
+    <div class="direct-ledger-contract">
+      <i></i>
+      <p><b>WER?</b> Ausschließlich ein täglich wechselndes Quellpseudonym – keine IP und keine behauptete Personenidentität. <b>WAS?</b> Ereignistyp, ehrlicher Schweregrad und Ergebnis innerhalb der Cowrie-Emulation. <b>HOST?</b> Niemals automatisch als kompromittiert bezeichnet.</p>
+    </div>
+    <ol id="direct-ledger-events" class="direct-ledger-events" aria-live="polite">
+      <li class="direct-ledger-empty"><span>DATA LINK</span><b>WAITING FOR AUTHENTICATED SENSOR SNAPSHOT</b></li>
+    </ol>
+  </section>
+</section>
+
+<section class="threat-truth section-shell section-pad" id="truth-contract" aria-labelledby="truth-title">
+  <div class="section-heading reveal">
+    <p class="eyebrow">DATA TRUTH CONTRACT // NO CINEMA FAKES</p>
+    <h2 id="truth-title">Sieht nach Film aus.<br><span>Bleibt trotzdem ehrlich.</span></h2>
+    <p>Die Karte darf spektakulär animiert sein, aber jeder technische Punkt besitzt eine echte Quelle und einen klaren Gültigkeitsbereich. Sie ist ausdrücklich kein vollständiger Scan des Internets. Private Server werden weder gesucht noch dargestellt. Öffentlich sichtbare Infrastrukturpunkte stammen aus dem freiwilligen RIPE-Atlas-Messnetz; deren Positionen werden bereits durch RIPE zum Schutz der Betreiber räumlich verschleiert.</p>
+  </div>
+  <div class="truth-source-grid">
+    <article class="truth-source-card reveal">
+      <span>SOURCE // 01</span><h3>Natural Earth</h3>
+      <p>Die hochauflösende Ländergeometrie basiert auf dem frei nutzbaren 1:50m-Datensatz. Sie dient nur als kartografische Grundlage und behauptet keine Netzwerkaktivität.</p>
+      <b>MAP GEOMETRY // VERSIONED</b>
+    </article>
+    <article class="truth-source-card reveal">
+      <span>SOURCE // 02</span><h3>RIPE Atlas</h3>
+      <p>Blaue Punkte sind echte verbundene öffentliche Messknoten aus einem datierten RIPE-Atlas-Snapshot. Für flüssige Darstellung wird eine reproduzierbare Auswahl gezeichnet; die vollständige verfügbare Anzahl und das Snapshot-Alter bleiben separat sichtbar.</p>
+      <b>PUBLIC MEASUREMENT NETWORK</b>
+    </article>
+    <article class="truth-source-card reveal">
+      <span>SOURCE // 03</span><h3>SANS ISC / DShield</h3>
+      <p>Rote Regionen repräsentieren die aktivsten Quellnetze aus dem eingebundenen, datierten DShield-Snapshot. Das Alter des Snapshots wird in der Konsole ausgewiesen. Sie sind kein Identitätsnachweis und kein direkter JARVIS-Honeypot-Log.</p>
+      <b>EXTERNAL THREAT INTELLIGENCE</b>
+    </article>
+    <article class="truth-source-card reveal">
+      <span>SOURCE // 04</span><h3>DB-IP Lite</h3>
+      <p>Quell-IP-Geodaten werden ausschließlich lokal mit DB-IP Lite nachgeschlagen und vor jeder Übertragung auf ein grobes Zwei-Grad-Raster reduziert. Dadurch entstehen echte regionale Linien ohne Roh-IP oder vorgetäuschte Punktgenauigkeit.</p>
+      <b><a href="https://db-ip.com" rel="external">IP Geolocation by DB-IP</a> // CC BY 4.0</b>
+    </article>
+    <article class="truth-source-card reveal">
+      <span>SOURCE // 05</span><h3>JARVIS Sensor Feed</h3>
+      <p>Der grüne Bereich zeigt nur eine grosszügig verschleierte Zielregion. Der reale Cowrie-Sensor sendet ausschließlich minimierte, pseudonymisierte Ereignisse über einen HMAC-gesicherten Empfänger. Der Livezustand wird im Browser direkt aus der öffentlichen API geprüft.</p>
+      <b>DIRECT EVENTS // AUTHENTICATED + SANITIZED</b>
+    </article>
+  </div>
+  <div class="threat-future-pipeline reveal">
+    <div><span>01</span><b>COWRIE SENSOR</b><small>isolierte Security-Node</small></div><i></i>
+    <div><span>02</span><b>SANITIZE GATE</b><small>IP entfernen, Region vergröbern</small></div><i></i>
+    <div><span>03</span><b>PUBLIC API</b><small>signierte Aggregate, Rate Limit</small></div><i></i>
+    <div><span>04</span><b>MAP + DISCORD</b><small>Website-Visualisierung und private Logs</small></div>
+  </div>
+  <div class="content-callout reveal">PRIVACY BOUNDARY // Der öffentliche Feed enthält keine Roh-IP, keinen echten Namen, keine Malware, keine Passwörter und keine vollständigen Eingaben. Detaillierte Sicherheitslogs bleiben geschützt und zeitlich begrenzt; die öffentliche Anzeige verwendet täglich wechselnde Pseudonyme und Zeitfenster-Aggregate.</div>
+</section>
+</main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><b>JARVIS SYSTEM</b><span>TECHNOLOGY PROJECT + DIGITAL SOLUTIONS</span><p>Websites, Local IT und technische Lösungen aus Deutschland – mit JARVIS OS als eigenem Kernprojekt.</p><small>Öffentlicher Standort: Deutschland · Baden-Württemberg · Landkreis Waldshut</small><a href="mailto:jarvissystem@jarvisserver.org">jarvissystem@jarvisserver.org</a></div>
+    <nav class="footer-directory" aria-label="Vollständige Seitennavigation">
+      <div><b>LEISTUNGEN</b><a href="/solutions/">Alle Angebote</a><a href="/shop/">Shop</a><a href="/#projekte">Arbeitsbeispiele</a><a href="/solutions/#local-it">Local IT &amp; Vor Ort</a><a href="/solutions/#request">Projekt anfragen</a><a href="/solutions/#services">Website-Check</a></div>
+      <div><b>JARVIS OS</b><a href="/jarvis-os/">Systemprofil</a><a href="/technik/">Technik</a><a href="/entwicklung/">Entwicklung</a><a href="/roadmap/">Roadmap</a></div>
+      <div><b>PROJEKT</b><a href="/updates/">Updates</a><a href="/gruender/">Gründer</a><a href="/community/">Community</a><a href="/threat-observatory/">Threat Map</a></div>
+      <div><b>ORIENTIERUNG</b><a href="/#partner">Partner &amp; Founding 100</a><a href="/uebersicht/">Website-Index</a><a href="/connect/">Offizielle Profile</a><a href="/support/">Support</a><a href="/faq/">FAQ</a></div>
+    </nav>
+    <div class="footer-legal">
+      <div><p>© 2026 Oliver-frank Pristaff. Alle Rechte vorbehalten. Keine ISO-Verteilung.</p>
+      <a href="/legal.html">Rechte, Hinweise &amp; Datenschutz</a> ·
+      <a href="https://www.linkedin.com/in/oliver-frank-pristaff/" rel="me">LinkedIn Oliver</a> ·
+      <a href="https://github.com/hotboxking09">GitHub</a> ·
+      <a href="https://discord.gg/DWBwuUhXmv">Discord</a></div>
+      <div class="footer-state"><span></span> PROJECT SIGNAL ACTIVE</div>
+    </div>
+  </footer>`;export{e as default};

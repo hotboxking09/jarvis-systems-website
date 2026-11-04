@@ -1,0 +1,370 @@
+var e=`<a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas>
+  <div class="noise-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>JARVIS</strong><small>SYSTEM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENÜ</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/" aria-current="page">Start</a>
+        <a href="/solutions/">Leistungen</a>
+        <a href="/shop/">Shop</a>
+        <a href="/#projekte">Projekte</a>
+        <a href="/#partner">Partner</a>
+        <a href="/jarvis-os/">JARVIS OS</a>
+        <a href="/threat-observatory/">AEGIS</a>
+        <a href="/updates/">Updates</a>
+      </div>
+    </nav>
+    <button class="header-search" type="button" data-site-search-open aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="Seite durchsuchen"><span aria-hidden="true">⌕</span><span>SUCHEN</span><kbd>⌘K</kbd></button>
+    <nav class="language-switch" aria-label="Sprache"><a href="/" hreflang="de-DE" lang="de" aria-current="true">DE</a><a href="/en/" hreflang="en" lang="en">EN</a></nav><a class="header-contact" href="/solutions/#request"><span></span> ANFRAGE STARTEN</a>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">JARVIS SYSTEM // DIGITAL SOLUTIONS // DEUTSCHLAND</p>
+        <h1 id="hero-title"><span>Websites &amp; IT-Hilfe</span><br>verständlich umgesetzt.</h1>
+        <p class="hero-lead">Neue Website, ein klareres Redesign oder persönliche Hilfe bei PC, WLAN und digitalen Arbeitsplätzen: <strong>Du erklärst dein Ziel in normalen Worten – wir klären Umfang, Kosten und nächsten Schritt schriftlich.</strong></p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/solutions/#request">PROJEKT ANFRAGEN <span>→</span></a>
+          <a class="button button-ghost" href="/solutions/">LEISTUNGEN &amp; PREISE</a>
+        </div>
+        <p class="hero-project-link">Neben unseren Dienstleistungen entwickeln wir JARVIS OS und AEGIS. <a href="/jarvis-os/">Technologieprojekt entdecken →</a></p>
+        <div class="truth-strip" role="note">
+          <span>KLARER START</span>
+          <p>Eine Anfrage ist unverbindlich. Keine Passwörter oder vertraulichen Daten beim Erstkontakt. Ein Auftrag beginnt erst nach schriftlich bestätigtem Umfang und Preis.</p>
+        </div>
+      </div>
+
+      <div class="hero-core reveal" aria-label="JARVIS System Core Visualisierung">
+        <div class="core-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="core-label core-label-top"><span>CORE ID</span><b>JARVIS-01</b></div>
+        <div class="core-label core-label-left"><span>STATE</span><b>ENGINEERING</b></div>
+        <div class="core-label core-label-right"><span>TARGET</span><b>REAL HARDWARE</b></div>
+        <picture class="head-frame">
+          <source srcset="/assets/jarvis-core-head.webp" type="image/webp">
+          <img src="/assets/jarvis-core-head.png" width="1024" height="1024" alt="Abstraktes JARVIS-Systemkern-Symbol" fetchpriority="high" decoding="async">
+        </picture>
+        <div class="core-scan" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-rail reveal" aria-label="Angebotsstatus">
+        <div><span>ERSTANFRAGE</span><b>UNVERBINDLICH</b></div>
+        <div><span>LOCAL IT</span><b>SÜDSCHWARZWALD</b></div>
+        <div><span>WEBSITE-CHECK</span><b>INDIVIDUELLE PRÜFUNG</b></div>
+        <div><span>JARVIS OS</span><b class="state-warn">IN ENTWICKLUNG</b></div>
+      </div>
+    </section>
+
+    <section class="audience-router section-shell section-pad" aria-labelledby="audience-router-title">
+      <div class="section-heading compact reveal">
+        <p class="eyebrow">START HERE // DIREKTE ORIENTIERUNG</p>
+        <h2 id="audience-router-title">Was möchtest du erreichen?</h2>
+        <p>Wähle den Weg, der zu dir passt. Du musst keine technischen Fachbegriffe kennen.</p>
+      </div>
+      <div class="audience-router-grid">
+        <a class="audience-route route-customer reveal" href="/solutions/"><span>01 // KUNDEN &amp; BETRIEBE</span><h3>Ich brauche eine Lösung.</h3><p>Website, Redesign, Pflege, Website-Check, Local IT oder eine klar begrenzte technische Aufgabe.</p><b>ANGEBOTE VERSTEHEN →</b></a>
+        <a class="audience-route route-project reveal" href="/jarvis-os/"><span>02 // TECHNOLOGIEPROJEKT</span><h3>Ich will JARVIS OS sehen.</h3><p>Erfahre verständlich, was bereits gebaut wurde, was noch fehlt und wie das System technisch aufgebaut ist.</p><b>BETRIEBSSYSTEM ENTDECKEN →</b></a>
+        <a class="audience-route route-community reveal" href="/uebersicht/"><span>03 // COMMUNITY &amp; PARTNER</span><h3>Ich will mitverfolgen.</h3><p>Updates, Community, offizielle Profile, Support, Gründerstory und alle öffentlichen Nachweise an einem Ort.</p><b>WEBSITE-INDEX ÖFFNEN →</b></a>
+      </div>
+    </section>
+
+    <section class="partner-command section-shell section-pad" id="partner" aria-labelledby="partner-command-title">
+      <div class="partner-command-head reveal">
+        <div>
+          <p class="eyebrow">ECOSYSTEM UPLINK // PARTNER // SPONSOREN // FOUNDING 100</p>
+          <h2 id="partner-command-title">Gemeinsam sichtbar.<br><span>Trotzdem klar unabhängig.</span></h2>
+          <p>Hier werden bestätigte Partner, künftige Sponsoren und die ersten 100 verifizierten Founding Supporter transparent präsentiert. Keine gekauften Logos, keine erfundenen Namen und keine versteckten Abhängigkeiten.</p>
+        </div>
+        <div class="partner-command-state" aria-label="Öffentlicher Partnerstatus">
+          <span><i></i> ECOSYSTEM ONLINE</span>
+          <b>01 PARTNER</b>
+          <small>00 SPONSOREN // 000 FOUNDING SUPPORTER</small>
+        </div>
+      </div>
+
+      <div class="partner-command-grid">
+        <article class="ecosystem-card ecosystem-card-noel reveal">
+          <div class="ecosystem-card-signal"><span>PARTNER 001</span><b>BESTÄTIGTE KOOPERATION</b></div>
+          <a class="noel-media" href="https://noelvisuals.com/" target="_blank" rel="noopener noreferrer" aria-label="Offizielle Website von NOEL VISUALS öffnen">
+            <img class="noel-banner" src="/assets/partners/noel-visuals-banner.webp" width="1600" height="686" loading="lazy" decoding="async" alt="Offizielles Banner von NOEL VISUALS mit Video-Editing- und Designmotiven">
+            <span class="noel-logo"><img src="/assets/partners/noel-visuals-logo.webp" width="720" height="720" loading="lazy" decoding="async" alt="Offizielles Logo von NOEL VISUALS"></span>
+            <strong>OFFIZIELLE WEBSITE <i>↗</i></strong>
+          </a>
+          <p class="ecosystem-role">INDEPENDENT CREATIVE PARTNER</p>
+          <h3>Creative Design trifft<br>Technical Engineering.</h3>
+          <p>NOEL VISUALS ergänzt das JARVIS-Netzwerk mit Video Editing, Thumbnails, Grafik, UI/UX sowie individuellen Discord-Servern und Bots. Bei passenden Projekten können klar getrennte Leistungen kombiniert oder Anfragen gegenseitig empfohlen werden.</p>
+          <ul aria-label="Leistungsfelder von NOEL VISUALS"><li>VIDEO &amp; CONTENT</li><li>GRAPHIC &amp; UI/UX</li><li>DISCORD &amp; BOTS</li></ul>
+          <div class="ecosystem-card-foot"><small>Beide Anbieter bleiben rechtlich, organisatorisch und finanziell unabhängig. Scope, Preis, Rechnung, Verantwortung und Support werden pro Auftrag getrennt geregelt.</small><div class="noel-links"><a href="https://noelvisuals.com/" target="_blank" rel="noopener noreferrer">WEBSITE →</a><a href="https://discord.gg/noelvisuals" target="_blank" rel="noopener noreferrer">DISCORD →</a></div></div>
+        </article>
+
+        <article class="ecosystem-card ecosystem-card-sponsor reveal">
+          <div class="ecosystem-card-signal"><span>SPONSOR NODE</span><b>OPEN FOR FIT</b></div>
+          <div class="sponsor-radar" aria-hidden="true"><i></i><i></i><i></i><span>00</span></div>
+          <p class="ecosystem-role">NOCH KEIN ÖFFENTLICHER SPONSOR</p>
+          <h3>Passende Partner statt beliebiger Logos.</h3>
+          <p>Gesucht werden glaubwürdige Infrastruktur-, Technologie- und Bildungspartner, die das Projekt sinnvoll stärken. Eine Nennung erfolgt erst nach klarer Vereinbarung und tatsächlicher Unterstützung.</p>
+          <a class="ecosystem-text-link" href="mailto:jarvissystem@jarvisserver.org?subject=Partnerschaft%20oder%20Sponsoring">PARTNERSCHAFT ANFRAGEN →</a>
+        </article>
+
+        <article class="ecosystem-card ecosystem-card-founders reveal">
+          <div class="ecosystem-card-signal"><span>FOUNDING CIRCLE</span><b>0 / 100 VERIFIZIERT</b></div>
+          <div class="founder-counter" aria-hidden="true"><span>0</span><span>0</span><span>0</span><b>/100</b></div>
+          <p class="ecosystem-role">TOP 100 // OPT-IN WALL OF FAME</p>
+          <h3>Die ersten Unterstützer bleiben sichtbar.</h3>
+          <p>Die Liste beginnt mit dem ersten verifizierten Monthly Member, der einer öffentlichen Nennung ausdrücklich zustimmt. Namen, Rollen und Vorteile werden nie ohne Einwilligung oder bestätigte Zahlung eingetragen.</p>
+          <div class="founder-slot" aria-label="Aktueller Founding-100-Status"><span>PLATZ 001</span><b>OFFEN</b><small>AWAITING VERIFIED MEMBER</small></div>
+          <div class="ecosystem-card-actions"><a href="/support/">REGELN &amp; STATUS →</a><a href="https://ko-fi.com/jarvissystem/tiers" target="_blank" rel="noopener noreferrer">MEMBERSHIP →</a></div>
+        </article>
+      </div>
+
+      <div class="partner-integrity reveal" role="note"><span>INTEGRITY RULE</span><p><strong>Partner ≠ Sponsor ≠ Kunde.</strong> Jede Beziehung wird nach ihrem echten Status bezeichnet. Mitgliedschaften geben keine administrativen Systemrechte, Firmenanteile oder ungeprüften Zugriffe.</p><a href="/support/">TRANSPARENZ LESEN →</a></div>
+    </section>
+
+    <div class="section-zone section-shell reveal"><span>01</span><div><b>FÜR KUNDEN</b><p>Angebote, Ablauf und direkter schriftlicher Kontakt</p></div></div>
+
+    <section class="solutions-home-section section-shell section-pad" id="services" aria-labelledby="solutions-home-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 // JARVIS SOLUTIONS // OPEN FOR PROJECTS</p>
+        <h2 id="solutions-home-title">Websites, Local IT und digitale Lösungen mit klarem Scope.</h2>
+        <p>Für Unternehmen, Selbstständige, Vereine, Gründer und Privatpersonen. Du musst keine technische Lösung vorgeben – beschreibe das Problem oder Ziel, und wir ordnen es verständlich ein.</p>
+      </div>
+      <div class="service-primary-grid">
+        <a class="service-primary-card reveal" href="/solutions/#services"><span>WEB-01</span><h3>Websites &amp; Landingpages</h3><p>Ein moderner, schneller und mobil verständlicher Auftritt, der dein echtes Angebot in den Mittelpunkt stellt.</p><div><b>INDIVIDUELLE OFFERTE</b><strong>DETAILS →</strong></div></a>
+        <a class="service-primary-card reveal" href="/solutions/#delivery"><span>CARE-03</span><h3>Redesign &amp; Website-Pflege</h3><p>Struktur, Texte, Mobilansicht und Technik bestehender Seiten verbessern – danach Änderungen nachvollziehbar betreuen.</p><div><b>NACH BESTÄTIGTEM UMFANG</b><strong>ABLAUF →</strong></div></a>
+        <a class="service-primary-card reveal" href="/solutions/#local-it"><span>LOCAL-04</span><h3>PC-, WLAN- &amp; IT-Hilfe</h3><p>Regionaler Start im Südschwarzwald – mit Fokus auf Rickenbach und Landkreis Waldshut.</p><div><b>NACH ANFRAGE</b><strong>DETAILS →</strong></div></a>
+      </div>
+      <div class="service-secondary-grid reveal" aria-label="Weitere Leistungen">
+        <a href="/solutions/#services"><span>AUDIT-02</span><div><b>Website-Check</b><small>priorisierter schriftlicher Bericht</small></div><strong>ANFRAGEN →</strong></a>
+        <a href="/solutions/#services"><span>SYS-05</span><div><b>Linux &amp; Automatisierung</b><small>Individuell und klar begrenzt</small></div><strong>PRÜFUNG →</strong></a>
+        <a href="/solutions/#hosting"><span>HOST-06</span><div><b>Managed Hosting</b><small>Noch aufnahme- und produktionsgeprüft</small></div><strong>STATUS →</strong></a>
+      </div>
+      <p class="section-action reveal"><a class="button button-primary" href="/solutions/">JARVIS SOLUTIONS ÖFFNEN →</a></p>
+    </section>
+
+
+    <section class="shop-home section-shell section-pad" id="shop-preview" aria-labelledby="shop-home-title">
+      <div class="shop-home-visual reveal">
+        <div class="shop-home-model-grid" aria-label="Sechs Farbwelten der JARVIS CORE SERIES 01">
+          <img src="/assets/shop/core-series-01-void-black-back-front-clean-v2.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="CORE SERIES 01 in Void Black mit T-Shirt und Hoodie">
+          <img src="/assets/shop/core-series-01-midnight-purple-front-back-clean-v2.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="CORE SERIES 01 in Midnight Purple mit T-Shirt und Hoodie">
+          <img src="/assets/shop/core-series-01-deep-navy-back-front-clean-v2.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="CORE SERIES 01 in Abyss Navy mit T-Shirt und Hoodie">
+          <img src="/assets/shop/core-series-01-core-cream-front-back-clean-v2.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="CORE SERIES 01 in Ivory Cream mit T-Shirt und Hoodie">
+          <img src="/assets/shop/core-series-01-signal-white-back-front-clean-v2.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="CORE SERIES 01 in Pure White mit T-Shirt und Hoodie">
+          <img src="/assets/shop/core-series-01-obsidian-violet-back-front-clean-v2.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="CORE SERIES 01 in Obsidian Violet mit T-Shirt und Hoodie">
+        </div>
+        <span>06 COLORWAYS // 12 PIECES // CORE SERIES 01</span>
+      </div>
+      <div class="shop-home-copy reveal">
+        <p class="eyebrow">JARVIS SHOP // CORE SERIES 01</p>
+        <h2 id="shop-home-title">Technologie wird<br><span>tragbar.</span></h2>
+        <p>Klare Frontsignale, kraftvolle Rückenmotive und sechs eigene Farbwelten: CORE SERIES 01 bringt die JARVIS-Identität auf Heavyweight T-Shirts und Premium Hoodies.</p>
+        <div class="shop-home-status" aria-label="Kollektionsübersicht">
+          <div><span>COLLECTION</span><b>CORE SERIES 01</b></div>
+          <div><span>PRODUCTS</span><b>12 DESIGNS</b></div>
+          <div><span>FULFILMENT</span><b>MADE TO ORDER</b></div>
+        </div>
+        <div class="shop-home-actions"><a class="button button-primary" href="/shop/">KOLLEKTION ENTDECKEN →</a><span>T-SHIRTS S–4XL // HOODIES S–3XL</span></div>
+      </div>
+    </section>
+
+
+    <section class="work-process section-shell section-pad" aria-labelledby="work-process-title">
+      <div class="section-heading compact reveal">
+        <p class="eyebrow">SO ARBEITEN WIR // OHNE FACHCHINESISCH</p>
+        <h2 id="work-process-title">Von deiner Frage zur klaren Lösung.</h2>
+        <p>Keine unklare Technikbox: Jede Anfrage beginnt verständlich, schriftlich und ohne automatische Verpflichtung.</p>
+      </div>
+      <ol class="work-process-grid">
+        <li class="reveal"><span>01</span><div><h3>Du beschreibst dein Ziel</h3><p>Ein paar normale Sätze reichen. Bilder oder vorhandene Links helfen, sind aber nicht zwingend.</p></div></li>
+        <li class="reveal"><span>02</span><div><h3>Wir prüfen ehrlich</h3><p>Du erfährst, was möglich ist, was nicht passt und welche Informationen noch fehlen.</p></div></li>
+        <li class="reveal"><span>03</span><div><h3>Umfang wird bestätigt</h3><p>Leistung, Grenzen, Termin, Datenumgang und Kosten werden vor dem Start schriftlich geklärt.</p></div></li>
+        <li class="reveal"><span>04</span><div><h3>Lieferung wird abgenommen</h3><p>Änderungen, Tests und Ergebnis bleiben nachvollziehbar. Nichts wird still am Kunden vorbei ausgeführt.</p></div></li>
+      </ol>
+      <div class="plain-contact-panel reveal"><div><p class="eyebrow">KEINE TECHNIKKENNTNISSE NÖTIG</p><h2>Schreib einfach, wobei du Hilfe brauchst.</h2><p>Wir ordnen deine Anfrage dem richtigen Bereich zu und sagen offen, ob wir sie sinnvoll übernehmen können.</p></div><a class="button button-primary" href="/solutions/#request">ANFRAGE VORBEREITEN →</a></div>
+    </section>
+
+    <div class="section-zone section-shell reveal"><span>02</span><div><b>ARBEIT, DIE MAN SEHEN KANN</b><p>Eigene Projekte und klar gekennzeichnete Demonstrationen</p></div></div>
+
+    <section class="portfolio-section section-shell section-pad" id="projekte" aria-labelledby="portfolio-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 // AUSGEWÄHLTE ARBEITEN</p>
+        <h2 id="portfolio-title">Nicht nur darüber reden.<br><span>Zeigen, was bereits funktioniert.</span></h2>
+        <p>Diese Beispiele belegen Gestaltung, responsive Umsetzung und technische Systemarbeit. Fiktive Demonstrationen sind ausdrücklich als solche markiert und werden nicht als Kundenreferenzen ausgegeben.</p>
+      </div>
+      <div class="portfolio-grid">
+        <article class="portfolio-card portfolio-card-wide reveal">
+          <div class="portfolio-visual"><img src="/assets/portfolio/werkraum-ost-demo.webp" width="1440" height="970" loading="lazy" decoding="async" alt="Desktopansicht der fiktiven Werkraum-Ost-Website-Demo"></div>
+          <div class="portfolio-copy"><div class="portfolio-meta"><span>DEMO-01</span><b>FIKTIVE KMU-DEMO</b></div><h3>Werkraum Ost</h3><p>Ein vollständig eigenständiger Webauftritt für einen fiktiven Handwerksbetrieb: klare Navigation, starke Mobilansicht, verständliche Projektführung und ein lokaler Anfrageassistent ohne Datenübertragung.</p><ul><li>Responsive Website</li><li>Klare Angebotsführung</li><li>Trackingfrei</li></ul><small>Keine reale Firma, kein echter Kunde und keine erfundene Referenz.</small></div>
+        </article>
+        <article class="portfolio-card reveal">
+          <div class="portfolio-visual"><img src="/assets/og-card.png" width="1200" height="630" loading="lazy" decoding="async" alt="JARVIS SYSTEM Projektgrafik"></div>
+          <div class="portfolio-copy"><div class="portfolio-meta"><span>OWN-02</span><b>EIGENE PLATTFORM</b></div><h3>JARVIS SYSTEM Website</h3><p>Die eigene statische Plattform verbindet Dienstleistungen, technische Dokumentation, Updates, Community und reale öffentliche Statusdaten in einer gemeinsamen Designsprache.</p><ul><li>30 statische Seiten</li><li>SEO &amp; strukturierte Daten</li><li>Privacy-first</li></ul><a href="/uebersicht/">WEBSITE-STRUKTUR →</a></div>
+        </article>
+        <article class="portfolio-card portfolio-card-wide portfolio-card-aegis reveal" id="aegis-portfolio">
+          <div class="portfolio-visual portfolio-aegis-visual">
+            <video controls preload="metadata" playsinline poster="/assets/aegis-0.4.2/JARVIS_AEGIS_0.4.2_12_PANEL_MILESTONE_1920_PUBLIC.webp" aria-label="Öffentlich redigierte Aufnahme des signierten AEGIS-Updates auf Version 0.4.2">
+              <source src="/assets/aegis-0.4.2/JARVIS_AEGIS_PANEL_UPDATE_0.4.2_PUBLIC_REDACTED.mp4" type="video/mp4">
+              Dein Browser unterstützt die eingebettete Videoaufnahme nicht. Der technische Meilenstein bleibt über den Bericht erreichbar.
+            </video>
+            <span class="aegis-video-badge"><i></i> REAL OPERATOR CAPTURE // PUBLIC REDACTED</span>
+          </div>
+          <div class="portfolio-copy portfolio-aegis-copy">
+            <div class="portfolio-meta"><span>OWN-03</span><b>SOFTWARE &amp; SECURITY UI</b></div>
+            <h3>AEGIS SOC NEXUS</h3>
+            <p>Die sichtbare Operator- und Analyseebene der eigenen AEGIS-Sicherheitsarchitektur. Das Video zeigt den real ausgeführten, öffentlich redigierten Updatepfad auf Version 0.4.2 – nicht eine nachgestellte Animation.</p>
+            <div class="aegis-proof-grid" aria-label="Belegte AEGIS-Meilensteine">
+              <div><span>CONTROL DOMAINS</span><b>12</b><small>vollständige Operatoroberfläche</small></div>
+              <div><span>VALIDATION</span><b>190 PASS</b><small>1 optionaler Skip dokumentiert</small></div>
+              <div><span>UPDATE PATH</span><b>0.4.1 → 0.4.2</b><small>Ed25519-signiert und versionsgebunden</small></div>
+              <div><span>RECOVERY</span><b>AUTO ROLLBACK</b><small>transaktionaler Rückweg bei Fehler</small></div>
+            </div>
+            <ul><li>Read-only first</li><li>Keine synthetischen Werte</li><li>N/A bleibt sichtbar</li><li>Kritische Aktionen nicht bewaffnet</li></ul>
+            <div class="aegis-proof-note"><b>EVIDENCE BOUNDARY</b><p>Öffentlich erscheinen nur dauerhaft redigierte Medien und belegte Metadaten. Keine Secrets, Roh-IP-Adressen, privaten Infrastrukturpfade oder frei ausführbaren Browserbefehle.</p></div>
+            <div class="aegis-proof-actions"><a href="/updates/aegis-0-4-2-security-core/">TECHNISCHER MEILENSTEIN →</a><a href="/threat-observatory/">THREAT OBSERVATORY →</a></div>
+          </div>
+        </article>
+        <article class="portfolio-card portfolio-card-wide portfolio-card-earning reveal" id="earning-command-portfolio">
+          <div class="portfolio-visual portfolio-earning-visual">
+            <figure class="earning-main-shot">
+              <img src="/assets/portfolio/earning-command-live-public-redacted.webp" width="1920" height="998" loading="lazy" decoding="async" alt="Öffentlich redigierte echte Operatoransicht des JARVIS Earning Command mit Live-Telemetrie, Workerstatus und Pipeline">
+              <figcaption><i></i> REAL OPERATOR CAPTURE // PUBLIC REDACTED</figcaption>
+            </figure>
+            <div class="earning-detail-shots" aria-label="Weitere öffentlich redigierte Ansichten des Earning Command">
+              <figure><img src="/assets/portfolio/earning-command-compass-public-redacted.webp" width="1280" height="831" loading="lazy" decoding="async" alt="Öffentlich redigierter Firmenkompass mit aktueller Reihenfolge, Status und Checklisten"><figcaption>FIRMENKOMPASS</figcaption></figure>
+              <figure><img src="/assets/portfolio/earning-command-pipeline-public-redacted.webp" width="1280" height="831" loading="lazy" decoding="async" alt="Öffentlich redigierte nach Passung gerankte Chancen- und Projektpipeline"><figcaption>RANKED PIPELINE</figcaption></figure>
+            </div>
+          </div>
+          <div class="portfolio-copy portfolio-earning-copy">
+            <div class="portfolio-meta"><span>OWN-04</span><b>AUTOMATION &amp; OPERATIONS</b></div>
+            <h3>JARVIS Earning Command</h3>
+            <p>Ein eigenes serverseitiges Operations-System, das auch bei ausgeschaltetem Arbeitsrechner weiterläuft. Es verbindet begrenzte E-Mail-Erfassung, Chancenrecherche, Ranking, Projekt- und Bewerbungsstatus, Live-Dienste, redigierte Logs sowie einen dauerhaften Firmenkompass in einer Oberfläche.</p>
+            <div class="earning-capability-grid" aria-label="Belegte Funktionen des Earning Command">
+              <div><span>INBOX</span><b>READ-ONLY TRIAGE</b><small>sanitisierte Metadaten, Priorität und Antwortbedarf</small></div>
+              <div><span>DISCOVERY</span><b>PROFILE MATCHING</b><small>Chancen nach Passung, Region und Risiko gerankt</small></div>
+              <div><span>CONTROL</span><b>LIVE 5S SYNC</b><small>Worker, Telemetrie, Status, Fehler und redigierte Events</small></div>
+              <div><span>MEMORY</span><b>NOTES &amp; ROADMAP</b><small>feste Kategorien, Checklisten und dauerhafte Notizen</small></div>
+            </div>
+            <ul><li>AI Core läuft unabhängig vom Laptop</li><li>Vorschläge statt autonomer Zusagen</li><li>Such- und Statusfilter</li><li>Tägliche Briefs &amp; Statushistorie</li><li>Verschlüsseltes State-Backup</li></ul>
+            <div class="earning-boundary"><b>HUMAN-GATED BY DESIGN</b><p>Das System sammelt, ordnet und schlägt nächste Schritte vor. Es versendet keine E-Mail, bewirbt sich nicht selbstständig, schließt keinen Vertrag und löst keine Zahlung aus. Externe Aktionen bleiben bewusst beim Menschen.</p></div>
+            <p class="earning-offer-note">Dieses Eigenprojekt belegt, dass wir vergleichbare, klar abgegrenzte Operations-Dashboards und Automatisierungen für individuelle Abläufe konzipieren können. Freigegebene Konten und Datenquellen, Umfang, Rechte sowie laufender Betrieb werden vor einem Kundenprojekt separat geprüft.</p>
+            <a href="/solutions/#request">INDIVIDUELLES SYSTEM ANFRAGEN →</a>
+          </div>
+        </article>
+      </div>
+      <div class="portfolio-truth reveal" role="note"><b>PORTFOLIO-GRENZE</b><p>Hier stehen nur eigene Projekte und ausdrücklich fiktive Demonstrationen. Reale Kundenarbeiten erscheinen erst mit überprüfbarer Freigabe.</p><a href="/solutions/#request">EIGENES PROJEKT ANFRAGEN →</a></div>
+    </section>
+
+    <div class="section-zone section-shell reveal"><span>03</span><div><b>DAS TECHNOLOGIEPROJEKT</b><p>JARVIS OS und AEGIS – kompakt erklärt, vollständig verlinkt</p></div></div>
+
+    <section class="technology-section section-shell section-pad" id="system" aria-labelledby="technology-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 // JARVIS TECHNOLOGY</p>
+        <h2 id="technology-title">Dienstleistungen heute.<br><span>Eigene Technologie für morgen.</span></h2>
+        <p>JARVIS SYSTEM ist mehr als eine gewöhnliche Webagentur. Gleichzeitig bleiben Kundenangebote, Betriebssystementwicklung und Sicherheitsforschung klar getrennt, damit niemand Entwicklungsstatus mit einer fertigen Leistung verwechselt.</p>
+      </div>
+      <div class="technology-grid">
+        <article class="technology-card technology-os reveal">
+          <div class="technology-image"><picture><source srcset="/assets/jarvis-boot-guardian.webp" type="image/webp"><img src="/assets/jarvis-boot-guardian.png" width="1920" height="1080" loading="lazy" decoding="async" alt="JARVIS Boot Guardian als visuelle Identität von JARVIS OS"></picture></div>
+          <div class="technology-copy"><span>CORE-01 // OPERATING SYSTEM</span><h3>JARVIS OS</h3><p>Ein aktiv entwickeltes Betriebssystemprojekt mit eigener sichtbarer Boot-, Login-, Shell- und Systemschicht. Der heutige Engineering-Stand nutzt ehrlich ausgewiesen weiterhin Linux-Kernel und Linux-Treiber.</p><dl><div><dt>PUBLIC ISO</dt><dd>NOCH NICHT</dd></div><div><dt>STATUS</dt><dd>ENGINEERING</dd></div></dl><a class="button button-ghost" href="/jarvis-os/">JARVIS OS ENTDECKEN →</a></div>
+        </article>
+        <article class="technology-card technology-aegis reveal">
+          <div class="technology-image"><img src="/assets/aegis-0.4.2/JARVIS_AEGIS_0.4.2_REPORT_POSTER_1920x1080_PUBLIC.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Öffentlich redigiertes AEGIS-Sicherheitsposter"></div>
+          <div class="technology-copy"><span>AEGIS-02 // SECURITY PLATFORM</span><h3>AEGIS &amp; Threat Observatory</h3><p>AEGIS verbindet Sicherheitsarchitektur, kontrollierte Telemetrie und ein eigenes SOC. Das öffentliche Threat Observatory trennt globale Beobachtungen, direkte Sensordaten und dekorative Darstellung ausdrücklich voneinander.</p><dl><div><dt>PUBLIC DATA</dt><dd>REDACTED</dd></div><div><dt>FAKE EVENTS</dt><dd>ZERO</dd></div></dl><a class="button button-ghost" href="/threat-observatory/">THREAT MAP ÖFFNEN →</a></div>
+        </article>
+      </div>
+
+      <section class="live-telemetry reveal" id="live-engineering-signal" data-endpoint="https://jarvis-live-telemetry.jarvis-system-live.workers.dev" aria-labelledby="live-signal-title">
+        <div class="live-telemetry-head">
+          <div><span class="live-kicker">LIVE INTERCEPT // PUBLIC ENGINEERING CARRIER</span><h3 id="live-signal-title">JARVIS WORK SIGNAL</h3></div>
+          <div class="live-link-state" data-live-state="connecting"><i></i><span id="live-state-label">LINKING</span></div>
+        </div>
+        <div class="live-telemetry-grid">
+          <div class="live-wave-stage">
+            <div class="live-wave-grid" aria-hidden="true"></div>
+            <canvas id="live-wave-canvas" aria-label="Echtzeitvisualisierung des öffentlichen JARVIS-Arbeitssignals"></canvas>
+            <div class="live-frequency-scale" aria-hidden="true"><span>00.4</span><span>08.8</span><span>16.2</span><span>24.0 kHz</span></div>
+            <div class="live-carrier-caption"><span id="live-carrier-label">WAITING FOR AUTHENTICATED CARRIER</span><b>AGGREGATE SIGNAL // NOT AUDIO</b></div>
+          </div>
+          <div class="live-readouts" aria-live="polite">
+            <div><span>LINK STATE</span><b id="live-link-value">CONNECTING</b><small>CODEX RUNTIME</small></div>
+            <div><span>REPORTED SESSION</span><b id="live-session-value">00:00:00</b><small>BACKEND-REPORTED VALUE</small></div>
+            <div><span>REPORTED ACTIVE TODAY</span><b id="live-today-value">00:00:00</b><small>BACKEND-REPORTED VALUE</small></div>
+            <div><span>WORK PULSE</span><b id="live-pulse-value">000%</b><small>PROCESS ACTIVITY</small></div>
+            <div><span>CODEX NODES</span><b id="live-process-value">00</b><small>AGGREGATED COUNT</small></div>
+            <div><span>CHECKED AGE</span><b id="live-freshness-value">--</b><small>RELAY FRESHNESS</small></div>
+          </div>
+        </div>
+        <div class="live-privacy-strip"><span>PRIVACY FIREWALL</span><p>Öffentlich sind ausschließlich vom Relay gemeldeter Aktivstatus, Dauer, Puls und Prozessanzahl sichtbar. Keine Chats, Prompts, Befehle, Dateinamen, Audioinhalte, Hardware-IDs oder IP-Adressen.</p><b>CONTENT: ZERO</b></div>
+      </section>
+    </section>
+
+    <div class="section-zone section-shell reveal"><span>04</span><div><b>VERTRAUEN &amp; FORTSCHRITT</b><p>Wer dahintersteht und was tatsächlich gebaut wurde</p></div></div>
+
+    <section class="trust-section section-shell section-pad" id="about" aria-labelledby="trust-title">
+      <div class="trust-founder reveal">
+        <div class="trust-brand"><img src="/assets/brand/jarvis-system-visor-wordmark.svg" width="2048" height="2048" loading="lazy" decoding="async" alt="JARVIS SYSTEM Visor Wordmark"></div>
+        <div class="trust-copy"><p class="eyebrow">FOUNDER-LED // DEUTSCHLAND</p><h2 id="trust-title">Technische Neugier.<br><span>Handwerkliche Bodenhaftung.</span></h2><p>JARVIS SYSTEM wird von <strong>Oliver-frank Pristaff</strong> aufgebaut. Sein beruflicher Ursprung liegt im Maurerhandwerk; Hardware, Linux, Server, Webentwicklung und Automatisierung entstanden über jahrelanges Selbststudium und eigene reale Projekte.</p><p>Keine erfundene Agenturgrösse und keine versteckten Senior-Titel: Du sprichst direkt mit der Person, die Umfang, Umsetzung und Dokumentation verantwortet.</p><a class="button button-ghost" href="/gruender/">GRÜNDERSTORY LESEN →</a></div>
+      </div>
+      <div class="trust-principles reveal" aria-label="Arbeitsgrundsätze"><div><span>01</span><b>Schriftlicher Umfang</b><p>Leistung, Grenzen und Preis werden vor dem Start bestätigt.</p></div><div><span>02</span><b>Kontrollierte Vorschau</b><p>Veröffentlichung erst nach Prüfung und Freigabe.</p></div><div><span>03</span><b>Ehrliche Technik</b><p>Unbekannte Werte bleiben N/A statt erfunden zu werden.</p></div><div><span>04</span><b>Nachvollziehbare Übergabe</b><p>Ergebnis, offene Punkte und nächste Schritte bleiben sichtbar.</p></div></div>
+    </section>
+
+    <section class="updates-section section-shell section-pad" id="updates" aria-labelledby="updates-title">
+      <div class="section-heading compact reveal"><p class="eyebrow">05 // DEVELOPMENT TRANSMISSIONS</p><h2 id="updates-title">Aktuelle Fortschritte.</h2><p>Datiert, nachvollziehbar und ohne einen Entwicklungsstand grösser darzustellen, als er ist.</p></div>
+      <div class="update-feed" id="update-feed"><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-10-17">17.10.2026</time>
+      <div><h3><a href="/updates/deutschland-orientierung-transparenz-oktober-2026/">Deutschland-Ausrichtung, klare Orientierung und überprüfbare Datenstände</a></h3><p>Die nächste öffentliche Websitefassung richtet Standort, Local IT, Navigation und Datenhinweise auf Deutschland aus. Der Kandidat bleibt bis zur gesonderten Freigabe unveröffentlicht; statische Snapshots und dynamische Statusquellen werden sichtbar getrennt.</p><a class="text-link" href="/updates/deutschland-orientierung-transparenz-oktober-2026/">TECHNISCHEN BERICHT LESEN →</a></div>
+      <span class="update-tag">REVIEWED CANDIDATE</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-08-03">03.08.2026</time>
+      <div><h3><a href="/updates/jarvis-platform-solutions-ai-core-august-2026/">JARVIS wächst zur realen Plattform: AI Core, AEGIS 0.4.4 und offene Webprojekte</a></h3><p>Seit dem letzten öffentlichen Meilenstein wurden der eigene AI Core, verschlüsselte lokale KI, sicherer Fernzugriff, AEGIS SOC 0.4.4, ESP32 Recon Lab und der neue JARVIS-Solutions-Eingang real aufgebaut und geprüft.</p><a class="text-link" href="/updates/jarvis-platform-solutions-ai-core-august-2026/">TECHNISCHEN BERICHT LESEN →</a></div>
+      <span class="update-tag">VERIFIED MILESTONE</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-27">27.07.2026</time>
+      <div><h3><a href="/updates/aegis-0-4-2-security-core/">Vom alten Heim-PC zum eigenen Security Core: JARVIS AEGIS 0.4.2</a></h3><p>Der erste eigene JARVIS Core Node, reale Event-Evidence, geprüfte Backup- und Recoveryketten, Founder-only Zero Trust, zwölf SOC-Workspaces und der erste signierte Browser-Updatepfad sind Ende-zu-Ende in Betrieb.</p><a class="text-link" href="/updates/aegis-0-4-2-security-core/">TECHNISCHEN BERICHT LESEN →</a></div>
+      <span class="update-tag">VERIFIED MILESTONE</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-24">24.07.2026</time>
+      <div><h3><a href="/updates/support-uplink-live/">Offizieller JARVIS Support-Uplink veröffentlicht</a></h3><p>Das freiwillige Unterstützungsmodell ist mit transparenter Website, Ko-fi-Tiers, klaren Discord-Rollen und konsistenten Verweisen auf den öffentlichen Projektprofilen live.</p><a class="text-link" href="/updates/support-uplink-live/">TECHNISCHEN BERICHT LESEN →</a></div>
+      <span class="update-tag">LIVE</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-24">24.07.2026</time>
+      <div><h3><a href="/updates/sichere-plattform-synchronisation/">Sichere JARVIS-Plattform-Synchronisation vollständig abgenommen</a></h3><p>JARVIS SYSTEM besitzt jetzt einen getesteten Publishing-Kern für Website, GitHub und Discord – mit exakter Inhaltsfreigabe, Datenschutzprüfung, Deduplizierung, Teilfehler-Recovery und standardmäßig aktivem Not-Aus.</p><a class="text-link" href="/updates/sichere-plattform-synchronisation/">TECHNISCHEN BERICHT LESEN →</a></div>
+      <span class="update-tag">APPROVED</span>
+    </article></div>
+      <p class="section-action reveal"><a class="button button-ghost" href="/updates/">ALLE ENTWICKLUNGSBERICHTE →</a></p>
+    </section>
+
+    <section class="connection-section section-shell section-pad" id="community" aria-labelledby="connection-title">
+      <div class="connection-grid">
+        <article class="connection-card reveal"><p class="eyebrow">06 // OFFICIAL NETWORK</p><h2 id="connection-title">Alle offiziellen Wege.<br><span>Ein gemeinsamer Ursprung.</span></h2><p>Website, GitHub, LinkedIn, Discord und Support sind im verifizierten Netzwerkverzeichnis gebündelt. Keine inoffiziellen Zahlungs- oder Downloadlinks.</p><div class="connection-actions"><a class="button button-primary" href="/connect/">OFFIZIELLE LINKS →</a></div></article>
+        <article class="connection-card connection-community reveal"><p class="eyebrow">COMMUNITY UPLINK</p><h2>Mitverfolgen, diskutieren und später testen.</h2><p>Der Discord verbindet Projektupdates, Entwicklung, Hardware, Community-Talks und Gaming. Eine Community-Rolle gibt niemals automatisch administrative Systemrechte.</p><span class="status-chip active">DISCORD // COMMUNITY ONLINE</span><div class="connection-actions"><a class="button button-ghost" href="/community/">COMMUNITY VERSTEHEN →</a><a class="button button-ghost " href="https://discord.gg/DWBwuUhXmv" >DISCORD BEITRETEN →</a></div></article>
+      </div>
+      <div class="final-cta reveal"><div><p class="eyebrow">DEIN NÄCHSTER SCHRITT</p><h2>Was möchtest du verbessern?</h2><p>Ein paar Sätze reichen. Wir antworten schriftlich und sagen ehrlich, ob und wie wir helfen können.</p></div><a class="button button-primary" href="/solutions/#request">PROJEKT ODER IT-HILFE ANFRAGEN →</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><b>JARVIS SYSTEM</b><span>TECHNOLOGY PROJECT + DIGITAL SOLUTIONS</span><p>Websites, Local IT und technische Lösungen aus Deutschland – mit JARVIS OS als eigenem Kernprojekt.</p><small>Öffentlicher Standort: Deutschland · Baden-Württemberg · Landkreis Waldshut</small><a href="mailto:jarvissystem@jarvisserver.org">jarvissystem@jarvisserver.org</a></div>
+    <nav class="footer-directory" aria-label="Vollständige Seitennavigation">
+      <div><b>LEISTUNGEN</b><a href="/solutions/">Alle Angebote</a><a href="/shop/">Shop</a><a href="/#projekte">Arbeitsbeispiele</a><a href="/solutions/#local-it">Local IT &amp; Vor Ort</a><a href="/solutions/#request">Projekt anfragen</a><a href="/solutions/#services">Website-Check</a></div>
+      <div><b>JARVIS OS</b><a href="/jarvis-os/">Systemprofil</a><a href="/technik/">Technik</a><a href="/entwicklung/">Entwicklung</a><a href="/roadmap/">Roadmap</a></div>
+      <div><b>PROJEKT</b><a href="/updates/">Updates</a><a href="/gruender/">Gründer</a><a href="/community/">Community</a><a href="/threat-observatory/">Threat Map</a></div>
+      <div><b>ORIENTIERUNG</b><a href="/#partner">Partner &amp; Founding 100</a><a href="/uebersicht/">Website-Index</a><a href="/connect/">Offizielle Profile</a><a href="/support/">Support</a><a href="/faq/">FAQ</a></div>
+    </nav>
+    <div class="footer-legal">
+      <div>
+        <p>© 2026 Oliver-frank Pristaff. Alle Rechte vorbehalten. Keine ISO-Verteilung.</p>
+        <a href="/legal.html">Rechte, Hinweise & Datenschutz</a>
+        · <a href="https://www.linkedin.com/in/oliver-frank-pristaff/" rel="me">LinkedIn Oliver</a>
+        · <a href="https://github.com/hotboxking09">GitHub</a>
+        · <a href="https://discord.gg/DWBwuUhXmv">Discord</a>
+      </div>
+      <div class="footer-state"><span></span> PROJECT SIGNAL ACTIVE</div>
+    </div>
+  </footer>`;export{e as default};

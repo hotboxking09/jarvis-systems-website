@@ -1,0 +1,71 @@
+var e=`<a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas>
+  <header class="site-header">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span><strong>JARVIS</strong><small>SYSTEM</small></span></a>
+    <nav class="main-nav" aria-label="Seitennavigation"><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENÜ</button><div class="nav-links" id="nav-links"><a href="/jarvis-os/">JARVIS OS</a><a href="/technik/">Technik</a><a href="/entwicklung/">Entwicklung</a><a href="/updates/">Updates</a><a href="/roadmap/">Roadmap</a><a href="/gruender/">Gründer</a><a href="/faq/">FAQ</a></div></nav>
+    <button class="header-search" type="button" data-site-search-open aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="Seite durchsuchen"><span aria-hidden="true">⌕</span><span>SUCHEN</span><kbd>⌘K</kbd></button>
+    <div class="header-state"><span></span> RIGHTS CONTROL</div>
+  <nav class="language-switch" aria-label="Sprache"><a href="/legal.html" hreflang="de-DE" lang="de" aria-current="true">DE</a><a href="/en/legal.html" hreflang="en" lang="en">EN</a></nav></header>
+  <main id="main">
+    <header class="legal-hero section-shell">
+      <p class="eyebrow">LEGAL & RIGHTS CONTROL // VERSION 12.08.2026</p>
+      <h1><span>RECHTE</span> & HINWEISE</h1>
+      <p>Urheberrecht, Nutzungsgrenzen, Kennzeichen, Datenschutz und Freigabestatus des unabhängigen Projekts JARVIS SYSTEM.</p>
+      <p class="legal-draft">PUBLIC PROJECT INFORMATION – Die Website dokumentiert einen Engineering-Stand. Es wird derzeit keine installierbare ISO angeboten.</p>
+    </header>
+    <div class="legal-grid section-shell">
+      <aside class="legal-index" aria-label="Inhaltsübersicht">
+        <b>LEGAL INDEX</b>
+        <a href="#copyright">01 Urheberrecht</a><a href="#license">02 Keine Lizenz</a><a href="#distribution">03 Keine ISO</a><a href="#marks">04 Kennzeichen</a><a href="#third-party">05 Drittkomponenten</a><a href="#privacy">06 Datenschutz</a><a href="#shop">07 Shop &amp; Bestellungen</a><a href="#liability">08 Haftung</a><a href="#contact">09 Kontakt</a>
+      </aside>
+      <article class="legal-copy">
+        <section id="copyright">
+          <p class="eyebrow">01 // COPYRIGHT</p><h2>Urheberrecht und Zuordnung</h2>
+          <p><strong>© 2026 Oliver-frank Pristaff. Alle Rechte vorbehalten.</strong></p>
+          <p>Die von Oliver geschaffenen Originalbestandteile dieser Website und des Projekts – insbesondere eigene Texte, Grafiken, Benutzeroberflächen, Markenauftritte, Dokumentation und eigener Programmcode – dürfen ohne vorherige ausdrückliche schriftliche Genehmigung nicht kopiert, verändert, verbreitet, veröffentlicht, verkauft oder als eigenes Werk ausgegeben werden.</p>
+          <p>Der Copyrightvermerk dokumentiert die beanspruchte Rechtezuordnung. Er ist keine Behauptung, dass allgemeine Ideen, technische Prinzipien, Drittbestandteile oder gemeinfreie Elemente monopolisiert werden.</p>
+        </section>
+        <section id="license">
+          <p class="eyebrow">02 // NO LICENSE GRANTED</p><h2>Keine stillschweigende Nutzungslizenz</h2>
+          <p>Das bloße Aufrufen dieser Website räumt keine Lizenz an JARVIS SYSTEM ein. Soweit ein Quelltext oder Websitebestandteil öffentlich einsehbar ist, folgt daraus keine Erlaubnis zur Wiederverwendung außerhalb zwingender Plattformrechte oder gesetzlich erlaubter Ausnahmen.</p>
+          <p class="legal-alert"><strong>Kein Open-Source-Angebot:</strong> Für die eigenen unveröffentlichten JARVIS-Bestandteile wird derzeit bewusst keine Open-Source-Lizenz erteilt.</p>
+        </section>
+        <section id="distribution">
+          <p class="eyebrow">03 // DISTRIBUTION LOCK</p><h2>Keine ISO, kein Releaseangebot</h2>
+          <p>Diese Website ist eine Projektvorstellung. Sie stellt derzeit weder eine installierbare ISO noch Binärpakete, Images, Schlüssel oder andere Systemdownloads bereit. Interne Engineering-Medien sind nicht freigegeben. Tests oder Zugänge erfolgen nur nach gesonderter ausdrücklicher Vereinbarung.</p>
+        </section>
+        <section id="marks">
+          <p class="eyebrow">04 // NAMES & MARKS</p><h2>Namen und Kennzeichen</h2>
+          <p>„JARVIS SYSTEM“ und „JARVIS OS“ werden auf dieser Seite als Projekt- und Produktbezeichnungen verwendet. JARVIS SYSTEM ist derzeit keine auf dieser Website behauptete eingetragene Gesellschaft oder registrierte Marke. Die Bezeichnungen müssen vor einer kommerziellen oder breiten Veröffentlichung professionell auf ältere Rechte und Verwechslungsgefahren geprüft werden. Das Symbol ® wird nicht verwendet.</p>
+        </section>
+        <section id="third-party">
+          <p class="eyebrow">05 // THIRD-PARTY RIGHTS</p><h2>Linux und Drittkomponenten</h2>
+          <p>JARVIS SYSTEM nutzt in der aktuellen Entwicklungsphase einen Linux-/Ubuntu-basierten technischen Unterbau und weitere Drittkomponenten. Deren Namen, Marken, Quelltexte und Lizenzen bleiben Eigentum der jeweiligen Rechteinhaber. Eigene JARVIS-Rechte ersetzen oder beschränken diese Lizenzen nicht. Vor einer späteren ISO-Veröffentlichung werden Komponenteninventar, Lizenztexte und gegebenenfalls Quellcodepflichten getrennt geprüft und erfüllt.</p>
+          <p>JARVIS SYSTEM ist nicht mit Microsoft, Canonical, der Linux Foundation, Marvel, Disney oder anderen Drittanbietern verbunden oder von ihnen unterstützt, sofern nicht künftig ausdrücklich schriftlich anders ausgewiesen.</p>
+        </section>
+        <section id="privacy">
+          <p class="eyebrow">06 // PRIVACY</p><h2>Datenschutz dieser Website</h2>
+          <p>Kontakt für Datenschutzanfragen zur öffentlichen JARVIS-Website ist <strong>Oliver-frank Pristaff – JARVIS SYSTEM</strong>, öffentlicher Standort: Deutschland · Baden-Württemberg · Landkreis Waldshut. Anfragen zu Auskunft, Berichtigung oder Löschung richtest du bitte an <a href="mailto:jarvissystem@jarvisserver.org"><strong>jarvissystem@jarvisserver.org</strong></a>.</p>
+          <p>Die öffentliche Website setzt keine eigenen Analyse-, Werbe- oder Profilingdienste ein. Die Companion-Web-App ist eine öffentliche Vorschau; Anmeldung, persönliche Nachrichten und Community-Chat sind noch nicht freigegeben. „Mein Setup“ speichert freiwillige Einträge ausschließlich im lokalen Browserspeicher; sie werden nicht automatisch übertragen. Du kannst sie in der Vorschau entfernen oder die Website-Daten im Browser löschen. Eine Anfrage im Lösungsfinder erzeugt lediglich einen E-Mail-Entwurf; erst das bewusste Versenden im eigenen E-Mail-Programm überträgt ihn. Beim Laden öffentlicher Statusquellen sehen die beteiligten Infrastrukturbetreiber technisch notwendige Verbindungsmetadaten. Vor Freigabe persönlicher Cloud-Funktionen werden deren Datenverarbeitung und Schutzmaßnahmen gesondert beschrieben.</p>
+          <p>Das sichtbare JARVIS-Arbeitssignal wird von einem Cloudflare Worker abgerufen. Der veröffentlichte Zustand enthält ausschliesslich aggregierten Aktivstatus, Dauer, Puls und Prozessanzahl. Chats, Prompts, Befehle, Dateien, Audio, Hardware-IDs und IP-Adressen gehören nicht zum Nutzdateninhalt. Wie bei jedem Webabruf können Hosting- und Netzwerkanbieter technisch notwendige Verbindungsmetadaten verarbeiten.</p>
+          <p>Technische Empfänger können GitHub Pages, Cloudflare und die bewusst ausgewählten externen Linkziele sein. Bei einem Besuch dieser Ziele gelten zusätzlich deren eigenen Datenschutzinformationen. Aufbewahrung und Löschung richten sich nach Zweck und anwendbaren gesetzlichen Pflichten.</p>
+          <p>Externe Community-, GitHub- und Profil-Links werden nur zu tatsächlich eingerichteten Zielen geführt. Beim bewussten Aufrufen gelten zusätzlich die Bedingungen und Datenschutzbestimmungen des jeweiligen Dienstes. Eine rechtlich verbindliche Einzelfallprüfung wird durch diese verständliche Projektinformation nicht ersetzt.</p>
+        </section>
+        <section id="shop">
+          <p class="eyebrow">07 // SHOP STATUS</p><h2>Shop und Checkout aktiv</h2>
+          <p>Die CORE SERIES 01 ist über diese Website verfügbar. Produkt- und Grössenpreise werden in EUR direkt aus der Fourthwall-Storefront geladen; erst der klar gekennzeichnete Zahlungsabschluss führt zum gebrandeten Checkout auf checkout.jarvisserver.org. Versand, Steuern und Gesamtbetrag werden dort vor der verbindlichen Bestellung angezeigt.</p>
+          <p>Ein möglicher späterer Shop benötigt vor einer Veröffentlichung eine eigene Prüfung der Anbieterangaben, rechtlichen Texte, Zahlungs- und Auszahlungswege, Währung, Produktinformationen, Widerruf sowie des technischen Checkoutpfads.</p>
+        </section>
+        <section id="liability">
+          <p class="eyebrow">08 // ENGINEERING STATE</p><h2>Projektstatus und Haftungshinweis</h2>
+          <p>Alle technischen Angaben beschreiben einen Entwicklungsstand und keine zugesicherte Produkteigenschaft. Eine öffentliche Distribution ist noch nicht freigegeben. Für externe Inhalte und Plattformverfügbarkeit wird im gesetzlich zulässigen Umfang keine Gewähr übernommen; zwingende gesetzliche Rechte bleiben unberührt.</p>
+        </section>
+        <section id="contact">
+          <p class="eyebrow">09 // CONTACT</p><h2>Rechtekontakt</h2>
+          <p>Rechte- und Projektkontakt: <strong>Oliver-frank Pristaff – JARVIS SYSTEM</strong><br>Öffentlicher Standort: Deutschland · Baden-Württemberg · Landkreis Waldshut<br>Geschäftskontakt: <a href="mailto:jarvissystem@jarvisserver.org"><strong>jarvissystem@jarvisserver.org</strong></a></p>
+          <p>JARVIS SYSTEM bezeichnet derzeit das von Oliver-frank Pristaff geführte Projekt. Die Website behauptet keine eingetragene Gesellschaft. Local-IT-Anfragen sind unverbindlich und auf den regionalen Start im Südschwarzwald mit Fokus auf Rickenbach und Landkreis Waldshut ausgerichtet. Ein Auftrag entsteht erst nach individueller schriftlicher Leistungs- und Preisbestätigung; vollständige Vertrags- und Rechnungsangaben werden nur im direkten, konkreten Vorgang bereitgestellt.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer section-shell"><div class="footer-brand"><b>JARVIS SYSTEM</b><span>RIGHTS CONTROL</span></div><nav class="footer-map" aria-label="Seitennavigation"><a href="/jarvis-os/">JARVIS OS</a><a href="/technik/">Technik</a><a href="/entwicklung/">Entwicklung</a><a href="/updates/">Updates</a><a href="/roadmap/">Roadmap</a><a href="/gruender/">Gründer</a><a href="/faq/">FAQ</a></nav><div class="footer-legal"><p>© 2026 Oliver-frank Pristaff. Alle Rechte vorbehalten.</p><a href="/">Zur Startseite</a></div><div class="footer-state"><span></span> ACCESS CONTROLLED</div></footer>`;export{e as default};

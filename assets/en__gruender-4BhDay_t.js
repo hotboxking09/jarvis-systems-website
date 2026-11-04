@@ -1,0 +1,73 @@
+var e=`<a class="skip-link" href="#main">Skip to content</a>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas><div class="noise-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="/en/">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>JARVIS</strong><small>SYSTEM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
+      <div class="nav-links" id="nav-links"><a href="/en/">Home</a><a href="/en/solutions/">Services</a><a href="/en/shop/">Shop</a><a href="/en/#projekte">Projects</a><a href="/en/#partner">Partners</a><a href="/en/jarvis-os/">JARVIS OS</a><a href="/en/threat-observatory/">AEGIS</a><a href="/en/updates/">Updates</a></div>
+    </nav>
+    <button class="header-search" type="button" data-site-search-open aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="Search this site"><span aria-hidden="true">⌕</span><span>SEARCH</span><kbd>⌘K</kbd></button>
+    <nav class="language-switch" aria-label="Language"><a href="/gruender/" hreflang="de-DE" lang="de">DE</a><a href="/en/gruender/" hreflang="en" lang="en" aria-current="true">EN</a></nav><a class="header-contact" href="/en/solutions/#request"><span></span> START AN INQUIRY</a>
+  </header>
+  <main id="main">
+    <section class="content-hero section-shell">
+      <div class="content-hero-copy reveal">
+        <nav class="breadcrumbs" aria-label="Breadcrumb navigation"><a href="/en/">JARVIS SYSTEM</a><span>/</span><span aria-current="page">Founder</span></nav>
+        <p class="eyebrow">FOUNDER PROFILE // GERMANY</p>
+        <h1>Oliver-frank Pristaff – Founder of JARVIS SYSTEM</h1>
+        <p class="content-intro">Oliver-frank Pristaff is the founder and developer behind JARVIS SYSTEM. His journey began in a trade and, through years of independent learning with computers, networks, servers and software development, led to his own operating-system project in Germany.</p>
+      </div>
+      <div class="content-core reveal" aria-hidden="true">
+        <div class="core-rings"><i></i><i></i><i></i></div>
+        <picture><source srcset="/assets/jarvis-core-head.webp" type="image/webp"><img src="/assets/jarvis-core-head.png" width="1024" height="1024" alt="" decoding="async"></picture>
+        <span>FOUNDER // ONLINE</span>
+      </div>
+      <div class="content-facts"><div><span>NAME</span><b>Oliver-frank Pristaff</b></div><div><span>ORIGIN</span><b>GERMANY</b></div><div><span>VINTAGE</span><b>2003</b></div><div><span>ROLL</span><b>FOUNDER + DEVELOPER</b></div></div>
+    </section>
+    <div class="content-layout section-shell">
+      <aside class="content-index"><b>PAGE MATRIX</b><a href="#craft">01 // ORIGIN</a><a href="#resilience">02 // RESILIENCE</a><a href="#idea">03 // THE IDEA</a><a href="#motto">04 // PRINCIPLE</a><a href="/en/updates/">LIVE DEVELOPMENT LOG</a></aside>
+      <article class="content-copy"><section id="craft" class="content-block reveal">
+      <p class="eyebrow">01 // ORIGIN</p>
+      <h2>From craftsmanship to system engineering</h2>
+      <p>Oliver's professional path did not begin in IT, but as a bricklayer, including customer bricklaying work. The craft conveyed a basic attitude that is still important today: sustainable results come from preparation, precision and many correctly executed individual steps.</p><p>At the same time, technical curiosity grew. Computers were not just used, but disassembled, assembled and examined. Networks, home servers, virtualization, Linux, Windows, data centers, artificial intelligence and software development evolved from a hobby to a long-term technical focus.</p>
+    </section><section id="resilience" class="content-block reveal">
+      <p class="eyebrow">02 // RESILIENCE</p>
+      <h2>Difficult years as part of history</h2>
+      <p>Oliver spent four years of his life in a home. This time was difficult and formative. It is not embellished as a marketing effect and is not described with made-up details.</p><p>Nevertheless, it is part of the story of how it came about: From difficult starting points, the will grew to take responsibility for one's own path, to continue learning and to build something of one's own in the long term.</p>
+    </section><section id="idea" class="content-block reveal">
+      <p class="eyebrow">03 // THE IDEA</p>
+      <h2>Why your own operating system project?</h2>
+      <p>With each technical project a new environment emerged. This led to the question of why all ideas should be permanently adapted to existing surfaces. JARVIS SYSTEM was intended to be a common platform that combines boot, system control, development and technical overview into a single identity.</p><p>The goal is not to hide the Linux basis or to pretend to have a finished kernel. The goal is a comprehensible path from a stable current basis to increasingly independent JARVIS components.</p>
+    </section><section id="motto" class="content-block reveal">
+      <p class="eyebrow">04 // PRINCIPLE</p>
+      <h2>Thousands of steps in the same direction</h2>
+      <p>The project should not grow through hasty promises, but through consistent construction, testing and documentation. This attitude sums up Oliver's personal motto:</p><blockquote class="content-quote">“Large projects are not created through perfection on the first day, but through thousands of small steps that consistently go in the same direction.”<cite>— Oliver-frank Pristaff</cite></blockquote>
+    </section></article>
+    </div>
+    <section class="related-section section-shell" aria-labelledby="related-title">
+      <p class="eyebrow">NEXT SIGNALS</p><h2 id="related-title">Continue exploring JARVIS</h2>
+      <div class="related-grid"><a class="related-card" href="/en/jarvis-os/"><span>JARVIS KNOWLEDGE</span><h3>What is JARVIS OS?</h3><p>JARVIS OS is a German operating system project with its own boot interface, login, shell, control panel and real-time telemetry.</p><b>OPEN →</b></a><a class="related-card" href="/en/entwicklung/"><span>JARVIS KNOWLEDGE</span><h3>How JARVIS OS is developed</h3><p>This is how JARVIS OS is created: documented builds, VM and hardware tests, backups, release gates and traceable status information.</p><b>OPEN →</b></a><a class="related-card" href="/en/updates/"><span>DEVELOPMENT LOG</span><h3>Current updates</h3><p>Traceable development statuses and verified milestones.</p><b>OPEN →</b></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><b>JARVIS SYSTEM</b><span>TECHNOLOGY PROJECT + DIGITAL SOLUTIONS</span><p>Websites, Local IT und technische Lösungen aus Deutschland – mit JARVIS OS als eigenem Kernprojekt.</p><small>Öffentlicher Standort: Deutschland · Baden-Württemberg · Landkreis Waldshut</small><a href="mailto:jarvissystem@jarvisserver.org">jarvissystem@jarvisserver.org</a></div>
+    <nav class="footer-directory" aria-label="Complete site navigation">
+      <div><b>SERVICES</b><a href="/en/solutions/">All offers</a><a href="/en/shop/">Shop</a><a href="/en/#projekte">Work examples</a><a href="/en/solutions/#local-it">Local IT &amp; On Site</a><a href="/en/solutions/#request">Request a project</a><a href="/en/solutions/#services">Website check</a></div>
+      <div><b>JARVIS OS</b><a href="/en/jarvis-os/">System profile</a><a href="/en/technik/">Technology</a><a href="/en/entwicklung/">Development</a><a href="/en/roadmap/">Roadmap</a></div>
+      <div><b>PROJECT</b><a href="/en/updates/">Updates</a><a href="/en/gruender/">Founder</a><a href="/en/community/">Community</a><a href="/en/threat-observatory/">Threat Map</a></div>
+      <div><b>ORIENTATION</b><a href="/en/#partner">Partner &amp; Founding 100</a><a href="/en/uebersicht/">Website index</a><a href="/en/connect/">Official profiles</a><a href="/en/support/">Support</a><a href="/en/faq/">FAQ</a></div>
+    </nav>
+    <div class="footer-legal">
+      <div><p>© 2026 Oliver-frank Pristaff. All rights reserved. No ISO distribution.</p>
+      <a href="/en/legal.html">Rights, notices &amp; privacy</a> ·
+      <a href="https://www.linkedin.com/in/oliver-frank-pristaff/" rel="me">LinkedIn Oliver</a> ·
+      <a href="https://github.com/hotboxking09">GitHub</a> ·
+      <a href="https://discord.gg/DWBwuUhXmv">Discord</a></div>
+      <div class="footer-state"><span></span> PROJECT SIGNAL ACTIVE</div>
+    </div>
+  </footer>`;export{e as default};

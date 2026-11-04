@@ -1,0 +1,36 @@
+var e=`<a class="skip-link" href="#main">Skip to content</a><canvas id="signal-canvas" aria-hidden="true"></canvas><div class="noise-layer" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="/en/">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>JARVIS</strong><small>SYSTEM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
+      <div class="nav-links" id="nav-links"><a href="/en/">Home</a><a href="/en/solutions/">Services</a><a href="/en/shop/">Shop</a><a href="/en/#projekte">Projects</a><a href="/en/#partner">Partners</a><a href="/en/jarvis-os/">JARVIS OS</a><a href="/en/threat-observatory/">AEGIS</a><a href="/en/updates/" aria-current="page">Updates</a></div>
+    </nav>
+    <button class="header-search" type="button" data-site-search-open aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="Search this site"><span aria-hidden="true">⌕</span><span>SEARCH</span><kbd>⌘K</kbd></button>
+    <nav class="language-switch" aria-label="Language"><a href="/updates/discord-team-welcome-securityfeed/" hreflang="de-DE" lang="de">DE</a><a href="/en/updates/discord-team-welcome-securityfeed/" hreflang="en" lang="en" aria-current="true">EN</a></nav><a class="header-contact" href="/en/solutions/#request"><span></span> START AN INQUIRY</a>
+  </header>
+  <main id="main"><article>
+    <header class="article-hero section-shell"><nav class="breadcrumbs" aria-label="Breadcrumb navigation"><a href="/en/">JARVIS SYSTEM</a><span>/</span><a href="/en/updates/">Updates</a><span>/</span><span aria-current="page">COMMUNITY-03</span></nav><p class="eyebrow">DEVELOPMENT TRANSMISSION // COMMUNITY-03</p><h1>Discord team structure and automations refined</h1><p class="content-intro">The community server now features clearly separated team and test areas, a personalized JARVIS welcome message, targeted protocols, and an automatic public security feed.</p><div class="article-meta"><time datetime="2026-07-24">2026-07-24</time><span>ACTIVE</span><span>Oliver-frank Pristaff</span></div></header>
+
+    <div class="content-layout section-shell"><aside class="content-index"><b>REPORT MATRIX</b><a href="#section-01">01 // Team and test laboratory deliberately separated</a><a href="#section-02">02 // More structure without destroying old content</a><a href="#section-03">03 // Personal greeting with JARVIS identity</a><a href="#section-04">04 // Targeted logs instead of full bot access</a><a href="/en/updates/">← ALL UPDATES</a></aside><div class="content-copy"><section class="content-block reveal" id="section-01"><p class="eyebrow">01 // COMMUNITY 03</p><h2>Team and test laboratory deliberately separated</h2><p>JARVIS TEAM gains access to the private Staff Core. The Test Lab is only visible to the JARVIS TEST TEAM composite release. This means that no one accidentally becomes part of internal development or testing simply because of a general interest role.</p></section><section class="content-block reveal" id="section-02"><p class="eyebrow">02 // COMMUNITY-03</p><h2>More structure without destroying old content</h2><p>Existing base names and community areas were retained and decorated uniformly. The Staff Core has been expanded to include team chat, announcements, backup status, errors and incidents, server logs, bot status, and releases and decisions.</p></section><section class="content-block reveal" id="section-03"><p class="eyebrow">03 // COMMUNITY 03</p><h2>Personal greeting with JARVIS identity</h2><p>ProBot welcomes new members in the welcome channel with short human text, dynamic avatar and its own JARVIS graphic. Discord's additional generic system greeting has been disabled so that new members are not welcomed twice.</p></section><section class="content-block reveal" id="section-04"><p class="eyebrow">04 // COMMUNITY 03</p><h2>Targeted logs instead of full bot access</h2><p>Selected member, role, channel, permission and moderation events end up exclusively in the private server log. The new Threat Observatory webhook only has its intended message path. An additional permanent bot will only be built when tickets, builds or real 24/7 automation justify it.</p></section><div class="content-callout">TRANSPARENCY // This report describes the documented project status on the specified date. Later tests can expand or correct the status.</div></div></div>
+  </article><section class="related-section section-shell"><p class="eyebrow">CONTINUE</p><h2>Project context</h2><div class="related-grid"><a class="related-card" href="/en/updates/"><span>ARCHIVES</span><h3>All updates</h3><p>The complete chronological development log.</p><b>OPEN →</b></a><a class="related-card" href="/en/entwicklung/"><span>PROCESS</span><h3>Development process</h3><p>Tests, builds and documentation.</p><b>OPEN →</b></a><a class="related-card" href="/en/roadmap/"><span>NEXT</span><h3>Roadmap</h3><p>The next technical gates.</p><b>OPEN →</b></a></div></section></main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><b>JARVIS SYSTEM</b><span>TECHNOLOGY PROJECT + DIGITAL SOLUTIONS</span><p>Websites, Local IT und technische Lösungen aus Deutschland – mit JARVIS OS als eigenem Kernprojekt.</p><small>Öffentlicher Standort: Deutschland · Baden-Württemberg · Landkreis Waldshut</small><a href="mailto:jarvissystem@jarvisserver.org">jarvissystem@jarvisserver.org</a></div>
+    <nav class="footer-directory" aria-label="Complete site navigation">
+      <div><b>SERVICES</b><a href="/en/solutions/">All offers</a><a href="/en/shop/">Shop</a><a href="/en/#projekte">Work examples</a><a href="/en/solutions/#local-it">Local IT &amp; On Site</a><a href="/en/solutions/#request">Request a project</a><a href="/en/solutions/#services">Website check</a></div>
+      <div><b>JARVIS OS</b><a href="/en/jarvis-os/">System profile</a><a href="/en/technik/">Technology</a><a href="/en/entwicklung/">Development</a><a href="/en/roadmap/">Roadmap</a></div>
+      <div><b>PROJECT</b><a href="/en/updates/">Updates</a><a href="/en/gruender/">Founder</a><a href="/en/community/">Community</a><a href="/en/threat-observatory/">Threat Map</a></div>
+      <div><b>ORIENTATION</b><a href="/en/#partner">Partner &amp; Founding 100</a><a href="/en/uebersicht/">Website index</a><a href="/en/connect/">Official profiles</a><a href="/en/support/">Support</a><a href="/en/faq/">FAQ</a></div>
+    </nav>
+    <div class="footer-legal">
+      <div><p>© 2026 Oliver-frank Pristaff. All rights reserved. No ISO distribution.</p>
+      <a href="/en/legal.html">Rights, notices &amp; privacy</a> ·
+      <a href="https://www.linkedin.com/in/oliver-frank-pristaff/" rel="me">LinkedIn Oliver</a> ·
+      <a href="https://github.com/hotboxking09">GitHub</a> ·
+      <a href="https://discord.gg/DWBwuUhXmv">Discord</a></div>
+      <div class="footer-state"><span></span> PROJECT SIGNAL ACTIVE</div>
+    </div>
+  </footer>`;export{e as default};

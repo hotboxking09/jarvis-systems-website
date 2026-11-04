@@ -1,0 +1,173 @@
+var e=`<a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas><div class="noise-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>JARVIS</strong><small>SYSTEM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENÜ</button>
+      <div class="nav-links" id="nav-links"><a href="/">Start</a><a href="/solutions/">Leistungen</a><a href="/shop/">Shop</a><a href="/#projekte">Projekte</a><a href="/#partner">Partner</a><a href="/jarvis-os/">JARVIS OS</a><a href="/threat-observatory/">AEGIS</a><a href="/updates/">Updates</a></div>
+    </nav>
+    <button class="header-search" type="button" data-site-search-open aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="Seite durchsuchen"><span aria-hidden="true">⌕</span><span>SUCHEN</span><kbd>⌘K</kbd></button>
+    <nav class="language-switch" aria-label="Sprache"><a href="/support/" hreflang="de-DE" lang="de" aria-current="true">DE</a><a href="/en/support/" hreflang="en" lang="en">EN</a></nav><a class="header-contact" href="/solutions/#request"><span></span> ANFRAGE STARTEN</a>
+  </header>
+  <main id="main"><section class="support-hero section-shell">
+  <div class="support-hero-copy reveal">
+    <nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">JARVIS SYSTEM</a><span>/</span><span aria-current="page">SUPPORT</span></nav>
+    <p class="eyebrow">SUPPORT UPLINK // LIVE BUILD 01</p>
+    <h1>BUILD THE<br><span>FUTURE.</span></h1>
+    <p>JARVIS SYSTEM wird unabhängig und Schritt für Schritt entwickelt. Wer das Projekt freiwillig unterstützen möchte, findet hier den einzigen offiziellen Zahlungsweg, klare Membership-Stufen und nachvollziehbare Regeln. Unterstützung finanziert Entwicklung und Infrastruktur – sie kauft niemals Eigentum oder Systemrechte.</p>
+    <div class="support-actions">
+      <a class="button support-button-live" href="https://ko-fi.com/jarvissystem">EINMAL UNTERSTÜTZEN →</a>
+      <a class="button button-ghost support-button-membership" href="https://ko-fi.com/jarvissystem/tiers">MEMBERSHIPS ÖFFNEN</a>
+      <a class="support-community-link" href="https://discord.gg/DWBwuUhXmv">Discord-Community ↗</a>
+    </div>
+  </div>
+  <div class="support-lock support-live-core reveal" aria-label="Offizieller Supportweg ist online">
+    <div class="support-lock-rings"><i></i><i></i><i></i></div>
+    <div class="support-lock-core"><span>01</span><b>SUPPORT<br>UPLINK</b></div>
+    <p><i></i> VERIFIED PATH ONLINE</p>
+  </div>
+  <div class="support-status-strip">
+    <div><span>PORTAL</span><b>PUBLIC LIVE</b></div>
+    <div><span>ONE-TIME</span><b>KO-FI ONLINE</b></div>
+    <div><span>MEMBERSHIPS</span><b>EUR 6 / EUR 16</b></div>
+    <div><span>PUBLIC ISO</span><b class="amber">NOT AVAILABLE</b></div>
+  </div>
+</section>
+
+<section class="support-console section-shell" aria-labelledby="support-console-title">
+  <header>
+    <div><span></span><span></span><span></span></div>
+    <p id="support-console-title">JARVIS_SUPPORT_CONTROL // VERIFIED UPLINK</p>
+    <b>SUPPORT PATH ACTIVE</b>
+  </header>
+  <div class="support-console-body">
+    <aside>
+      <b>PORTAL MATRIX</b>
+      <a href="#model">01 // MODEL</a>
+      <a href="#founding">02 // FOUNDING 100</a>
+      <a href="#transparency">03 // TRANSPARENCY</a>
+      <a href="#rights">04 // RIGHTS</a>
+      <a href="#operations">05 // OPERATIONS</a>
+    </aside>
+    <div class="support-console-copy">
+      <section id="model" class="support-block reveal">
+        <p class="eyebrow">01 // OFFICIAL SUPPORT MODEL</p>
+        <h2>Drei freiwillige Wege. Keine versteckten Versprechen.</h2>
+        <p>Alle Zahlungen laufen ausschließlich über das offizielle Ko-fi-Profil von JARVIS SYSTEM und den dort verbundenen Zahlungsanbieter. Preise, Abrechnung und Kündigung werden beim Checkout angezeigt. „Spende“ bedeutet hier freiwillige Projektunterstützung und nicht automatisch eine steuerlich abzugsfähige Zuwendung.</p>
+        <div class="support-tier-grid">
+          <article class="support-tier">
+            <div><span>01</span><b>ONE-TIME</b></div>
+            <h3>GÖNNER</h3>
+            <strong>AB EUR 5 <small>// EINMALIG</small></strong>
+            <p>Eine freiwillige einmalige Unterstützung für Entwicklung und Infrastruktur. Die GÖNNER-Rolle wird nach erfolgreicher Zahlung und verifizierter Discord-Verknüpfung vergeben.</p>
+            <ul><li>GÖNNER-Rolle</li><li>Optionaler öffentlicher Alias</li><li>Kein Abo-Zwang</li></ul>
+            <a class="support-tier-action" href="https://ko-fi.com/jarvissystem">GÖNNER-UPLINK ÖFFNEN →</a>
+          </article>
+          <article class="support-tier support-tier-vip">
+            <div><span>02</span><b>MONTHLY</b></div>
+            <h3>JARVIS VIP</h3>
+            <strong>EUR 6 <small>// PRO MONAT</small></strong>
+            <p>Der Community-Circle für Menschen, die JARVIS kontinuierlich begleiten und früher in ausgewählte, nicht vertrauliche Entwicklungsstände schauen möchten.</p>
+            <ul><li>VIP-Lounge</li><li>Early Insights</li><li>Community-Abstimmungen</li></ul>
+            <a class="support-tier-action" href="https://ko-fi.com/jarvissystem/tiers">VIP-MEMBERSHIP ÖFFNEN →</a>
+          </article>
+          <article class="support-tier support-tier-founder">
+            <div><span>03</span><b>FOUNDING PATH</b></div>
+            <h3>FOUNDING SUPPORTER</h3>
+            <strong>EUR 16 <small>// PRO MONAT</small></strong>
+            <p>Die höchste Community-Stufe mit Anwartschaft auf die Founding 100. Die Bezeichnung würdigt frühe Unterstützung, schafft aber keine Gründer- oder Eigentümerstellung.</p>
+            <ul><li>Alle VIP-Bereiche</li><li>Founding-100-Anwartschaft</li><li>Opt-in für Credits</li></ul>
+            <a class="support-tier-action" href="https://ko-fi.com/jarvissystem/tiers">FOUNDING-PATH ÖFFNEN →</a>
+            <em>0 / 100 // VERIFIED COUNT</em>
+          </article>
+        </div>
+      </section>
+
+      <section id="founding" class="support-block reveal">
+        <p class="eyebrow">02 // FOUNDING 100 PROTOCOL</p>
+        <h2>Anerkennung entsteht durch klare, überprüfbare Regeln.</h2>
+        <div class="founding-protocol">
+          <div><span>01</span><p><b>Aktive Membership</b>Die Founding-Supporter-Stufe muss erfolgreich aktiviert sein.</p></div>
+          <i></i>
+          <div><span>02</span><p><b>Drei Folgemonate</b>Eine permanente Anerkennung entsteht erst nach drei erfolgreich bezahlten aufeinanderfolgenden Monaten.</p></div>
+          <i></i>
+          <div><span>03</span><p><b>Bewusstes Opt-in</b>Name oder Alias werden nur mit ausdrücklicher Zustimmung veröffentlicht.</p></div>
+          <i></i>
+          <div><span>04</span><p><b>Lebenslange Würdigung</b>Nach Qualifikation bleibt der Eintrag als frühe Projektunterstützung erhalten – ohne Eigentumsrechte.</p></div>
+        </div>
+        <div class="support-notice"><span>!</span><p><b>FOUNDING BEDEUTET NICHT FIRMENGRÜNDER.</b> Founding Supporter erhalten keine Anteile, Stimmrechte, Gewinnbeteiligung, Investmentrechte oder Kontrolle über JARVIS SYSTEM.</p></div>
+      </section>
+
+      <section id="transparency" class="support-block reveal">
+        <p class="eyebrow">03 // PROJECT COST TRANSPARENCY</p>
+        <h2>Echte Zahlen erst dann, wenn echte Belege vorhanden sind.</h2>
+        <p>JARVIS zeigt keine erfundene Finanztelemetrie. Solange noch keine verifizierbaren Monatswerte vorliegen, bleiben die Felder bewusst auf N/A. Sobald belastbare Daten vorhanden sind, werden reale Projektkosten, Brutto-Unterstützung, Plattformgebühren, Rückerstattungen und Netto-Unterstützung nachvollziehbar zusammengeführt.</p>
+        <div class="support-ledger">
+          <div class="support-ledger-head"><span>MONTHLY PROJECT COVERAGE</span><b>AWAITING VERIFIED DATA</b></div>
+          <div class="support-ledger-track"><i></i></div>
+          <div class="support-ledger-grid">
+            <div><span>VERIFIZIERTE KOSTEN</span><b>N/A</b></div>
+            <div><span>BRUTTO SUPPORT</span><b>N/A</b></div>
+            <div><span>GEBÜHREN / REFUNDS</span><b>N/A</b></div>
+            <div><span>NETTO DECKUNG</span><b>N/A</b></div>
+          </div>
+        </div>
+        <div class="support-use-grid">
+          <article><span>INFRA</span><h3>Server &amp; Domains</h3><p>Website, Bots, sichere Dienste, Backups und Testinfrastruktur.</p></article>
+          <article><span>DEV</span><h3>Entwicklung</h3><p>Werkzeuge, Build-Infrastruktur, Hardwaretests und Dokumentation.</p></article>
+          <article><span>AI</span><h3>KI-Werkzeuge</h3><p>Nachvollziehbar eingesetzte Entwicklungsunterstützung und APIs.</p></article>
+          <article><span>OPS</span><h3>Betrieb</h3><p>Gebühren, Schutzmaßnahmen und verlässlicher Community-Betrieb.</p></article>
+        </div>
+      </section>
+
+      <section id="rights" class="support-block reveal">
+        <p class="eyebrow">04 // RIGHTS AND BOUNDARIES</p>
+        <h2>Unterstützung kauft Nähe – niemals Systemrechte.</h2>
+        <div class="support-rights">
+          <div class="allowed"><b>COMMUNITY BENEFITS</b><ul><li>Definierte Discord-Bereiche</li><li>Ausgewählte frühe Einblicke</li><li>Freiwillige Umfragen</li><li>Optionale öffentliche Würdigung</li></ul></div>
+          <div class="denied"><b>NEVER FOR SALE</b><ul><li>Team-, Tester- oder Moderationsrechte</li><li>Administrator- oder Systemzugriff</li><li>Eigentum, Governance oder Gewinnanspruch</li><li>Bevorzugte Sicherheits- oder Releasefreigaben</li></ul></div>
+        </div>
+        <p>Partnerschaften und Sponsoring sind getrennte, individuell geprüfte Beziehungen. Firmen werden nur nach einer realen Vereinbarung und ihrer ausdrücklichen Zustimmung öffentlich genannt. Diese Seite ist kein öffentliches Investmentangebot.</p>
+      </section>
+
+      <section id="operations" class="support-block reveal">
+        <p class="eyebrow">05 // OPERATIONAL CHAIN</p>
+        <h2>Ein klarer Weg vom Support bis zur Community-Rolle.</h2>
+        <ol class="support-gates">
+          <li><span>01</span><p><b>Offizieller Checkout</b>Nur Links zu ko-fi.com/jarvissystem gelten als offizieller Supportweg.</p><em>ONLINE</em></li>
+          <li><span>02</span><p><b>Konten verknüpfen</b>Supporter verbinden bei Bedarf ihr eigenes Ko-fi- und Discord-Konto.</p><em>READY</em></li>
+          <li><span>03</span><p><b>Rollen-Synchronisation</b>GÖNNER, JARVIS VIP und FOUNDING SUPPORTER sind im Discord getrennt und nach Berechtigung gestaffelt.</p><em>READY</em></li>
+          <li><span>04</span><p><b>Membership-Ende</b>Zeitgebundene Membership-Rollen werden durch die offizielle Integration entzogen; einmalige Gönner-Fälle werden kontrolliert verwaltet.</p><em>MONITORED</em></li>
+          <li><span>05</span><p><b>Öffentliche Anerkennung</b>Founding-100-Einträge entstehen erst nach drei bezahlten Folgemonaten und ausdrücklichem Namens-Opt-in.</p><em>0 / 100</em></li>
+        </ol>
+        <div class="support-final-cta">
+          <div><p class="eyebrow">COMMUNITY SIGNAL // FREE</p><h2>Mitmachen bleibt kostenlos.</h2><p>Du musst nichts bezahlen, um Teil der Community zu sein. Diskussionen, ehrliches Feedback und das Teilen der öffentlichen Entwicklung helfen JARVIS ebenfalls.</p></div>
+          <div class="support-final-actions"><a class="button" href="https://discord.gg/DWBwuUhXmv">DISCORD ÖFFNEN →</a><a href="/updates/">Updates verfolgen</a></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+</main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><b>JARVIS SYSTEM</b><span>TECHNOLOGY PROJECT + DIGITAL SOLUTIONS</span><p>Websites, Local IT und technische Lösungen aus Deutschland – mit JARVIS OS als eigenem Kernprojekt.</p><small>Öffentlicher Standort: Deutschland · Baden-Württemberg · Landkreis Waldshut</small><a href="mailto:jarvissystem@jarvisserver.org">jarvissystem@jarvisserver.org</a></div>
+    <nav class="footer-directory" aria-label="Vollständige Seitennavigation">
+      <div><b>LEISTUNGEN</b><a href="/solutions/">Alle Angebote</a><a href="/shop/">Shop</a><a href="/#projekte">Arbeitsbeispiele</a><a href="/solutions/#local-it">Local IT &amp; Vor Ort</a><a href="/solutions/#request">Projekt anfragen</a><a href="/solutions/#services">Website-Check</a></div>
+      <div><b>JARVIS OS</b><a href="/jarvis-os/">Systemprofil</a><a href="/technik/">Technik</a><a href="/entwicklung/">Entwicklung</a><a href="/roadmap/">Roadmap</a></div>
+      <div><b>PROJEKT</b><a href="/updates/">Updates</a><a href="/gruender/">Gründer</a><a href="/community/">Community</a><a href="/threat-observatory/">Threat Map</a></div>
+      <div><b>ORIENTIERUNG</b><a href="/#partner">Partner &amp; Founding 100</a><a href="/uebersicht/">Website-Index</a><a href="/connect/">Offizielle Profile</a><a href="/support/">Support</a><a href="/faq/">FAQ</a></div>
+    </nav>
+    <div class="footer-legal">
+      <div><p>© 2026 Oliver-frank Pristaff. Alle Rechte vorbehalten. Keine ISO-Verteilung.</p>
+      <a href="/legal.html">Rechte, Hinweise &amp; Datenschutz</a> ·
+      <a href="https://www.linkedin.com/in/oliver-frank-pristaff/" rel="me">LinkedIn Oliver</a> ·
+      <a href="https://github.com/hotboxking09">GitHub</a> ·
+      <a href="https://discord.gg/DWBwuUhXmv">Discord</a></div>
+      <div class="footer-state"><span></span> PROJECT SIGNAL ACTIVE</div>
+    </div>
+  </footer>`;export{e as default};

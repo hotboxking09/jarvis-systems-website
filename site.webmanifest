@@ -1,16 +1,17 @@
 {
-  "name": "JARVIS SYSTEM",
+  "name": "JARVIS Companion",
   "short_name": "JARVIS",
-  "description": "JARVIS SYSTEM aus Deutschland: Websites, Local IT, Smart Home, Automatisierung und sicherheitsorientierte Systeme – mit JARVIS OS als Technologieprojekt.",
-  "start_url": "./",
+  "description": "JARVIS SYSTEM Companion: Updates, Signal-Zentrale, Lösungsfinder und Community.",
+  "id": "/app",
+  "start_url": "/app",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#010407",
-  "theme_color": "#02060a",
+  "background_color": "#0b0f13",
+  "theme_color": "#0b0f13",
   "icons": [
-    {
-      "src": "assets/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
-    }
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/assets/brand/jarvis-orbit-mark.svg", "sizes": "any", "type": "image/svg+xml" }
   ]
 }

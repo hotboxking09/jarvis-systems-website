@@ -1,0 +1,73 @@
+var e=`<a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas><div class="noise-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>JARVIS</strong><small>SYSTEM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENÜ</button>
+      <div class="nav-links" id="nav-links"><a href="/">Start</a><a href="/solutions/">Leistungen</a><a href="/shop/">Shop</a><a href="/#projekte">Projekte</a><a href="/#partner">Partner</a><a href="/jarvis-os/">JARVIS OS</a><a href="/threat-observatory/">AEGIS</a><a href="/updates/">Updates</a></div>
+    </nav>
+    <button class="header-search" type="button" data-site-search-open aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="Seite durchsuchen"><span aria-hidden="true">⌕</span><span>SUCHEN</span><kbd>⌘K</kbd></button>
+    <nav class="language-switch" aria-label="Sprache"><a href="/technik/" hreflang="de-DE" lang="de" aria-current="true">DE</a><a href="/en/technik/" hreflang="en" lang="en">EN</a></nav><a class="header-contact" href="/solutions/#request"><span></span> ANFRAGE STARTEN</a>
+  </header>
+  <main id="main">
+    <section class="content-hero section-shell">
+      <div class="content-hero-copy reveal">
+        <nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">JARVIS SYSTEM</a><span>/</span><span aria-current="page">Technik</span></nav>
+        <p class="eyebrow">SYSTEM ARCHITECTURE // VERIFIED PATHS</p>
+        <h1>Technik hinter JARVIS SYSTEM</h1>
+        <p class="content-intro">Die technische Architektur von JARVIS SYSTEM trennt sichtbare Produktidentität, Betriebssystemdienste und Hardwarebasis bewusst voneinander. Dadurch kann die JARVIS-Laufzeit weiterentwickelt werden, während Kernel und Treiber weiterhin einen stabilen Hardwarezugang bereitstellen.</p>
+      </div>
+      <div class="content-core reveal" aria-hidden="true">
+        <div class="core-rings"><i></i><i></i><i></i></div>
+        <picture><source srcset="/assets/jarvis-core-head.webp" type="image/webp"><img src="/assets/jarvis-core-head.png" width="1024" height="1024" alt="" decoding="async"></picture>
+        <span>TECHNIK // ONLINE</span>
+      </div>
+      <div class="content-facts"><div><span>BOOT</span><b>NATIVE EFI</b></div><div><span>RUNTIME</span><b>JARVIS CORE</b></div><div><span>AUTH</span><b>PAM + FINGERPRINT</b></div><div><span>DATA</span><b>REAL SOURCES</b></div></div>
+    </section>
+    <div class="content-layout section-shell">
+      <aside class="content-index"><b>PAGE MATRIX</b><a href="#boot">01 // PREBOOT</a><a href="#runtime">02 // RUNTIME</a><a href="#telemetry">03 // TELEMETRY</a><a href="#portability">04 // HARDWARE</a><a href="/updates/">LIVE DEVELOPMENT LOG</a></aside>
+      <article class="content-copy"><section id="boot" class="content-block reveal">
+      <p class="eyebrow">01 // PREBOOT</p>
+      <h2>UEFI-Bootmanager vor dem Betriebssystem</h2>
+      <p>Der JARVIS EFI Manager läuft in der UEFI-Umgebung, bevor die eigentliche Systemoberfläche startet. Er erkennt verfügbare Startziele und stellt sie als interaktive Systemkarten dar. Maus, Tastatur, Countdown und ein sicherer Fallbackpfad wurden in OVMF geprüft.</p><p>Erkannte Fremdsysteme werden nur angezeigt, wenn reale Bootdaten vorhanden sind. Die Oberfläche soll keine Windows-, Linux- oder Hardwareinformationen erfinden. Die Auswahl bleibt auch ohne Maus per Tastatur bedienbar.</p>
+    </section><section id="runtime" class="content-block reveal">
+      <p class="eyebrow">02 // RUNTIME</p>
+      <h2>Login, Unified Shell und Frame Core</h2>
+      <p>Nach dem Boot übernimmt der Login-Supervisor. Entsperrung und Systemoberfläche sind als zusammenhängender Übergang konzipiert. Passwort und Fingerabdruck werden über etablierte Authentifizierungsdienste angebunden; Recovery muss weiterhin möglich bleiben.</p><p>Die Unified Shell ist der dauerhafte Bedienkern. Sie startet Befehle, Einstellungen und Anwendungen. Der Frame Core sorgt dafür, dass externe Programme im Vordergrund geöffnet, minimiert, maximiert, gewechselt und geschlossen werden können, ohne den festen Systemkern zu ersetzen.</p>
+    </section><section id="telemetry" class="content-block reveal">
+      <p class="eyebrow">03 // TELEMETRY</p>
+      <h2>Echtzeitdaten ohne erfundene Messwerte</h2>
+      <p>CPU-Auslastung und Frequenz, RAM-Druck, Netzverkehr, Laufwerksaktivität, Akku, Temperaturen und weitere Werte werden aus verfügbaren Systemschnittstellen gelesen. Hardwareabhängige Sensoren können fehlen; in diesem Fall muss die Oberfläche den fehlenden Wert sichtbar kennzeichnen.</p><p>Die öffentliche Website zeigt zusätzlich ein bewusst begrenztes Arbeitssignal. Es überträgt nur aggregierten Aktivstatus, Dauer, Puls und Prozessanzahl. Chats, Prompts, Befehle, Dateien, Audio, Hardware-IDs und IP-Adressen gehören ausdrücklich nicht zum öffentlichen Payload.</p>
+    </section><section id="portability" class="content-block reveal">
+      <p class="eyebrow">04 // HARDWARE</p>
+      <h2>Capability Discovery statt Laptop-Massanfertigung</h2>
+      <p>JARVIS OS wird nicht nur für den Entwicklungsrechner entworfen. Beim Start müssen Display, Eingabegeräte, Grafik, Netzwerk, Speicher, Energieversorgung und verfügbare Sensoren automatisch erkannt werden. Funktionen dürfen nur aktiviert werden, wenn die jeweilige Fähigkeit vorhanden ist.</p><p>Die erste Zielklasse sind moderne x86-64-PCs mit UEFI, ACPI und Hardware, die vom zugrunde liegenden Linux-Treiberstack unterstützt wird. Breite Intel-, AMD-, NVIDIA-, WLAN-, LAN-, USB- und Displaytests bleiben ein zentrales Release-Gate.</p><div class="content-callout">ENGINEERING RULE // VM-verifiziert bedeutet nicht automatisch hardwareverifiziert.</div>
+    </section></article>
+    </div>
+    <section class="related-section section-shell" aria-labelledby="related-title">
+      <p class="eyebrow">NEXT SIGNALS</p><h2 id="related-title">JARVIS weiter erkunden</h2>
+      <div class="related-grid"><a class="related-card" href="/jarvis-os/"><span>JARVIS KNOWLEDGE</span><h3>Was ist JARVIS OS?</h3><p>JARVIS OS ist ein deutsches Betriebssystemprojekt mit eigener Bootoberfläche, Anmeldung, Shell, Systemsteuerung und echter Echtzeit-Telemetrie.</p><b>ÖFFNEN →</b></a><a class="related-card" href="/entwicklung/"><span>JARVIS KNOWLEDGE</span><h3>Wie JARVIS OS entwickelt wird</h3><p>So entsteht JARVIS OS: dokumentierte Builds, VM- und Hardwaretests, Backups, Release-Gates und nachvollziehbare Statusangaben.</p><b>ÖFFNEN →</b></a><a class="related-card" href="/roadmap/"><span>JARVIS KNOWLEDGE</span><h3>Roadmap von JARVIS SYSTEM</h3><p>Die JARVIS-OS-Roadmap: vom Bootmanager über Hardwareportabilität, Secure Boot und Recovery bis zum kontrollierten Community-Release.</p><b>ÖFFNEN →</b></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><b>JARVIS SYSTEM</b><span>TECHNOLOGY PROJECT + DIGITAL SOLUTIONS</span><p>Websites, Local IT und technische Lösungen aus Deutschland – mit JARVIS OS als eigenem Kernprojekt.</p><small>Öffentlicher Standort: Deutschland · Baden-Württemberg · Landkreis Waldshut</small><a href="mailto:jarvissystem@jarvisserver.org">jarvissystem@jarvisserver.org</a></div>
+    <nav class="footer-directory" aria-label="Vollständige Seitennavigation">
+      <div><b>LEISTUNGEN</b><a href="/solutions/">Alle Angebote</a><a href="/shop/">Shop</a><a href="/#projekte">Arbeitsbeispiele</a><a href="/solutions/#local-it">Local IT &amp; Vor Ort</a><a href="/solutions/#request">Projekt anfragen</a><a href="/solutions/#services">Website-Check</a></div>
+      <div><b>JARVIS OS</b><a href="/jarvis-os/">Systemprofil</a><a href="/technik/">Technik</a><a href="/entwicklung/">Entwicklung</a><a href="/roadmap/">Roadmap</a></div>
+      <div><b>PROJEKT</b><a href="/updates/">Updates</a><a href="/gruender/">Gründer</a><a href="/community/">Community</a><a href="/threat-observatory/">Threat Map</a></div>
+      <div><b>ORIENTIERUNG</b><a href="/#partner">Partner &amp; Founding 100</a><a href="/uebersicht/">Website-Index</a><a href="/connect/">Offizielle Profile</a><a href="/support/">Support</a><a href="/faq/">FAQ</a></div>
+    </nav>
+    <div class="footer-legal">
+      <div><p>© 2026 Oliver-frank Pristaff. Alle Rechte vorbehalten. Keine ISO-Verteilung.</p>
+      <a href="/legal.html">Rechte, Hinweise &amp; Datenschutz</a> ·
+      <a href="https://www.linkedin.com/in/oliver-frank-pristaff/" rel="me">LinkedIn Oliver</a> ·
+      <a href="https://github.com/hotboxking09">GitHub</a> ·
+      <a href="https://discord.gg/DWBwuUhXmv">Discord</a></div>
+      <div class="footer-state"><span></span> PROJECT SIGNAL ACTIVE</div>
+    </div>
+  </footer>`;export{e as default};

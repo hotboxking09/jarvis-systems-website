@@ -1,0 +1,99 @@
+var e=`<a class="skip-link" href="#main">Skip to content</a><canvas id="signal-canvas" aria-hidden="true"></canvas><div class="noise-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="/en/">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>JARVIS</strong><small>SYSTEM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
+      <div class="nav-links" id="nav-links"><a href="/en/">Home</a><a href="/en/solutions/">Services</a><a href="/en/shop/">Shop</a><a href="/en/#projekte">Projects</a><a href="/en/#partner">Partners</a><a href="/en/jarvis-os/">JARVIS OS</a><a href="/en/threat-observatory/">AEGIS</a><a href="/en/updates/" aria-current="page">Updates</a></div>
+    </nav>
+    <button class="header-search" type="button" data-site-search-open aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="Search this site"><span aria-hidden="true">⌕</span><span>SEARCH</span><kbd>⌘K</kbd></button>
+    <nav class="language-switch" aria-label="Language"><a href="/updates/" hreflang="de-DE" lang="de">DE</a><a href="/en/updates/" hreflang="en" lang="en" aria-current="true">EN</a></nav><a class="header-contact" href="/en/solutions/#request"><span></span> START AN INQUIRY</a>
+  </header>
+  <main id="main">
+    <section class="content-hero section-shell content-hero-wide">
+      <div class="content-hero-copy reveal"><nav class="breadcrumbs" aria-label="Breadcrumb navigation"><a href="/en/">JARVIS SYSTEM</a><span>/</span><span aria-current="page">Updates</span></nav><p class="eyebrow">DEVELOPMENT TRANSMISSIONS // VERIFIED LOG</p><h1>Development updates to JARVIS OS</h1><p class="content-intro">No empty announcements: Each entry states the date, technical scope, tested limits and the next reliable step.</p><a class="button button-ghost" href="/feed.xml">ATOM UPDATE FEED →</a></div>
+      <div class="content-facts"><div><span>ENTRIES</span><b>15</b></div><div><span>LATEST</span><b>2026-10-17</b></div><div><span>PUBLIC ISO</span><b>LOCKED</b></div><div><span>STATUS RULE</span><b>NO FAKES</b></div></div>
+    </section>
+    <section class="section-shell update-archive" aria-labelledby="archive-title"><p class="eyebrow">PUBLIC ENGINEERING LOG</p><h2 id="archive-title">Chronological project status</h2><div class="update-feed"><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-10-17">17.10.2026</time>
+      <div><h3><a href="/en/updates/deutschland-orientierung-transparenz-oktober-2026/">Germany orientation, clear navigation and verifiable data status</a></h3><p>The next public website version aligns location, Local IT, navigation and data notes with Germany. The candidate remains unpublished until separate approval; static snapshots and dynamic status sources are visibly separated.</p><a class="text-link" href="/en/updates/deutschland-orientierung-transparenz-oktober-2026/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">REVIEWED CANDIDATE</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-08-03">03.08.2026</time>
+      <div><h3><a href="/en/updates/jarvis-platform-solutions-ai-core-august-2026/">JARVIS is growing into a real platform: AI Core, AEGIS 0.4.4 and open web projects</a></h3><p>Since the last public milestone, our own AI Core, encrypted local AI, secure remote access, AEGIS SOC 0.4.4, ESP32 Recon Lab and the new JARVIS Solutions input have been built and tested in real life.</p><a class="text-link" href="/en/updates/jarvis-platform-solutions-ai-core-august-2026/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">VERIFIED MILESTONE</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-27">27.07.2026</time>
+      <div><h3><a href="/en/updates/aegis-0-4-2-security-core/">From the old home PC to your own security core: JARVIS AEGIS 0.4.2</a></h3><p>The first dedicated JARVIS core node, real event evidence, tested backup and recovery chains, founder-only zero trust, twelve SOC workspaces, and the first signed browser update path are in operation end-to-end.</p><a class="text-link" href="/en/updates/aegis-0-4-2-security-core/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">VERIFIED MILESTONE</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-24">24.07.2026</time>
+      <div><h3><a href="/en/updates/support-uplink-live/">Official JARVIS support uplink published</a></h3><p>The voluntary support model is live with a transparent website, ko-fi tiers, clear Discord roles and consistent references on the public project profiles.</p><a class="text-link" href="/en/updates/support-uplink-live/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">LIVE</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-24">24.07.2026</time>
+      <div><h3><a href="/en/updates/sichere-plattform-synchronisation/">Secure JARVIS platform synchronization fully approved</a></h3><p>JARVIS SYSTEM now has a tested publishing core for website, GitHub and Discord - with accurate content sharing, data protection checking, deduplication, partial error recovery and emergency shutdown active by default.</p><a class="text-link" href="/en/updates/sichere-plattform-synchronisation/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">APPROVED</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-24">24.07.2026</time>
+      <div><h3><a href="/en/updates/threat-observatory-live-sensorfeed/">Threat Observatory with real sensor feed live</a></h3><p>The isolated JARVIS honeypot, signed privacy uplink, enlarged world map, and hourly GitHub/Discord ledger are now end-to-end active.</p><a class="text-link" href="/en/updates/threat-observatory-live-sensorfeed/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">LIVE</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-24">24.07.2026</time>
+      <div><h3><a href="/en/updates/discord-team-welcome-securityfeed/">Discord team structure and automations refined</a></h3><p>The community server now features clearly separated team and test areas, a personalized JARVIS welcome message, targeted protocols, and an automatic public security feed.</p><a class="text-link" href="/en/updates/discord-team-welcome-securityfeed/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">ACTIVE</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-24">24.07.2026</time>
+      <div><h3><a href="/en/updates/engineering-signal-und-projektkern/">Website now shows the real engineering pulse</a></h3><p>Website, GitHub and Discord form a common public project core - with a privacy-limited live work signal, clean development log and clear release boundaries.</p><a class="text-link" href="/en/updates/engineering-signal-und-projektkern/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">ONLINE</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-23">23.07.2026</time>
+      <div><h3><a href="/en/updates/discord-onboarding-automatisiert/">Discord onboarding and role matrix automated</a></h3><p>The JARVIS community now has a clean channel and role structure, a mandatory interest query before joining, and automatic, non-privileged role assignment.</p><a class="text-link" href="/en/updates/discord-onboarding-automatisiert/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">VERIFIED</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-23">23.07.2026</time>
+      <div><h3><a href="/en/updates/discord-community-online/">Official JARVIS community is online</a></h3><p>JARVIS SYSTEM's Discord server has launched with dedicated areas for development, testing, community, and gaming, alongside a secure role and onboarding system.</p><a class="text-link" href="/en/updates/discord-community-online/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">ONLINE</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-23">23.07.2026</time>
+      <div><h3><a href="/en/updates/website-google-indexiert/">JARVIS SYSTEM is in the Google index</a></h3><p>Domain property, sitemap and HTTPS have been confirmed. Google now lists the public homepage as indexed and eligible for search results.</p><a class="text-link" href="/en/updates/website-google-indexiert/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">LIVE</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-22">22.07.2026</time>
+      <div><h3><a href="/en/updates/hardwareportabilitaet-verbindlich/">Hardware portability made mandatory</a></h3><p>JARVIS SYSTEM is built for different real x86-64 PCs. VM successes remain precursors; a real hardware matrix is a release requirement.</p><a class="text-link" href="/en/updates/hardwareportabilitaet-verbindlich/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">CONFIRMED</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-22">22.07.2026</time>
+      <div><h3><a href="/en/updates/efi-manager-maussteuerung/">Mouse-controlled EFI manager removed</a></h3><p>Hover, left click, smooth map lifting and animated signal structure were tested in real life in OVMF.</p><a class="text-link" href="/en/updates/efi-manager-maussteuerung/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">VERIFIED</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-22">22.07.2026</time>
+      <div><h3><a href="/en/updates/installer-iso-intern-verifiziert/">New installer ISO verified internally</a></h3><p>BIOS/UEFI structure, fixture-free EFI identity and media boot passed network preflight. The ISO is not yet publicly offered.</p><a class="text-link" href="/en/updates/installer-iso-intern-verifiziert/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">ENGINEERING</span>
+    </article><article class="update-entry reveal">
+      <time class="update-date" datetime="2026-07-20">20.07.2026</time>
+      <div><h3><a href="/en/updates/native-jarvis-laufzeit/">Native JARVIS runtime</a></h3><p>Own login supervisor, unified shell, frame core, system control and real telemetry were approved in the isolated development environment.</p><a class="text-link" href="/en/updates/native-jarvis-laufzeit/">READ TECHNICAL REPORT →</a></div>
+      <span class="update-tag">VERIFIED</span>
+    </article></div></section>
+    <section class="related-section section-shell"><p class="eyebrow">CONTEXT</p><h2>Technology behind the updates</h2><div class="related-grid"><a class="related-card" href="/en/entwicklung/"><span>PROCESS</span><h3>Development process</h3><p>How builds, tests and documentation fit together.</p><b>OPEN →</b></a><a class="related-card" href="/en/technik/"><span>ARCHITECTURE</span><h3>Technology</h3><p>Boot, runtime, shell and telemetry at a glance.</p><b>OPEN →</b></a><a class="related-card" href="/en/roadmap/"><span>NEXT GATES</span><h3>Roadmap</h3><p>What is still missing before the community release.</p><b>OPEN →</b></a></div></section>
+  </main>
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><b>JARVIS SYSTEM</b><span>TECHNOLOGY PROJECT + DIGITAL SOLUTIONS</span><p>Websites, Local IT und technische Lösungen aus Deutschland – mit JARVIS OS als eigenem Kernprojekt.</p><small>Öffentlicher Standort: Deutschland · Baden-Württemberg · Landkreis Waldshut</small><a href="mailto:jarvissystem@jarvisserver.org">jarvissystem@jarvisserver.org</a></div>
+    <nav class="footer-directory" aria-label="Complete site navigation">
+      <div><b>SERVICES</b><a href="/en/solutions/">All offers</a><a href="/en/shop/">Shop</a><a href="/en/#projekte">Work examples</a><a href="/en/solutions/#local-it">Local IT &amp; On Site</a><a href="/en/solutions/#request">Request a project</a><a href="/en/solutions/#services">Website check</a></div>
+      <div><b>JARVIS OS</b><a href="/en/jarvis-os/">System profile</a><a href="/en/technik/">Technology</a><a href="/en/entwicklung/">Development</a><a href="/en/roadmap/">Roadmap</a></div>
+      <div><b>PROJECT</b><a href="/en/updates/">Updates</a><a href="/en/gruender/">Founder</a><a href="/en/community/">Community</a><a href="/en/threat-observatory/">Threat Map</a></div>
+      <div><b>ORIENTATION</b><a href="/en/#partner">Partner &amp; Founding 100</a><a href="/en/uebersicht/">Website index</a><a href="/en/connect/">Official profiles</a><a href="/en/support/">Support</a><a href="/en/faq/">FAQ</a></div>
+    </nav>
+    <div class="footer-legal">
+      <div><p>© 2026 Oliver-frank Pristaff. All rights reserved. No ISO distribution.</p>
+      <a href="/en/legal.html">Rights, notices &amp; privacy</a> ·
+      <a href="https://www.linkedin.com/in/oliver-frank-pristaff/" rel="me">LinkedIn Oliver</a> ·
+      <a href="https://github.com/hotboxking09">GitHub</a> ·
+      <a href="https://discord.gg/DWBwuUhXmv">Discord</a></div>
+      <div class="footer-state"><span></span> PROJECT SIGNAL ACTIVE</div>
+    </div>
+  </footer>`;export{e as default};

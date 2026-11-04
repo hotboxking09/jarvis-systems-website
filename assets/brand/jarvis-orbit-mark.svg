@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="JARVIS">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4FBFC"/>
+      <stop offset="1" stop-color="#3FE0E6"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0B0F13"/>
+  <path d="M32 7 53.6 19.5v25L32 57 10.4 44.5v-25Z" fill="none" stroke="url(#g)" stroke-width="2.6" stroke-linejoin="round"/>
+  <ellipse cx="32" cy="32" rx="25" ry="8.5" transform="rotate(-24 32 32)" fill="none" stroke="#3FE0E6" stroke-opacity=".55" stroke-width="1.4"/>
+  <path d="M37.5 19v14.5a7.5 7.5 0 0 1-15 0" fill="none" stroke="#F4FBFC" stroke-width="4.2" stroke-linecap="round"/>
+  <circle cx="49" cy="17" r="3.4" fill="#B6F23A"/>
+  <circle cx="14.5" cy="44" r="2" fill="#FF4655"/>
+</svg>

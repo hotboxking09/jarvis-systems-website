@@ -1,0 +1,109 @@
+var e=`<a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas><div class="noise-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>JARVIS</strong><small>SYSTEM</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENÜ</button>
+      <div class="nav-links" id="nav-links"><a href="/">Start</a><a href="/solutions/">Leistungen</a><a href="/shop/">Shop</a><a href="/#projekte">Projekte</a><a href="/#partner">Partner</a><a href="/jarvis-os/">JARVIS OS</a><a href="/threat-observatory/">AEGIS</a><a href="/updates/">Updates</a></div>
+    </nav>
+    <button class="header-search" type="button" data-site-search-open aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="Seite durchsuchen"><span aria-hidden="true">⌕</span><span>SUCHEN</span><kbd>⌘K</kbd></button>
+    <nav class="language-switch" aria-label="Sprache"><a href="/connect/" hreflang="de-DE" lang="de" aria-current="true">DE</a><a href="/en/connect/" hreflang="en" lang="en">EN</a></nav><a class="header-contact" href="/solutions/#request"><span></span> ANFRAGE STARTEN</a>
+  </header>
+  <main id="main">
+    <section class="network-hero section-shell">
+      <div class="network-hero-copy reveal">
+        <nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">JARVIS SYSTEM</a><span>/</span><span aria-current="page">NETZWERK</span></nav>
+        <p class="eyebrow">OFFICIAL UPLINK DIRECTORY // DE-2026</p>
+        <h1>JARVIS<br><span>NETWORK</span></h1>
+        <p>Dies ist der zentrale, überprüfbare Einstieg in das öffentliche JARVIS-Ökosystem. Aktive Kanäle führen direkt zum offiziellen Ziel – ohne tote Links, erfundene Konten oder versteckte Weiterleitungen.</p>
+      </div>
+      <div class="network-radar reveal" aria-hidden="true">
+        <div class="network-rings"><i></i><i></i><i></i><i></i></div>
+        <div class="network-core"><span>J</span><b>SYSTEM<br>UPLINK</b></div>
+        <span class="network-node node-web">WEB</span><span class="network-node node-dc">DC</span>
+        <span class="network-node node-gh">GH</span><span class="network-node node-x">X</span>
+      </div>
+      <div class="network-status-strip">
+        <div><span>ACTIVE LINKS</span><b>8 VERIFIED</b></div>
+        <div><span>PROJECT ORIGIN</span><b>GERMANY</b></div>
+        <div><span>IDENTITY</span><b>JARVIS SYSTEM</b></div>
+        <div><span>DIRECTORY STATE</span><b>ONLINE</b></div>
+      </div>
+    </section>
+
+    <section class="network-directory section-shell section-pad" aria-labelledby="directory-title">
+      <div class="section-heading">
+        <p class="eyebrow">01 // ACTIVE CHANNEL MATRIX</p>
+        <h2 id="directory-title">Alle offiziellen Wege. Ein System.</h2>
+        <p>Leistungen, Website, Community, Quellnachweise, Social Updates und direkter Kontakt sind bewusst an einem Ort gebündelt. Dadurch erkennen Kunden, Interessierte, Entwickler und mögliche Partner sofort, welche Wege wirklich zu JARVIS SYSTEM gehören.</p>
+      </div>
+      <div class="network-grid"><a class="network-card network-cyan reveal" href="https://jarvisserver.org/">
+          <div class="network-card-head"><span>WEB</span><b>01 // ONLINE</b></div>
+          <div><p class="eyebrow">VERIFIED CHANNEL</p><h2>Official Website</h2><p>Zentrale Quelle für Projektstatus, Leistungen, Technik, Roadmap, Gründerstory und veröffentlichte Entwicklungsberichte.</p></div>
+          <strong>JARVISSERVER.ORG <i aria-hidden="true">→</i></strong>
+        </a><a class="network-card network-cyan reveal" href="https://jarvisserver.org/solutions/">
+          <div class="network-card-head"><span>SOL</span><b>02 // ONLINE</b></div>
+          <div><p class="eyebrow">VERIFIED CHANNEL</p><h2>JARVIS Solutions</h2><p>Websites, Redesigns, technische Website-Checks, laufende Pflege und klar eingegrenzte digitale Systemarbeit.</p></div>
+          <strong>LEISTUNGEN ANSEHEN <i aria-hidden="true">→</i></strong>
+        </a><a class="network-card network-magenta reveal" href="https://discord.gg/DWBwuUhXmv">
+          <div class="network-card-head"><span>DC</span><b>03 // ONLINE</b></div>
+          <div><p class="eyebrow">VERIFIED CHANNEL</p><h2>Discord Community</h2><p>Community, Entwicklung, Tests, Gaming, Diskussionen und strukturierte Projektbereiche in einer gemeinsamen Kommandozentrale.</p></div>
+          <strong>COMMUNITY BEITRETEN <i aria-hidden="true">→</i></strong>
+        </a><a class="network-card network-green reveal" href="https://github.com/hotboxking09/jarvis-systems-website">
+          <div class="network-card-head"><span>GH</span><b>04 // ONLINE</b></div>
+          <div><p class="eyebrow">VERIFIED CHANNEL</p><h2>GitHub Project</h2><p>Öffentlicher Website-Stand, ausgewählte technische Nachweise und nachvollziehbare Projektveröffentlichungen.</p></div>
+          <strong>REPOSITORY ÖFFNEN <i aria-hidden="true">→</i></strong>
+        </a><a class="network-card network-cyan reveal" href="https://github.com/hotboxking09">
+          <div class="network-card-head"><span>OF</span><b>05 // ONLINE</b></div>
+          <div><p class="eyebrow">VERIFIED CHANNEL</p><h2>Oliver on GitHub</h2><p>Das offizielle Entwicklerprofil von Oliver-frank Pristaff mit öffentlichen Repositories und Projektzuordnung.</p></div>
+          <strong>GRÜNDERPROFIL ÖFFNEN <i aria-hidden="true">→</i></strong>
+        </a><a class="network-card network-cyan reveal" href="https://www.linkedin.com/in/oliver-frank-pristaff/" rel="me">
+          <div class="network-card-head"><span>IN</span><b>08 // ONLINE</b></div>
+          <div><p class="eyebrow">VERIFIED CHANNEL</p><h2>Oliver on LinkedIn</h2><p>Professionelles Gründerprofil für Dienstleistungen, Engineering-Einblicke, technische Kontakte, Partnerschaften und Projektanfragen.</p></div>
+          <strong>LINKEDIN-PROFIL ÖFFNEN <i aria-hidden="true">→</i></strong>
+        </a><a class="network-card network-green reveal" href="mailto:jarvissystem@jarvisserver.org">
+          <div class="network-card-head"><span>@</span><b>10 // ONLINE</b></div>
+          <div><p class="eyebrow">VERIFIED CHANNEL</p><h2>Direkter Geschäftskontakt</h2><p>Direkter Kontakt für Website-, Pflege-, System-, Kooperations- und Partnerschaftsanfragen.</p></div>
+          <strong>KONTAKT AUFNEHMEN <i aria-hidden="true">→</i></strong>
+        </a><a class="network-card network-magenta reveal" href="https://jarvisserver.org/support/">
+          <div class="network-card-head"><span>SUP</span><b>11 // ONLINE</b></div>
+          <div><p class="eyebrow">VERIFIED CHANNEL</p><h2>Project Support</h2><p>Zentrale, transparente Übersicht für einmalige Unterstützung, Memberships, Discord-Rollen und die Founding-100-Regeln.</p></div>
+          <strong>SUPPORTPORTAL ÖFFNEN <i aria-hidden="true">→</i></strong>
+        </a></div>
+    </section>
+
+    <section class="network-future section-shell section-pad" aria-labelledby="future-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">02 // CONTROLLED EXPANSION</p>
+        <h2 id="future-title">Die nächsten Verbindungen werden sauber aktiviert.</h2>
+        <p>Das persönliche LinkedIn-Gründerprofil und das offizielle Supportportal sind öffentlich verknüpft. Finanzielle Unterstützung bleibt freiwillig, wird über Ko-fi abgewickelt und verleiht niemals Eigentums-, Team- oder Systemrechte.</p>
+      </div>
+      <div class="network-future-grid">
+        <a class="network-future-card reveal" href="/solutions/"><span>SOL</span><div><b>JARVIS SOLUTIONS // OPEN</b><h3>Web- und Systemprojekte anfragen</h3><p>Websites, Redesigns, technische Checks, laufende Pflege und klar begrenzte Systemarbeit mit nachvollziehbarem Ablauf.</p></div><strong>LEISTUNGEN UND ANFRAGEWEG ÖFFNEN →</strong></a>
+        <a class="network-future-card reveal" href="/support/"><span>SUP</span><div><b>SUPPORT UPLINK // LIVE</b><h3>JARVIS SYSTEM unterstützen</h3><p>Einmalige Unterstützung, Memberships, Discord-Rollen, Schutzregeln und Founding-100-Ablauf sind transparent an einem Ort dokumentiert.</p></div><strong>VERIFIED SUPPORT PATH // PORTAL ÖFFNEN →</strong></a>
+      </div>
+      <div class="network-integrity reveal"><span></span><p><b>IDENTITY RULE //</b> Nur die hier als ONLINE markierten Ziele gelten als offizielle JARVIS-Kanäle. JARVIS SYSTEM verkauft derzeit keine öffentliche ISO und veröffentlicht kein öffentliches Investmentangebot.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><b>JARVIS SYSTEM</b><span>TECHNOLOGY PROJECT + DIGITAL SOLUTIONS</span><p>Websites, Local IT und technische Lösungen aus Deutschland – mit JARVIS OS als eigenem Kernprojekt.</p><small>Öffentlicher Standort: Deutschland · Baden-Württemberg · Landkreis Waldshut</small><a href="mailto:jarvissystem@jarvisserver.org">jarvissystem@jarvisserver.org</a></div>
+    <nav class="footer-directory" aria-label="Vollständige Seitennavigation">
+      <div><b>LEISTUNGEN</b><a href="/solutions/">Alle Angebote</a><a href="/shop/">Shop</a><a href="/#projekte">Arbeitsbeispiele</a><a href="/solutions/#local-it">Local IT &amp; Vor Ort</a><a href="/solutions/#request">Projekt anfragen</a><a href="/solutions/#services">Website-Check</a></div>
+      <div><b>JARVIS OS</b><a href="/jarvis-os/">Systemprofil</a><a href="/technik/">Technik</a><a href="/entwicklung/">Entwicklung</a><a href="/roadmap/">Roadmap</a></div>
+      <div><b>PROJEKT</b><a href="/updates/">Updates</a><a href="/gruender/">Gründer</a><a href="/community/">Community</a><a href="/threat-observatory/">Threat Map</a></div>
+      <div><b>ORIENTIERUNG</b><a href="/#partner">Partner &amp; Founding 100</a><a href="/uebersicht/">Website-Index</a><a href="/connect/">Offizielle Profile</a><a href="/support/">Support</a><a href="/faq/">FAQ</a></div>
+    </nav>
+    <div class="footer-legal">
+      <div><p>© 2026 Oliver-frank Pristaff. Alle Rechte vorbehalten. Keine ISO-Verteilung.</p>
+      <a href="/legal.html">Rechte, Hinweise &amp; Datenschutz</a> ·
+      <a href="https://www.linkedin.com/in/oliver-frank-pristaff/" rel="me">LinkedIn Oliver</a> ·
+      <a href="https://github.com/hotboxking09">GitHub</a> ·
+      <a href="https://discord.gg/DWBwuUhXmv">Discord</a></div>
+      <div class="footer-state"><span></span> PROJECT SIGNAL ACTIVE</div>
+    </div>
+  </footer>`;export{e as default};

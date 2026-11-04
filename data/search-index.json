@@ -208,5 +208,54 @@
     "url": "/updates/native-jarvis-laufzeit/",
     "summary": "Eigener Login-Supervisor, Unified Shell, Frame Core, System Control und echte Telemetrie wurden in der isolierten Entwicklungsumgebung abgenommen.",
     "text": "2026-07-20 2026-07-23 RUNTIME-02 VERIFIED native-jarvis-laufzeit Native JARVIS-Laufzeit Eigener Login-Supervisor, Unified Shell, Frame Core, System Control und echte Telemetrie wurden in der isolierten Entwicklungsumgebung abgenommen. Zusammenhängender Laufzeitpfad Anmeldung und Systemoberfläche wurden so verbunden, dass JARVIS nach erfolgreicher Authentifizierung in die eigene Laufzeit wechselt. Passwort, Fingerprint und Recovery werden als getrennte, prüfbare Pfade behandelt. Unified Shell und Anwendungen Die feste JARVIS-Shell bleibt der Systemkern, während Programme als eigene Fenster geöffnet, gewechselt, minimiert, maximiert und geschlossen werden können. Der Frame Core stellt dabei die gemeinsame Designsprache bereit. Reale Telemetrie CPU, RAM, Netzwerk, Speicher, Energie und verfügbare Sensorwerte werden aus lokalen Systemschnittstellen bezogen. Nicht verfügbare Messwerte müssen als N/A sichtbar bleiben."
+  },
+  {
+    "kind": "Seite",
+    "title": "Für Unternehmen",
+    "url": "/unternehmen/",
+    "summary": "Websites, Checks, Pflege und individuelle Systemarbeit.",
+    "text": "Für Unternehmen Websites, Checks, Pflege und individuelle Systemarbeit."
+  },
+  {
+    "kind": "Seite",
+    "title": "Für Privatpersonen",
+    "url": "/privat/",
+    "summary": "PC, WLAN, IT-Hilfe und Smart Home im Südschwarzwald.",
+    "text": "Für Privatpersonen PC, WLAN, IT-Hilfe und Smart Home im Südschwarzwald."
+  },
+  {
+    "kind": "Seite",
+    "title": "Technologie",
+    "url": "/technologie/",
+    "summary": "JARVIS OS, AEGIS, Technik und Roadmap.",
+    "text": "Technologie JARVIS OS, AEGIS, Technik und Roadmap."
+  },
+  {
+    "kind": "Seite",
+    "title": "Smart Home",
+    "url": "/smart-home/",
+    "summary": "Home Assistant und Automationen; lokale KI als Zukunft.",
+    "text": "Smart Home Home Assistant und Automationen; lokale KI als Zukunft."
+  },
+  {
+    "kind": "Seite",
+    "title": "Lösungsfinder",
+    "url": "/loesungsfinder/",
+    "summary": "Drei Fragen zur passenden Leistung und E-Mail-Anfrage.",
+    "text": "Lösungsfinder Drei Fragen zur passenden Leistung und E-Mail-Anfrage."
+  },
+  {
+    "kind": "Seite",
+    "title": "Signal-Zentrale",
+    "url": "/signale/",
+    "summary": "Engineering-Telemetrie und öffentlicher Sensor, mit Quellen und Frische.",
+    "text": "Signal-Zentrale Engineering-Telemetrie und öffentlicher Sensor, mit Quellen und Frische."
+  },
+  {
+    "kind": "Seite",
+    "title": "Web-App · Coming soon",
+    "url": "/app/",
+    "summary": "Companion-Vorschau: Hilfe, lokale Geräteübersicht, Updates und Signale. Persönliche Funktionen folgen.",
+    "text": "Web-App · Coming soon Companion-Vorschau: Hilfe, lokale Geräteübersicht, Updates und Signale. Persönliche Funktionen folgen."
   }
 ]
