@@ -4,5 +4,5 @@
   "app_stage": "public-preview-coming-soon",
   "private_features_enabled": false,
   "telemetry_source": "existing-public-relays",
-  "source_commit": "6b759047c339d5c42e1bcb4a7a04e26a20b31df3"
+  "source_commit": "05c211bca35eddb17d02b67425ac3ae530282d8f"
 }

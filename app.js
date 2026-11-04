@@ -220,6 +220,7 @@
       return indexPromise;
     };
     const openSearch = async (opener) => {
+      if (closed || !dialog.isConnected) return;
       lastOpener = opener;
       if (!dialog.open) dialog.showModal();
       input.focus();
@@ -231,7 +232,7 @@
         status.textContent = searchCopy.failed;
       }
     };
-    searchOpeners.forEach((opener) => opener.addEventListener("click", () => openSearch(opener)));
+    searchOpeners.forEach((opener) => listen(opener, "click", () => openSearch(opener)));
     input.addEventListener("input", render);
     form.addEventListener("submit", (event) => {
       event.preventDefault();
