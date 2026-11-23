@@ -2,11 +2,11 @@
   "counts": {
     "by_type_24h": {
       "client_observed": 4,
-      "connection": 43,
-      "disconnect": 43
+      "connection": 39,
+      "disconnect": 39
     },
-    "direct_events_24h": 90,
-    "direct_events_7d": 542
+    "direct_events_24h": 82,
+    "direct_events_7d": 530
   },
   "events": [
     {
@@ -18,6 +18,62 @@
       "outcome": "observed",
       "position": null,
       "severity": "low",
+      "source_alias": "SRC-024BE3B4CDB1",
+      "time_window": "2026-11-23T00:15:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": null,
+      "count": 1,
+      "country": null,
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": null,
+      "severity": "info",
+      "source_alias": "SRC-024BE3B4CDB1",
+      "time_window": "2026-11-23T00:15:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": null,
+      "count": 1,
+      "country": null,
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": null,
+      "severity": "low",
+      "source_alias": "SRC-024BE3B4CDB1",
+      "time_window": "2026-11-23T00:10:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": null,
+      "count": 1,
+      "country": null,
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": null,
+      "severity": "info",
+      "source_alias": "SRC-024BE3B4CDB1",
+      "time_window": "2026-11-23T00:10:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": null,
+      "count": 1,
+      "country": null,
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": null,
+      "severity": "low",
       "source_alias": "SRC-08914B2FD8D2",
       "time_window": "2026-11-22T19:15:00.000Z",
       "type": "connection",
@@ -511,68 +567,12 @@
       "source_alias": "SRC-A28B8F6A7388",
       "time_window": "2026-11-22T15:15:00.000Z",
       "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": null,
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": null,
-      "severity": "info",
-      "source_alias": "SRC-A28B8F6A7388",
-      "time_window": "2026-11-22T15:15:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": null,
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": null,
-      "severity": "low",
-      "source_alias": "SRC-A28B8F6A7388",
-      "time_window": "2026-11-22T15:15:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": null,
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": null,
-      "severity": "info",
-      "source_alias": "SRC-A28B8F6A7388",
-      "time_window": "2026-11-22T15:15:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": null,
-      "host_compromised": false,
-      "label": "CLIENT OBSERVED",
-      "outcome": "client_fingerprint_observed",
-      "position": null,
-      "severity": "info",
-      "source_alias": "SRC-A040E26DD635",
-      "time_window": "2026-11-22T13:45:00.000Z",
-      "type": "client_observed",
       "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-11-22T19:15:46.000Z",
+  "last_direct_event": "2026-11-23T00:15:48.000Z",
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -581,7 +581,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "72f76381b2acc0b63b2b0baa9fef305280c08509e357903e8ca207922551a635",
-  "updated_at": "2026-11-22T19:36:20Z",
+  "source_fingerprint": "13080f579aef05989e3a71de6bd4e88d21f04a109f92b1ee6a64507659534aeb",
+  "updated_at": "2026-11-23T00:49:58Z",
   "window": "rolling-24h-events-with-7d-total"
 }
