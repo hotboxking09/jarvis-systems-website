@@ -257,5 +257,33 @@
     "url": "/app/",
     "summary": "Companion-Vorschau: Hilfe, lokale Geräteübersicht, Updates und Signale. Persönliche Funktionen folgen.",
     "text": "Web-App · Coming soon Companion-Vorschau: Hilfe, lokale Geräteübersicht, Updates und Signale. Persönliche Funktionen folgen."
+  },
+  {
+    "kind": "Seite",
+    "title": "JARVIS Shop – Websites, Hosting & Bots",
+    "url": "/shop/",
+    "summary": "Website-Check, Website-Erstellung, Website-Pflege, Bot-Entwicklung und Discord-/Telegram-Bot-Hosting.",
+    "text": "JARVIS Shop – Websites, Hosting & Bots Website-Check, Website-Erstellung, Website-Pflege, Bot-Entwicklung und Discord-/Telegram-Bot-Hosting."
+  },
+  {
+    "kind": "Seite",
+    "title": "JARVIS Merch – CORE SERIES 01",
+    "url": "/merch/",
+    "summary": "Bekleidung: sechs Heavyweight T-Shirts und sechs Premium Hoodies.",
+    "text": "JARVIS Merch – CORE SERIES 01 Bekleidung: sechs Heavyweight T-Shirts und sechs Premium Hoodies."
+  },
+  {
+    "kind": "Seite",
+    "title": "JARVIS Shop – Websites, Hosting & Bots",
+    "url": "/en/shop/",
+    "summary": "Website checks, design, care, hosting and custom Discord or Telegram bots.",
+    "text": "JARVIS Shop – Websites, Hosting & Bots Website checks, design, care, hosting and custom Discord or Telegram bots."
+  },
+  {
+    "kind": "Seite",
+    "title": "JARVIS Merch – CORE SERIES 01",
+    "url": "/en/merch/",
+    "summary": "Apparel: six heavyweight T-shirts and six premium hoodies.",
+    "text": "JARVIS Merch – CORE SERIES 01 Apparel: six heavyweight T-shirts and six premium hoodies."
   }
 ]

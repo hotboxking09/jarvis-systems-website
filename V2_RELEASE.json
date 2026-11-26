@@ -1,8 +1,8 @@
 {
   "release": "JARVIS-WEBSITE-V2-20261104",
-  "static_routes": 69,
+  "static_routes": 71,
   "app_stage": "public-preview-coming-soon",
   "private_features_enabled": false,
   "telemetry_source": "existing-public-relays",
-  "source_commit": "05c211bca35eddb17d02b67425ac3ae530282d8f"
+  "source_commit": "b75eb09b33a6ecd6693ce43f0c589771485510f5"
 }
