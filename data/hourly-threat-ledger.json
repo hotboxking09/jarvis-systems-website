@@ -1,13 +1,12 @@
 {
   "counts": {
     "by_type_24h": {
-      "client_observed": 11,
-      "connection": 36,
-      "disconnect": 36,
-      "login_attempt": 7
+      "client_observed": 2,
+      "connection": 22,
+      "disconnect": 22
     },
-    "direct_events_24h": 90,
-    "direct_events_7d": 560
+    "direct_events_24h": 46,
+    "direct_events_7d": 540
   },
   "events": [
     {
@@ -19,6 +18,62 @@
       "outcome": "observed",
       "position": null,
       "severity": "low",
+      "source_alias": "SRC-2B08F5B60AFF",
+      "time_window": "2026-11-28T00:40:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": null,
+      "count": 1,
+      "country": null,
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": null,
+      "severity": "info",
+      "source_alias": "SRC-2B08F5B60AFF",
+      "time_window": "2026-11-28T00:40:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": null,
+      "count": 1,
+      "country": null,
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": null,
+      "severity": "low",
+      "source_alias": "SRC-BCC9F52AFC39",
+      "time_window": "2026-11-28T00:00:00.000Z",
+      "type": "connection",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": null,
+      "count": 1,
+      "country": null,
+      "host_compromised": false,
+      "label": "SESSION CLOSED",
+      "outcome": "session_closed",
+      "position": null,
+      "severity": "info",
+      "source_alias": "SRC-BCC9F52AFC39",
+      "time_window": "2026-11-28T00:00:00.000Z",
+      "type": "disconnect",
+      "verified_direct_sensor_event": true
+    },
+    {
+      "asn": null,
+      "count": 1,
+      "country": null,
+      "host_compromised": false,
+      "label": "SESSION OPENED",
+      "outcome": "observed",
+      "position": null,
+      "severity": "low",
       "source_alias": "SRC-E92C83AD966A",
       "time_window": "2026-11-27T18:25:00.000Z",
       "type": "connection",
@@ -511,69 +566,13 @@
       "severity": "info",
       "source_alias": "SRC-74F8F772A9E9",
       "time_window": "2026-11-27T04:35:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": null,
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": null,
-      "severity": "low",
-      "source_alias": "SRC-74F8F772A9E9",
-      "time_window": "2026-11-27T04:35:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": null,
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": null,
-      "severity": "info",
-      "source_alias": "SRC-74F8F772A9E9",
-      "time_window": "2026-11-27T04:35:00.000Z",
-      "type": "disconnect",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": null,
-      "host_compromised": false,
-      "label": "SESSION OPENED",
-      "outcome": "observed",
-      "position": null,
-      "severity": "low",
-      "source_alias": "SRC-688A4A480893",
-      "time_window": "2026-11-27T02:10:00.000Z",
-      "type": "connection",
-      "verified_direct_sensor_event": true
-    },
-    {
-      "asn": null,
-      "count": 1,
-      "country": null,
-      "host_compromised": false,
-      "label": "SESSION CLOSED",
-      "outcome": "session_closed",
-      "position": null,
-      "severity": "info",
-      "source_alias": "SRC-688A4A480893",
-      "time_window": "2026-11-27T02:10:00.000Z",
       "type": "disconnect",
       "verified_direct_sensor_event": true
     }
   ],
   "host_compromise_claim": false,
   "identity_warning": "A network source alias is not a person identity.",
-  "last_direct_event": "2026-11-27T18:28:24.000Z",
+  "last_direct_event": "2026-11-28T00:41:49.000Z",
   "privacy": "daily-rotating-source-aliases-no-raw-identifiers",
   "schema": 1,
   "sensor": {
@@ -582,7 +581,7 @@
     "state_at_update": "online"
   },
   "source": "https://jarvis-threat-observatory.jarvis-system-live.workers.dev/v1/public/attacks",
-  "source_fingerprint": "baa3273b5d4a3b47df8dbe43c0266e8e6ff92308e32b95fffb220874d201f613",
-  "updated_at": "2026-11-27T18:56:37Z",
+  "source_fingerprint": "7e7d775aab8c9742d7b10c78e523f567779e6ea8c7b25971e52a91eb3945533b",
+  "updated_at": "2026-11-28T01:57:33Z",
   "window": "rolling-24h-events-with-7d-total"
 }
